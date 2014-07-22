@@ -11,7 +11,7 @@ static bool isPlaying = false;
 + (void)Init 
 {        
     NSString *pathe=[[NSBundle mainBundle] pathForResource:@"Tock" ofType:@"wav"];
-    CFURLRef url =(CFURLRef)[NSURL fileURLWithPath:pathe];
+    CFURLRef url =(__bridge CFURLRef)[NSURL fileURLWithPath:pathe];
     AudioServicesCreateSystemSoundID(url,&TockSoundID);
     
     AudioServicesAddSystemSoundCompletion (TockSoundID,

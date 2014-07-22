@@ -30,11 +30,10 @@
 +(PFMetaObject*)metaObject
 {
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects: [ PFMetaObjectField fieldWithId: PFFieldName name: @"name" ]
+           @[[ PFMetaObjectField fieldWithId: PFFieldName name: @"name" ]
             , [ PFMetaObjectField fieldWithId: PFFieldFingerPrint name: @"signature" ]
             , [ PFMetaObjectField fieldWithId: PFFieldIsCompressed name: @"compressed" ]
-            , [ PFMetaObjectField fieldWithName: @"quotes" ]
-            , nil ] ];
+            , [ PFMetaObjectField fieldWithName: @"quotes" ]] ];
 }
 
 -(BOOL)verifyData:( NSData* )data_
@@ -85,7 +84,7 @@
       NSArray* files_ = [ archive_ inflatedFiles ];
       if ( [ files_ count ] == 1 )
       {
-         decompressed_data_ = [ [ files_ objectAtIndex: 0 ] objectForKey: ZKFileDataKey ];
+         decompressed_data_ = files_[0][ZKFileDataKey];
       }
    }
 

@@ -40,7 +40,7 @@
    ArrayMath *v_hlc3  = [[ArrayMath alloc] initWithLength:(uint)capacity_];
    ArrayMath *v_hlcc4 = [[ArrayMath alloc] initWithLength:(uint)capacity_];
 
-   PFBaseQuote* quote_ = [quotes_ objectAtIndex: 0];
+   PFBaseQuote* quote_ = quotes_[0];
    
    int time_temp;
    double open;
@@ -53,7 +53,7 @@
    {
       if (i_ >= delta_capacity_)
       {
-         quote_ = [quotes_ objectAtIndex: i_ - delta_capacity_];
+         quote_ = quotes_[i_ - delta_capacity_];
          
          open  = quote_.info.open;
          high  = quote_.info.high;

@@ -66,8 +66,8 @@
       if ( instrument_.routes.count == 2 )
       {
          BOOL need_change_name_ = NO;
-         PFRoute* first_route_ = [ instrument_.routes objectAtIndex: 0 ];
-         PFRoute* second_route_ = [ instrument_.routes objectAtIndex: 1 ];
+         PFRoute* first_route_ = (instrument_.routes)[0];
+         PFRoute* second_route_ = (instrument_.routes)[1];
          
          if ( first_route_.quoteRouteId == second_route_.routeId )
          {
@@ -92,18 +92,16 @@
 
       for ( PFSymbol* symbol_ in filtered_symbols_ )
       {
-         [ symbols_by_id_ setObject: symbol_
-                             forKey: [ PFSymbolIdKey keyWithSymbolId: symbol_ ] ];
+         symbols_by_id_[[ PFSymbolIdKey keyWithSymbolId: symbol_ ]] = symbol_;
 
-         [ symbols_by_name_ setObject: symbol_ forKey: symbol_.name ];
+         symbols_by_name_[symbol_.name] = symbol_;
          
          
-         NSMutableArray* symbols_array_ = [ symbols_by_quote_route_id_ objectForKey: [ PFSymbolIdKey quotesKeyWithSymbol: symbol_ ] ];
+         NSMutableArray* symbols_array_ = symbols_by_quote_route_id_[[ PFSymbolIdKey quotesKeyWithSymbol: symbol_ ]];
          
          if ( !symbols_array_ )
          {
-            [ symbols_by_quote_route_id_ setObject: [ NSMutableArray arrayWithObject: symbol_ ]
-                                            forKey: [ PFSymbolIdKey quotesKeyWithSymbol: symbol_ ] ];
+            symbols_by_quote_route_id_[[ PFSymbolIdKey quotesKeyWithSymbol: symbol_ ]] = [ NSMutableArray arrayWithObject: symbol_ ];
          }
          else if ( ![ symbols_array_ containsObject: symbol_ ] )
          {
@@ -121,17 +119,17 @@
 
 -(PFSymbol*)symbolForId:( id< PFSymbolId > )symbol_id_
 {
-   return [ self.symbolsById objectForKey: [ PFSymbolIdKey keyWithSymbolId: symbol_id_ ] ];
+   return (self.symbolsById)[[ PFSymbolIdKey keyWithSymbolId: symbol_id_ ]];
 }
 
 -(NSArray*)symbolsForQuoteRouteId:( id< PFSymbolId > )symbol_id_
 {
-   return [ self.symbolsByQuoteRouteId objectForKey: [ PFSymbolIdKey keyWithSymbolId: symbol_id_ ] ];
+   return (self.symbolsByQuoteRouteId)[[ PFSymbolIdKey keyWithSymbolId: symbol_id_ ]];
 }
 
 -(PFSymbol*)symbolForName:( NSString* )name_
 {
-   return [ self.symbolsByName objectForKey: name_ ];
+   return (self.symbolsByName)[name_];
 }
 
 -(NSArray*)addSymbolConnectionByQuoteRouteId:( id< PFSymbolConnection > )connection_

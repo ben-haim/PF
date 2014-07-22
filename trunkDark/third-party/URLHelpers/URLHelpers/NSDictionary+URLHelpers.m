@@ -7,7 +7,7 @@
    NSMutableArray* name_value_array_ = [ NSMutableArray arrayWithCapacity: [ self count ] ];
    for ( id key_ in self )
    {
-      NSString* value_ = [ [ self objectForKey: key_ ] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding ];
+      NSString* value_ = [ self[key_] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding ];
       [ name_value_array_ addObject: [ NSString stringWithFormat: @"%@=%@", key_, value_ ] ];
    }
    return [ name_value_array_ componentsJoinedByString: @"&" ];
@@ -21,7 +21,7 @@
 {
    if ( object_ )
    {
-      [ self setObject: object_ forKey: key_ ];
+      self[key_] = object_;
    }
 }
 

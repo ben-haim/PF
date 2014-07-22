@@ -22,13 +22,11 @@
 +(PFMetaObject*)metaObject
 {
     return [ PFMetaObject metaObjectWithFields:
-            [ NSArray arrayWithObjects:
-             [ PFMetaObjectField fieldWithId: PFFieldId name: @"assetId" ],
+            @[[ PFMetaObjectField fieldWithId: PFFieldId name: @"assetId" ],
              [ PFMetaObjectField fieldWithId: PFFieldName name: @"name" ],
              [ PFMetaObjectField fieldWithId: PFFieldDescription name: @"assetDescription" ],
              [ PFMetaObjectField fieldWithId: PFFieldInterest name: @"interestRate" ],
-             [ PFMetaObjectField fieldWithId: PFFieldMinChange name: @"minChange" ],
-             nil ] ];
+             [ PFMetaObjectField fieldWithId: PFFieldMinChange name: @"minChange" ]] ];
 }
 
 -(void)updateFromAssetType: (PFAssetType*) object_

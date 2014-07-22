@@ -16,7 +16,7 @@
                                                                          watchlist: watchlist_
                                                                         controller: controller_ ];
       symbol_item_.action = ^( PFTableViewItem* item_ ) { [ (PFTableViewSymbolItem*)item_ selectCurrentItem ]; };
-      [ categories_array_ addObject: [ PFTableViewCategory categoryWithTitle: nil items: [ NSArray arrayWithObject: symbol_item_ ] ] ];
+      [ categories_array_ addObject: [ PFTableViewCategory categoryWithTitle: nil items: @[symbol_item_] ] ];
    }
    
    return categories_array_;

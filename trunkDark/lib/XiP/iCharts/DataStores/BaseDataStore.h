@@ -11,6 +11,6 @@
 -(ArrayMath*)GetVector:(NSString*)name;
 -(uint)GetLength;
 -(void)Clear;
-@property (nonatomic, retain) NSMutableDictionary* dataSets;  
-@property (nonatomic, retain) NSString* lastKey;  
+@property (nonatomic, strong) NSMutableDictionary* dataSets;  
+@property (nonatomic, strong) NSString* lastKey;  
 @end

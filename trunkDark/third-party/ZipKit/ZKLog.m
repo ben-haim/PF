@@ -21,7 +21,7 @@ NSString* const ZKLogToFileKey = @"ZKLogToFile";
 		NSString *label = [self levelToLabel:level];
 		NSString *now = [self.dateFormatter stringFromDate:[NSDate date]];
 		if (label) {
-			NSString *line = [NSString stringWithFormat:@"%@ [%i] %@ %@ (%@:%lu)", now, self.pid, label, message, [[NSString stringWithUTF8String:sourceFile] lastPathComponent], (unsigned long)lineNumber];
+			NSString *line = [NSString stringWithFormat:@"%@ [%i] %@ %@ (%@:%lu)", now, self.pid, label, message, [@(sourceFile) lastPathComponent], (unsigned long)lineNumber];
 			fprintf(stderr, "%s\n", [line UTF8String]);
 			fflush(stderr);
 		}
@@ -89,7 +89,7 @@ static ZKLog *sharedInstance = nil;
 				
 				if ([[NSUserDefaults standardUserDefaults] boolForKey:ZKLogToFileKey]) {
 					NSArray *searchPaths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
-					NSString *libraryFolder = [searchPaths objectAtIndex:0];
+					NSString *libraryFolder = searchPaths[0];
 					NSString *logFolder = [libraryFolder stringByAppendingPathComponent:@"Logs"];
 					[[[NSFileManager new] autorelease] createDirectoryAtPath:logFolder withIntermediateDirectories:YES attributes:nil error:nil];
 					self.logFilePath = [logFolder stringByAppendingPathComponent:
@@ -114,7 +114,7 @@ static ZKLog *sharedInstance = nil;
 
 + (void) initialize {
 	[[NSUserDefaults standardUserDefaults] registerDefaults:
-	 [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:ZKLogToFileKey]];
+	 @{ZKLogToFileKey: @NO}];
 	[super initialize];
 }
 

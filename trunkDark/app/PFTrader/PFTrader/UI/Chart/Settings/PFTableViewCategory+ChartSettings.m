@@ -23,10 +23,8 @@
    };
    
    return [ PFTableViewCategory categoryWithTitle: NSLocalizedString( @"DEFAULTS", nil )
-                                            items: [ NSArray arrayWithObjects:
-                                                    style_item_
-                                                    , scheme_item_
-                                                    , nil ] ];
+                                            items: @[style_item_
+                                                    , scheme_item_] ];
 }
 
 +(id)tradingLayersCategoryWithSettings:( PFChartSettings* )initial_settings_
@@ -56,11 +54,9 @@
    };
    
    return [ PFTableViewCategory categoryWithTitle: NSLocalizedString( @"TRADING_LAYERS", nil )
-                                            items: [ NSArray arrayWithObjects:
-                                                      show_orders_item_
+                                            items: @[show_orders_item_
                                                     , show_positions_item_
-                                                    , include_in_scaling_item_
-                                                    , nil ] ];
+                                                    , include_in_scaling_item_] ];
 }
 
 +(id)additionalCategoryWithSettings:( PFChartSettings* )initial_settings_
@@ -82,10 +78,8 @@
    };
    
    return [ PFTableViewCategory categoryWithTitle: NSLocalizedString( @"ADDITIONAL", nil )
-                                            items: [ NSArray arrayWithObjects:
-                                                    show_volume_item_
-                                                    , show_loupe_item_
-                                                    , nil ] ];
+                                            items: @[show_volume_item_
+                                                    , show_loupe_item_] ];
 }
 
 @end

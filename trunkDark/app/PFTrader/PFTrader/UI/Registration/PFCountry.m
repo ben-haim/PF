@@ -49,7 +49,7 @@
       for ( NSString* id_ in name_by_id_ )
       {
          [ mutable_countries_ addObject: [ [ self alloc ] initWithId: [ id_ integerValue ]
-                                                                name: [ name_by_id_ objectForKey: id_ ] ] ];
+                                                                name: name_by_id_[id_] ] ];
       }
       default_countries_ = [ mutable_countries_ sortedArrayUsingSelector: @selector(compare:)];
    }

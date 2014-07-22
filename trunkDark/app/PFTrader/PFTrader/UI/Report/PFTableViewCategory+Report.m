@@ -19,7 +19,7 @@
       criteria_.fromDate = date_item_.date;
    };
 
-   return [ self categoryWithTitle: nil items: [ NSArray arrayWithObject: from_item_ ] ];
+   return [ self categoryWithTitle: nil items: @[from_item_] ];
 }
 
 +(id)toDateCategoryWithCriteria:( id< PFMutableSearchCriteria > )criteria_
@@ -33,7 +33,7 @@
       criteria_.toDate = date_item_.date;
    };
    
-   return [ self categoryWithTitle: nil items: [ NSArray arrayWithObject: to_item_ ] ];
+   return [ self categoryWithTitle: nil items: @[to_item_] ];
 }
 
 +(id)tableTypeCategoryWithCriteria:( id< PFMutableSearchCriteria > )criteria_
@@ -44,7 +44,7 @@
       criteria_.tableType = [ (PFReportTableTypeItem*)picker_item_ tableType ];
    };
 
-   return [ self categoryWithTitle: nil items: [ NSArray  arrayWithObject: type_item_ ] ];
+   return [ self categoryWithTitle: nil items: @[type_item_] ];
 }
 
 @end

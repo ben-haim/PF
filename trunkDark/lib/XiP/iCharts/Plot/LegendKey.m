@@ -17,12 +17,6 @@
     return self;
 }
 
--(void)dealloc
-{	
-    //[key release];
-    [text release];
-	[super dealloc];    
-}
 
 
 @end

@@ -28,18 +28,6 @@
     return self;
 }
 
--(void)dealloc
-{	
-    if(DataStore!=nil)
-        [DataStore release];
-    if(srcField!=nil)
-        [srcField release];
-    if(layerName!=nil)        
-        [layerName release];
-    if(legendKey!=nil)
-        [legendKey release];
-	[super dealloc];    
-}
 
 -(ArrayMath*) GetMainData
 {
@@ -140,6 +128,6 @@
 	NSString *LegendMsg = [[NSString alloc] initWithFormat:@"%@: %@", legendKey, valueText];
 	
 	[parentChart.legendBox setText:LegendMsg ForKey:legendKey];
-	[LegendMsg autorelease];
+//	[LegendMsg autorelease];
 }
 @end

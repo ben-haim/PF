@@ -18,18 +18,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [lblTitle release];
-    [valueHPicker release];
-    if(pickerViewArray)
-        [pickerViewArray release];
-    if(properties)
-        [properties release];
-    if(propertyPath)
-        [propertyPath release];
-    [super dealloc];
-}
 
 - (id)initWithCoder:(NSCoder *)coder
 {
@@ -75,14 +63,14 @@
 #pragma mark - HorizontalPickerView Delegate Methods
 - (NSString *)horizontalPickerView:(V8HorizontalPickerView *)picker titleForElementAtIndex:(NSInteger)index 
 {
-	return [pickerViewArray objectAtIndex:index];
+	return pickerViewArray[index];
 }
 
 
 - (NSInteger) horizontalPickerView:(V8HorizontalPickerView *)picker widthForElementAtIndex:(NSInteger)index 
 {
 	CGSize constrainedSize = CGSizeMake(MAXFLOAT, MAXFLOAT);
-	NSString *text = [pickerViewArray objectAtIndex:index];
+	NSString *text = pickerViewArray[index];
 	CGSize textSize = [text sizeWithFont:[UIFont boldSystemFontOfSize:14.0f]
 					   constrainedToSize:constrainedSize
 						   lineBreakMode:UILineBreakModeWordWrap];

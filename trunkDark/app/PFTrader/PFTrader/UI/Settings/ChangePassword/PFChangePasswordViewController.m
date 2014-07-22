@@ -127,8 +127,8 @@ typedef enum
 
 -(IBAction)changeAction:(id)sender_
 {
-   NSString* old_password_ = [ (PFTableViewEditableDetailItem*)[ [ [ self.tableView.categories objectAtIndex: 0 ] items ] objectAtIndex: 0 ] value ];
-   NSString* new_password_ = [ (PFTableViewEditableDetailItem*)[ [ [ self.tableView.categories lastObject ]items ] objectAtIndex: 0 ] value ];
+   NSString* old_password_ = [ (PFTableViewEditableDetailItem*)[ (self.tableView.categories)[0] items ][0] value ];
+   NSString* new_password_ = [ (PFTableViewEditableDetailItem*)[ [ self.tableView.categories lastObject ]items ][0] value ];
    NSString* confirm_password_ = [ (PFTableViewEditableDetailItem*)[ [ [ self.tableView.categories lastObject ]items ] lastObject ] value ];
    
    if ( old_password_.length == 0 )

@@ -19,7 +19,7 @@
    
    if ( !parse_error_ && xml_error_ )
    {
-      parse_error_ = [ NSError PFErrorWithDescription: [ NSString stringWithUTF8String: xml_error_->message ] ];
+      parse_error_ = [ NSError PFErrorWithDescription: @(xml_error_->message) ];
    }
 
    if ( parse_error_ )
@@ -47,7 +47,7 @@
    
    if ( !parse_error_ && xml_error_ )
    {
-      parse_error_ = [ NSError PFErrorWithDescription: [ NSString stringWithUTF8String: xml_error_->message ] ];
+      parse_error_ = [ NSError PFErrorWithDescription: @(xml_error_->message) ];
    }
 
    if ( parse_error_ )

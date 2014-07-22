@@ -42,17 +42,6 @@ uint chart_nes_colors[] = {0x00000000, 0xFF0000FF,0x00FF00FF,0x0000FFFF, 0xFFFF0
     return self;
 }
 
-- (void)dealloc
-{
-    [lblTitle release];
-    [valueHPicker release];
-    NSLog(@"properties cnt %lu", (unsigned long)[properties retainCount]);
-    if(properties)
-        [properties release];
-    if(propertyPath)
-        [propertyPath release];
-    [super dealloc];
-}
 
 - (id)initWithCoder:(NSCoder *)coder
 {
@@ -106,7 +95,6 @@ uint chart_nes_colors[] = {0x00000000, 0xFF0000FF,0x00FF00FF,0x0000FFFF, 0xFFFF0
     for(int c=0; c< (uint)sizeof(chart_nes_colors)/sizeof(int); c++)
         [colorPalette addObject:[NSNumber numberWithInt:chart_nes_colors[c]]];
     [colorView setColors:colorPalette];
-    [colorPalette release];
     colorView.item_index = (uint)index;
     return colorView;
 }

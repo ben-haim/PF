@@ -44,16 +44,14 @@ double fibRates1[] = {0, 0.236, 0.382, 0.5, 0.618, 1};
                                                   XIndex:x2_index 
                                                   YValue:y2];
     [anchors addObject:p2];
-    [p1 release];
-    [p2 release];
     return self;
 }
 
 
 -(bool)isVisibleWithin:(int)x_start And:(int)x_end
 {   
-    TAAnchor* p1 = [anchors objectAtIndex:0];
-    TAAnchor* p2 = [anchors objectAtIndex:1];
+    TAAnchor* p1 = anchors[0];
+    TAAnchor* p2 = anchors[1];
     
     
     return !(MAX(p1.x_index, p2.x_index)<x_start ||  
@@ -66,8 +64,8 @@ double fibRates1[] = {0, 0.236, 0.382, 0.5, 0.618, 1};
 - (double)GetDistance:(CGPoint)p
 {  
     double minDistance = HUGE_VAL;	
-    TAAnchor* a1 = [anchors objectAtIndex:0];
-    TAAnchor* a2 = [anchors objectAtIndex:1];
+    TAAnchor* a1 = anchors[0];
+    TAAnchor* a2 = anchors[1];
     double priceDelta = a2.y_value - a1.y_value;
     
     for(int f=0; f<sizeof(fibRates1)/sizeof(double); f++)  
@@ -117,8 +115,8 @@ double fibRates1[] = {0, 0.236, 0.382, 0.5, 0.618, 1};
 -(CGPoint)getP1
 {
     //! changed 1->0 0->1 indexes
-    TAAnchor* p1 = [anchors objectAtIndex:1];
-    TAAnchor* p2 = [anchors objectAtIndex:0];
+    TAAnchor* p1 = anchors[1];
+    TAAnchor* p2 = anchors[0];
     double x1 = p1.x_coord;
     double y1 = p1.y_coord;
     double k = (p2.y_value-p1.y_value)/(p2.x_index-p1.x_index);
@@ -144,8 +142,8 @@ double fibRates1[] = {0, 0.236, 0.382, 0.5, 0.618, 1};
 -(CGPoint)getP2
 {
     //! changed 1->0 0->1 indexes
-    TAAnchor* p1 = [anchors objectAtIndex:1];
-    TAAnchor* p2 = [anchors objectAtIndex:0];
+    TAAnchor* p1 = anchors[1];
+    TAAnchor* p2 = anchors[0];
     double x2 = p2.x_coord;
     double y2 = p2.y_coord;
     double k = (p2.y_value-p1.y_value)/(p2.x_index-p1.x_index);
@@ -175,8 +173,8 @@ double fibRates1[] = {0, 0.236, 0.382, 0.5, 0.618, 1};
         AndCursorMode:(uint)cursorMode
 {
     //! changed 1->0 0->1 indexes
-    TAAnchor* a1 = [anchors objectAtIndex:1];
-    TAAnchor* a2 = [anchors objectAtIndex:0];
+    TAAnchor* a1 = anchors[1];
+    TAAnchor* a2 = anchors[0];
     CGPoint p1 = [self getP1];
     CGPoint p2 = [self getP2];
     CGContextSetLineWidth(ctx, linewidth*pen_1px);
@@ -227,7 +225,7 @@ double fibRates1[] = {0, 0.236, 0.382, 0.5, 0.618, 1};
         CGContextStrokePath(ctx);
         
         //draw text
-        NSNumber *c = [NSNumber numberWithDouble:pct*100.0];
+        NSNumber *c = @(pct*100.0);
         NSString *title = [numberFormatter stringFromNumber:c];
         NSString *PriceStr = [NSString stringWithFormat:@"%@ (%@)", [parentChart formatPrice:lastPrice], title];        
         CGContextSaveGState(ctx);

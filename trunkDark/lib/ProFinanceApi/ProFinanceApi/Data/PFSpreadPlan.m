@@ -29,12 +29,10 @@
 +(PFMetaObject*)metaObject
 {
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects:
-            [ PFMetaObjectField fieldWithId: PFFieldCommissionPlanId name: @"planId" ]
+           @[[ PFMetaObjectField fieldWithId: PFFieldCommissionPlanId name: @"planId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldName name: @"name" ]
             , [ PFMetaObjectField fieldWithId: PFFieldDescription name: @"description" ]
-            , [ PFMetaObjectField fieldWithId: PFFieldCounterAccountId name: @"counterAccountId" ]
-            , nil ] ];
+            , [ PFMetaObjectField fieldWithId: PFFieldCounterAccountId name: @"counterAccountId" ]] ];
 }
 
 -(void)didUpdateWithFieldOwner:( PFFieldOwner* )field_owner_
@@ -50,11 +48,11 @@
       
       if ( spread_level_.instrumentId > 0 )
       {
-         [ self.instrumentSpreadLevels setObject: spread_level_ forKey: @(spread_level_.instrumentId)  ];
+         (self.instrumentSpreadLevels)[@(spread_level_.instrumentId)] = spread_level_;
       }
       else
       {
-         [ self.instrumentGroupSpreadLevels setObject: spread_level_ forKey: @(spread_level_.instrumentTypeId)  ];
+         (self.instrumentGroupSpreadLevels)[@(spread_level_.instrumentTypeId)] = spread_level_;
       }
    }
 }
@@ -81,13 +79,13 @@
 
 -(PFSpreadLevel*)spreadLevelForInstrument: ( id< PFInstrument > )instument_
 {
-   PFSpreadLevel* current_spread_level_ = [ self.instrumentSpreadLevels objectForKey: @(instument_.instrumentId) ];
+   PFSpreadLevel* current_spread_level_ = (self.instrumentSpreadLevels)[@(instument_.instrumentId)];
    
    if ( !current_spread_level_ )
    {
-      if ( !( current_spread_level_ = [ self.instrumentGroupSpreadLevels objectForKey: @(instument_.group.groupId) ] ) )
+      if ( !( current_spread_level_ = (self.instrumentGroupSpreadLevels)[@(instument_.group.groupId)] ) )
       {
-         current_spread_level_ =  [ self.instrumentGroupSpreadLevels objectForKey: @(instument_.group.superId) ];
+         current_spread_level_ =  (self.instrumentGroupSpreadLevels)[@(instument_.group.superId)];
       }
    }
    

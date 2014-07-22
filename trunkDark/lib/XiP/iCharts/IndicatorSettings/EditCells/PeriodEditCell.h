@@ -20,11 +20,11 @@
 -(void)SetMin:(uint)_min AndMax:(uint)_max;
 -(void)SetInternalMin:(double)_min AndMax:(double)_max AndStep:(double)_step AndDigits:(uint)_digits;
 -(void)SelectValue:(double)_value;
-@property (nonatomic, retain) UILabel *lblTitle;
-@property (nonatomic, retain) NSMutableArray *pickerViewArray;
-@property (nonatomic, retain) V8HorizontalPickerView* valueHPicker;
-@property (nonatomic, retain) NSString* propertyPath;
-@property (nonatomic, retain) PropertiesStore* properties;
+@property (nonatomic, strong) UILabel *lblTitle;
+@property (nonatomic, strong) NSMutableArray *pickerViewArray;
+@property (nonatomic, strong) V8HorizontalPickerView* valueHPicker;
+@property (nonatomic, strong) NSString* propertyPath;
+@property (nonatomic, strong) PropertiesStore* properties;
 @property (assign) double min;
 @property (assign) double max;
 @property (assign) double step;

@@ -19,18 +19,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [lblTitle release];
-    [valueHPicker release];
-    if(pickerViewArray)
-        [pickerViewArray release];
-    if(properties)
-        [properties release];
-    if(propertyPath)
-        [propertyPath release];
-    [super dealloc];
-}
 
 - (id)initWithCoder:(NSCoder *)coder
 {
@@ -76,14 +64,14 @@
 #pragma mark - HorizontalPickerView Delegate Methods
 - (NSString *)horizontalPickerView:(V8HorizontalPickerView *)picker titleForElementAtIndex:(NSInteger)index 
 {
-	return [pickerViewArray objectAtIndex:index];
+	return pickerViewArray[index];
 }
 
 
 - (NSInteger) horizontalPickerView:(V8HorizontalPickerView *)picker widthForElementAtIndex:(NSInteger)index 
 {
 	CGSize constrainedSize = CGSizeMake(MAXFLOAT, MAXFLOAT);
-	NSString *text = [pickerViewArray objectAtIndex:index];
+	NSString *text = pickerViewArray[index];
 	CGSize textSize = [text sizeWithFont:[UIFont boldSystemFontOfSize:14.0f]
 					   constrainedToSize:constrainedSize
 						   lineBreakMode:UILineBreakModeWordWrap];
@@ -129,11 +117,10 @@
     step = _step;
     digits = _digits;
     
-    [pickerViewArray release];    
     pickerViewArray = [[NSMutableArray alloc] initWithCapacity:max - min];
     
     double v = min;
-    NSNumberFormatter *nf = [[[NSNumberFormatter alloc] init] autorelease];
+    NSNumberFormatter *nf = [[NSNumberFormatter alloc] init];
     [nf setFormatterBehavior:NSNumberFormatterBehavior10_4];
 	[nf setDecimalSeparator:@"."];
 	[nf setGeneratesDecimalNumbers:TRUE];
@@ -143,7 +130,7 @@
     [nf setRoundingMode:NSNumberFormatterRoundHalfUp];
     while (v<=max) 
     {
-        [pickerViewArray addObject:[nf stringFromNumber:[NSNumber numberWithDouble:v]]];
+        [pickerViewArray addObject:[nf stringFromNumber:@(v)]];
         v+=step;
     }
     [valueHPicker reloadData];

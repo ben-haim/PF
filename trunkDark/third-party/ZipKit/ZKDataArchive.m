@@ -55,16 +55,12 @@
 			return zkFailed;
 		
 		if ([cdHeader isSymLink] || [cdHeader isDirectory]) {
-			[self.inflatedFiles addObject:[NSDictionary dictionaryWithObjectsAndKeys:
-										   fileAttributes, ZKFileAttributesKey,
-										   [[[NSString alloc] initWithData:inflatedData encoding:NSUTF8StringEncoding] autorelease], ZKPathKey,
-										   nil]];
+			[self.inflatedFiles addObject:@{ZKFileAttributesKey: fileAttributes,
+										   ZKPathKey: [[[NSString alloc] initWithData:inflatedData encoding:NSUTF8StringEncoding] autorelease]}];
 		} else {
-			[self.inflatedFiles addObject:[NSDictionary dictionaryWithObjectsAndKeys:
-										   inflatedData, ZKFileDataKey,
-										   fileAttributes, ZKFileAttributesKey,
-										   cdHeader.filename, ZKPathKey,
-										   nil]];
+			[self.inflatedFiles addObject:@{ZKFileDataKey: inflatedData,
+										   ZKFileAttributesKey: fileAttributes,
+										   ZKPathKey: cdHeader.filename}];
 		}
 	}
 	return zkSucceeded;
@@ -103,11 +99,10 @@
 	}
 	
 	if (inflatedData)
-		*fileAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
-						   [cdHeader posixPermissions], NSFilePosixPermissions,
-						   [cdHeader lastModDate], NSFileCreationDate,
-						   [cdHeader lastModDate], NSFileModificationDate,
-						   fileType, NSFileType, nil];
+		*fileAttributes = @{NSFilePosixPermissions: [cdHeader posixPermissions],
+						   NSFileCreationDate: [cdHeader lastModDate],
+						   NSFileModificationDate: [cdHeader lastModDate],
+						   NSFileType: fileType};
 	else
 		*fileAttributes = nil;
 	
@@ -126,9 +121,9 @@
 	NSString *expansionDirectory = [self uniqueExpansionDirectoryIn:enclosingFolder];
 	[self.fileManager createDirectoryAtPath:expansionDirectory withIntermediateDirectories:YES attributes:nil error:nil];
 	for (NSDictionary *file in self.inflatedFiles) {
-		NSDictionary *fileAttributes = [file objectForKey:ZKFileAttributesKey];
-		NSData *inflatedData = [file objectForKey:ZKFileDataKey];
-		NSString *path = [expansionDirectory stringByAppendingPathComponent:[file objectForKey:ZKPathKey]];
+		NSDictionary *fileAttributes = file[ZKFileAttributesKey];
+		NSData *inflatedData = file[ZKFileDataKey];
+		NSString *path = [expansionDirectory stringByAppendingPathComponent:file[ZKPathKey]];
 		[self.fileManager createDirectoryAtPath:[path stringByDeletingLastPathComponent]
 					withIntermediateDirectories:YES attributes:nil error:nil];
 		if ([[fileAttributes fileType] isEqualToString:NSFileTypeRegular])
@@ -330,7 +325,7 @@
 	
 	if (fileAttributes) {
 		if ([[fileAttributes allKeys] containsObject:NSFileModificationDate]) {
-			lfHeaderData.lastModDate = [fileAttributes objectForKey:NSFileModificationDate];
+			lfHeaderData.lastModDate = fileAttributes[NSFileModificationDate];
 			cdHeaderData.lastModDate = lfHeaderData.lastModDate;
 		}
 		cdHeaderData.externalFileAttributes = [self.fileManager zk_externalFileAttributesFor:fileAttributes];

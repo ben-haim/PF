@@ -176,7 +176,7 @@ static double PFLotStep = 0.01;
                                                                       target: self
                                                                       action: @selector( plus5 ) ];
 
-   return [ NSArray arrayWithObjects: minus_5_item_, minus_1_item_, plus_1_item_, plus_5_item_, nil ];
+   return @[minus_5_item_, minus_1_item_, plus_1_item_, plus_5_item_];
 }
 
 @end

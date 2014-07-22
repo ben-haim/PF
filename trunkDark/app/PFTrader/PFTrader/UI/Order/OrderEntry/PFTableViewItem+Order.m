@@ -129,7 +129,7 @@
 
          if ( unsafe_controller_.validityCategory )
          {
-            PFTableViewTifItem* tif_item_ = (PFTableViewTifItem*)[ unsafe_controller_.validityCategory.items objectAtIndex: 0 ];
+            PFTableViewTifItem* tif_item_ = (PFTableViewTifItem*)(unsafe_controller_.validityCategory.items)[0];
             
 
              PFTableViewTifItem* validity_item_ = [ PFTableViewItem validityItemWithValidity: [ tif_item_ currentValidity ]
@@ -256,7 +256,7 @@
          [ unsafe_controller_.tableView reloadCategory: unsafe_controller_.orderTypeCategory
                                       withRowAnimation: UITableViewRowAnimationFade ];
 
-         PFOrderType current_order_type_ = ((PFTableViewOrderTypeItem*)[ unsafe_controller_.orderTypeCategory.items objectAtIndex: 0 ]).currentType;
+         PFOrderType current_order_type_ = ((PFTableViewOrderTypeItem*)(unsafe_controller_.orderTypeCategory.items)[0]).currentType;
          BOOL old_OCO_mode_ = unsafe_controller_.OCOMode;
          unsafe_controller_.OCOMode = (current_order_type_ == PFOrderOCO);
 
@@ -285,7 +285,7 @@
 
          if ( unsafe_controller_.validityCategory )
          {
-            PFTableViewTifItem* tif_item_ = (PFTableViewTifItem*)[ unsafe_controller_.validityCategory.items objectAtIndex: 0 ];
+            PFTableViewTifItem* tif_item_ = (PFTableViewTifItem*)(unsafe_controller_.validityCategory.items)[0];
 
 
             PFTableViewTifItem* validity_item_ = [ PFTableViewItem validityItemWithValidity: [ tif_item_ currentValidity ]

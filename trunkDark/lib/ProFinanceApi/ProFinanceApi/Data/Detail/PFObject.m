@@ -56,7 +56,7 @@
 +(PFMetaObject*)cachedMetaObject
 {
    NSString* class_name_ = NSStringFromClass( self );
-   PFMetaObject* meta_object_ = [ [ self metaObjectsByClass ] objectForKey: class_name_ ];
+   PFMetaObject* meta_object_ = [ self metaObjectsByClass ][class_name_];
 
    if ( !meta_object_ )
    {
@@ -67,8 +67,7 @@
          ? [ super_meta_object_ metaObjectByAddingFieldsFromMetaObject: self_meta_object_ ]
          : self_meta_object_;
 
-      [ [ self metaObjectsByClass ] setObject: meta_object_
-                                       forKey: class_name_ ];
+      [ self metaObjectsByClass ][class_name_] = meta_object_;
    }
 
    return meta_object_;

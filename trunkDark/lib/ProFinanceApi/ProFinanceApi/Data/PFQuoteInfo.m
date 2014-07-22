@@ -175,7 +175,7 @@
 +(PFBaseQuote*)agregatedQuoteWithQuotes:( NSArray* )quotes_
 {
    PFTradesMinQuote* agregated_quote_ = [ PFTradesMinQuote new ];
-   PFBaseQuote* first_quote_ = [ quotes_ objectAtIndex: 0 ];
+   PFBaseQuote* first_quote_ = quotes_[0];
    PFBaseQuote* last_quote_ = [ quotes_ lastObject ];
    
    agregated_quote_.info = [ PFQuoteInfo new ];
@@ -225,7 +225,7 @@
 +(PFBaseQuote*)agregatedQuoteWithQuotes:( NSArray* )quotes_
 {
    PFLotsMinQuote* agregated_quote_ = [ PFLotsMinQuote new ];
-   PFLotsMinQuote* first_quote_ = [ quotes_ objectAtIndex: 0 ];
+   PFLotsMinQuote* first_quote_ = quotes_[0];
    PFLotsMinQuote* last_quote_ = [ quotes_ lastObject ];
    
    agregated_quote_.bidInfo = [ PFQuoteInfo new ];
@@ -287,7 +287,7 @@
 +(PFBaseQuote*)agregatedQuoteWithQuotes:( NSArray* )quotes_
 {
    PFTradesDayQuote* agregated_quote_ = [ PFTradesDayQuote new ];
-   PFTradesDayQuote* first_quote_ = [ quotes_ objectAtIndex: 0 ];
+   PFTradesDayQuote* first_quote_ = quotes_[0];
    PFTradesDayQuote* last_quote_ = [ quotes_ lastObject ];
    
    agregated_quote_.info = [ PFQuoteInfo new ];
@@ -360,7 +360,7 @@
 +(PFBaseQuote*)agregatedQuoteWithQuotes:( NSArray* )quotes_
 {
    PFLotsDayQuote* agregated_quote_ = [ PFLotsDayQuote new ];
-   PFLotsDayQuote* first_quote_ = [ quotes_ objectAtIndex: 0 ];
+   PFLotsDayQuote* first_quote_ = quotes_[0];
    PFLotsDayQuote* last_quote_ = [ quotes_ lastObject ];
    
    agregated_quote_.bidInfo = [ PFQuoteInfo new ];

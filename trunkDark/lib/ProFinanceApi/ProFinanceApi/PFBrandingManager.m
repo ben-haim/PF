@@ -111,8 +111,7 @@
                 
                 for ( CXMLElement* rule_element_ in rule_nodes_)
                 {
-                   [ branding_rules_ setObject: [ [ rule_element_ attributeForName: @"value" ] stringValue ]
-                                        forKey: [ [ rule_element_ attributeForName: @"name" ] stringValue ] ];
+                   branding_rules_[[ [ rule_element_ attributeForName: @"name" ] stringValue ]] = [ [ rule_element_ attributeForName: @"value" ] stringValue ];
                 }
                 
                 [ self disconnect ];

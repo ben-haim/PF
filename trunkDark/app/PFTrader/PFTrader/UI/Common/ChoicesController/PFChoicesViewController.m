@@ -134,7 +134,7 @@
    
    self.activeSourceIndex = index_;
    
-   PFChoicesViewControllerSource* active_source_ = [ self.sources objectAtIndex: self.activeSourceIndex ];
+   PFChoicesViewControllerSource* active_source_ = (self.sources)[self.activeSourceIndex];
    active_source_.controller.view.frame = self.contentView.bounds;
    active_source_.controller.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
    [ self.contentView addSubview: active_source_.controller.view ];

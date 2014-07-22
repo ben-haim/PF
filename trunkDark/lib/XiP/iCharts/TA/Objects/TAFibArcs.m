@@ -45,15 +45,13 @@ double fibRates2[] = {0.382, 0.5, 0.618, 0.786};
                                                   XIndex:x2_index 
                                                   YValue:y2];
     [anchors addObject:p2];
-    [p1 release];
-    [p2 release];
     return self;
 }
 
 -(bool)isVisibleWithin:(int)x_start And:(int)x_end
 {   
-    TAAnchor* p1 = [anchors objectAtIndex:0];
-    TAAnchor* p2 = [anchors objectAtIndex:1];
+    TAAnchor* p1 = anchors[0];
+    TAAnchor* p2 = anchors[1];
     
     
     return !(MAX(p1.x_index, p2.x_index)<x_start ||  
@@ -62,8 +60,8 @@ double fibRates2[] = {0.382, 0.5, 0.618, 0.786};
 
 -(CGPoint)getP1
 {
-    TAAnchor* p1 = [anchors objectAtIndex:0];
-    TAAnchor* p2 = [anchors objectAtIndex:1];
+    TAAnchor* p1 = anchors[0];
+    TAAnchor* p2 = anchors[1];
     double x1 = p1.x_coord;
     double y1 = p1.y_coord;
     double k = (p2.y_value-p1.y_value)/(p2.x_index-p1.x_index);
@@ -88,8 +86,8 @@ double fibRates2[] = {0.382, 0.5, 0.618, 0.786};
 
 -(CGPoint)getP2
 {
-    TAAnchor* p1 = [anchors objectAtIndex:0];
-    TAAnchor* p2 = [anchors objectAtIndex:1];
+    TAAnchor* p1 = anchors[0];
+    TAAnchor* p2 = anchors[1];
     double x2 = p2.x_coord;
     double y2 = p2.y_coord;
     double k = (p2.y_value-p1.y_value)/(p2.x_index-p1.x_index);
@@ -120,8 +118,8 @@ double fibRates2[] = {0.382, 0.5, 0.618, 0.786};
     double minDistance = HUGE_VAL;
     double xp = p.x; 
     double yp = p.y;		
-    TAAnchor* a1 = [anchors objectAtIndex:0];
-    TAAnchor* a2 = [anchors objectAtIndex:1];
+    TAAnchor* a1 = anchors[0];
+    TAAnchor* a2 = anchors[1];
 
     double real_x1 = [parentChart.parentFChart.xAxis XIndexToX:a1.x_index];
     double real_x2 = [parentChart.parentFChart.xAxis XIndexToX:a2.x_index];
@@ -164,7 +162,6 @@ double fibRates2[] = {0.382, 0.5, 0.618, 0.786};
     double seg_dist = [seg GetDistance:p];
     if(seg_dist < minDistance)
         minDistance = seg_dist;
-    [seg release];
     
     return minDistance;
 }
@@ -203,8 +200,8 @@ CGMutablePathRef createArcPathFromBottomOfRect(CGRect rect, CGFloat arcHeight, b
                AndDPI:(double)pen_1px 
         AndCursorMode:(uint)cursorMode
 {
-    TAAnchor* a1 = [anchors objectAtIndex:0];
-    TAAnchor* a2 = [anchors objectAtIndex:1];
+    TAAnchor* a1 = anchors[0];
+    TAAnchor* a2 = anchors[1];
     CGPoint p1 = [self getP1];
     CGPoint p2 = [self getP2];    
     
@@ -245,7 +242,7 @@ CGMutablePathRef createArcPathFromBottomOfRect(CGRect rect, CGFloat arcHeight, b
         CFRelease(arcPath);
         
         //draw text 
-        NSNumber *c = [NSNumber numberWithDouble:pct*100.0];
+        NSNumber *c = @(pct*100.0);
         NSString *PriceStr = [numberFormatter stringFromNumber:c];
         CGContextSaveGState(ctx);
 		

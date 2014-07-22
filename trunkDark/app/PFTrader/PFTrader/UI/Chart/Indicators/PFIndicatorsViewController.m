@@ -67,7 +67,7 @@
       cell_ = [ PFIndicatorCell cell ];
    }
 
-   PFIndicator* indicator_ = [ self.indicators objectAtIndex: index_path_.row ];
+   PFIndicator* indicator_ = (self.indicators)[index_path_.row];
    cell_.nameLabel.text = indicator_.title;
    cell_.removeButton.hidden = YES;
 
@@ -79,7 +79,7 @@
 -(void)tableView:(UITableView *)table_view_ didSelectRowAtIndexPath:(NSIndexPath *)index_path_
 {
    [ self.delegate indicatorsController: self
-                        didSelectIndicator: [ self.indicators objectAtIndex: index_path_.row ] ];
+                        didSelectIndicator: (self.indicators)[index_path_.row] ];
 }
 
 @end

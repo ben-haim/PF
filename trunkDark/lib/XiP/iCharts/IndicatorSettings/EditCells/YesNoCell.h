@@ -13,7 +13,7 @@
 }
 -(void)SelectBool:(uint)_bool_value;
 - (IBAction)valueChanged:(id)sender;
-@property (nonatomic, retain) UILabel *lblTitle;
-@property (nonatomic, retain) NSString* propertyPath;
-@property (nonatomic, retain) PropertiesStore* properties;
+@property (nonatomic, strong) UILabel *lblTitle;
+@property (nonatomic, strong) NSString* propertyPath;
+@property (nonatomic, strong) PropertiesStore* properties;
 @end

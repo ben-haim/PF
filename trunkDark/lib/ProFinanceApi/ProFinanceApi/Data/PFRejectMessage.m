@@ -28,7 +28,7 @@
             @(223): @"BUSINESS_REJECT_MESSAGE_223"
        };
     }
-    return NSLocalizedString( [ names_error_code_ objectForKey: @( errorCode )], nil );
+    return NSLocalizedString( names_error_code_[@( errorCode )], nil );
 }
 
 -(BOOL)IsErrorCodeName
@@ -39,13 +39,11 @@
 +(PFMetaObject*)metaObject
 {
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects:
-                [ PFMetaObjectField fieldWithId: PFFieldId name: @"messageId" ],
+           @[[ PFMetaObjectField fieldWithId: PFFieldId name: @"messageId" ],
                 [ PFMetaObjectField fieldWithId: PFFieldErrorCode name: @"errorCode" ],
                 [ PFMetaObjectField fieldWithId: PFFieldComment name: @"comment" ],
                 [ PFMetaObjectField fieldWithId: PFFieldSequenceId name: @"sequenceId" ],
-                [ PFMetaObjectField fieldWithId: PFFieldRequestId name: @"requestId" ],
-                nil ] ];
+                [ PFMetaObjectField fieldWithId: PFFieldRequestId name: @"requestId" ]] ];
 }
 
 @end

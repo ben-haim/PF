@@ -94,7 +94,7 @@
       cell_ = [ PFStoryCell cell ];
    }
 
-   cell_.story = [ self.stories objectAtIndex: index_path_.row ];
+   cell_.story = (self.stories)[index_path_.row];
 
    return cell_;
 }
@@ -103,7 +103,7 @@
 
 - (void)tableView:(UITableView *)table_view_ didSelectRowAtIndexPath:(NSIndexPath *)index_path_
 {
-   id< PFStory > story_ = [ self.stories objectAtIndex: index_path_.row ];
+   id< PFStory > story_ = (self.stories)[index_path_.row];
 
    if ( [ self.delegate respondsToSelector: @selector(newsViewController:didSelectStory:) ] )
    {

@@ -68,7 +68,7 @@
                                                                          target: self
                                                                          action: @selector( plus1 ) ];
 
-      [ _toolbar setItems: [ NSArray arrayWithObjects: done_item_, spacer_, minus_1_item_, plus_1_item_, nil ] animated: NO ];
+      [ _toolbar setItems: @[done_item_, spacer_, minus_1_item_, plus_1_item_] animated: NO ];
    }
    
    return _toolbar;

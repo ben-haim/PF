@@ -319,7 +319,7 @@ static BOOL MZFromSheetControllerIsViewControllerBasedStatusBarAppearance(void) 
 
 + (void)registerTransitionClass:(Class)transitionClass forTransitionStyle:(MZFormSheetTransitionStyle)transitionStyle
 {
-    [[MZFormSheetController sharedTransitionClasses] setObject:transitionClass forKey:@(transitionStyle)];
+    [MZFormSheetController sharedTransitionClasses][@(transitionStyle)] = transitionClass;
 }
 
 + (Class)classForTransitionStyle:(MZFormSheetTransitionStyle)transitionStyle

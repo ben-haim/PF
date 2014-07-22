@@ -57,7 +57,7 @@
 
 -(id)objectForKey:( id )key_
 {
-   return [ self.mutableDictionary objectForKey: key_ ];
+   return (self.mutableDictionary)[key_];
 }
 
 -(NSArray*)array
@@ -85,7 +85,7 @@
 
 -(void)removeObjectForKey:( id )key_
 {
-   id found_object_ = [ self.mutableDictionary objectForKey: key_ ];
+   id found_object_ = (self.mutableDictionary)[key_];
    if ( found_object_ )
    {
       [ self.mutableDictionary removeObjectForKey: key_ ];
@@ -95,15 +95,14 @@
 
 -(void)setObject:( id )object_ forKey:( id )key_
 {
-   id found_object_ = [ self.mutableDictionary objectForKey: key_ ];
-   [ self.mutableDictionary setObject: object_ forKey: key_ ];
+   id found_object_ = (self.mutableDictionary)[key_];
+   (self.mutableDictionary)[key_] = object_;
 
    if ( found_object_ )
    {
       NSUInteger found_object_index_ = [ self.mutableArray indexOfObject: found_object_ ];
       NSAssert( found_object_index_ != NSNotFound, @"invalid index" );
-      [ self.mutableArray replaceObjectAtIndex: found_object_index_
-                                    withObject: object_ ];
+      (self.mutableArray)[found_object_index_] = object_;
    }
    else
    {

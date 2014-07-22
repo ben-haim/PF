@@ -198,8 +198,8 @@ numberOfColumnsInPageAtIndex:( NSUInteger )page_index_
      cellForRowAtIndex:( NSUInteger )row_index_
          columnAtIndex:( NSUInteger )column_index_
 {
-   id element_ = [ self.elements objectAtIndex: row_index_ ];
-   PFColumn* column_ = [ self.columns objectAtIndex: column_index_ ];
+   id element_ = (self.elements)[row_index_];
+   PFColumn* column_ = (self.columns)[column_index_];
    
    return [ column_ cellForGridView: grid_view_ context: element_ ];
 }
@@ -207,7 +207,7 @@ numberOfColumnsInPageAtIndex:( NSUInteger )page_index_
 -(UIView*)gridView:( PFGridView* )grid_view_
 headerViewForColumnAtIndex:( NSUInteger )column_index_
 {
-   PFColumn* column_ = [ self.columns objectAtIndex: column_index_ ];
+   PFColumn* column_ = (self.columns)[column_index_];
 
    return [ column_ headerViewForGridView: grid_view_ ];
 }

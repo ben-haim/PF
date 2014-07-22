@@ -39,7 +39,7 @@
 
 -(void)handleButtonWithIndex:( NSInteger )button_index_
 {
-   JFFAlertButton* alert_button_ = [ self.alertButtons objectAtIndex: button_index_ ];
+   JFFAlertButton* alert_button_ = (self.alertButtons)[button_index_];
    if ( alert_button_ )
       alert_button_.action( self );
 }

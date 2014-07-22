@@ -154,7 +154,7 @@ otherButtonTitlesArray:( NSArray* )other_button_titles_
    if ( button_index_ == -1 )
       return;
 
-   JFFAlertButton* alert_button_ = [ self.alertButtons objectAtIndex: button_index_ ];
+   JFFAlertButton* alert_button_ = (self.alertButtons)[button_index_];
    if ( alert_button_ )
       alert_button_.action( self );
 }

@@ -13,7 +13,7 @@
 @interface BaseBoxLayer : NSObject 
 {
     BaseDataStore*  DataStore;  
-    XYChart*        parentChart;
+    XYChart*        __unsafe_unretained parentChart;
     NSString*       srcField;
     NSString*       layerName;
     NSString*       legendKey;
@@ -39,11 +39,11 @@
 - (void)drawInContext:(CGContextRef)ctx InRect:(CGRect)rect AndDPI:(double)pen_1px;
 -(void)setChartCursorValue:(uint)valueIndex;
 
-@property (nonatomic, retain) BaseDataStore* DataStore;
-@property (assign) XYChart* parentChart;
-@property (nonatomic, retain) NSString* srcField;
-@property (nonatomic, retain) NSString* layerName;
-@property (nonatomic, retain) NSString* legendKey;
+@property (nonatomic, strong) BaseDataStore* DataStore;
+@property (unsafe_unretained) XYChart* parentChart;
+@property (nonatomic, strong) NSString* srcField;
+@property (nonatomic, strong) NSString* layerName;
+@property (nonatomic, strong) NSString* legendKey;
 @property (assign) uint color1;  
 @property (assign) uint color2;  
 @property (assign) uint color3;  

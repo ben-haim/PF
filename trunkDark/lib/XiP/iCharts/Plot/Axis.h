@@ -7,8 +7,8 @@
 
 @interface Axis : NSObject 
 {
-    XYChart* parentChart;
-    FinanceChart* parentFChart;
+    XYChart* __unsafe_unretained parentChart;
+    FinanceChart* __unsafe_unretained parentFChart;
     NSMutableArray* tickPositions;
     NSDateFormatter *dateFormatter;
     uint axisType;
@@ -49,10 +49,10 @@
 - (void)setLinearScale:(double)_lowerLimit AndUpper:(double)_upperLimit;
 - (void)setLowerLimit_:(double)_lowerLimit;
 
-@property (assign) XYChart* parentChart;
-@property (assign) FinanceChart* parentFChart;
-@property (nonatomic, retain) NSMutableArray* tickPositions;
-@property (nonatomic, retain) NSDateFormatter *dateFormatter;
+@property (unsafe_unretained) XYChart* parentChart;
+@property (unsafe_unretained) FinanceChart* parentFChart;
+@property (nonatomic, strong) NSMutableArray* tickPositions;
+@property (nonatomic, strong) NSDateFormatter *dateFormatter;
 @property (assign) uint axisType;
 @property (assign) CGRect axis_rect;
 @property (assign) bool showZero;

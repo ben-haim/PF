@@ -14,8 +14,8 @@
 @interface TAAnchor : NSObject 
 {
     double AnchorSize;
-    XYChart* parentChart;
-    TAObject* parentObject;
+    XYChart* __unsafe_unretained parentChart;
+    TAObject* __unsafe_unretained parentObject;
     uint color;
     int x_index;
     double y_value;
@@ -40,8 +40,8 @@
 - (void)setIsSelected:(bool)input;
 - (bool)isSelected;
 
-@property (assign) XYChart* parentChart;
-@property (assign) TAObject* parentObject;
+@property (unsafe_unretained) XYChart* parentChart;
+@property (unsafe_unretained) TAObject* parentObject;
 @property (assign) double AnchorSize;
 @property (assign) uint color;
 @property (assign) int x_index;

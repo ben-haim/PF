@@ -188,7 +188,7 @@
                            [parentChart formatPrice:closePrice]];
     
 	[parentChart.legendBox setText:LegendMsg ForKey:legendKey];
-	[LegendMsg autorelease];
+//	[LegendMsg autorelease];
 
 }
 @end

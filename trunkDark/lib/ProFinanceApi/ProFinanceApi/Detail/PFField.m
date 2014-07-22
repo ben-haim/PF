@@ -932,12 +932,12 @@
                          };
    }
    
-   return [ names_mapping_ objectForKey: @( field_id_ ) ];
+   return names_mapping_[@( field_id_ )];
 }
 
 +(Class)classForFieldWithId:( PFShort )field_id_
 {
-   Class field_class_ = [ [ self classMapping ] objectForKey: @(field_id_) ];
+   Class field_class_ = [ self classMapping ][@(field_id_)];
    NSAssert1( field_class_ != Nil, @"undefined field id: %d", field_id_ );
    return field_class_;
 }

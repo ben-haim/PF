@@ -83,8 +83,7 @@
 +(PFMetaObject*)metaObject
 {
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects:
-            [ PFMetaObjectField fieldWithId: PFFieldBid name: @"crossInstrumentBid" ],
+           @[[ PFMetaObjectField fieldWithId: PFFieldBid name: @"crossInstrumentBid" ],
             [ PFMetaObjectField fieldWithId: PFFieldCrossType name: @"crossType" ],
             [ PFMetaObjectField fieldWithId: PFFieldAllowOverhightTrading name: @"allowsOvernightTrading" ],
             [ PFMetaObjectField fieldWithId: PFFieldAccountId name: @"accountId" ],
@@ -101,8 +100,7 @@
             [ PFMetaObjectField fieldWithId: PFFieldType name: @"type" ],
             [ PFMetaObjectField fieldWithId: PFFieldUserId name: @"userId" ],
             [ PFMetaObjectField fieldWithId: PFFieldGroupId name: @"groupId" ],
-            [ PFMetaObjectField fieldWithId: PFFieldAccountType name: @"accountType" ],
-            nil ] ];
+            [ PFMetaObjectField fieldWithId: PFFieldAccountType name: @"accountType" ]] ];
 }
 
 -(id)init
@@ -128,14 +126,14 @@
     for (PFGroupField* asset_account_group_ in asset_accaunt_groups_) 
     {
         int asset_id_ = [(PFIntegerField*)[asset_account_group_ fieldWithId: PFFieldAssetId] integerValue];
-        PFAssetAccount* current_asset_account_ = [ self.mutableAssetAccounts objectForKey: @(asset_id_) ];
+        PFAssetAccount* current_asset_account_ = (self.mutableAssetAccounts)[@(asset_id_)];
         
         if ( !current_asset_account_ )
         {
             current_asset_account_ = [PFAssetAccount new];
             current_asset_account_.assetId = asset_id_;
 
-            [ self.mutableAssetAccounts setObject: current_asset_account_ forKey: @(asset_id_) ];
+            (self.mutableAssetAccounts)[@(asset_id_)] = current_asset_account_;
         }
         
         [ current_asset_account_ readFromFieldOwner: asset_account_group_.fieldOwner ];
@@ -144,7 +142,7 @@
 
 -(void)setCurrAssetAccountFromId: (PFInteger)asset_id_
 {
-    self.currAssetAccount = [ self.mutableAssetAccounts objectForKey: @(asset_id_) ];
+    self.currAssetAccount = (self.mutableAssetAccounts)[@(asset_id_)];
 }
 
 -(void)setCurrAssetAccountFromAccount: (id< PFAccount >)account_
@@ -502,13 +500,13 @@
 -(id< PFRule >)ruleForName:( NSString* )name_
 {
    // NSLog(@"%@",[ self.ruleByName objectForKey: name_ ]);
-    return [ self.ruleByName objectForKey: name_ ];
+    return (self.ruleByName)[name_];
 }
 
 -(void)addRule:( PFRule* )rule_
 {
   // NSAssert( rule_.accountId == self.accountId, @"Incorrect rule" );
-    [ self.ruleByName setObject: rule_ forKey: rule_.name ];
+    (self.ruleByName)[rule_.name] = rule_;
 }
 -(void)removeRule:( PFRule* )rule_
 {
@@ -519,7 +517,7 @@
 -(PFRule* )getRule:( NSString* )ruleName andAccountId:(int)accId;
 {
    //  NSAssert( accId== self.accountId, @"Incorrect rule" );
-    return  [ self.ruleByName objectForKey: ruleName ];
+    return  (self.ruleByName)[ruleName];
 }
 
 -(void)connectToSymbols:( PFSymbols* )symbols_

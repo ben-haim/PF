@@ -17,11 +17,9 @@
 +(PFMetaObject*)metaObject
 {
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects:
-            [ PFMetaObjectField fieldWithId: PFFieldAccountId name:@"investId" ],
+           @[[ PFMetaObjectField fieldWithId: PFFieldAccountId name:@"investId" ],
             [ PFMetaObjectField fieldWithId:PFFieldAmount name:@"capital" ],
-            [ PFMetaObjectField fieldWithId:PFFieldFilledAmount name:@"currCapital" ],
-            nil ] ];
+            [ PFMetaObjectField fieldWithId:PFFieldFilledAmount name:@"currCapital" ]] ];
 }
 
 -(id)init

@@ -344,22 +344,22 @@ static PFSession* shared_session_ = nil;
 
 -(PFQuoteSubscriber*)mutableQuoteSubscriber
 {
-   return [ self.subscriberByType objectForKey: @(PFSubscriptionTypeQuoteLevel1) ];
+   return (self.subscriberByType)[@(PFSubscriptionTypeQuoteLevel1)];
 }
 
 -(PFQuoteSubscriber*)mutableLevel2QuoteSubscriber
 {
-   return [ self.subscriberByType objectForKey: @(PFSubscriptionTypeQuoteLevel2) ];
+   return (self.subscriberByType)[@(PFSubscriptionTypeQuoteLevel2)];
 }
 
 -(PFQuoteSubscriber*)mutableLevel4QuoteSubscriber
 {
-   return [ self.subscriberByType objectForKey: @(PFSubscriptionTypeQuoteLevel4) ];
+   return (self.subscriberByType)[@(PFSubscriptionTypeQuoteLevel4)];
 }
 
 -(PFQuoteSubscriber*)mutableLevel3QuoteSubscriber
 {
-   return [ self.subscriberByType objectForKey: @(PFSubscriptionTypeQuoteLevel3) ];
+   return (self.subscriberByType)[@(PFSubscriptionTypeQuoteLevel3)];
 }
 
 -(id< PFQuoteSubscriber >)quoteSubscriber
@@ -896,7 +896,7 @@ static PFSession* shared_session_ = nil;
 
 -(id< PFTradeSessionContainer >)tradeSessionContainerForInstrument:( id< PFInstrument > )instrument_
 {
-   return [ self.tradeSessionContainers objectForKey: @( instrument_.tradeSessionContainerId ) ];
+   return (self.tradeSessionContainers)[@( instrument_.tradeSessionContainerId )];
 }
 
 -(double)transferCommission
@@ -1008,15 +1008,15 @@ didLogoutWithReason:( NSString* )reason_
 
 -(id< PFWatchlist >)watchlistWithId:( NSString* )watchlist_id_
 {
-   return [ self.watchlistById objectForKey: watchlist_id_ ];
+   return (self.watchlistById)[watchlist_id_];
 }
 
 -(void)addWatchlist:( PFWatchlist* )watchlist_
 {
-   if ( [ self.watchlistById objectForKey: watchlist_.watchlistId ] )
+   if ( (self.watchlistById)[watchlist_.watchlistId] )
       return;
 
-   [ self.watchlistById setObject: watchlist_ forKey: watchlist_.watchlistId ];
+   (self.watchlistById)[watchlist_.watchlistId] = watchlist_;
 
    if ( self.server.quotesTransferFinished )
    {
@@ -1090,7 +1090,7 @@ didLogoutWithReason:( NSString* )reason_
            r.ownerType == OWNER_USER_GROUP)
         {
             [self.mutableAccounts addRule:r withTransferFinished:YES];
-            [self.mutableRules setObject:r forKey:r.name];
+            (self.mutableRules)[r.name] = r;
         }
     }
     
@@ -1167,7 +1167,7 @@ didLogoutWithReason:( NSString* )reason_
       {
          asset_account_.assetType = [self.assetTypes assetTypeWithId: asset_account_.assetId];
       }
-      account_.currAssetAccount = [account_.sortedAssetAccounts objectAtIndex: 0];
+      account_.currAssetAccount = (account_.sortedAssetAccounts)[0];
    }
 }
 
@@ -1243,7 +1243,7 @@ didLogoutWithReason:( NSString* )reason_
       for ( PFSymbol* symbol_ in instrument_.symbols )
       {
          NSUInteger index_ = [ old_symbols_ indexOfObject: symbol_ ];
-         if ( index_ != NSNotFound && [ [ old_modes_ objectAtIndex: index_ ] integerValue ] != PFTradeModeTradingHalt && symbol_.tradeMode == PFTradeModeTradingHalt )
+         if ( index_ != NSNotFound && [ old_modes_[index_] integerValue ] != PFTradeModeTradingHalt && symbol_.tradeMode == PFTradeModeTradingHalt )
          {
             [ self.delegate session: self didReceiveTradingHaltForSymbol: symbol_ ];
          }
@@ -1353,8 +1353,8 @@ didLogoutWithReason:( NSString* )reason_
     
     PFRule* existingRule =nil;
     for(int i =0;i<_not_mutable_rules.count;i++){
-        if([[[self.notMtableRules objectAtIndex:i] name] isEqualToString:rule_.name]){
-          existingRule = [self.mutableRules objectForKey:[rule_ name]];
+        if([[(self.notMtableRules)[i] name] isEqualToString:rule_.name]){
+          existingRule = (self.mutableRules)[[rule_ name]];
            break;
         }
         
@@ -1454,7 +1454,7 @@ if(existingRule)
 
 -(id< PFRule >)ruleForName:( NSString* )name_
 {
-   return [ self.mutableRules objectForKey: name_ ];
+   return (self.mutableRules)[name_];
 }
 
 -(PFBool)allowsChat
@@ -1555,7 +1555,7 @@ if(existingRule)
    
    if ( trade_session_container_ )
    {
-      PFTradeSessionContainer* existing_container_ = [ self.tradeSessionContainers objectForKey: @( trade_session_container_.tradeSessionContainerId ) ];
+      PFTradeSessionContainer* existing_container_ = (self.tradeSessionContainers)[@( trade_session_container_.tradeSessionContainerId )];
       
       if ( existing_container_ )
       {
@@ -1568,7 +1568,7 @@ if(existingRule)
       }
       else
       {
-         [ self.tradeSessionContainers setObject: trade_session_container_ forKey: @( trade_session_container_.tradeSessionContainerId ) ];
+         (self.tradeSessionContainers)[@( trade_session_container_.tradeSessionContainerId )] = trade_session_container_;
          main_session_started_ = trade_session_container_.currentTradeSession.dayPeriodType == PFTradeSessionDayPeriodTypeMain;
       }
    }
@@ -1757,13 +1757,13 @@ didUpdateAccount:( PFAccount* )account_
 -(void)quoteSubscriber:( PFQuoteSubscriber* )subscriber_
     didAddSymbolWithId:( id< PFSymbolId > )symbol_id_
 {
-   [ self.server subscribeToSymbols: [ NSArray arrayWithObject: symbol_id_ ] type: subscriber_.subscriptionType ];
+   [ self.server subscribeToSymbols: @[symbol_id_] type: subscriber_.subscriptionType ];
 }
 
 -(void)quoteSubscriber:( PFQuoteSubscriber* )subscriber_
  didRemoveSymbolWithId:( id< PFSymbolId > )symbol_id_
 {
-   [ self.server unsubscribeFromSymbols: [ NSArray arrayWithObject: symbol_id_ ] type: subscriber_.subscriptionType ];
+   [ self.server unsubscribeFromSymbols: @[symbol_id_] type: subscriber_.subscriptionType ];
 }
 
 #pragma mark PFAsyncCalculatorDelegate

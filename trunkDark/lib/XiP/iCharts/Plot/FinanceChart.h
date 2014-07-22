@@ -21,7 +21,7 @@ typedef void (^ChartTapDoneBlock)();
 @class XYChart, LineLayer, InterLineLayer, BarLayer;
 @interface FinanceChart : UIScrollView <UIScrollViewDelegate>
 {
-    UIViewController<ChartSettingsDelegate>  *parent;
+    UIViewController<ChartSettingsDelegate>  *__unsafe_unretained parent;
     ChartSensorView         *chartSensor;
     UIView                  *contentView;
     UIInterfaceOrientation  lastOrientation;
@@ -98,20 +98,20 @@ typedef void (^ChartTapDoneBlock)();
 -(double)upperOrderPrice;
 -(double)lowerOrderPrice;
 
-@property (nonatomic, assign) UIViewController *parent;
-@property (nonatomic, retain) UIView *contentView;
-@property (nonatomic, retain) ChartSensorView *chartSensor;
+@property (nonatomic, unsafe_unretained) UIViewController *parent;
+@property (nonatomic, strong) UIView *contentView;
+@property (nonatomic, strong) ChartSensorView *chartSensor;
 @property (assign) UIInterfaceOrientation lastOrientation;
-@property (nonatomic, retain) HLOCDataSource *chart_data;
-@property (nonatomic, retain) UIImage* imgCachedChart;
-@property (nonatomic, retain) PropertiesStore *properties;
-@property (nonatomic, retain) PropertiesStore *default_properties;
-@property (nonatomic, retain) NSString *symbol;
-@property (nonatomic, retain) XYChart *mainChart;
-@property (nonatomic, retain) Axis* xAxis;
-@property (nonatomic, retain) SplitterLayer* splitter_layer;
-@property (nonatomic, retain) NSMutableArray *addIndCharts;
-@property (nonatomic, retain) id<IndicatorFactoryDelegate> indFactory;
+@property (nonatomic, strong) HLOCDataSource *chart_data;
+@property (nonatomic, strong) UIImage* imgCachedChart;
+@property (nonatomic, strong) PropertiesStore *properties;
+@property (nonatomic, strong) PropertiesStore *default_properties;
+@property (nonatomic, strong) NSString *symbol;
+@property (nonatomic, strong) XYChart *mainChart;
+@property (nonatomic, strong) Axis* xAxis;
+@property (nonatomic, strong) SplitterLayer* splitter_layer;
+@property (nonatomic, strong) NSMutableArray *addIndCharts;
+@property (nonatomic, strong) id<IndicatorFactoryDelegate> indFactory;
 @property (assign) double currentZoom;
 
 @property (assign) bool showAddIndicators;
@@ -121,7 +121,7 @@ typedef void (^ChartTapDoneBlock)();
 @property (assign) bool dataChanged;
 @property (assign) uint cursorMode;
 @property (assign) uint drawSubtype;
-@property (nonatomic, retain) NSMutableArray *orderLevels;
+@property (nonatomic, strong) NSMutableArray *orderLevels;
 
 @property ( nonatomic, copy ) ChartTapDoneBlock tapBlock;
 

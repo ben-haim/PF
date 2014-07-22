@@ -92,7 +92,7 @@
    NSUInteger array_size_ = [ self count ];
    for ( NSUInteger item_index_ = 0; item_index_ < array_size_; ++item_index_ )
    {
-      block_( [ self objectAtIndex: item_index_], [ other_ objectAtIndex: item_index_ ] );
+      block_( self[item_index_], other_[item_index_] );
    }
 }
 

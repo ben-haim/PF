@@ -76,8 +76,7 @@
 +(PFMetaObject*)metaObject
 {
     return [ PFMetaObject metaObjectWithFields:
-            [ NSArray arrayWithObjects:
-             [ PFMetaObjectField fieldWithId: PFFieldBalance name: @"balance" ],
+            @[[ PFMetaObjectField fieldWithId: PFFieldBalance name: @"balance" ],
              [ PFMetaObjectField fieldWithId: PFFieldBlockedSum name: @"blockedSum" ],
              [ PFMetaObjectField fieldWithId: PFFieldLockedForOrders name: @"blockedForOrders" ],
              [ PFMetaObjectField fieldWithId: PFFieldLockedForPamm name: @"blockedFunds" ],
@@ -93,8 +92,7 @@
              [ PFMetaObjectField fieldWithId: PFFieldReservedBalance name: @"reservedBalance" ],
              [ PFMetaObjectField fieldWithId: PFFieldUsedMargin name: @"initMargin" ],
              [ PFMetaObjectField fieldWithId: PFFieldTradeCount name: @"tradesCount" ],
-             [ PFMetaObjectField fieldWithId: PFFieldAmount name: @"tradeAmount" ],
-             nil ] ];
+             [ PFMetaObjectField fieldWithId: PFFieldAmount name: @"tradeAmount" ]] ];
 }
 
 -(NSString*)currency

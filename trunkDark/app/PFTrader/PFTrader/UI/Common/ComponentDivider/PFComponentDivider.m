@@ -160,7 +160,7 @@
 
 -(PFDoubleComponent*)componentAtIndex:( NSUInteger )index_
 {
-   return [ self.components objectAtIndex: index_ ];
+   return (self.components)[index_];
 }
 
 -(NSUInteger)maximumValueForComponentWithIndex:( NSUInteger )index_

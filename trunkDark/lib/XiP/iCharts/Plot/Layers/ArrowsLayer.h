@@ -16,8 +16,8 @@
     uint mDownArrowsColor;
 }
 
-@property (nonatomic, retain) NSString* mUpData; 
-@property (nonatomic, retain) NSString* mDownData;
+@property (nonatomic, strong) NSString* mUpData; 
+@property (nonatomic, strong) NSString* mDownData;
 @property (assign) uint mUpArrowsColor;
 @property (assign) uint mDownArrowsColor;
 

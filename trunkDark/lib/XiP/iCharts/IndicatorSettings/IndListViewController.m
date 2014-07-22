@@ -16,18 +16,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [tableIndList release];
-    [default_properties release];
-
-    tableIndList = nil;
-    default_properties = nil;
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-
-    [super dealloc];
-}
 
 - (void)didReceiveMemoryWarning
 {
@@ -50,7 +38,6 @@
                                                                       target:self 
                                                                       action:@selector(close)];
         [[self navigationItem] setLeftBarButtonItem:backButton];
-        [backButton release];
         [[self navigationController] navigationBar].tintColor = [UIColor colorWithRed:81.0/255 green:98.0/255.0 blue:113.0/255.0 alpha:1.0];
         [[self navigationItem] setTitle:NSLocalizedString(@"chart_indicators", nil)];
 #ifdef iPAD
@@ -75,8 +62,6 @@
 
 - (void)ShowIndicators:(PropertiesStore*)def_store
 {
-    if(default_properties)
-        [default_properties release];
     [self setDefault_properties:def_store];
 }
 #pragma mark Table view methods
@@ -102,7 +87,7 @@
     NSArray *indicators = [default_properties getArray:@"indicators.order"];
     
     NSString *indPropPath = [NSString stringWithFormat:@"indicators.%@.title", 
-                             [indicators objectAtIndex:indexPath.row]];
+                             indicators[indexPath.row]];
     CellText = NSLocalizedString([default_properties getParam:indPropPath], "ind localized title");
     
     static NSString *CellIdentifier = @"Cell";
@@ -111,7 +96,7 @@
     
     if (cell == nil) 
     {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
 //        cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero 
 //                                       reuseIdentifier:CellIdentifier] autorelease];
     }    
@@ -125,7 +110,7 @@
 {    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSArray *indicators = [default_properties getArray:@"indicators.order"];    
-    NSString *indID = [indicators objectAtIndex:indexPath.row];    
+    NSString *indID = indicators[indexPath.row];    
     [self dismissModalViewControllerAnimated:YES]; 
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"indListSelected" object:indID];
 }

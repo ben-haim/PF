@@ -39,11 +39,10 @@
                                                                         value: [ NSString stringWithPercent: [ [ PFSession sharedSession ] transferCommission ]
                                                                                             showPercentSign: YES ] ];
    
-   NSArray* general_items_ = [ NSArray arrayWithObjects: equity_item_
+   NSArray* general_items_ = @[equity_item_
                               , available_item_
                               , remains_item_
-                              , commission_item_
-                              , nil ];
+                              , commission_item_];
    
    return [ self categoryWithTitle: NSLocalizedString( @"SOURCE_ACCOUNT", nil )
                              items: general_items_ ];
@@ -58,7 +57,7 @@
                                                                                         step: 0.01 ];
    
    return [ self categoryWithTitle: nil
-                             items: [ NSArray arrayWithObject: pad_item_ ] ];
+                             items: @[pad_item_] ];
 }
 
 +(id)transferTargetInfoCategoryWithFromAccount:( id< PFAccount > )from_account_
@@ -98,11 +97,10 @@
                                                                 currency: transfer_account_.currency
                                                                colorSign: NO ];
    
-   NSArray* general_items_ = [ NSArray arrayWithObjects: account_item_
+   NSArray* general_items_ = @[account_item_
                               , equity_item_
                               , rate_item_
-                              , deposit_item_
-                              , nil ];
+                              , deposit_item_];
    
    return [ self categoryWithTitle: NSLocalizedString( @"TARGET_ACCOUNT", nil )
                              items: general_items_ ];

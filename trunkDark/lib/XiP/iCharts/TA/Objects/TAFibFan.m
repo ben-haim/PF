@@ -45,16 +45,14 @@ double fibRates3[] = {0.382, 0.5, 0.618};
                                                   XIndex:x2_index 
                                                   YValue:y2];
     [anchors addObject:p2];
-    [p1 release];
-    [p2 release];
     return self;
 }
 
 
 -(bool)isVisibleWithin:(int)x_start And:(int)x_end
 {   
-    TAAnchor* a1 = [anchors objectAtIndex:0];
-    TAAnchor* a2 = [anchors objectAtIndex:1];
+    TAAnchor* a1 = anchors[0];
+    TAAnchor* a2 = anchors[1];
     
     
     for(int f=0; f<sizeof(fibRates3)/sizeof(double); f++)  
@@ -70,7 +68,6 @@ double fibRates3[] = {0.382, 0.5, 0.618};
                                            AndLineWidth:1 
                                             AndLineDash:0];
         bool isRayVisible = [ray isVisibleWithin:x_start And:x_end];
-        [ray release];
         if(isRayVisible)
         {
             return true;
@@ -85,14 +82,13 @@ double fibRates3[] = {0.382, 0.5, 0.618};
                                                AndLineWidth:1 
                                                 AndLineDash:0];
     bool res = [seg isVisibleWithin:x_start And:x_end];
-    [seg release];
     return res;
 }
 
 -(CGPoint)getP1
 {
-    TAAnchor* p1 = [anchors objectAtIndex:0];
-    TAAnchor* p2 = [anchors objectAtIndex:1];
+    TAAnchor* p1 = anchors[0];
+    TAAnchor* p2 = anchors[1];
     double x1 = p1.x_coord;
     double y1 = p1.y_coord;
     double k = (p2.y_value-p1.y_value)/(p2.x_index-p1.x_index);
@@ -117,8 +113,8 @@ double fibRates3[] = {0.382, 0.5, 0.618};
 
 -(CGPoint)getP2
 {
-    TAAnchor* p1 = [anchors objectAtIndex:0];
-    TAAnchor* p2 = [anchors objectAtIndex:1];
+    TAAnchor* p1 = anchors[0];
+    TAAnchor* p2 = anchors[1];
     double x2 = p2.x_coord;
     double y2 = p2.y_coord;
     double k = (p2.y_value-p1.y_value)/(p2.x_index-p1.x_index);
@@ -147,8 +143,8 @@ double fibRates3[] = {0.382, 0.5, 0.618};
     double currDistance = NAN;
     double minDistance = HUGE_VAL;
 	
-    TAAnchor* a1 = [anchors objectAtIndex:0];
-    TAAnchor* a2 = [anchors objectAtIndex:1];
+    TAAnchor* a1 = anchors[0];
+    TAAnchor* a2 = anchors[1];
     
     
     for(int f=0; f<sizeof(fibRates3)/sizeof(double); f++)  
@@ -164,7 +160,6 @@ double fibRates3[] = {0.382, 0.5, 0.618};
                                            AndLineWidth:1 
                                             AndLineDash:0];
         currDistance = [ray GetDistance:p];
-        [ray release];
         if(currDistance < minDistance)
             minDistance = currDistance;
     }
@@ -179,7 +174,6 @@ double fibRates3[] = {0.382, 0.5, 0.618};
     double seg_dist = [seg GetDistance:p];
     if(seg_dist < minDistance)
         minDistance = seg_dist;
-    [seg release];
     return minDistance;
 }
 
@@ -189,8 +183,8 @@ double fibRates3[] = {0.382, 0.5, 0.618};
                AndDPI:(double)pen_1px 
         AndCursorMode:(uint)cursorMode
 {
-    TAAnchor* a1 = [anchors objectAtIndex:0];
-    TAAnchor* a2 = [anchors objectAtIndex:1];
+    TAAnchor* a1 = anchors[0];
+    TAAnchor* a2 = anchors[1];
     CGPoint p1 = [self getP1];
     CGPoint p2 = [self getP2];   
     
@@ -225,10 +219,9 @@ double fibRates3[] = {0.382, 0.5, 0.618};
                                            AndLineWidth:linewidth 
                                             AndLineDash:linedash];
         [ray drawInContext:ctx InRect:rect AndDPI:pen_1px AndCursorMode:CHART_MODE_NONE];
-        [ray release];
         
         //draw text   
-        NSNumber *c = [NSNumber numberWithDouble:100.0-pct*100.0];//! added 100.0-
+        NSNumber *c = @(100.0-pct*100.0);//! added 100.0-
         NSString *PriceStr = [numberFormatter stringFromNumber:c];
         CGContextSaveGState(ctx);
 		CGContextSetShouldAntialias(ctx, true);

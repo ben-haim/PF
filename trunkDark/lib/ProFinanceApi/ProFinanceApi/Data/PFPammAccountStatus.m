@@ -19,9 +19,7 @@
 +(PFMetaObject*)metaObject
 {
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects:
-            [ PFMetaObjectField fieldWithId: PFFieldAccountId name:@"pammStatusId" ],
-            nil ] ];
+           @[[ PFMetaObjectField fieldWithId: PFFieldAccountId name:@"pammStatusId" ]] ];
 }
 
 -(void)didUpdateWithFieldOwner:( PFFieldOwner* )field_owner_
@@ -32,7 +30,7 @@
    for ( PFGroupField* pamm_investor_group in pamm_investor_groups )
    {
       PFPammInvestor* investor =[ PFPammInvestor objectWithFieldOwner: pamm_investor_group.fieldOwner ];
-      [ self.investors setObject:investor forKey: @(investor.investId) ];
+      (self.investors)[@(investor.investId)] = investor;
    }
 }
 

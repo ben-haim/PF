@@ -37,7 +37,6 @@
 		free(data);
 		data = nil;
 	}
-	[super dealloc];    
 }
 
 -(double*)getData
@@ -79,7 +78,7 @@
             res_data[i] = a1 + a2;
     }
     
-    return [res autorelease];
+    return res;
 }
         
 -(ArrayMath*)sub:(ArrayMath*)v
@@ -98,7 +97,7 @@
             res_data[i] = a1 - a2;
     }
     
-    return [res autorelease]; 
+    return res; 
 }
 
 -(ArrayMath*)sub2:(double)a2
@@ -115,7 +114,7 @@
             res_data[i] = a1 - a2;
     }
     
-    return [res autorelease]; 
+    return res; 
 }
         
 -(ArrayMath*)mul:(ArrayMath*)v
@@ -134,7 +133,7 @@
             res_data[i] = a1 * a2;
     }
     
-    return [res autorelease];
+    return res;
 }
 
 -(ArrayMath*)mul2:(double)a2
@@ -151,7 +150,7 @@
             res_data[i] = a1 * a2;
     }
     
-    return [res autorelease];
+    return res;
 }
     
 -(ArrayMath*)div:(ArrayMath*)v
@@ -170,7 +169,7 @@
             res_data[i] = a1 / a2;
     }
     
-    return [res autorelease];
+    return res;
 }
 
 -(ArrayMath*)safeDiv:(ArrayMath*)v AndStub:(double)stub
@@ -194,7 +193,7 @@
             res_data[i] = a1 / a2;
     }
     
-    return [res autorelease];
+    return res;
 }
 
 -(ArrayMath*)acc
@@ -217,7 +216,7 @@
 		}
     }
     
-    return [res autorelease];
+    return res;
 }
 
 -(double)min
@@ -279,7 +278,7 @@
 		res_data[c++] = data[i++];
     }
 	
-    return [res autorelease];
+    return res;
 }
 
 -(ArrayMath*)abs
@@ -296,7 +295,7 @@
             res_data[i] = fabs(a1);
     }
     
-    return [res autorelease];
+    return res;
 }
 
 -(ArrayMath*)delta:(int)shift //default shift 1
@@ -321,7 +320,7 @@
 		i++;
     }
     
-    return [res autorelease];
+    return res;
 }
 
 -(ArrayMath*)shiftRight:(int)period
@@ -339,7 +338,7 @@
 		res_data[i++] = a1;
 	}
     
-    return [res autorelease];
+    return res;
 }
 
 
@@ -360,7 +359,7 @@
             res_data[i] = stub;
     }
     
-    return [res autorelease];
+    return res;
 }
 -(ArrayMath*)selectEQZ:(ArrayMath*)v AndStub:(double)stub //default stub == 0
 {	
@@ -378,7 +377,7 @@
             res_data[i] = stub;
     }
     
-    return [res autorelease];
+    return res;
 }
 -(ArrayMath*)selectLTZ:(double)stub //default stub == 0
 {
@@ -396,7 +395,7 @@
             res_data[i] = stub;
     }
     
-    return [res autorelease];	
+    return res;	
 }
 -(ArrayMath*)selectGTZ:(double)stub //default stub == 0
 {
@@ -414,7 +413,7 @@
             res_data[i] = stub;
     }
     
-    return [res autorelease];
+    return res;
 }
         
 -(ArrayMath*)movMin:(uint)period
@@ -439,7 +438,7 @@
         res_data[i] = max_val;
         i++;		
 	}
-    return [res autorelease];
+    return res;
     /*var loc1:*;
     loc1 = null;
     var loc2:*;
@@ -494,7 +493,7 @@
         res_data[i] = max_val;
         i++;		
 	}
-    return [res autorelease];
+    return res;
 	/*var loc1:*;
 	loc1 = null;
 	var loc2:*;
@@ -529,7 +528,7 @@
 }
 -(ArrayMath*)movAvg:(uint)period
 {
-	ArrayMath* res = [[[ArrayMath alloc] initWithLength:length] autorelease];
+	ArrayMath* res = [[ArrayMath alloc] initWithLength:length];
 
 	if ( length == 0 )
 		return res;
@@ -601,7 +600,7 @@
 		}
         i++;
     }	
-    return [res autorelease];
+    return res;
 	
 }
 
@@ -636,7 +635,7 @@
 		i++;
 	}
 	
-    return [res autorelease];
+    return res;
 }
 
 -(ArrayMath*)movStdDev:(uint)period
@@ -668,7 +667,7 @@
 		res_data[i] = (period != 0) ? sqrt(Sum / period) : 0;
         i++;
     }
-    return [res autorelease];
+    return res;
 }
         
 

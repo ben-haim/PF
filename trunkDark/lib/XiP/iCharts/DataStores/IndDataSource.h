@@ -5,7 +5,7 @@
 @class PropertiesStore;
 @interface IndDataSource : BaseDataStore 
 {
-    BaseDataStore* src;
+    BaseDataStore* __unsafe_unretained src;
     int recalc_period;
 }
 - (id)initWithDataSource:(BaseDataStore*)baseData
@@ -15,5 +15,5 @@
 -(void)build;
 //called from outside to inform the last basr value in the source DS has changed
 -(void)SourceDataChanged;
-@property (assign) BaseDataStore* src; 
+@property (unsafe_unretained) BaseDataStore* src; 
 @end

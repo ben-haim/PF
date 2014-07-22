@@ -60,8 +60,8 @@
 }
 
 - (void) calculateSizeAndItemCount:(NSDictionary *) userInfo {
-	NSArray *paths = [userInfo objectForKey:ZKPathsKey];
-	BOOL rfFlag = [[userInfo objectForKey:ZKusingResourceForkKey] boolValue];
+	NSArray *paths = userInfo[ZKPathsKey];
+	BOOL rfFlag = [userInfo[ZKusingResourceForkKey] boolValue];
 	unsigned long long size = 0;
 	unsigned long long count = 0;
 	NSFileManager *fmgr = [[NSFileManager new] autorelease];
@@ -72,9 +72,9 @@
 		count += [dict zk_itemCount];
 	}
 	[self performSelectorOnMainThread:@selector(didUpdateTotalSize:)
-						   withObject:[NSNumber numberWithUnsignedLongLong:size] waitUntilDone:NO];
+						   withObject:@(size) waitUntilDone:NO];
 	[self performSelectorOnMainThread:@selector(didUpdateTotalCount:)
-						   withObject:[NSNumber numberWithUnsignedLongLong:count] waitUntilDone:NO];
+						   withObject:@(count) waitUntilDone:NO];
 }
 
 - (NSString *) uniqueExpansionDirectoryIn:(NSString *) enclosingFolder {

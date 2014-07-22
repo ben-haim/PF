@@ -311,7 +311,7 @@
 
    return [ NSString stringWithFormat: @"%@ %@%d"
            , instrument_name_
-           , [ [ self monthNames ] objectAtIndex: month_ - 1 ]
+           , [ self monthNames ][month_ - 1]
            , year_ % 10 ];
 }
 
@@ -358,20 +358,20 @@
       {
          PFFuturesSymbol* futures_ = [ PFFuturesSymbol futuresSymbolWithInstrument: instrument_
                                                                              route: route_
-                                                                              date: [ instrument_.expirationDates objectAtIndex: i ] ];
+                                                                              date: (instrument_.expirationDates)[i] ];
          
-         futures_.lastTradeDate = [ instrument_.lastTradeDates objectAtIndex: i ];
-         futures_.contractMonthDate = [ instrument_.expirationDates objectAtIndex: i ];
-         futures_.settlementDate = [ instrument_.settlementDates objectAtIndex: i ];
-         futures_.noticeDate = [ instrument_.noticeDates objectAtIndex: i ];
-         futures_.firstTradeDate = [ instrument_.firstTradeDates objectAtIndex: i ];
-         futures_.autoCloseDate = [ instrument_.autoCloseDates objectAtIndex: i ];
-         futures_.deliveryStatus = (PFInteger)[ [ instrument_.deliveryStatuses objectAtIndex: i ] integerValue ];
-         futures_.isContiniousContract = [ [ instrument_.isContiniousContracts objectAtIndex: i ] boolValue ];
-         futures_.tradeMode = [ [ instrument_.tradeModes objectAtIndex: i ] shortValue ];
-         futures_.lowLimitPrice = [ [ instrument_.priceLowLimits objectAtIndex: i ] doubleValue ];
-         futures_.highLimitPrice = [ [ instrument_.priceHighLimits objectAtIndex: i ] doubleValue ];
-         futures_.limitMeasure = [ [ instrument_.priceLimitMeasures objectAtIndex: i ] shortValue ];
+         futures_.lastTradeDate = (instrument_.lastTradeDates)[i];
+         futures_.contractMonthDate = (instrument_.expirationDates)[i];
+         futures_.settlementDate = (instrument_.settlementDates)[i];
+         futures_.noticeDate = (instrument_.noticeDates)[i];
+         futures_.firstTradeDate = (instrument_.firstTradeDates)[i];
+         futures_.autoCloseDate = (instrument_.autoCloseDates)[i];
+         futures_.deliveryStatus = (PFInteger)[ (instrument_.deliveryStatuses)[i] integerValue ];
+         futures_.isContiniousContract = [ (instrument_.isContiniousContracts)[i] boolValue ];
+         futures_.tradeMode = [ (instrument_.tradeModes)[i] shortValue ];
+         futures_.lowLimitPrice = [ (instrument_.priceLowLimits)[i] doubleValue ];
+         futures_.highLimitPrice = [ (instrument_.priceHighLimits)[i] doubleValue ];
+         futures_.limitMeasure = [ (instrument_.priceLimitMeasures)[i] shortValue ];
          
          [ result_ addObject: futures_ ];
       }

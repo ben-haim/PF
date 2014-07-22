@@ -149,19 +149,18 @@
                                                                                                   transfer: self.transferValue
                                                                                         transferController: (PFAccountTransferViewController*)controller_ ];
    
-   self.sourceEquityItem = [ info_category_.items objectAtIndex: 0 ];
-   self.sourceAvailableItem = [ info_category_.items objectAtIndex: 1 ];
-   self.sourceRemainsItem = [ info_category_.items objectAtIndex: 2 ];
+   self.sourceEquityItem = (info_category_.items)[0];
+   self.sourceAvailableItem = (info_category_.items)[1];
+   self.sourceRemainsItem = (info_category_.items)[2];
    self.transferPadItem = [ value_category_.items lastObject ];
-   self.targetEquityItem = [ target_category_.items objectAtIndex: 1 ];
+   self.targetEquityItem = (target_category_.items)[1];
    self.targetDepositItem = [ target_category_.items lastObject ];
    
    self.transferPadItem.delegate = self;
    
-   return [ NSArray arrayWithObjects: info_category_
+   return @[info_category_
            , target_category_
-           , value_category_
-           , nil ];
+           , value_category_];
 }
 
 -(void)updateTransferInfo
@@ -169,13 +168,13 @@
    self.sourceAvailableItem.amount = self.sourceAccount.withdrawalAvailable;
    self.sourceEquityItem.amount = self.sourceAccount.equity;
    self.sourceRemainsItem.amount = self.sourceAccount.withdrawalAvailable - ( self.transferValue + self.transferValue * [ [ PFSession sharedSession ] transferCommission ] / 100.0 );
-   [ self.controller.tableView reloadCategory: [ self.controller.tableView.categories objectAtIndex: 0 ] withRowAnimation: UITableViewRowAnimationNone ];
+   [ self.controller.tableView reloadCategory: (self.controller.tableView.categories)[0] withRowAnimation: UITableViewRowAnimationNone ];
 }
 
 -(void)updateTargetAccount
 {
    self.targetEquityItem.amount = self.targetAccount.equity;
-   [ self.controller.tableView reloadCategory: [ self.controller.tableView.categories objectAtIndex: 1 ] withRowAnimation: UITableViewRowAnimationNone ];
+   [ self.controller.tableView reloadCategory: (self.controller.tableView.categories)[1] withRowAnimation: UITableViewRowAnimationNone ];
 }
 
 -(void)submitAction
@@ -229,7 +228,7 @@ didUpdateAccount:( id< PFAccount > )account_
    self.transferValue = self.transferPadItem.doubleValue;
    
    self.targetDepositItem.amount = self.transferValue * self.targetAccount.crossPrice / self.sourceAccount.crossPrice;
-   [ self.controller.tableView reloadCategory: [ self.controller.tableView.categories objectAtIndex: 1 ] withRowAnimation: UITableViewRowAnimationNone ];
+   [ self.controller.tableView reloadCategory: (self.controller.tableView.categories)[1] withRowAnimation: UITableViewRowAnimationNone ];
    
    [ self updateTransferInfo ];
 }
@@ -274,11 +273,11 @@ didUpdateAccount:( id< PFAccount > )account_
    self.withdrawalPadItem = [ value_category_.items lastObject ];
    self.withdrawalPadItem.delegate = self;
    
-   self.availableItem = [ info_category_.items objectAtIndex: 0 ];
+   self.availableItem = (info_category_.items)[0];
    self.remainsItem = [ info_category_.items lastObject ];
    
    
-   return [ NSArray arrayWithObjects: info_category_, value_category_, nil ];
+   return @[info_category_, value_category_];
 }
 
 -(void)updateAccountInfo
@@ -286,7 +285,7 @@ didUpdateAccount:( id< PFAccount > )account_
    self.availableItem.amount = self.sourceAccount.withdrawalAvailable;
    self.remainsItem.amount = self.sourceAccount.withdrawalAvailable - self.withdrawalValue;
    
-   [ self.controller.tableView reloadCategory: [ self.controller.tableView.categories objectAtIndex: 0 ] withRowAnimation: UITableViewRowAnimationNone ];
+   [ self.controller.tableView reloadCategory: (self.controller.tableView.categories)[0] withRowAnimation: UITableViewRowAnimationNone ];
 }
 
 -(void)submitAction

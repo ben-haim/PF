@@ -118,7 +118,7 @@
    if ( [ self.queue count ] == 0 )
       return nil;
 
-   return [ self.queue objectAtIndex: 0 ];
+   return (self.queue)[0];
 }
 
 -(void)showTopAlertView

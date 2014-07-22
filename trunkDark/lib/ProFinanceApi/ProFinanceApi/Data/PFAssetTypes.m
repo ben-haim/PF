@@ -28,7 +28,7 @@
 
 -(void)addAssetType:(PFAssetType *)asset_type_
 {
-    PFAssetType* current_asset_type_ = [ self.mutableAssetTypes objectForKey: @(asset_type_.assetId)];
+    PFAssetType* current_asset_type_ = (self.mutableAssetTypes)[@(asset_type_.assetId)];
 
     if ( !current_asset_type_ )
     {
@@ -37,7 +37,7 @@
             self.mutableAssetTypes = [NSMutableDictionary new];
         }
 
-        [ self.mutableAssetTypes setObject: asset_type_ forKey: @(asset_type_.assetId) ];
+        (self.mutableAssetTypes)[@(asset_type_.assetId)] = asset_type_;
     }
     else
     {
@@ -47,7 +47,7 @@
 
 -(PFAssetTypes*)assetTypeWithId: (int)asset_id_
 {
-    return [ self.mutableAssetTypes objectForKey: @(asset_id_) ];
+    return (self.mutableAssetTypes)[@(asset_id_)];
 }
 
 -(PFAssetType *)assetTypeWithCurrency:(NSString *)currency

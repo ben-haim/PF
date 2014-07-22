@@ -16,23 +16,15 @@
     NSDictionary *results = (NSDictionary *)[parser objectWithString:settings_str];
     [self setSettings:results];
     cache = [[NSMutableDictionary alloc] init];
-    [parser release];
     return self;
 }
 
-- (void)dealloc
-{
-    [settings release];
-    [cache release];
-    [super dealloc];
-}
 -(NSString*)getJSONString
 {
     SBJSON *json = [[SBJSON alloc] init];
     NSError * error = nil;//[[NSError alloc] init];
     NSString *res = [json stringWithObject:settings error:&error];
     //NSLog(@"%@", error);
-    [json release];        
     return res; 
 }
 -(void)cloneDict:(PropertiesStore*)src
@@ -45,13 +37,11 @@
     SBJSON *json = [[SBJSON alloc] init];
     NSError * error = nil;//[[NSError alloc] init];
     NSString *dict2string = [json stringWithObject:elem error:&error];
-    [json release]; 
     
     
     
     SBJsonParser* parser = [[SBJsonParser alloc] init];
     NSDictionary *string2dict = (NSDictionary *)[parser objectWithString:dict2string];
-    [parser release];
     [self setDict:new_name inPath:new_path WithDict:[NSMutableDictionary dictionaryWithDictionary:string2dict]];
 
 }
@@ -68,7 +58,7 @@
     
     for (NSString* fold in path_components) 
     {
-        result = [result objectForKey:fold];
+        result = result[fold];
     }
     return result;
 }
@@ -84,13 +74,13 @@
 -(uint)getUIntParam:(NSString*)paramName
 {
     NSDictionary* result = [self getDict:paramName];
-    return (uint)[[result objectForKey:@"value"] intValue];
+    return (uint)[result[@"value"] intValue];
 }
 
 -(double)getDblParam:(NSString*)paramName
 {
     NSDictionary* result = [self getDict:paramName];
-    return (double)[[result objectForKey:@"value"] doubleValue];
+    return (double)[result[@"value"] doubleValue];
 }
 
 -(NSString*)getApplyToParam:(NSString*)paramName
@@ -144,15 +134,15 @@
 
 -(uint)getColorParam:(NSString*)paramName
 {
-    id val = [cache objectForKey:paramName]; 
+    id val = cache[paramName]; 
     if(val==nil)
     {
         NSDictionary* result = [self getDict:paramName];
-        NSString* str_val = [result objectForKey:@"value"];
+        NSString* str_val = result[@"value"];
         uint outVal;
         NSScanner* scanner = [NSScanner scannerWithString:str_val];
         [scanner scanHexInt:&outVal];
-        val = [NSNumber numberWithUnsignedInt:outVal];
+        val = @(outVal);
         [cache setValue:val forKey:paramName];
         return outVal;  
     }
@@ -163,7 +153,7 @@
 -(bool)getBoolParam:(NSString*)paramName
 {
     NSDictionary* result = [self getDict:paramName];
-    return ((uint)[[result objectForKey:@"value"] intValue])>0;
+    return ((uint)[result[@"value"] intValue])>0;
 }
 
 -(void)setParam:(NSString*)paramName WithValue:(NSString*)value

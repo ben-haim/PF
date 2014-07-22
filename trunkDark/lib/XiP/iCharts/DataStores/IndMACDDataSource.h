@@ -12,7 +12,7 @@
     uint ema1;
     uint ema2;
 }
-@property (nonatomic, retain) NSString *priceField;
+@property (nonatomic, strong) NSString *priceField;
 @property (assign) uint sma_period;
 @property (assign) uint ema1;
 @property (assign) uint ema2;

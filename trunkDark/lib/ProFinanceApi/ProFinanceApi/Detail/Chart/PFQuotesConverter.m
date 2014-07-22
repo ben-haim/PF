@@ -110,7 +110,7 @@
    for ( NSUInteger i_ = from_date_index_; i_ < [ quotes_ count ]; )
    {
       NSDate* start_date_ = [ self startTimeForPeriod: to_period_
-                                                quote: [ quotes_ objectAtIndex: i_ ]
+                                                quote: quotes_[i_]
                                        timeZoneOffset: time_zone_offset_ ];
 
       NSMutableArray* qoutes_for_interval_ = [ NSMutableArray new ];
@@ -119,7 +119,7 @@
 
       for ( ; i_ < [ quotes_ count ]; ++i_ )
       {
-         PFBaseQuote* current_quote_ = [ quotes_ objectAtIndex: i_ ];
+         PFBaseQuote* current_quote_ = quotes_[i_];
    
          if ( [ current_quote_.date compare: end_date_ ] != NSOrderedAscending )
             break;

@@ -195,7 +195,7 @@
      inComponent:( NSInteger )component_
         animated:( BOOL )animated_
 {
-   id< PFPickerFieldRowManager > row_manager_ = [ self.rowManagers objectAtIndex: component_ ];
+   id< PFPickerFieldRowManager > row_manager_ = (self.rowManagers)[component_];
 
    NSUInteger picker_row_ = [ row_manager_ convertSelectedRow: row_
                                                    currentRow: [ self.pickerView selectedRowInComponent: component_ ] ];
@@ -221,14 +221,14 @@ numberOfRowsInComponent:( NSInteger )component_
    NSUInteger number_of_rows_ = [ self.checkDelegate pickerField: self
                                          numberOfRowsInComponent: component_ ];
 
-   return [ [ self.rowManagers objectAtIndex: component_ ] convertNumberOfRows: number_of_rows_ ];
+   return [ (self.rowManagers)[component_] convertNumberOfRows: number_of_rows_ ];
 }
 
 -(NSString*)pickerView:( UIPickerView* )picker_view_
            titleForRow:( NSInteger )row_
           forComponent:( NSInteger )component_
 {
-   NSInteger selected_row_ = [ [ self.rowManagers objectAtIndex: component_ ] convertPickerRow: row_ ];
+   NSInteger selected_row_ = [ (self.rowManagers)[component_] convertPickerRow: row_ ];
 
    return [ self.checkDelegate pickerField: self
                                titleForRow: selected_row_
@@ -240,7 +240,7 @@ numberOfRowsInComponent:( NSInteger )component_
         forComponent:( NSInteger )component_
          reusingView:( UIView* )view_
 {
-   NSInteger selected_row_ = [ [ self.rowManagers objectAtIndex: component_ ] convertPickerRow: row_ ];
+   NSInteger selected_row_ = [ (self.rowManagers)[component_] convertPickerRow: row_ ];
 
    return [ self.checkDelegate pickerField: self
                                 viewForRow: selected_row_
@@ -252,7 +252,7 @@ numberOfRowsInComponent:( NSInteger )component_
      didSelectRow:( NSInteger )row_
       inComponent:( NSInteger )component_
 {
-   NSInteger selected_row_ = [ [ self.rowManagers objectAtIndex: component_ ] convertPickerRow: row_ ];
+   NSInteger selected_row_ = [ (self.rowManagers)[component_] convertPickerRow: row_ ];
 
    [ self.checkDelegate pickerField: self
                        didSelectRow: selected_row_
@@ -263,7 +263,7 @@ numberOfRowsInComponent:( NSInteger )component_
 {
    for ( NSUInteger component_ = 0; component_ < self.pickerView.numberOfComponents; ++component_ )
    {
-      NSInteger current_row_ = [ [ self.rowManagers objectAtIndex: component_ ] convertCurrentRow: [ self.checkDelegate pickerField: self currentRowInComponent: component_ ] ];
+      NSInteger current_row_ = [ (self.rowManagers)[component_] convertCurrentRow: [ self.checkDelegate pickerField: self currentRowInComponent: component_ ] ];
       
       [ self.pickerView selectRow: current_row_
                       inComponent: component_

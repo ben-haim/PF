@@ -8,8 +8,7 @@ static NSString* const PFErrorDomain = @"ProFinanceApi";
 
 +(id)PFErrorWithDescription:( NSString* )description_
 {
-   NSDictionary* user_info_ = [ NSDictionary dictionaryWithObject: description_
-                                                           forKey: NSLocalizedDescriptionKey ];
+   NSDictionary* user_info_ = @{NSLocalizedDescriptionKey: description_};
 
    return [ [ self alloc ] initWithDomain: PFErrorDomain code: 0 userInfo: user_info_ ];
 }

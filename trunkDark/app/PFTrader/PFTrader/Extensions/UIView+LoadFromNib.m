@@ -5,9 +5,9 @@
 +(id)viewAsFirstObjectFromNibNamed:( NSString* )nib_name_
                              owner:( id )owner_
 {
-   return [ [ [ NSBundle mainBundle ] loadNibNamed: nib_name_
+   return [ [ NSBundle mainBundle ] loadNibNamed: nib_name_
                                              owner: owner_
-                                           options: nil ] objectAtIndex: 0 ];
+                                           options: nil ][0];
 }
 
 +(id)viewAsFirstObjectFromNibNamed:( NSString* )nib_name_

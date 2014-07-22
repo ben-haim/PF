@@ -80,7 +80,7 @@ typedef void (^ReconnectionDoneBlock)();
    {
       if ( self.enqueuedReconnections.count > 0 )
       {
-         reconnection_ = [ self.enqueuedReconnections objectAtIndex: 0 ];
+         reconnection_ = (self.enqueuedReconnections)[0];
          [ self.enqueuedReconnections removeObjectAtIndex: 0 ];
       }
    }
@@ -137,7 +137,7 @@ typedef void (^ReconnectionDoneBlock)();
    
    reconnection_view_.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
    
-   UIView* view_ = ( ( UIView* )[ [ [ [ UIApplication sharedApplication ] keyWindow ] subviews ] objectAtIndex: 0 ] );
+   UIView* view_ = ( ( UIView* )[ [ [ UIApplication sharedApplication ] keyWindow ] subviews ][0] );
    container_view_.bounds = view_.bounds;
    container_view_.transform = view_.transform;
    [ reconnection_view_ getCurrentPresentingStateAndAtomicallySetPresentingState: YES ];

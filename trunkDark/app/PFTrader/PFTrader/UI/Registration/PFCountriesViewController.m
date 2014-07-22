@@ -62,7 +62,7 @@
       cell_ = [ PFCountryCell cell ];
    }
 
-   PFCountry* country_ = [ self.countries objectAtIndex: index_path_.row ];
+   PFCountry* country_ = (self.countries)[index_path_.row];
    cell_.nameLabel.text = country_.name;
    cell_.accessoryType = self.selectedCountry == country_
       ? UITableViewCellAccessoryCheckmark
@@ -75,7 +75,7 @@
 
 -(void)tableView:( UITableView* )table_view_ didSelectRowAtIndexPath:( NSIndexPath* )index_path_
 {
-   self.selectedCountry = [ self.countries objectAtIndex: index_path_.row ];
+   self.selectedCountry = (self.countries)[index_path_.row];
    [ self.tableView reloadData ];
    [ self.delegate countriesController: self didSelectCountry: self.selectedCountry ];
 }

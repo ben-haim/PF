@@ -60,7 +60,7 @@
       symbol_info_cell_ = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? [ PFSymbolInfoCell_iPad cell ] : [ PFSymbolInfoCell cell ];
    }
    
-   id< PFSymbolInfoRow > info_row_ = [ self.items objectAtIndex: index_path_.row ];
+   id< PFSymbolInfoRow > info_row_ = (self.items)[index_path_.row];
    [ symbol_info_cell_ setName: info_row_.name
                       andValue: info_row_.value ];
    

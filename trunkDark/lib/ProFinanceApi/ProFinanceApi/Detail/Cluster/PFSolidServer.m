@@ -40,7 +40,7 @@
 
 -(NSArray*)allApis
 {
-   return [ NSArray arrayWithObjects: self.primaryApi, self.quoteApi, nil ];
+   return @[self.primaryApi, self.quoteApi];
 }
 
 -(void)api:( PFApi* )api_ didLogonUser:( PFUser* )user_
@@ -90,7 +90,7 @@
 
 -(NSArray*)routersForSymbols:( NSArray* )symbols_
 {
-   return [ NSArray arrayWithObject: [ PFSymbolsRouter routerWithCommander: self.quoteApi symbols: symbols_ ] ];
+   return @[[ PFSymbolsRouter routerWithCommander: self.quoteApi symbols: symbols_ ]];
 }
 
 -(void)api:( PFApi* )api_ didLoadRouteMessage:( PFMessage* )message_

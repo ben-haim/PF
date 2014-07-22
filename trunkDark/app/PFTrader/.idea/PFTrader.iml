@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="CIDR_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file:///Applications/Xcode6-Beta3.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libiconv.dylib">
+      <sourceFolder url="file:///Applications/Xcode6-Beta3.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libiconv.dylib" isTestSource="false" />
+    </content>
+    <content url="file:///Applications/Xcode6-Beta3.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libicucore.dylib">
+      <sourceFolder url="file:///Applications/Xcode6-Beta3.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libicucore.dylib" isTestSource="false" />
+    </content>
+    <content url="file:///Applications/Xcode6-Beta3.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libsqlite3.dylib">
+      <sourceFolder url="file:///Applications/Xcode6-Beta3.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libsqlite3.dylib" isTestSource="false" />
+    </content>
+    <content url="file:///Applications/Xcode6-Beta3.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libxml2.dylib">
+      <sourceFolder url="file:///Applications/Xcode6-Beta3.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libxml2.dylib" isTestSource="false" />
+    </content>
+    <content url="file:///Applications/Xcode6-Beta3.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libz.dylib">
+      <sourceFolder url="file:///Applications/Xcode6-Beta3.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libz.dylib" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$/../../lib/ProFinanceApi">
+      <sourceFolder url="file://$MODULE_DIR$/../../lib/ProFinanceApi" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../lib/XiP">
+      <sourceFolder url="file://$MODULE_DIR$/../../lib/XiP" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../third-party/AsyncDispatcher/README.md">
+      <sourceFolder url="file://$MODULE_DIR$/../../third-party/AsyncDispatcher/README.md" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../third-party/AsyncDispatcher/lib/AsyncDispatcher">
+      <sourceFolder url="file://$MODULE_DIR$/../../third-party/AsyncDispatcher/lib/AsyncDispatcher" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../third-party/AsyncSocket">
+      <sourceFolder url="file://$MODULE_DIR$/../../third-party/AsyncSocket" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../third-party/CTPP2">
+      <sourceFolder url="file://$MODULE_DIR$/../../third-party/CTPP2" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../third-party/ESButtonGroup">
+      <sourceFolder url="file://$MODULE_DIR$/../../third-party/ESButtonGroup" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../third-party/JFF">
+      <sourceFolder url="file://$MODULE_DIR$/../../third-party/JFF" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../third-party/JFFMessageBox">
+      <sourceFolder url="file://$MODULE_DIR$/../../third-party/JFFMessageBox" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../third-party/NetworkReachability">
+      <sourceFolder url="file://$MODULE_DIR$/../../third-party/NetworkReachability" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../third-party/NotificationBanner">
+      <sourceFolder url="file://$MODULE_DIR$/../../third-party/NotificationBanner" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../third-party/TouchXML">
+      <sourceFolder url="file://$MODULE_DIR$/../../third-party/TouchXML" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../third-party/URLHelpers">
+      <sourceFolder url="file://$MODULE_DIR$/../../third-party/URLHelpers" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../third-party/ZipKit">
+      <sourceFolder url="file://$MODULE_DIR$/../../third-party/ZipKit" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
+

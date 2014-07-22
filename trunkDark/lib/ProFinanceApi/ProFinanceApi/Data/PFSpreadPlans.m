@@ -29,12 +29,12 @@
       self.mutableSpreadPlans = [ NSMutableDictionary new ];
    }
    
-   [ self.mutableSpreadPlans setObject: spread_plan_ forKey: @(spread_plan_.planId) ];
+   (self.mutableSpreadPlans)[@(spread_plan_.planId)] = spread_plan_;
 }
 
 -(PFSpreadPlan*)spreadPlanWithId: (int)plan_Id_
 {
-   return [ self.mutableSpreadPlans objectForKey: @(plan_Id_) ];
+   return (self.mutableSpreadPlans)[@(plan_Id_)];
 }
 
 -(PFQuote*)createlevel1QuoteWithQuote: ( PFQuote* )real_quote_

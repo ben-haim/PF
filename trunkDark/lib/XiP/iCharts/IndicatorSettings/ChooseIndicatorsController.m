@@ -27,29 +27,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [indicatorsList release];
-    [btnClose release];
-    [btnEdit release];
-    [lblCaption1 release];
-    [tbNormal release];
-    [tbEditing release];
-    [lblCaption2 release];
-    [properties release];
-    [default_properties release];
-
-    indicatorsList = nil;
-    btnClose = nil;
-    btnEdit = nil;
-    lblCaption1 = nil;
-    tbNormal = nil;
-    tbEditing = nil;
-    lblCaption2 = nil;
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-    [super dealloc];
-}
 - (void)indEditDlgClosed:(NSNotification *)notification
 {
     //NSLog(@"indEditDlgClosed");
@@ -61,7 +38,7 @@
     
     //insert data to dictionary
     NSString* fullParamPath = [NSString stringWithFormat:@"indicators.%@", paramName];
-    NSMutableDictionary* defIndParams = [NSMutableDictionary dictionaryWithDictionary:[[[default_properties getDict:fullParamPath] copy] autorelease]];
+    NSMutableDictionary* defIndParams = [NSMutableDictionary dictionaryWithDictionary:[[default_properties getDict:fullParamPath] copy]];
     
     bool alreadyExists = true;
     NSString* testParamName;
@@ -86,7 +63,7 @@
     NSString *arrName = nil;
     NSString *arrParamPath = nil;
     
-    if([[defIndParams objectForKey:@"mainchart"] intValue]==1)    
+    if([defIndParams[@"mainchart"] intValue]==1)    
         arrName = @"user_main";
     else  
         arrName = @"user_add";    
@@ -127,10 +104,6 @@
 
 - (void)ShowIndicators:(PropertiesStore*)store AndDefStore:(PropertiesStore*)def_store
 {
-    if(properties)
-        [properties release];
-    if(default_properties)
-        [default_properties release];
     [self setProperties:store];
     [self setDefault_properties:def_store];
 }
@@ -197,7 +170,6 @@
             // NSLog(@"landscape");
         }
         navControl.view.superview.center = centerPt; 
-		[navControl release];
     }
     else
     {
@@ -206,7 +178,6 @@
     }
     
     
-    [dlgList release];
     
 }
 
@@ -283,10 +254,9 @@ moveRowAtIndexPath:(NSIndexPath *)fromIndexPath
     fullParamPath = [NSString stringWithFormat:@"indicators.%@", paramName];
     indArr = [NSMutableArray arrayWithArray:[properties getArray:fullParamPath]];
               
-	NSString *item = [[indArr objectAtIndex:fromIndexPath.row] retain];
+	NSString *item = indArr[fromIndexPath.row];
 	[indArr removeObject:item];
 	[indArr insertObject:item atIndex:toIndexPath.row];
-	[item release];
     
     [properties setArray:paramName inPath:@"indicators" WithArray:indArr];
 }
@@ -312,7 +282,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     indArr = [NSMutableArray arrayWithArray:[properties getArray:fullParamPath]];
     
     //remove this indicator data
-    NSString* indCode = [indArr objectAtIndex:indexPath.row];
+    NSString* indCode = indArr[indexPath.row];
     NSDictionary *oldDict = [properties getDict:@"indicators"];
     NSMutableDictionary *newDict = [NSMutableDictionary dictionaryWithDictionary:oldDict];
     [newDict removeObjectForKey:indCode];
@@ -346,7 +316,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     }
         
     NSString *indPropPath = [NSString stringWithFormat:@"indicators.%@.title", 
-                             [indicators objectAtIndex:indexPath.row]];
+                             indicators[indexPath.row]];
     CellText = NSLocalizedString([properties getParam:indPropPath], "ind localized title");
 
     static NSString *CellIdentifier = @"Cell";
@@ -355,7 +325,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     
     if (cell == nil) 
     {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
 //        cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero 
 //                                       reuseIdentifier:CellIdentifier] autorelease];
     }    
@@ -378,7 +348,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
         indicators = [properties getArray:@"indicators.user_add"];
     }
     
-    NSString *indID = [indicators objectAtIndex:indexPath.row];
+    NSString *indID = indicators[indexPath.row];
     NSString *indPath = [NSString stringWithFormat:@"indicators.%@", indID]; 
     //NSLog(@"%@", indPath);
     EditPropertiesViewController *dlgEdit = [[EditPropertiesViewController alloc] initWithNibName:@"EditPropertiesView" bundle:nil];
@@ -450,7 +420,6 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
             // NSLog(@"landscape");
         }
         navControl.view.superview.center = centerPt; 
-		[navControl release];
     }
     else
     {
@@ -458,7 +427,6 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
         [self presentModalViewController:dlgEdit animated:YES  ];
     }  
     
-    [dlgEdit release];
 }
 
 @end

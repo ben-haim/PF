@@ -34,7 +34,7 @@ static char subscribers_association_;
 
    if ( subscribers_ )
    {
-      [ subscribers_by_key_ setObject: subscribers_ forKey: key_ ];
+      subscribers_by_key_[key_] = subscribers_;
    }
    else
    {
@@ -44,7 +44,7 @@ static char subscribers_association_;
 
 -(ADOperationSubscribers*)asyncSubscribersForKey:( NSString* )key_
 {
-   return [ [ self asyncSubscribersByKey ] objectForKey: key_ ];
+   return [ self asyncSubscribersByKey ][key_];
 }
 
 -(void)processAsyncSubscribersForKey:( NSString* )key_

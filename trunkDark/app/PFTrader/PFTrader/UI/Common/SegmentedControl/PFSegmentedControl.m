@@ -108,7 +108,7 @@
    NSMutableArray* buttons_ = [ NSMutableArray arrayWithCapacity: [ items_ count ] ];
    for ( NSUInteger i_ = 0; i_ < [ items_ count ]; ++i_ )
    {
-      NSString* title_ = [ items_ objectAtIndex: i_ ];
+      NSString* title_ = items_[i_];
       UIButton* button_ = nil;
       if ( i_ == 0 )
       {

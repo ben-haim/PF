@@ -29,7 +29,7 @@
 {
    if ( !_categories )
    {
-      _categories = [ NSArray arrayWithObject: [ PFTableViewCategory logDateCategoryWithController: self ] ];
+      _categories = @[[ PFTableViewCategory logDateCategoryWithController: self ]];
    }
    return _categories;
 }

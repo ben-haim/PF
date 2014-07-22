@@ -87,7 +87,7 @@ static int server_time_offset_ = 0;
 +(PFMetaObject*)metaObject
 {
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects: [ PFMetaObjectField fieldWithId: PFFieldType name: @"type" ]
+           @[[ PFMetaObjectField fieldWithId: PFFieldType name: @"type" ]
             , [ PFMetaObjectField fieldWithId: PFFieldInstrumentId name: @"instrumentId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldInstrumentTypeId name: @"groupId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldName name: @"name" ]
@@ -116,8 +116,7 @@ static int server_time_offset_ = 0;
             , [ PFMetaObjectField fieldWithId: PFFieldPriceLowLimit name: @"lowLimitPrice" ]
             , [ PFMetaObjectField fieldWithId: PFFieldPriceLimitMesure name: @"limitMeasure" ]
             , [ PFMetaObjectField fieldWithId: PFFieldDerivativeExpirationTemplate name: @"expirationTemplate" ]
-            , [ PFMetaObjectField fieldWithId: PFFieldDeliveryMethodId name: @"deliveryMethodId" ]
-            , nil ] ];
+            , [ PFMetaObjectField fieldWithId: PFFieldDeliveryMethodId name: @"deliveryMethodId" ]] ];
 }
 
 -(void)didUpdateWithFieldOwner:( PFFieldOwner* )field_owner_

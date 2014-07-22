@@ -16,7 +16,7 @@
             getRect:( CGRect* )keyboard_rect_
           getHeight:( CGFloat* )height_
 {
-   NSValue* bounds_ = [ [ notification_ userInfo ] objectForKey: UIKeyboardFrameEndUserInfoKey ];
+   NSValue* bounds_ = [ notification_ userInfo ][UIKeyboardFrameEndUserInfoKey];
    *keyboard_rect_ = [ bounds_ CGRectValue ];
    *height_ = fmin( keyboard_rect_->size.height, keyboard_rect_->size.width );
 }
@@ -40,7 +40,7 @@
 
 -(void)willHideKeyboardWithNotification:( NSNotification* )notification_
 {
-   [ self willHideKeyboardWithDuration: [ [ notification_.userInfo objectForKey: UIKeyboardAnimationDurationUserInfoKey ] doubleValue ] ];
+   [ self willHideKeyboardWithDuration: [ (notification_.userInfo)[UIKeyboardAnimationDurationUserInfoKey] doubleValue ] ];
 }
 
 -(void)willShowKeyboardWithHeight:( CGFloat )height_
@@ -61,7 +61,7 @@
 
    [ self willShowKeyboardWithHeight: height_
                               inRect: keyboard_rect_
-                            duration: [ [ notification_.userInfo objectForKey: UIKeyboardAnimationDurationUserInfoKey ] doubleValue ] ];
+                            duration: [ (notification_.userInfo)[UIKeyboardAnimationDurationUserInfoKey] doubleValue ] ];
 }
 
 

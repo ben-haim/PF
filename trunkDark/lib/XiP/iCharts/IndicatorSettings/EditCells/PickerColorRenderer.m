@@ -26,7 +26,7 @@
         return;
     if(item_index >= [colors count])
         return;
-    uint icolor = (uint)[[colors objectAtIndex:item_index] intValue];
+    uint icolor = (uint)[colors[item_index] intValue];
     
     
     CGFloat XScale = 1.0;
@@ -85,11 +85,5 @@
     [self setNeedsDisplay];
 }
 
-- (void)dealloc
-{
-    if(colors)
-        [colors release];
-    [super dealloc];
-}
 
 @end

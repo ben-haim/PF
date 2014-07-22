@@ -20,7 +20,7 @@ static NSDictionary* PFReportTitleMapping()
 
 static NSString* PFReportTitleWithPFReportTableType( PFReportTableType table_type_ )
 {
-   return [ PFReportTitleMapping() objectForKey: @(table_type_) ];
+   return PFReportTitleMapping()[@(table_type_)];
 }
 
 @interface PFReportTableTypeItem ()
@@ -49,7 +49,7 @@ static NSString* PFReportTitleWithPFReportTableType( PFReportTableType table_typ
 
 -(NSString*)valueForRow:( NSInteger )row_
 {
-   return PFReportTitleWithPFReportTableType( (PFReportTableType)[ [ self.availableTypes objectAtIndex: row_ ] integerValue ] );
+   return PFReportTitleWithPFReportTableType( (PFReportTableType)[ (self.availableTypes)[row_] integerValue ] );
 }
 
 -(NSString*)value
@@ -80,7 +80,7 @@ static NSString* PFReportTitleWithPFReportTableType( PFReportTableType table_typ
       didSelectRow:( NSInteger )row_
        inComponent:( NSInteger )component_
 {
-   self.tableType = (PFReportTableType)[ [ self.availableTypes objectAtIndex: row_ ] integerValue ];
+   self.tableType = (PFReportTableType)[ (self.availableTypes)[row_] integerValue ];
    picker_field_.text = PFReportTitleWithPFReportTableType( self.tableType );
 
    [ super pickerField: picker_field_ didSelectRow: row_ inComponent: component_ ];

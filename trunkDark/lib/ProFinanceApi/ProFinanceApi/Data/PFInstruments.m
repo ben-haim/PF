@@ -59,7 +59,7 @@
 
 -(PFInstrument*)instrumentWithId:( PFInteger )instrument_id_
 {
-   return [ self.instrumentsById objectForKey: @(instrument_id_) ];
+   return (self.instrumentsById)[@(instrument_id_)];
 }
 
 -(void)updateRouteWithMessage:( PFMessage* )message_
@@ -69,8 +69,8 @@
 
 -(void)addInstrument:( PFInstrument* )instrument_
 {
-   PFInstrument* found_instrument_ = [ self.instrumentsById objectForKey: @(instrument_.instrumentId) ];
-   [ self.instrumentsById setObject: instrument_ forKey: @(instrument_.instrumentId) ];
+   PFInstrument* found_instrument_ = (self.instrumentsById)[@(instrument_.instrumentId)];
+   (self.instrumentsById)[@(instrument_.instrumentId)] = instrument_;
 
    if ( found_instrument_ )
    {
@@ -99,11 +99,11 @@
 
 -(PFInstrumentGroup*)writeGroupWithId:( PFInteger )group_id_
 {
-   PFInstrumentGroup* group_ = [ self.groupsById objectForKey: @(group_id_) ];
+   PFInstrumentGroup* group_ = (self.groupsById)[@(group_id_)];
    if ( !group_ )
    {
       group_ = [ PFInstrumentGroup groupWithId: group_id_ ];
-      [ self.groupsById setObject: group_ forKey: @(group_id_) ];
+      (self.groupsById)[@(group_id_)] = group_;
    }
    return group_;
 }

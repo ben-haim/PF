@@ -22,15 +22,14 @@
    };
 
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects: [ PFMetaObjectField fieldWithId: PFFieldNewsId name: @"storyId" ]
+           @[[ PFMetaObjectField fieldWithId: PFFieldNewsId name: @"storyId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldSource name: @"source" ]
             , [ PFMetaObjectField fieldWithId: PFFieldRouteId name: @"routeId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldTheme name: @"header" ]
             , [ PFMetaObjectField fieldWithId: PFFieldText
                                          name: @"url"
                                   transformer: url_transformer_ ]
-            , [ PFMetaObjectField fieldWithId: PFFieldDate name: @"date" ]
-            , nil ] ];
+            , [ PFMetaObjectField fieldWithId: PFFieldDate name: @"date" ]] ];
 }
 
 -(void)detailsWithDoneBlock:( PFStoryDetailsDoneBlock )done_block_

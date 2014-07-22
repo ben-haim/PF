@@ -96,7 +96,7 @@
 
 -(PFIndicator*)indicatorForRow:( NSInteger )row_
 {
-   return [ ( self.isMain ? self.settings.mainIndicators : self.settings.additionalIndicators ) objectAtIndex: row_ ];
+   return ( self.isMain ? self.settings.mainIndicators : self.settings.additionalIndicators )[row_];
 }
 
 #pragma mark - UITableViewDataSource

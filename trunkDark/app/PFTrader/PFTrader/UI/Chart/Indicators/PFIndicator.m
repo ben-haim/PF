@@ -40,7 +40,7 @@
 
 +(id)attributeWithType:( PFIndicatorAttributeType )type_
 {
-   Class attribute_class_ = [ [ self classByType ] objectForKey: @(type_) ];
+   Class attribute_class_ = [ self classByType ][@(type_)];
 
    if ( !attribute_class_ )
       attribute_class_ = [ PFIndicatorAttribute class ];
@@ -52,7 +52,7 @@
 
 -(void)readFromDictionary:( NSDictionary* )dictionary_
 {
-   self.name = [ dictionary_ objectForKey: @"label" ];
+   self.name = dictionary_[@"label"];
 }
 
 -(NSString*)title
@@ -89,7 +89,7 @@
 {
    [ super readFromDictionary: dictionary_ ];
 
-   NSScanner* scanner_ = [ NSScanner scannerWithString: [ dictionary_ objectForKey: @"value" ] ];
+   NSScanner* scanner_ = [ NSScanner scannerWithString: dictionary_[@"value"] ];
    uint value_ = 0;
    [ scanner_ scanHexInt: &value_ ];
    self.colorValue = value_;
@@ -97,7 +97,7 @@
 
 -(void)writeToDictionary:( NSMutableDictionary* )dictionary_
 {
-   [ dictionary_ setObject: [ NSString stringWithFormat: @"0x%08X", self.colorValue ] forKey: @"value" ];
+   dictionary_[@"value"] = [ NSString stringWithFormat: @"0x%08X", self.colorValue ];
 }
 
 @end
@@ -112,12 +112,12 @@
 {
    [ super readFromDictionary: dictionary_ ];
 
-   self.applyType = (PFIndicatorAttributeApplyType)[ [ dictionary_ objectForKey: @"value" ] integerValue ];
+   self.applyType = (PFIndicatorAttributeApplyType)[ dictionary_[@"value"] integerValue ];
 }
 
 -(void)writeToDictionary:( NSMutableDictionary* )dictionary_
 {
-   [ dictionary_ setObject: @(self.applyType) forKey: @"value" ];
+   dictionary_[@"value"] = @(self.applyType);
 }
 
 @end
@@ -132,12 +132,12 @@
 {
    [ super readFromDictionary: dictionary_ ];
 
-   self.width = [ [ dictionary_ objectForKey: @"value" ] integerValue ];
+   self.width = [ dictionary_[@"value"] integerValue ];
 }
 
 -(void)writeToDictionary:( NSMutableDictionary* )dictionary_
 {
-   [ dictionary_ setObject: @(self.width) forKey: @"value" ];
+   dictionary_[@"value"] = @(self.width);
 }
 
 @end
@@ -154,16 +154,16 @@
 {
    [ super readFromDictionary: dictionary_ ];
 
-   self.value = [ [ dictionary_ objectForKey: @"value" ] integerValue ];
-   self.min = [ [ dictionary_ objectForKey: @"min" ] integerValue ];
-   self.max = [ [ dictionary_ objectForKey: @"max" ] integerValue ];
+   self.value = [ dictionary_[@"value"] integerValue ];
+   self.min = [ dictionary_[@"min"] integerValue ];
+   self.max = [ dictionary_[@"max"] integerValue ];
 }
 
 -(void)writeToDictionary:( NSMutableDictionary* )dictionary_
 {
-   [ dictionary_ setObject: @(self.value) forKey: @"value" ];
-   [ dictionary_ setObject: @(self.min) forKey: @"min" ];
-   [ dictionary_ setObject: @(self.max) forKey: @"max" ];
+   dictionary_[@"value"] = @(self.value);
+   dictionary_[@"min"] = @(self.min);
+   dictionary_[@"max"] = @(self.max);
 }
 
 @end
@@ -178,12 +178,12 @@
 {
    [ super readFromDictionary: dictionary_ ];
    
-   self.value = [ [ dictionary_ objectForKey: @"value" ] boolValue ];
+   self.value = [ dictionary_[@"value"] boolValue ];
 }
 
 -(void)writeToDictionary:( NSMutableDictionary* )dictionary_
 {
-   [ dictionary_ setObject: @(self.value) forKey: @"value" ];
+   dictionary_[@"value"] = @(self.value);
 }
 
 @end
@@ -198,12 +198,12 @@
 {
    [ super readFromDictionary: dictionary_ ];
    
-   self.dash = [ [ dictionary_ objectForKey: @"value" ] integerValue ];
+   self.dash = [ dictionary_[@"value"] integerValue ];
 }
 
 -(void)writeToDictionary:( NSMutableDictionary* )dictionary_
 {
-   [ dictionary_ setObject: @(self.dash) forKey: @"value" ];
+   dictionary_[@"value"] = @(self.dash);
 }
 
 @end
@@ -222,20 +222,20 @@
 {
    [ super readFromDictionary: dictionary_ ];
    
-   self.value = [ [ dictionary_ objectForKey: @"value" ] doubleValue ];
-   self.min = [ [ dictionary_ objectForKey: @"min" ] doubleValue ];
-   self.max = [ [ dictionary_ objectForKey: @"max" ] doubleValue ];
-   self.step = [ [ dictionary_ objectForKey: @"step" ] doubleValue ];
-   self.digits = [ [ dictionary_ objectForKey: @"digits" ] unsignedIntValue ];
+   self.value = [ dictionary_[@"value"] doubleValue ];
+   self.min = [ dictionary_[@"min"] doubleValue ];
+   self.max = [ dictionary_[@"max"] doubleValue ];
+   self.step = [ dictionary_[@"step"] doubleValue ];
+   self.digits = [ dictionary_[@"digits"] unsignedIntValue ];
 }
 
 -(void)writeToDictionary:( NSMutableDictionary* )dictionary_
 {
-   [ dictionary_ setObject: @(self.value) forKey: @"value" ];
-   [ dictionary_ setObject: @(self.min) forKey: @"min" ];
-   [ dictionary_ setObject: @(self.max) forKey: @"max" ];
-   [ dictionary_ setObject: @(self.step) forKey: @"step" ];
-   [ dictionary_ setObject: @(self.digits) forKey: @"digits" ];
+   dictionary_[@"value"] = @(self.value);
+   dictionary_[@"min"] = @(self.min);
+   dictionary_[@"max"] = @(self.max);
+   dictionary_[@"step"] = @(self.step);
+   dictionary_[@"digits"] = @(self.digits);
 }
 
 
@@ -264,15 +264,15 @@
 
 -(void)readFromDictionary:( NSDictionary* )dictionary_
 {
-   self.name = [ dictionary_ objectForKey: @"name" ];
+   self.name = dictionary_[@"name"];
 
-   NSArray* attribute_codes_ = [ dictionary_ objectForKey: @"order" ];
+   NSArray* attribute_codes_ = dictionary_[@"order"];
    NSMutableArray* attributes_ = [ NSMutableArray arrayWithCapacity: [ attribute_codes_ count ] ];
    for ( NSString* code_ in attribute_codes_ )
    {
-      NSDictionary* attribute_dictionary_ = [ dictionary_ objectForKey: code_ ];
+      NSDictionary* attribute_dictionary_ = dictionary_[code_];
       
-      PFIndicatorAttributeType type_ = (PFIndicatorAttributeType)[ [ attribute_dictionary_ objectForKey: @"type" ] integerValue ];
+      PFIndicatorAttributeType type_ = (PFIndicatorAttributeType)[ attribute_dictionary_[@"type"] integerValue ];
       
       PFIndicatorAttribute* attribute_ = [ PFIndicatorAttribute attributeWithType: type_ ];
       if ( attribute_ )
@@ -295,7 +295,7 @@
 
    for ( PFIndicatorAttribute* attribute_ in self.attributes )
    {
-      [ dictionary_ setObject: [ attribute_ dictionary ] forKey: attribute_.code ];
+      dictionary_[attribute_.code] = [ attribute_ dictionary ];
    }
 
    return dictionary_;
@@ -334,18 +334,18 @@
 
 -(void)readFromDictionary:( NSDictionary* )dictionary_
 {
-   self.code = [ dictionary_ objectForKey: @"code" ];
-   self.name = [ dictionary_ objectForKey: @"title" ];
-   self.main = [ [ dictionary_ objectForKey: @"mainchart" ] integerValue ];
+   self.code = dictionary_[@"code"];
+   self.name = dictionary_[@"title"];
+   self.main = [ dictionary_[@"mainchart"] integerValue ];
 
-   NSArray* line_codes_ = [ dictionary_ objectForKey: @"sec_order" ];
+   NSArray* line_codes_ = dictionary_[@"sec_order"];
    NSMutableArray* lines_ = [ NSMutableArray arrayWithCapacity: [ line_codes_ count ] ];
    for ( NSString* code_ in line_codes_ )
    {
       PFIndicatorLine* line_ = [ PFIndicatorLine new ];
       line_.code = code_;
 
-      NSDictionary* line_dictionary_ = [ dictionary_ objectForKey: code_ ];
+      NSDictionary* line_dictionary_ = dictionary_[code_];
       [ line_ readFromDictionary: line_dictionary_ ];
       [ lines_ addObject: line_ ];
    }
@@ -365,7 +365,7 @@
    
    for ( PFIndicatorLine* line_ in self.lines )
    {
-      [ dictionary_ setObject: [ line_ dictionary ] forKey: line_.code ];
+      dictionary_[line_.code] = [ line_ dictionary ];
    }
 
    return dictionary_;

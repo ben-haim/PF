@@ -104,8 +104,8 @@
       self.contentScrollView.hidden = YES;
       self.assetTable.tableView.scrollEnabled = NO;
 
-      self.assetTable.categories = [ NSArray arrayWithObject: [ PFTableViewCategory assetAccountCategoryWithAccount: self.account ] ];
-      self.assetInfoTable.categories = [ NSArray arrayWithObject: [ PFTableViewCategory generalAssetCategoryWithAccount: self.account ] ];
+      self.assetTable.categories = @[[ PFTableViewCategory assetAccountCategoryWithAccount: self.account ]];
+      self.assetInfoTable.categories = @[[ PFTableViewCategory generalAssetCategoryWithAccount: self.account ]];
 
       self.assetTable.backgroundColor = [ UIColor clearColor ];
       self.assetInfoTable.backgroundColor = [ UIColor clearColor ];
@@ -211,7 +211,7 @@
 {
    if ( self.account.accountType == PFAccountTypeMultiAsset )
    {
-      self.assetInfoTable.categories = [ NSArray arrayWithObject: [ PFTableViewCategory generalAssetCategoryWithAccount: self.account ] ];
+      self.assetInfoTable.categories = @[[ PFTableViewCategory generalAssetCategoryWithAccount: self.account ]];
       [ self.assetInfoTable reloadData ];
    }
    else

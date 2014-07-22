@@ -72,7 +72,7 @@
       cell_ = [ PFMenuCell cell ];
    }
    
-   cell_.menuItem = [ self.menuItems objectAtIndex: index_path_.row ];
+   cell_.menuItem = (self.menuItems)[index_path_.row];
    cell_.menuController = self.menuController;
    
    return cell_;

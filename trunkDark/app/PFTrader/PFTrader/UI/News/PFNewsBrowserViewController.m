@@ -113,7 +113,7 @@
    {
       id< PFStories > stories_ = [ PFSession sharedSession ].stories;
       NSUInteger index_ = [ stories_ indexOfStory: self.story ];
-      [ self loadStory: [ stories_.stories objectAtIndex: index_ + 1 ] ];
+      [ self loadStory: (stories_.stories)[index_ + 1] ];
    }
 }
 
@@ -123,7 +123,7 @@
    {
       id< PFStories > stories_ = [ PFSession sharedSession ].stories;
       NSUInteger index_ = [ stories_ indexOfStory: self.story ];
-      [ self loadStory: [ stories_.stories objectAtIndex: index_ - 1 ] ];
+      [ self loadStory: (stories_.stories)[index_ - 1] ];
    }
 }
 

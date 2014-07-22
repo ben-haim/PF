@@ -171,14 +171,14 @@
    for ( int index_ = 0; index_ < self.groups.count; index_++ )
    {
       NSUInteger active_symbols_count_ = 0;
-      for ( id< PFSymbol > symbol_ in [ [ self.groups objectAtIndex: index_ ] symbols ] )
+      for ( id< PFSymbol > symbol_ in [ (self.groups)[index_] symbols ] )
       {
          if ( [ self.watchlist containsSymbol: symbol_ ] )
          {
             active_symbols_count_++;
          }
       }
-      [ (PFTabItem*)[ self.tabItems objectAtIndex: index_ ] setBadgeValue: active_symbols_count_ ];
+      [ (PFTabItem*)(self.tabItems)[index_] setBadgeValue: active_symbols_count_ ];
    }
 }
 -(void)badgeValueDidChangeNotification:( NSNotification* )notification_

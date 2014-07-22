@@ -25,12 +25,10 @@ static NSMutableArray* settings_controllers_;
 {
    if ( !_categories )
    {
-      _categories = [ NSArray arrayWithObjects:
-                     [ PFTableViewCategory settingsDefaultsCategoryWithSettings: self.settings ]
+      _categories = @[[ PFTableViewCategory settingsDefaultsCategoryWithSettings: self.settings ]
                      , [ PFTableViewCategory settingsConfirmationCategoryWithSettings: self.settings ]
                      , [ PFTableViewCategory settingsChartCategoryWithSettings: self.settings ]
-                     , [ PFTableViewCategory settingsEnvironmentCategoryWithSettings: self.settings ]
-                     , nil ];
+                     , [ PFTableViewCategory settingsEnvironmentCategoryWithSettings: self.settings ]];
    }
    return _categories;
 }

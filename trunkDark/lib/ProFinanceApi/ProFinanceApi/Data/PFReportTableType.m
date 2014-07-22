@@ -27,7 +27,7 @@ static NSDictionary* PFReportTableTypeNameMapping()
 
 extern NSString* PFReportNameWithPFReportTableType( PFReportTableType table_type_ )
 {
-   NSString* name_ = [ PFReportTableTypeNameMapping() objectForKey: @(table_type_) ];
+   NSString* name_ = PFReportTableTypeNameMapping()[@(table_type_)];
    assert( name_ != nil && "undefined table type" );
    return name_;
 }
@@ -37,7 +37,7 @@ PFReportTableType PFReportTableTypeWithReportName( NSString* report_name_ )
    NSDictionary* mapping_ = PFReportTableTypeNameMapping();
    for ( NSNumber* type_ in mapping_ )
    {
-      NSString* current_name_ = [ mapping_ objectForKey: type_ ];
+      NSString* current_name_ = mapping_[type_];
       if ( [ current_name_ isEqualToString: report_name_ ] )
       {
          return (PFReportTableType)[ type_ integerValue ];

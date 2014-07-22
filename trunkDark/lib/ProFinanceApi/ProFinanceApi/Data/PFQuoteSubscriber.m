@@ -69,7 +69,7 @@
 
 -(NSMutableSet*)subscribersForSymbolWithId:( PFSymbolIdKey* )symbol_id_
 {
-   return [ self.subscribersBySymbol objectForKey: symbol_id_ ];
+   return (self.subscribersBySymbol)[symbol_id_];
 }
 
 -(NSMutableSet*)writeSubscribersForSymbolWithId:( PFSymbolIdKey* )symbol_id_
@@ -78,7 +78,7 @@
    if ( !subscribers_ )
    {
       subscribers_ = [ NSMutableSet new ];
-      [ self.subscribersBySymbol setObject: subscribers_ forKey: symbol_id_ ];
+      (self.subscribersBySymbol)[symbol_id_] = subscribers_;
    }
    return subscribers_;
 }

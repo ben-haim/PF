@@ -26,7 +26,6 @@
     BOOL AddNewBar = YES;
     NSCalendar *gregorian = [[NSCalendar alloc]initWithCalendarIdentifier:NSGregorianCalendar] ;
     NSDateComponents *newBar = [gregorian components:(NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:timeValue];
-    [gregorian release];
     
     if(!(RangeType == 1 && [newBar second]==0))
     {
@@ -53,7 +52,6 @@
     {
         NSCalendar *gregorian1 = [[NSCalendar alloc]initWithCalendarIdentifier:NSGregorianCalendar] ;
         NSDateComponents *lastOldBar = [gregorian1 components:(NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:[NSDate dateWithTimeIntervalSince1970:t2]];
-        [gregorian1 release];
         if(lastOldBar.minute == newBar.minute && AddNewBar)
             AddNewBar = NO;
         

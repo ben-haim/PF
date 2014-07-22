@@ -64,8 +64,7 @@
 +(PFMetaObject*)metaObject
 {
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects:
-              [ PFMetaObjectField fieldWithId: PFFieldBid name: @"bid" ]
+           @[[ PFMetaObjectField fieldWithId: PFFieldBid name: @"bid" ]
             , [ PFMetaObjectField fieldWithId: PFFieldAsk name: @"ask" ]
             , [ PFMetaObjectField fieldWithId: PFFieldLastPrice name: @"last" ]
 //            , [ PFMetaObjectField fieldWithId: PFFieldPreClose name: @"previousClose" ]
@@ -91,8 +90,7 @@
             , [ PFMetaObjectField fieldWithName: @"high" ]
             , [ PFMetaObjectField fieldWithName: @"askClose" ]
             , [ PFMetaObjectField fieldWithName: @"bidClose" ]
-            , [ PFMetaObjectField fieldWithName: @"close" ]
-            , nil ] ];
+            , [ PFMetaObjectField fieldWithName: @"close" ]] ];
 }
 
 -(void)didUpdateWithFieldOwner:( PFFieldOwner* )field_owner_

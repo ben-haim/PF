@@ -38,7 +38,7 @@
 
 -(NSString*)value
 {
-   return [ self.availableApplies objectAtIndex: self.apply.applyType ];
+   return (self.availableApplies)[self.apply.applyType];
 }
 
 -(NSUInteger)pickerField:( PFPickerField* )picker_field_
@@ -51,7 +51,7 @@
             titleForRow:( NSInteger )row_
            forComponent:( NSInteger )component_
 {
-   return [ self.availableApplies objectAtIndex: row_ ];
+   return (self.availableApplies)[row_];
 }
 
 -(NSUInteger)pickerField:( PFPickerField* )picker_field_
@@ -65,7 +65,7 @@
        inComponent:( NSInteger )component_
 {
    self.apply.applyType = (PFIndicatorAttributeApplyType)row_;
-   picker_field_.text = [ self.availableApplies objectAtIndex: row_ ];
+   picker_field_.text = (self.availableApplies)[row_];
 
    [ super pickerField: picker_field_ didSelectRow: row_ inComponent: component_ ];
 }

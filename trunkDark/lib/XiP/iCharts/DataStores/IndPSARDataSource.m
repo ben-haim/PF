@@ -46,8 +46,8 @@
     int srclen = [src GetLength];
     if([self GetLength]==0)
     {
-        [self SetVector:[[[ArrayMath alloc] initWithLength:srclen] autorelease] forKey:@"sarData"];
-        [self SetVector:[[[ArrayMath alloc] initWithLength:srclen] autorelease] forKey:@"loc2"];        
+        [self SetVector:[[ArrayMath alloc] initWithLength:srclen] forKey:@"sarData"];
+        [self SetVector:[[ArrayMath alloc] initWithLength:srclen] forKey:@"loc2"];        
     }
     
     int thislen = [self GetLength];

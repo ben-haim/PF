@@ -195,7 +195,7 @@
       {
          if ( field_.fieldId != PFFieldUndefined )
          {
-            [ fields_by_id_ setObject: field_ forKey: @(field_.fieldId) ];
+            fields_by_id_[@(field_.fieldId)] = field_;
          }
       }
       _fieldById = fields_by_id_;
@@ -218,7 +218,7 @@
 {
    for ( PFField* protocol_field_ in field_owner_.fields )
    {
-      PFMetaObjectField* mo_field_ = [ self.fieldsById objectForKey: @(protocol_field_.fieldId) ];
+      PFMetaObjectField* mo_field_ = (self.fieldsById)[@(protocol_field_.fieldId)];
       [ mo_field_ readFromFieldOwner: field_owner_ object: object_ ];
    }
 }
@@ -226,7 +226,7 @@
 -(id)readValueForKey:( NSString* )key_
       fromFieldOwner:( PFFieldOwner* )field_owner_
 {
-   PFMetaObjectField* mo_field_ = [ self.fieldsById objectForKey: key_ ];
+   PFMetaObjectField* mo_field_ = (self.fieldsById)[key_];
    return [ mo_field_ objectValueFromFieldOwner: field_owner_ object: self ];
 }
 
@@ -245,7 +245,7 @@
 {
    for ( NSNumber* field_id_ in fields_ )
    {
-      PFMetaObjectField* mo_field_ = [ self.fieldsById objectForKey: field_id_ ];
+      PFMetaObjectField* mo_field_ = (self.fieldsById)[field_id_];
       NSAssert( mo_field_, @"invalid field" );
       [ mo_field_ writeToFieldOwner: field_owner_ object: object_ ];
    }

@@ -41,7 +41,7 @@
    };
 
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects: [ PFMetaObjectField fieldWithId: PFFieldInstrumentId name: @"instrumentId" ]
+           @[[ PFMetaObjectField fieldWithId: PFFieldInstrumentId name: @"instrumentId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldRouteId name: @"routeId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldOptionType name: @"optionType" ]
             , [ PFMetaObjectField fieldWithId: PFFieldStrikePrice name: @"strikePrice" ]
@@ -54,8 +54,7 @@
                                        filter: filter_exp_date_ ]
             , [ PFMetaObjectField fieldWithId: PFFieldExpDay
                                          name: @"expDay"
-                                       filter: filter_exp_date_ ]
-            , nil ] ];
+                                       filter: filter_exp_date_ ]] ];
 }
 
 -(id)init

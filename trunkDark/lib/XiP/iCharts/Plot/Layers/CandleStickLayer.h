@@ -11,9 +11,9 @@
     UIColor* color_down_border;
 }
 - (id)initWithDataStore:(BaseDataStore*)_DataStore ParentChart:(XYChart*)_parentChart;
-@property (nonatomic, retain) UIColor* color_up;
-@property (nonatomic, retain) UIColor* color_down;
-@property (nonatomic, retain) UIColor* color_up_border;
-@property (nonatomic, retain) UIColor* color_down_border;
-@property (nonatomic, retain) UIColor* color_null_border;
+@property (nonatomic, strong) UIColor* color_up;
+@property (nonatomic, strong) UIColor* color_down;
+@property (nonatomic, strong) UIColor* color_up_border;
+@property (nonatomic, strong) UIColor* color_down_border;
+@property (nonatomic, strong) UIColor* color_null_border;
 @end

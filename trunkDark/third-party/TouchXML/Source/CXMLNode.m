@@ -48,7 +48,7 @@ static int MyXmlOutputCloseCallback(void * context);
 {
 if (_node)
 	{
-	if (_node->_private == self)
+	if (_node->_private == (__bridge void *)(self))
 		_node->_private = NULL;
 
 	if (_freeNodeOnRelease)
@@ -59,7 +59,6 @@ if (_node)
 	_node = NULL;
 	}
 //
-[super dealloc];
 }
 
 - (id)copyWithZone:(NSZone *)zone;
@@ -67,7 +66,7 @@ if (_node)
 #pragma unused (zone)
 xmlNodePtr theNewNode = xmlCopyNode(_node, 1);
 CXMLNode *theNode = [[[self class] alloc] initWithLibXMLNode:theNewNode freeOnDealloc:YES];
-theNewNode->_private = theNode;
+theNewNode->_private = (__bridge void *)(theNode);
 return(theNode);
 }
 
@@ -86,12 +85,12 @@ return (CXMLNodeKind)(_node->type); // TODO this isn't 100% accurate!
 	if (_node->name == NULL)
 		return(NULL);
 	
-	NSString *localName = [NSString stringWithUTF8String:(const char *)_node->name];
+	NSString *localName = @((const char *)_node->name);
 	
 	if (_node->ns == NULL || _node->ns->prefix == NULL)
 		return localName;
 	
-	return [NSString stringWithFormat:@"%@:%@",	[NSString stringWithUTF8String:(const char *)_node->ns->prefix], localName];
+	return [NSString stringWithFormat:@"%@:%@",	@((const char *)_node->ns->prefix), localName];
 }
 
 - (NSString *)stringValue
@@ -99,12 +98,12 @@ return (CXMLNodeKind)(_node->type); // TODO this isn't 100% accurate!
 	NSAssert(_node != NULL, @"CXMLNode does not have attached libxml2 _node.");
 	
 	if (_node->type == XML_TEXT_NODE || _node->type == XML_CDATA_SECTION_NODE) 
-		return [NSString stringWithUTF8String:(const char *)_node->content];
+		return @((const char *)_node->content);
 	
 	if (_node->type == XML_ATTRIBUTE_NODE)
-		return [NSString stringWithUTF8String:(const char *)_node->children->content];
+		return @((const char *)_node->children->content);
 
-	NSMutableString *theStringValue = [[[NSMutableString alloc] init] autorelease];
+	NSMutableString *theStringValue = [[NSMutableString alloc] init];
 	
 	for (CXMLNode *child in [self children])
 	{
@@ -140,7 +139,7 @@ return(N);
 {
 NSAssert(_node != NULL, @"CXMLNode does not have attached libxml2 _node.");
 
-return(_node->doc->_private);
+return(__bridge CXMLDocument *)((_node->doc->_private));
 }
 
 - (CXMLNode *)parent
@@ -150,7 +149,7 @@ NSAssert(_node != NULL, @"CXMLNode does not have attached libxml2 _node.");
 if (_node->parent == NULL)
 	return(NULL);
 else
-	return (_node->parent->_private);
+	return (__bridge CXMLNode *)((_node->parent->_private));
 }
 
 - (NSUInteger)childCount
@@ -230,13 +229,13 @@ NSAssert(_node != NULL, @"CXMLNode does not have attached libxml2 _node.");
 if (_node->name == NULL)
 	return(NULL);
 else
-	return([NSString stringWithUTF8String:(const char *)_node->name]);
+	return(@((const char *)_node->name));
 }
 
 - (NSString *)prefix
 {
 if (_node->ns && _node->ns->prefix)
-	return([NSString stringWithUTF8String:(const char *)_node->ns->prefix]);
+	return(@((const char *)_node->ns->prefix));
 else
 	return(@"");
 }
@@ -244,7 +243,7 @@ else
 - (NSString *)URI
 {
 if (_node->ns)
-	return([NSString stringWithUTF8String:(const char *)_node->ns->href]);
+	return(@((const char *)_node->ns->href));
 else
 	return(NULL);
 }
@@ -302,15 +301,15 @@ return([self XMLStringWithOptions:0]);
 {
 #pragma unused (options)
 
-NSMutableData *theData = [[[NSMutableData alloc] init] autorelease];
+NSMutableData *theData = [[NSMutableData alloc] init];
 
-xmlOutputBufferPtr theOutputBuffer = xmlOutputBufferCreateIO(MyXmlOutputWriteCallback, MyXmlOutputCloseCallback, theData, NULL);
+xmlOutputBufferPtr theOutputBuffer = xmlOutputBufferCreateIO(MyXmlOutputWriteCallback, MyXmlOutputCloseCallback, (__bridge void *)(theData), NULL);
 
 xmlNodeDumpOutput(theOutputBuffer, _node->doc, _node, 0, 0, "utf-8");
 
 xmlOutputBufferFlush(theOutputBuffer);
 
-NSString *theString = [[[NSString alloc] initWithData:theData encoding:NSUTF8StringEncoding] autorelease];
+NSString *theString = [[NSString alloc] initWithData:theData encoding:NSUTF8StringEncoding];
 
 xmlOutputBufferClose(theOutputBuffer);
 
@@ -338,7 +337,7 @@ if (theXPathObject == NULL)
 	return(NULL);
 	}
 if (xmlXPathNodeSetIsEmpty(theXPathObject->nodesetval))
-	theResult = [NSArray array]; // TODO better to return NULL?
+	theResult = @[]; // TODO better to return NULL?
 else
 	{
 	NSMutableArray *theArray = [NSMutableArray array];
@@ -365,7 +364,7 @@ return(theResult);
 
 static int MyXmlOutputWriteCallback(void * context, const char * buffer, int len)
 {
-NSMutableData *theData = context;
+NSMutableData *theData = (__bridge NSMutableData *)(context);
 [theData appendBytes:buffer length:len];
 return(len);
 }

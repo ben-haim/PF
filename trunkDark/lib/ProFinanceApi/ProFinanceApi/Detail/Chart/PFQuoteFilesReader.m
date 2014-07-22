@@ -51,7 +51,7 @@
 {
    if ( [ self.files count ] == 0 )
    {
-      [ delegate_ reader: self didLoadQuotes: self.lastBar ? [ NSArray arrayWithObject: self.lastBar ] : nil ];
+      [ delegate_ reader: self didLoadQuotes: self.lastBar ? @[self.lastBar] : nil ];
       return;
    }
 
@@ -68,7 +68,7 @@
       
       if( file_data_ )
       {
-         [ local_loaders_ setObject: loader_ forKey: file_data_ ];
+         local_loaders_[file_data_] = loader_;
       }
       else
       {
@@ -92,7 +92,7 @@
    for ( NSData* data_ in [ local_loaders_ allKeys ] )
    {
       dispatch_async( dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0 ), ^{
-         [ (PFQuoteFileLoader*)[ local_loaders_ objectForKey: data_ ] loadData: data_ ];
+         [ (PFQuoteFileLoader*)local_loaders_[data_] loadData: data_ ];
       } );
    }
 }

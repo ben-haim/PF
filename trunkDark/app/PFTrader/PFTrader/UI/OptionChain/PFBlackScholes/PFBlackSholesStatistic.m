@@ -7,7 +7,7 @@
    double sum = 0.0;
    for (int i = 0; i < dataRow.count; i++)
    {
-      sum += [ [ dataRow objectAtIndex: i ] doubleValue ];
+      sum += [ dataRow[i] doubleValue ];
    }
 
    return sum / dataRow.count;
@@ -20,7 +20,7 @@
    
    for (int i = 0; i < dataRow.count; i++)
    {
-      double current_value_ = [ [ dataRow objectAtIndex: i ] doubleValue ];
+      double current_value_ = [ dataRow[i] doubleValue ];
       sum += pow(current_value_ - meanDataRow, 2.0);
    }
 
@@ -38,7 +38,7 @@
    
    for (int i = 0; i < count_; i++)
    {
-      sum += ( [ [ dataRowX objectAtIndex: i ] doubleValue ] - meanDataRowX ) * ( [ [ dataRowY objectAtIndex: i ] doubleValue ] - meanDataRowY );
+      sum += ( [ dataRowX[i] doubleValue ] - meanDataRowX ) * ( [ dataRowY[i] doubleValue ] - meanDataRowY );
    }
 
    return sum / count_;
@@ -58,13 +58,13 @@
    
    for (int i = lag; i < dataRowX.count; i++)
    {
-      sumUp += ( [ [ dataRowX objectAtIndex: i ] doubleValue ] - meanX ) * ( [ [ dataRowX objectAtIndex: i - lag ] doubleValue ] - meanX );
+      sumUp += ( [ dataRowX[i] doubleValue ] - meanX ) * ( [ dataRowX[i - lag] doubleValue ] - meanX );
    }
       
    
    for (int i = 0; i < dataRowX.count; i++)
    {
-      double current_value_ = [ [ dataRowX objectAtIndex: i ] doubleValue ];
+      double current_value_ = [ dataRowX[i] doubleValue ];
       sumDown += ( current_value_ - meanX ) * ( current_value_ - meanX );
    }
    

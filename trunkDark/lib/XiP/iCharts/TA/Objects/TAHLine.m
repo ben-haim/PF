@@ -37,14 +37,13 @@
                                                   XIndex:x1_index 
                                                   YValue:y1];
     [anchors addObject:p1];  
-    [p1 release]; 
     
     return self;
 }
 
 -(bool)isVisibleWithin:(int)x_start And:(int)x_end
 {	
-    TAAnchor* a1 = [anchors objectAtIndex:0];
+    TAAnchor* a1 = anchors[0];
     TAAnchor* a2 = [self get_a2];	
     
     TALine* line1 = [[TALine alloc] initWithParentChart:parentChart 
@@ -57,14 +56,13 @@
                                             AndLineDash:0];
     bool isRayVisible = [line1 isVisibleWithin:x_start And:x_end];
     
-    [line1 release];
     return isRayVisible;
 }
 
 
 - (double)GetDistance:(CGPoint)p
 {  	
-    TAAnchor* a1 = [anchors objectAtIndex:0];	
+    TAAnchor* a1 = anchors[0];	
     TAAnchor* a2 = [self get_a2];	
     
     
@@ -79,19 +77,17 @@
                                             AndLineDash:0];
     double resDistance = [line1 GetDistance:p];
     
-    [line1 release];
     return resDistance;
 }
 
 -(TAAnchor*)get_a2
 {    
-    TAAnchor* a1 = [anchors objectAtIndex:0];    
-    return [[[TAAnchor alloc] initWithParentChart:parentChart 
+    TAAnchor* a1 = anchors[0];    
+    return [[TAAnchor alloc] initWithParentChart:parentChart 
                                         AndObject:self 
                                             Color:0x0 
                                            XIndex:a1.x_index>1?a1.x_index-1:a1.x_index+1 
-                                           YValue:a1.y_value] 
-            autorelease];
+                                           YValue:a1.y_value];
 }
 
 
@@ -100,7 +96,7 @@
                AndDPI:(double)pen_1px 
         AndCursorMode:(uint)cursorMode
 {  	
-    TAAnchor* a1 = [anchors objectAtIndex:0];	
+    TAAnchor* a1 = anchors[0];	
     TAAnchor* a2 = [self get_a2];
     
     TALine* line1 = [[TALine alloc] initWithParentChart:parentChart 
@@ -113,7 +109,6 @@
                                             AndLineDash:linedash];
     
     [line1 drawInContext:ctx InRect:rect AndDPI:pen_1px AndCursorMode:CHART_MODE_NONE];    
-    [line1 release];
     
     
     //setup the font

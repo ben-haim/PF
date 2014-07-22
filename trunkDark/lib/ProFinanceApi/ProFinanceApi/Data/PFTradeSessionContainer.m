@@ -35,7 +35,7 @@
 
 -(id< PFTradeSession >)currentTradeSession
 {
-   return [ self.mutableTradeSessionsDictionary objectForKey: @( self.currentTradeSessionId ) ];
+   return (self.mutableTradeSessionsDictionary)[@( self.currentTradeSessionId )];
 }
 
 -(NSMutableDictionary*)mutableTradeSessionsDictionary
@@ -59,12 +59,11 @@
    PFMetaObjectFieldTransformer time_zone_transformer_ = ^id ( id object_, PFFieldOwner* field_owner_, id value_ ) { return [ NSTimeZone timeZoneWithName: (NSString*)value_ ]; };
    
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects: [ PFMetaObjectField fieldWithId: PFFieldId name: @"tradeSessionContainerId" ]
+           @[[ PFMetaObjectField fieldWithId: PFFieldId name: @"tradeSessionContainerId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldTradeSessionCurrentPeriodId name: @"currentTradeSessionId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldSessionIsIntaday name: @"isIntraday" ]
             , [ PFMetaObjectField fieldWithId: PFFieldName name: @"name" ]
-            , [ PFMetaObjectField fieldWithId: PFFieldTimeZoneId name: @"currentTimeZone" transformer: time_zone_transformer_ ]
-            , nil ] ];
+            , [ PFMetaObjectField fieldWithId: PFFieldTimeZoneId name: @"currentTimeZone" transformer: time_zone_transformer_ ]] ];
 }
 
 -(PFHolidays*)currentHolliday
@@ -129,7 +128,7 @@
       if ( trade_session_.tradeSessionId > 0 )
       {
          trade_session_.currentTimeZone = self.currentTimeZone;
-         [ self.mutableTradeSessionsDictionary setObject: trade_session_ forKey: @( trade_session_.tradeSessionId ) ];
+         (self.mutableTradeSessionsDictionary)[@( trade_session_.tradeSessionId )] = trade_session_;
       }
    }
 }

@@ -25,13 +25,11 @@
 +(PFMetaObject*)metaObject
 {
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects:
-              [ PFMetaObjectField fieldWithId: PFFieldExpDay name: @"expDay" ],
+           @[[ PFMetaObjectField fieldWithId: PFFieldExpDay name: @"expDay" ],
               [ PFMetaObjectField fieldWithId: PFFieldExpMonth name: @"expMonth" ],
               [ PFMetaObjectField fieldWithId: PFFieldExpYear name: @"expYear" ],
               [ PFMetaObjectField fieldWithId: PFFieldDayType name: @"dayType" ],
-              [ PFMetaObjectField fieldWithId: PFFieldName name: @"name" ],
-              nil ] ];
+              [ PFMetaObjectField fieldWithId: PFFieldName name: @"name" ]] ];
 }
 
 @end

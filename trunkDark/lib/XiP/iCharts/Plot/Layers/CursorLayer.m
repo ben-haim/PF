@@ -23,11 +23,6 @@
     return self;
 }
 
-- (void)dealloc
-{	
-    [key release];
-	[super dealloc];    
-}
 @end
 
 @implementation CursorLayer
@@ -40,11 +35,11 @@
     if(self == nil)
         return self;
     self.parentChart        = _parentChart;
-    self.chartCursors       = [[[NSMutableArray alloc] init] autorelease];
+    self.chartCursors       = [[NSMutableArray alloc] init];
     self.chartCursorVisible = false;
     
-    mask                    = [[UIImage imageNamed: @"loupe_alpha_mask.png"] retain];
-    glass                   = [[UIImage imageNamed: @"loupe"] retain];
+    mask                    = [UIImage imageNamed: @"loupe_alpha_mask.png"];
+    glass                   = [UIImage imageNamed: @"loupe"];
     loupeWindow             = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, glass.size.width, glass.size.height)];
     loupeWindow.windowLevel = UIWindowLevelStatusBar;
     loupeWindow.hidden = YES;
@@ -74,11 +69,6 @@
 - (void)dealloc
 {	
     [chartCursors removeAllObjects];
-    [chartCursors release];
-    [glass release];
-    [mask release];
-    [loupeWindow release];
-	[super dealloc];    
 }
 
 - (void)showLoupe
@@ -322,6 +312,5 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
         return;
     ChartCursor *cur = [[ChartCursor alloc] initWithKey:key AndColor:_color];
     [chartCursors addObject:cur];
-    [cur release];
 }
 @end

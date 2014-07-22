@@ -157,12 +157,12 @@
 
 -(PFTableViewCategory*)categoryInSection:( NSInteger )section_
 {
-   return [ self.categories objectAtIndex: ( NSUInteger )section_ ];
+   return (self.categories)[( NSUInteger )section_];
 }
 
 -(PFTableViewItem*)itemAtIndexPath:( NSIndexPath* )index_path_
 {
-   return [ [ self categoryInSection: index_path_.section ].items objectAtIndex: ( NSUInteger )index_path_.row ];
+   return ([ self categoryInSection: index_path_.section ].items)[( NSUInteger )index_path_.row];
 }
 
 -(UIView*)sectionViewWithView:( UIView* )view_
@@ -216,7 +216,7 @@ numberOfRowsInSection:( NSInteger )section_
        cellForRowAtIndexPath:( NSIndexPath* )index_path_
 {
    PFTableViewCategory* category_ = [ self categoryInSection: index_path_.section ];
-   PFTableViewItem* item_ = [ category_.items objectAtIndex: ( NSUInteger )index_path_.row ];
+   PFTableViewItem* item_ = (category_.items)[( NSUInteger )index_path_.row];
    
    UITableViewCell* cell_ = [ item_ cellForTableView: self.tableView ];
    

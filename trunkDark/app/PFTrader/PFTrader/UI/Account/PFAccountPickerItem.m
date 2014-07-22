@@ -40,7 +40,7 @@
 
 -(NSString*)valueForRow:( NSInteger )row_
 {
-   return [ [ self.availableAccounts objectAtIndex: row_ ] name ];
+   return [ (self.availableAccounts)[row_] name ];
 }
 
 -(NSString*)value
@@ -71,7 +71,7 @@
       didSelectRow:( NSInteger )row_
        inComponent:( NSInteger )component_
 {
-   self.selectedAccount = [ self.availableAccounts objectAtIndex: row_ ];
+   self.selectedAccount = (self.availableAccounts)[row_];
    picker_field_.text = self.selectedAccount.name;
    
    [ super pickerField: picker_field_ didSelectRow: row_ inComponent: component_ ];

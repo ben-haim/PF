@@ -26,7 +26,7 @@
 +(PFMetaObject*)metaObject
 {
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects: [ PFMetaObjectField fieldWithId: PFFieldOrderId name: @"orderId" ]
+           @[[ PFMetaObjectField fieldWithId: PFFieldOrderId name: @"orderId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldClientOrderId name: @"clientOrderId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldBoundToOrderId name: @"boundToOrderId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldFilledAmount name: @"filledAmount" ]
@@ -39,8 +39,7 @@
             , [ PFMetaObjectField fieldWithId: PFFieldCreatedAt name: @"createdAt" ]
             , [ PFMetaObjectField fieldWithId: PFFieldIsOpen name: @"openOrder" ]
             , [ PFMetaObjectField fieldWithId: PFFieldExpireAt name: @"expireAtDate" ]
-            , [ PFMetaObjectField fieldWithId: PFFieldInitMarginSize name: @"initMargin" ]
-            , nil ] ];
+            , [ PFMetaObjectField fieldWithId: PFFieldInitMarginSize name: @"initMargin" ]] ];
 }
 
 -(id<PFMutableOrder>)mutableOrder

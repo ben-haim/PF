@@ -39,7 +39,7 @@
 
 	if ([item isKindOfClass:[NSArray class]])
 		if ([item count] == 1)
-			item = [item objectAtIndex:0];
+			item = item[0];
 
 	if ([item isKindOfClass:[NSString class]]) {
 		NSString *path = (NSString *)item;
@@ -102,8 +102,8 @@
 			if (delegate) {
 				archive.delegate = delegate;
 				[NSThread detachNewThreadSelector:@selector(calculateSizeAndItemCount:) toTarget:archive
-									   withObject:[NSDictionary dictionaryWithObjectsAndKeys:[NSArray arrayWithObject:path], ZKPathsKey,
-												   [NSNumber numberWithBool:rfFlag], ZKusingResourceForkKey, nil]];
+									   withObject:@{ZKPathsKey: @[path],
+												   ZKusingResourceForkKey: @(rfFlag)}];
 				if ([NSThread isMainThread])
 					[archive didBeginZip];
 				else
@@ -137,7 +137,7 @@
 		}
 	} else if ([item isKindOfClass:[NSArray class]]) {
 		NSArray *paths = item;
-		NSString *firstPath = [paths objectAtIndex:0];
+		NSString *firstPath = paths[0];
 		NSString *basePath = [firstPath stringByDeletingLastPathComponent];
 		NSString *archiveName = [NSLocalizedString(@"Archive", @"default archive filename")
 		                         stringByAppendingPathExtension:ZKArchiveFileExtension];
@@ -149,8 +149,8 @@
 		if (delegate) {
 			archive.delegate = delegate;
 			[NSThread detachNewThreadSelector:@selector(calculateSizeAndItemCount:) toTarget:archive
-								   withObject:[NSDictionary dictionaryWithObjectsAndKeys:paths, ZKPathsKey,
-											   [NSNumber numberWithBool:rfFlag], ZKusingResourceForkKey, nil]];
+								   withObject:@{ZKPathsKey: paths,
+											   ZKusingResourceForkKey: @(rfFlag)}];
 			if ([NSThread isMainThread])
 				[archive didBeginZip];
 			else
@@ -229,10 +229,9 @@
 	if (result == zkSucceeded) {
 		for (ZKCDHeader *cdHeader in self.centralDirectory) {
 			NSString *path = [expansionDirectory stringByAppendingPathComponent:cdHeader.filename];
-			[self.fileManager setAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-											 [cdHeader posixPermissions], NSFilePosixPermissions,
-											 [cdHeader lastModDate], NSFileCreationDate,
-											 [cdHeader lastModDate], NSFileModificationDate, nil] ofItemAtPath:path error:nil];
+			[self.fileManager setAttributes:@{NSFilePosixPermissions: [cdHeader posixPermissions],
+											 NSFileCreationDate: [cdHeader lastModDate],
+											 NSFileModificationDate: [cdHeader lastModDate]} ofItemAtPath:path error:nil];
 		}
 	}
 
@@ -327,10 +326,10 @@
 					if ([self delegateWantsSizes]) {
 						if (ZKNotificationIterations > 0 && ++block % ZKNotificationIterations == 0) {
 							if ([NSThread isMainThread])
-								[self didUpdateBytesWritten:[NSNumber numberWithUnsignedLongLong:bytesWritten]];
+								[self didUpdateBytesWritten:@(bytesWritten)];
 							else
 								[self performSelectorOnMainThread:@selector(didUpdateBytesWritten:)
-													   withObject:[NSNumber numberWithUnsignedLongLong:bytesWritten] waitUntilDone:NO];
+													   withObject:@(bytesWritten) waitUntilDone:NO];
 							bytesWritten = 0;
 						}
 					}
@@ -340,10 +339,10 @@
 				pool = nil;
 				if ([self delegateWantsSizes]) {
 					if ([NSThread isMainThread])
-						[self didUpdateBytesWritten:[NSNumber numberWithUnsignedLongLong:bytesWritten]];
+						[self didUpdateBytesWritten:@(bytesWritten)];
 					else
 						[self performSelectorOnMainThread:@selector(didUpdateBytesWritten:)
-											   withObject:[NSNumber numberWithUnsignedLongLong:bytesWritten] waitUntilDone:NO];
+											   withObject:@(bytesWritten) waitUntilDone:NO];
 				}
 				if (ret != Z_STREAM_ERROR)
 					inflateEnd(&strm);
@@ -373,10 +372,10 @@
 					if ([self delegateWantsSizes]) {
 						if (ZKNotificationIterations > 0 && ++block % ZKNotificationIterations == 0) {
 							if ([NSThread isMainThread])
-								[self didUpdateBytesWritten:[NSNumber numberWithUnsignedLongLong:bytesWritten]];
+								[self didUpdateBytesWritten:@(bytesWritten)];
 							else
 								[self performSelectorOnMainThread:@selector(didUpdateBytesWritten:)
-													   withObject:[NSNumber numberWithUnsignedLongLong:bytesWritten] waitUntilDone:NO];
+													   withObject:@(bytesWritten) waitUntilDone:NO];
 							bytesWritten = 0;
 						}
 					}
@@ -405,10 +404,9 @@
 
 	// restore the extracted file's attributes
 	if (result) {
-		[self.fileManager setAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-										 [cdHeader posixPermissions], NSFilePosixPermissions,
-										 [cdHeader lastModDate], NSFileCreationDate,
-										 [cdHeader lastModDate], NSFileModificationDate, nil] ofItemAtPath:path error:nil];
+		[self.fileManager setAttributes:@{NSFilePosixPermissions: [cdHeader posixPermissions],
+										 NSFileCreationDate: [cdHeader lastModDate],
+										 NSFileModificationDate: [cdHeader lastModDate]} ofItemAtPath:path error:nil];
 	}
 
 	[archiveFile closeFile];
@@ -580,10 +578,10 @@
 				if ([self delegateWantsSizes]) {
 					if (ZKNotificationIterations > 0 && ++block % ZKNotificationIterations == 0) {
 						if ([NSThread isMainThread])
-							[self didUpdateBytesWritten:[NSNumber numberWithUnsignedLongLong:bytesWritten]];
+							[self didUpdateBytesWritten:@(bytesWritten)];
 						else
 							[self performSelectorOnMainThread:@selector(didUpdateBytesWritten:)
-												   withObject:[NSNumber numberWithUnsignedLongLong:bytesWritten] waitUntilDone:NO];
+												   withObject:@(bytesWritten) waitUntilDone:NO];
 						bytesWritten = 0;
 					}
 				}
@@ -593,10 +591,10 @@
 			[file closeFile];
 			if ([self delegateWantsSizes]) {
 				if ([NSThread isMainThread])
-					[self didUpdateBytesWritten:[NSNumber numberWithUnsignedLongLong:bytesWritten]];
+					[self didUpdateBytesWritten:@(bytesWritten)];
 				else
 					[self performSelectorOnMainThread:@selector(didUpdateBytesWritten:)
-										   withObject:[NSNumber numberWithUnsignedLongLong:bytesWritten] waitUntilDone:NO];
+										   withObject:@(bytesWritten) waitUntilDone:NO];
 			}
 			if (ret != Z_STREAM_END) {
 				ZKLogError(@"Stream incomplete");

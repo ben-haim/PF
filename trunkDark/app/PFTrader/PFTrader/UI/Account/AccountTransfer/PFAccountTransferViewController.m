@@ -100,7 +100,7 @@
          
          self.modeButton.choices = @[ @( 0 ) , @( 1 ) ];
          self.modeButton.prompt = NSLocalizedString( @"SELECT_MODE", nil );
-         self.modeButton.toStringBlock = ^( id choice_ ) { return [ [ self.dataSources objectAtIndex: [ choice_ integerValue ] ] title ]; };
+         self.modeButton.toStringBlock = ^( id choice_ ) { return [ (self.dataSources)[[ choice_ integerValue ]] title ]; };
          self.modeButton.currentChoice = @( 0 );
       }
 
@@ -115,7 +115,7 @@
 -(void)activateModeWithIndex:( NSInteger )index_
 {
    [ self.activeDataSource deactivate ];
-   self.activeDataSource = [ self.dataSources objectAtIndex: index_ ];
+   self.activeDataSource = (self.dataSources)[index_];
    [ self.activeDataSource activateInController: self andAccount: self.sourceAccount ];
 }
 

@@ -20,14 +20,14 @@
     CGPoint ptMouseDown;
     void* address;  
 }
-@property (nonatomic, retain) HitTestResult* lastHitTest;
+@property (nonatomic, strong) HitTestResult* lastHitTest;
 @property (assign) CGPoint ptMouseDown;
 @property (assign) void* address;
 @end
 
 @interface TALayer : NSObject 
 {
-    XYChart* parentChart;
+    XYChart* __unsafe_unretained parentChart;
     NSMutableArray* objects; 
     NSMutableArray* ta_touches; 
     UIImage* ta_anchor_img;
@@ -53,10 +53,10 @@
 
 -(BOOL)resizeModeFromTouches:(NSSet*)touches;
 
-@property (assign) XYChart* parentChart;
-@property (nonatomic, retain) NSMutableArray* objects;
-@property (nonatomic, retain) NSMutableArray* ta_touches;
-@property (nonatomic, retain) UIImage* ta_anchor_img;
-@property (nonatomic, retain) UIImage* ta_anchor_img_off;
+@property (unsafe_unretained) XYChart* parentChart;
+@property (nonatomic, strong) NSMutableArray* objects;
+@property (nonatomic, strong) NSMutableArray* ta_touches;
+@property (nonatomic, strong) UIImage* ta_anchor_img;
+@property (nonatomic, strong) UIImage* ta_anchor_img_off;
 
 @end

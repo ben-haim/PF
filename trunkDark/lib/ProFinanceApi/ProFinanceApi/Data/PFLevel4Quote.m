@@ -39,7 +39,7 @@
 +(PFMetaObject*)metaObject
 {
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects: [ PFMetaObjectField fieldWithId: PFFieldUnderlier name: @"underlier" ]
+           @[[ PFMetaObjectField fieldWithId: PFFieldUnderlier name: @"underlier" ]
             , [ PFMetaObjectField fieldWithId: PFFieldInstrumentId name: @"instrumentId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldRouteId name: @"routeId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldBidVolume name: @"bidSize" ]
@@ -59,8 +59,7 @@
             , [ PFMetaObjectField fieldWithId: PFFieldLastSize name: @"lastSize" ]
             , [ PFMetaObjectField fieldWithId: PFFieldCrossPrice name: @"crossPrice" ]
             , [ PFMetaObjectField fieldWithId: PFFieldVolumeTotal name: @"volume" ]
-            , [ PFMetaObjectField fieldWithId: PFFieldLastPrice name: @"lastPrice" ]
-            , nil ] ];
+            , [ PFMetaObjectField fieldWithId: PFFieldLastPrice name: @"lastPrice" ]] ];
 }
 
 -(NSDate*)expirationDate

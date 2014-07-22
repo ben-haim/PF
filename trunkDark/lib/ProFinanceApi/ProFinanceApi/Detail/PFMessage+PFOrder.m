@@ -14,10 +14,9 @@ static NSUInteger PFCurrentOrderIndex = 0;
 
    [ PFOrder writeToFieldOwner: message_
                         object: order_
-                        fields: [ NSArray arrayWithObjects: @(PFFieldOrderId)
+                        fields: @[@(PFFieldOrderId)
                                  , @(PFFieldInstrumentId)
-                                 , @(PFFieldAccountId)
-                                 , nil ] ];
+                                 , @(PFFieldAccountId)] ];
 
    return message_;
 }

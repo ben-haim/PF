@@ -14,11 +14,11 @@
 
 @interface XYChart : NSObject 
 {
-    BaseDataStore*      DataStore;
+    BaseDataStore*      __unsafe_unretained DataStore;
 	CGRect              chart_rect;
     NSNumberFormatter*  priceFormatter;
     uint                digits;  
-    FinanceChart*       parentFChart;
+    FinanceChart*       __unsafe_unretained parentFChart;
     NSMutableArray*     layers;
     PlotArea*           plotArea;
     Axis*               yAxis;
@@ -133,16 +133,16 @@
                         LegendKey:(NSString*)_legend_key
                      ShowInLegend:(bool)_showLegend;
 
-@property (assign) BaseDataStore* DataStore;
-@property (assign) FinanceChart* parentFChart;
+@property (unsafe_unretained) BaseDataStore* DataStore;
+@property (unsafe_unretained) FinanceChart* parentFChart;
 @property (assign) CGRect chart_rect;
-@property (nonatomic, retain) NSNumberFormatter* priceFormatter;
-@property (nonatomic, retain) NSMutableArray* layers;
-@property (nonatomic, retain) LegendBox* legendBox;
-@property (nonatomic, retain) PlotArea* plotArea;
-@property (nonatomic, retain) CursorLayer* cursorLayer;
-@property (nonatomic, retain) TALayer* taLayer;
-@property (nonatomic, retain) Axis* yAxis;
+@property (nonatomic, strong) NSNumberFormatter* priceFormatter;
+@property (nonatomic, strong) NSMutableArray* layers;
+@property (nonatomic, strong) LegendBox* legendBox;
+@property (nonatomic, strong) PlotArea* plotArea;
+@property (nonatomic, strong) CursorLayer* cursorLayer;
+@property (nonatomic, strong) TALayer* taLayer;
+@property (nonatomic, strong) Axis* yAxis;
 @property (assign) uint digits;
 @property (assign) int startIndex;
 @property (assign) int endIndex;

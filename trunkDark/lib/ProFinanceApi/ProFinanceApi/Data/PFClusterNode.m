@@ -18,14 +18,12 @@
 +(PFMetaObject*)metaObject
 {
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects: [ PFMetaObjectField fieldWithId: PFFieldNodeId name: @"nodeId" ]
+           @[[ PFMetaObjectField fieldWithId: PFFieldNodeId name: @"nodeId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldNodeReportTable name: @"isReportNode" ]
             , [ PFMetaObjectField fieldWithId: PFFieldIsHostNode name: @"isHostNode" ]
             , [ PFMetaObjectField fieldWithId: PFFieldNodeLoad name: @"loadIndex" ]
             , [ PFMetaObjectField fieldWithId: PFFieldConnectionMode name: @"connectionMode" ]
-            , [ PFMetaObjectField fieldWithId: PFFieldTimeZoneOffset name: @"adressProtocol" ]
-            
-            , nil ] ];
+            , [ PFMetaObjectField fieldWithId: PFFieldTimeZoneOffset name: @"adressProtocol" ]] ];
 }
 
 -(void)didUpdateWithFieldOwner:( PFFieldOwner* )field_owner_

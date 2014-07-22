@@ -180,7 +180,7 @@ static NSUInteger version_1_7_Minor = 7;
       return NO;
 
    PFInteger request_id_ = [ request_field_ integerValue ];
-   PFRequestHandler* handler_ = [ self.handlers objectForKey: @(request_id_) ];
+   PFRequestHandler* handler_ = (self.handlers)[@(request_id_)];
    if ( !handler_ )
       return NO;
 
@@ -193,7 +193,7 @@ static NSUInteger version_1_7_Minor = 7;
 
 -(void)addHandler:( PFRequestHandler* )handler_ forMessage:( PFMessage* )message_
 {
-   [ self.handlers setObject: handler_ forKey: @(self.currentRequestId) ];
+   (self.handlers)[@(self.currentRequestId)] = handler_;
 
    [ [ message_ writeFieldWithId: PFFieldRequestId ] setIntegerValue: self.currentRequestId ];
 

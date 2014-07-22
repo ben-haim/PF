@@ -60,7 +60,7 @@
   JCNotificationBanner* notification;
   @synchronized(notificationQueueMutex) {
     if ([enqueuedNotifications count] > 0) {
-      notification = [enqueuedNotifications objectAtIndex:0];
+      notification = enqueuedNotifications[0];
       [enqueuedNotifications removeObjectAtIndex:0];
     }
   }
@@ -114,7 +114,7 @@
   UIView* view = nil;
 
   if ( [[[UIApplication sharedApplication] keyWindow] subviews].count > 0)
-    view = ((UIView*)[[[[UIApplication sharedApplication] keyWindow] subviews] objectAtIndex:0]);
+    view = ((UIView*)[[[UIApplication sharedApplication] keyWindow] subviews][0]);
 
   containerView.bounds = view.bounds;
   containerView.transform = view.transform;

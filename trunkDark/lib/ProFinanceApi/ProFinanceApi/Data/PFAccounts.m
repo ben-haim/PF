@@ -127,7 +127,7 @@
 
       if ( !user_account_ )
       {
-         user_account_ = [ self.accounts objectAtIndex: 0 ];
+         user_account_ = (self.accounts)[0];
          NSAssert( user_account_, @"no account available" );
 
          [ self writeDefaultAccountId: user_account_.accountId ];
@@ -164,18 +164,18 @@
 
 -(PFAccount*)accountWithId:( PFLong )account_id_
 {
-   return [ self.accountsById objectForKey: @(account_id_) ];
+   return (self.accountsById)[@(account_id_)];
 }
 
 -(PFPammAccountStatus*)pammStatusWithId:( PFInteger )account_id_
 {
-    return [ self.pammStatuses objectForKey: @(account_id_) ];
+    return (self.pammStatuses)[@(account_id_)];
 }
 
 -(void)addAccount:( PFAccount* )account_
 {
     if( account_.name)
-        [ self.accountsById setObject: account_ forKey: @(account_.accountId) ];
+        (self.accountsById)[@(account_.accountId)] = account_;
 }
 
 -(PFAccount*)writeAccountWithId:( PFInteger )account_id_
@@ -231,7 +231,7 @@
         self.pammStatuses = [ NSMutableDictionary new ];
     }
     
-    [ self.pammStatuses setObject: pamm_status_ forKey: @(pamm_status_.pammStatusId) ];
+    (self.pammStatuses)[@(pamm_status_.pammStatusId)] = pamm_status_;
 }
 
 -(void)recalcPammStatusAndUpdeteFromDelegate: ( id< PFAccountsDelegate > )delegate_
@@ -245,12 +245,12 @@
         {
             for (PFPammInvestor* invest_group_ in invest_groups_)
             {
-                PFPammInvestor* investor_ = [investors_ objectForKey: @(invest_group_.investId)];
+                PFPammInvestor* investor_ = investors_[@(invest_group_.investId)];
                 if (!investor_)
                 {
                     investor_ = [PFPammInvestor new];
                     investor_.investId = invest_group_.investId;
-                    [investors_ setObject: investor_ forKey: @(investor_.investId)];
+                    investors_[@(investor_.investId)] = investor_;
                 }
                 investor_.capital += invest_group_.capital;
                 investor_.currCapital += invest_group_.currCapital;
@@ -262,7 +262,7 @@
     {
         double curr_cap_ = account_.currentFundCapital;
         double start_cap_ = account_.startPammCapital;
-        PFPammInvestor* investor_ = [investors_ objectForKey: @(account_.accountId)];
+        PFPammInvestor* investor_ = investors_[@(account_.accountId)];
         
         if (investor_)
         {
@@ -340,7 +340,7 @@
    
    for ( id account_key_ in self.accountsById )
    {
-      PFAccount* account_ = [ self.accountsById objectForKey: account_key_ ];
+      PFAccount* account_ = (self.accountsById)[account_key_];
       [ account_ connectToSymbols: symbols_ ];
    }
 }
@@ -355,9 +355,9 @@
     PFAccount* account_ = nil;
     for(int i=0;i<self.accounts.count;i++)
     {
-        account_ =[self.accounts objectAtIndex:i];
+        account_ =(self.accounts)[i];
         
-        existingRule =[account_.ruleByName objectForKey:rule_.name];
+        existingRule =(account_.ruleByName)[rule_.name];
         if(existingRule)
         {
             if([PFRule compareOwnerTypes:existingRule.ownerType withNew:rule_.ownerType] )

@@ -19,7 +19,7 @@
 +(PFMetaObject*)metaObject
 {
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects: [ PFMetaObjectField fieldWithId: PFFieldTradeId name: @"tradeId" ]
+           @[[ PFMetaObjectField fieldWithId: PFFieldTradeId name: @"tradeId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldOrderId name: @"orderId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldCommission name: @"commission" ]
             , [ PFMetaObjectField fieldWithId: PFFieldPnl name: @"grossPl" ]
@@ -28,8 +28,7 @@
             , [ PFMetaObjectField fieldWithId: PFFieldExtId name: @"extId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldCreatorName name: @"login" ]
             , [ PFMetaObjectField fieldWithId: PFFieldExternalPrice name: @"externalPrice" ]
-            , [ PFMetaObjectField fieldWithId: PFFieldExchange name: @"exchange" ]
-            , nil ] ];
+            , [ PFMetaObjectField fieldWithId: PFFieldExchange name: @"exchange" ]] ];
 }
 
 -(PFInteger)operationId

@@ -60,7 +60,7 @@
    int index_ = 0;
    for ( UIButton* range_button_ in self.rangeButtons )
    {
-      range_button_.tag = [ [ choises_ objectAtIndex: index_++ ] integerValue ];
+      range_button_.tag = [ choises_[index_++] integerValue ];
       
       [ range_button_ setTitle: NSStringFromPFChartPeriodType( (PFChartPeriodType)range_button_.tag )
                       forState: UIControlStateNormal ];

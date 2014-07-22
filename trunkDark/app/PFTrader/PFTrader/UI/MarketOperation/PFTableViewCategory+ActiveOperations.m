@@ -15,7 +15,7 @@
       PFTableViewActiveOperationsItem* order_item_ = [ PFTableViewActiveOperationsItem itemWithOrder: order_
                                                                                           controller: controller_ ];
       order_item_.action = ^( PFTableViewItem* item_ ) { [ (PFTableViewActiveOperationsItem*)item_ selectCurrentItem ]; };
-      [ categories_array_ addObject: [ PFTableViewCategory categoryWithTitle: nil items: [ NSArray arrayWithObject: order_item_ ] ] ];
+      [ categories_array_ addObject: [ PFTableViewCategory categoryWithTitle: nil items: @[order_item_] ] ];
    }
    
    return categories_array_;

@@ -69,14 +69,13 @@ static const int defaultStrikesCount = 8;
 
 -(NSArray*)optionChainColumns
 {
-   return [ NSArray arrayWithObjects: [ PFLevel4QuoteColumn strikeColumn ]
+   return @[[ PFLevel4QuoteColumn strikeColumn ]
            , [ PFLevel4QuoteColumn askColumnWithDelegate: self ]
            , [ PFLevel4QuoteColumn bidColumnWithDelegate: self ]
            , [ PFLevel4QuoteColumn askSizeAndBidSizeColumn ]
            , [ PFLevel4QuoteColumn lastAndVolumeColumn ]
            , [ PFLevel4QuoteColumn deltaAndGammaColumn ]
-           , [ PFLevel4QuoteColumn vegaAndThetaColumn ]
-           , nil ];
+           , [ PFLevel4QuoteColumn vegaAndThetaColumn ]];
 }
 
 -(void)viewDidLoad
@@ -93,7 +92,7 @@ static const int defaultStrikesCount = 8;
    self.expirationSelector.userInteractionEnabled = NO;
    self.expirationSelector.text = NSLocalizedString(@"NO_EXPIRATION_DATES", nil );
    
-   self.optionTypeSelector.items = [ NSArray arrayWithObjects: NSLocalizedString(@"CALL", nil ), NSLocalizedString(@"PUT", nil ), nil ];
+   self.optionTypeSelector.items = @[NSLocalizedString(@"CALL", nil ), NSLocalizedString(@"PUT", nil )];
    self.optionTypeSelector.selectedSegmentIndex = 0;
    
    self.strikesCount = defaultStrikesCount;
@@ -209,7 +208,7 @@ static const int defaultStrikesCount = 8;
       
       for ( int i = 0; i < all_quotes_.count; i++)
       {
-         if ( ((id<PFLevel4Quote>)[ all_quotes_ objectAtIndex: i ]).strikePrice >= etalon_price_ )
+         if ( ((id<PFLevel4Quote>)all_quotes_[i]).strikePrice >= etalon_price_ )
          {
             location_ = i >= reverse_count_ ? i - reverse_count_ : 0;
             if ( location_ + length_ > all_quotes_.count )
@@ -232,7 +231,7 @@ static const int defaultStrikesCount = 8;
    
    if ( self.expirationDates.count > 0 )
    {
-      self.elements = [ self filteredLevel4QuotesFromQuotes: [ [ [ current_quotes_ objectForKey: self.currentExpirationDate ] allObjects ]
+      self.elements = [ self filteredLevel4QuotesFromQuotes: [ [ current_quotes_[self.currentExpirationDate] allObjects ]
                                                               sortedArrayUsingSelector: @selector(compare:) ] ];
    }
    
@@ -252,7 +251,7 @@ static const int defaultStrikesCount = 8;
    {
       if ( need_set_first_date_ )
       {
-         self.currentExpirationDate = [ self.expirationDates objectAtIndex: 0 ];
+         self.currentExpirationDate = (self.expirationDates)[0];
       }
       
       [ self.expirationPicker reloadAllComponents ];
@@ -317,7 +316,7 @@ static const int defaultStrikesCount = 8;
                                                                                      target: self
                                                                                      action: @selector( resignFirstResponder ) ];
       
-      [ _toolbar setItems: [ NSArray arrayWithObject: done_item_ ] animated: NO ];
+      [ _toolbar setItems: @[done_item_] animated: NO ];
    }
    
    return _toolbar;
@@ -348,12 +347,12 @@ static const int defaultStrikesCount = 8;
 
 -(NSString*)pickerView: (UIPickerView*)picker_view_ titleForRow: (NSInteger)row_ forComponent: (NSInteger)component_
 {
-   return [ self stringFromDate: [ self.expirationDates objectAtIndex: row_ ] ];
+   return [ self stringFromDate: (self.expirationDates)[row_] ];
 }
 
 -(void)pickerView: (UIPickerView*)picker_view_ didSelectRow: (NSInteger)row_ inComponent: (NSInteger)component_
 {
-   self.currentExpirationDate = [ self.expirationDates objectAtIndex: row_ ];
+   self.currentExpirationDate = (self.expirationDates)[row_];
 }
 
 #pragma mark - UIPickerViewDataSource

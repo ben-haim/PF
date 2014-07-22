@@ -18,16 +18,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [lblTitle release];
-    if(properties)
-        [properties release];
-    if(propertyPath)
-        [propertyPath release];
-    [swYesNo release];
-    [super dealloc];
-}
 
 - (id)initWithCoder:(NSCoder *)coder
 {

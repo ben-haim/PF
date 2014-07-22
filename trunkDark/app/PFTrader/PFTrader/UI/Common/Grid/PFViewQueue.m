@@ -22,11 +22,11 @@
 -(void)enqueueView:( UIView* )view_
     withIdentifier:( NSString* )identifier_
 {
-   NSMutableArray* views_ = [ self.viewsByIdentifier objectForKey: identifier_ ];
+   NSMutableArray* views_ = (self.viewsByIdentifier)[identifier_];
    if ( !views_ )
    {
       views_ = [ NSMutableArray arrayWithObject: view_ ];
-      [ self.viewsByIdentifier setObject: views_ forKey: identifier_ ];
+      (self.viewsByIdentifier)[identifier_] = views_;
    }
    else
    {
@@ -36,7 +36,7 @@
 
 -(UIView*)dequeueViewWithIdentifier:( NSString* )identifier_
 {
-   NSMutableArray* views_ = [ self.viewsByIdentifier objectForKey: identifier_ ];
+   NSMutableArray* views_ = (self.viewsByIdentifier)[identifier_];
    if ( [ views_ count ] == 0 )
       return nil;
 

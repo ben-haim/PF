@@ -29,12 +29,12 @@
       self.mutableCommissionPlans = [ NSMutableDictionary new ];
    }
    
-   [ self.mutableCommissionPlans setObject: commission_plan_ forKey: @(commission_plan_.planId) ];
+   (self.mutableCommissionPlans)[@(commission_plan_.planId)] = commission_plan_;
 }
 
 -(PFCommissionPlan*)commissionPlanWithId: (int)plan_Id_
 {
-   return [ self.mutableCommissionPlans objectForKey: @(plan_Id_) ];
+   return (self.mutableCommissionPlans)[@(plan_Id_)];
 }
 
 -(double)transferCommissionWithCommissionPlan: ( int )plan_Id_

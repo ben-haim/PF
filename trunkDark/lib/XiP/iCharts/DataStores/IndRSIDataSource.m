@@ -34,7 +34,7 @@
     ArrayMath* src_data = [src GetVector:priceField];
     int scr_len = [src_data getLength];
     
-    ArrayMath* hundred = [[[ArrayMath alloc] initWithLength:scr_len] autorelease];
+    ArrayMath* hundred = [[ArrayMath alloc] initWithLength:scr_len];
     for(int i = 0; i<scr_len; i++)
         [hundred getData][i] = 100.0; 
     
@@ -53,12 +53,12 @@
     
     [self SetVector:res forKey:@"indData"];
     
-    ArrayMath* level_top = [[[ArrayMath alloc] initWithLength:scr_len] autorelease];
+    ArrayMath* level_top = [[ArrayMath alloc] initWithLength:scr_len];
     for(int i = 0; i<scr_len; i++)
         [level_top getData][i] = 100 - level;
     [self SetVector:level_top forKey:@"level_top"]; 
     
-    ArrayMath* level_bottom = [[[ArrayMath alloc] initWithLength:scr_len] autorelease];
+    ArrayMath* level_bottom = [[ArrayMath alloc] initWithLength:scr_len];
     for(int i = 0; i<scr_len; i++)
         [level_bottom getData][i] = level;
     [self SetVector:level_bottom forKey:@"level_bottom"]; 

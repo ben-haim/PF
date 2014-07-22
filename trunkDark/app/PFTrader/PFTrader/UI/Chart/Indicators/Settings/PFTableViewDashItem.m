@@ -37,7 +37,7 @@
 
 -(PFFrameView*)frameViewForDash:( NSUInteger )dash_
 {
-   UIImageView* image_view_ = [ [ UIImageView alloc ] initWithImage: [ self.availableLines objectAtIndex: dash_ ] ];
+   UIImageView* image_view_ = [ [ UIImageView alloc ] initWithImage: (self.availableLines)[dash_] ];
    image_view_.backgroundColor = [ UIColor whiteColor ];
    image_view_.contentMode = UIViewContentModeCenter;
 
@@ -74,7 +74,7 @@
    else
    {
       UIImageView* image_view_ = ( UIImageView* )frame_view_.contentView;
-      image_view_.image = [ self.availableLines objectAtIndex: row_ ];
+      image_view_.image = (self.availableLines)[row_];
    }
 
    return frame_view_;
@@ -92,7 +92,7 @@
 {
    PFFrameView* frame_view_ = ( PFFrameView* )picker_field_.overlayView;
    UIImageView* image_view_ = ( UIImageView* )frame_view_.contentView;
-   image_view_.image = [ self.availableLines objectAtIndex: row_ ];
+   image_view_.image = (self.availableLines)[row_];
 
    self.dash.dash = row_;
 

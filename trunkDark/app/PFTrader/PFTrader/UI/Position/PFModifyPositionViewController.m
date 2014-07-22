@@ -47,9 +47,8 @@
       self.slCategory = [ PFTableViewCategory stopLossCategoryWithController: self marketOperation: self.position ];
       self.tpCategory = [ PFTableViewCategory takeProfitCategoryWithController: self marketOperation: self.position ];
       
-      _categories = [ NSArray arrayWithObjects: self.slCategory
-                     , self.tpCategory
-                     , nil ];
+      _categories = @[self.slCategory
+                     , self.tpCategory];
    }
    return _categories;
 }

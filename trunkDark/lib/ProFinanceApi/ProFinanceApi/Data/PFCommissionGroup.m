@@ -39,13 +39,11 @@
 +(PFMetaObject*)metaObject
 {
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects:
-                 [ PFMetaObjectField fieldWithId: PFFieldCommissionType name: @"type" ]
+           @[[ PFMetaObjectField fieldWithId: PFFieldCommissionType name: @"type" ]
                , [ PFMetaObjectField fieldWithId: PFFieldCommissionPaymentType name: @"paymentType" ]
                , [ PFMetaObjectField fieldWithId: PFFieldCounterAccountId name: @"counterAccountId" ]
                , [ PFMetaObjectField fieldWithId: PFFieldCommissionActivateIb name: @"activateIb" ]
-               , [ PFMetaObjectField fieldWithId: PFFieldApplyOpertionType name: @"applyOperationType" ]
-               ,nil ] ];
+               , [ PFMetaObjectField fieldWithId: PFFieldApplyOpertionType name: @"applyOperationType" ]] ];
 }
 
 -(void)didUpdateWithFieldOwner:( PFFieldOwner* )field_owner_

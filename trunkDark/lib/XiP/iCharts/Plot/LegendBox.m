@@ -21,11 +21,6 @@
     return self;
 }
 
--(void)dealloc
-{	
-    [legendKeys release];
-	[super dealloc];    
-}
 
 - (void)drawInContext:(CGContextRef)ctx 
                InRect:(CGRect)rect 
@@ -272,7 +267,6 @@
         [legendKeys insertObject:leg atIndex:0];
     else
         [legendKeys addObject:leg];   
-    [leg release];
 }  
 
 - (void)setText:(NSString*)_text ForKey:(NSString*)_key

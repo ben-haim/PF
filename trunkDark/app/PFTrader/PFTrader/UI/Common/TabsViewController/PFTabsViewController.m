@@ -65,7 +65,7 @@
       _selectedTabIndex = selected_tabIndex_;
       
       [ self.tabsTableView reloadData ];
-      [ self performActionWithItem: [ self.tabItems objectAtIndex: _selectedTabIndex ] ];
+      [ self performActionWithItem: (self.tabItems)[_selectedTabIndex] ];
    }
    else
    {
@@ -143,7 +143,7 @@
    static NSString* image_cell_identifier_ = @"PFImageTabCell";
    static NSString* no_image_cell_identifier_ = @"PFNoImageTabCell";
    
-   PFTabItem* current_item_ = [ self.tabItems objectAtIndex: index_path_.row ];
+   PFTabItem* current_item_ = (self.tabItems)[index_path_.row];
    UITableViewCell< PFTabCell >* cell_ = [ table_view_ dequeueReusableCellWithIdentifier: current_item_.icon ? image_cell_identifier_ : no_image_cell_identifier_ ];
    
    if ( !cell_ )
@@ -160,7 +160,7 @@
 
 -(void)tableView:( UITableView* )table_view_ willDisplayCell:( UITableViewCell* )cell_ forRowAtIndexPath:( NSIndexPath* )index_path_
 {
-   PFTabItem* current_item_ = [ self.tabItems objectAtIndex: index_path_.row ];
+   PFTabItem* current_item_ = (self.tabItems)[index_path_.row];
    BOOL is_selected_ = index_path_.row == self.selectedTabIndex;
    
    

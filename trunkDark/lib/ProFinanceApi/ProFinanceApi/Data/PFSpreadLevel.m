@@ -33,16 +33,14 @@
 +(PFMetaObject*)metaObject
 {
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects:
-              [ PFMetaObjectField fieldWithId: PFFieldId name: @"spredLevelId" ]
+           @[[ PFMetaObjectField fieldWithId: PFFieldId name: @"spredLevelId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldInstrumentTypeId name: @"instrumentTypeId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldInstrumentId name: @"instrumentId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldSpread name: @"spread" ]
             , [ PFMetaObjectField fieldWithId: PFFieldBidShift name: @"bidShift" ]
             , [ PFMetaObjectField fieldWithId: PFFieldAskShift name: @"askShift" ]
             , [ PFMetaObjectField fieldWithId: PFFieldSpreadMode name: @"spreadMode" ]
-            , [ PFMetaObjectField fieldWithId: PFFieldSpreadMeasure name: @"spreadMeasure" ]
-            , nil ] ];
+            , [ PFMetaObjectField fieldWithId: PFFieldSpreadMeasure name: @"spreadMeasure" ]] ];
 }
 
 -(void)recalcLevel1Quote: (PFQuote*)quote_
@@ -83,9 +81,9 @@
 {
    for ( NSUInteger i = 0; i < quotes_.count; i++ )
    {
-      if ( [ [ quotes_ objectAtIndex: i ] isMemberOfClass: [ PFLotsMinQuote class ] ] )
+      if ( [ quotes_[i] isMemberOfClass: [ PFLotsMinQuote class ] ] )
       {
-         PFLotsMinQuote* lots_qoute_ = (PFLotsMinQuote*)[ quotes_ objectAtIndex: i ];
+         PFLotsMinQuote* lots_qoute_ = (PFLotsMinQuote*)quotes_[i];
          
          double new_bid_open_  = [ self calculateBidWithAsk: lots_qoute_.askInfo.open  AndBid: lots_qoute_.bidInfo.open ];
          double new_bid_high_  = [ self calculateBidWithAsk: lots_qoute_.askInfo.high  AndBid: lots_qoute_.bidInfo.high ];
@@ -115,8 +113,8 @@
                           AndLevel1Bid:( double )bid_
                           AndLevel1Ask:( double )ask_
 {
-   double best_bid_ = (bid_quotes_.count > 0) ? ((PFLevel2Quote*)[ bid_quotes_ objectAtIndex: 0 ]).realPrice : bid_;
-   double best_ask_ = (ask_quotes_.count > 0) ? ((PFLevel2Quote*)[ ask_quotes_ objectAtIndex: 0 ]).realPrice : ask_;
+   double best_bid_ = (bid_quotes_.count > 0) ? ((PFLevel2Quote*)bid_quotes_[0]).realPrice : bid_;
+   double best_ask_ = (ask_quotes_.count > 0) ? ((PFLevel2Quote*)ask_quotes_[0]).realPrice : ask_;
    
    double spread_bid_offet_  = [ self calculateBidWithAsk: best_ask_ AndBid: best_bid_ ] - best_bid_;
    double spread_ask_offset_ = [ self calculateAskWithAsk: best_ask_ AndBid: best_bid_ ] - best_ask_;

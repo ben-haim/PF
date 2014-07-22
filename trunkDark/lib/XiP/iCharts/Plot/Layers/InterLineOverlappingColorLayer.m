@@ -47,14 +47,6 @@
     return self;
 }
 
--(void)dealloc
-{	
-    if(mSpanAData!=nil)
-        [mSpanAData release];
-    if(mSpanBData!=nil)
-        [mSpanBData release];
-    [super dealloc];
-}
 
 -(double)getLowerDataValue
 {
@@ -304,7 +296,7 @@
                 NSString *LegendMsg = [[NSString alloc] initWithFormat:@"%@: (%@,%@)", legendKey, valueText1, valueText2];
                 
                 [parentChart.legendBox setText:LegendMsg ForKey:legendKey];
-                [LegendMsg autorelease];
+//                [LegendMsg autorelease];
             }
         }
     }

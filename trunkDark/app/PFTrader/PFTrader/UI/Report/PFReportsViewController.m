@@ -51,11 +51,9 @@ static NSString* NSStringFromPFReportTableType( PFReportTableType type_ )
 {
    if ( !_categories )
    {
-      _categories = [ NSArray arrayWithObjects:
-                     [ PFTableViewCategory tableTypeCategoryWithCriteria: self.criteria ]
+      _categories = @[[ PFTableViewCategory tableTypeCategoryWithCriteria: self.criteria ]
                      , [ PFTableViewCategory fromDateCategoryWithCriteria: self.criteria ]
-                     , [ PFTableViewCategory toDateCategoryWithCriteria: self.criteria ]
-                     , nil ];
+                     , [ PFTableViewCategory toDateCategoryWithCriteria: self.criteria ]];
    }
    return _categories;
 }

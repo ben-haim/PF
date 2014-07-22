@@ -32,7 +32,7 @@
 +(PFMetaObject*)metaObject
 {
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects: [ PFMetaObjectField fieldWithId: PFFieldPositionId name: @"positionId" ]
+           @[[ PFMetaObjectField fieldWithId: PFFieldPositionId name: @"positionId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldLastOrderId name: @"orderId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldSlOrderId name: @"stopLossOrderId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldTpOrderId name: @"takeProfitOrderId" ]
@@ -43,8 +43,7 @@
             , [ PFMetaObjectField fieldWithId: PFFieldDate name: @"createdAt" ]
             , [ PFMetaObjectField fieldWithId: PFFieldOpenCrossPrice name: @"openCrossPrice" ]
             , [ PFMetaObjectField fieldWithName: @"profitUSD" ]
-            , [ PFMetaObjectField fieldWithName: @"netProfitUSD" ]
-            , nil ] ];
+            , [ PFMetaObjectField fieldWithName: @"netProfitUSD" ]] ];
 }
 
 -(id)init

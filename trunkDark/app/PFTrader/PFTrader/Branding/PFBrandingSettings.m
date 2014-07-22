@@ -52,72 +52,72 @@ static NSString* const PFBrandingKey = @"PFBrandingKey";
 
 -(NSString*)scriptsServer
 {
-   return [ self.settings objectForKey: PFScriptsServer ];
+   return (self.settings)[PFScriptsServer];
 }
 
 -(NSString*)brandingServer
 {
-   return [ self.settings objectForKey: PFBrandingServer ];
+   return (self.settings)[PFBrandingServer];
 }
 
 -(NSString*)brandingKey
 {
-   return [ self.settings objectForKey: PFBrandingKey ];
+   return (self.settings)[PFBrandingKey];
 }
 
 -(NSString*)appID
 {
-   return [ self.settings objectForKey: PFAppID ];
+   return (self.settings)[PFAppID];
 }
 
 -(BOOL)useChat
 {
-   return [ [ self.settings objectForKey: PFUseChat ] boolValue ];
+   return [ (self.settings)[PFUseChat] boolValue ];
 }
 
 -(BOOL)useNews
 {
-   return [ [ self.settings objectForKey: PFUseNews ] boolValue ];
+   return [ (self.settings)[PFUseNews] boolValue ];
 }
 
 -(BOOL)useSecure
 {
-   return [ [ self.settings objectForKey: PFUseSecure ] boolValue ];
+   return [ (self.settings)[PFUseSecure] boolValue ];
 }
 
 -(BOOL)useHTTP
 {
-   return [ [ self.settings objectForKey: PFUseHTTP ] boolValue ];
+   return [ (self.settings)[PFUseHTTP] boolValue ];
 }
 
 -(BOOL)useTransfer
 {
-   return [ [ self.settings objectForKey: PFUseTransfer ] boolValue ];
+   return [ (self.settings)[PFUseTransfer] boolValue ];
 }
 
 -(NSString*)defaultServer
 {
-   return [ self.settings objectForKey: PFDefaultServer ];
+   return (self.settings)[PFDefaultServer];
 }
 
 -(NSArray*)defaultSymbols
 {
-   return [ self.settings objectForKey: PFDefaultSymbols ];
+   return (self.settings)[PFDefaultSymbols];
 }
 
 -(BOOL)useDemoSecure
 {
-   return [ [ self.settings objectForKey: PFUseDemoSecure ] boolValue ];
+   return [ (self.settings)[PFUseDemoSecure] boolValue ];
 }
 
 -(NSString*)defaultDemoServer
 {
-   return [ self.settings objectForKey: PFDefaultDemoServer ];
+   return (self.settings)[PFDefaultDemoServer];
 }
 
 -(BOOL)usePrivateLogs
 {
-   return [ [ self.settings objectForKey: PFUsePrivateLogs ] boolValue ];
+   return [ (self.settings)[PFUsePrivateLogs] boolValue ];
 }
 
 @end

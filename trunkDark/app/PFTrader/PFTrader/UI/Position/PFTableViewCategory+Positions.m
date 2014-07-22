@@ -15,7 +15,7 @@
       PFTableViewPositionItem* position_item_ = [ PFTableViewPositionItem itemWithPosition: position_
                                                                                 controller: controller_ ];
       position_item_.action = ^( PFTableViewItem* item_ ) { [ (PFTableViewPositionItem*)item_ selectCurrentItem ]; };
-      [ categories_array_ addObject: [ PFTableViewCategory categoryWithTitle: nil items: [ NSArray arrayWithObject: position_item_ ] ] ];
+      [ categories_array_ addObject: [ PFTableViewCategory categoryWithTitle: nil items: @[position_item_] ] ];
    }
    
    return categories_array_;

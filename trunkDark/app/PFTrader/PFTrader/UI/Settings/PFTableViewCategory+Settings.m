@@ -31,12 +31,11 @@
    };
 
    PFTableViewOrderTypeItem* order_type_item_ = [ [ PFTableViewOrderTypeItem alloc ] initWithType: settings_.orderType
-                                                                                  andAllowedTypes: [ NSArray arrayWithObjects: @(PFOrderMarket)
+                                                                                  andAllowedTypes: @[@(PFOrderMarket)
                                                                                                     , @(PFOrderLimit)
                                                                                                     , @(PFOrderStop)
                                                                                                     , @(PFOrderTrailingStop)
-                                                                                                    , @(PFOrderOCO)
-                                                                                                    , nil ] ];
+                                                                                                    , @(PFOrderOCO)] ];
    order_type_item_.pickerAction = ^( PFTableViewBasePickerItem* picker_item_ )
    {
       PFTableViewOrderTypeItem* item_ = (PFTableViewOrderTypeItem*)picker_item_;
@@ -61,20 +60,17 @@
                                                 } ];
 
    return [ PFTableViewCategory categoryWithTitle: NSLocalizedString( @"DEFAULTS", nil )
-                                            items: [ NSArray arrayWithObjects:
-                                                    quantity_item_
+                                            items: @[quantity_item_
                                                     , tif_item_
                                                     , order_type_item_
                                                     , use_sltp_offset_item_
-                                                    , use_lots_quantity_
-                                                    , nil ] ];
+                                                    , use_lots_quantity_] ];
 }
 
 +(id)settingsConfirmationCategoryWithSettings:( PFSettings* )settings_
 {
    return [ PFTableViewCategory categoryWithTitle: NSLocalizedString( @"CONFIRMATIONS", nil )
-                                            items: [ NSArray arrayWithObjects:
-                                                    [ PFTableViewSwitchItem switchItemWithTitle: NSLocalizedString( @"ORDER_SENDING", nil )
+                                            items: @[[ PFTableViewSwitchItem switchItemWithTitle: NSLocalizedString( @"ORDER_SENDING", nil )
                                                                                            isOn: settings_.shouldConfirmPlaceOrder
                                                                                    switchAction: ^(PFTableViewSwitchItem* item_)
                                                      {
@@ -115,8 +111,7 @@
                                                        {
                                                           settings_.shouldConfirmExecuteAsMarket = item_.on;
                                                           [ settings_ save ];
-                                                       }]
-                                                    , nil ] ];
+                                                       }]] ];
 }
 
 +(id)settingsChartCategoryWithSettings:( PFSettings* )settings_
@@ -140,13 +135,13 @@
    };
    
    return [ PFTableViewCategory categoryWithTitle: NSLocalizedString( @"CHART", nil )
-                                            items: [ NSArray arrayWithObjects: period_item_, cashe_size_item_, nil ] ];
+                                            items: @[period_item_, cashe_size_item_] ];
 }
 
 +(id)settingsEnvironmentCategoryWithSettings:( PFSettings* )settings_
 {
     return [ PFTableViewCategory categoryWithTitle: NSLocalizedString( @"ENVIRONMENT_SETTINGS", nil )
-                                             items: [ NSArray arrayWithObjects: [ PFTableViewSwitchItem switchItemWithTitle: NSLocalizedString( @"PLAY_SOUNDS", nil )
+                                             items: @[[ PFTableViewSwitchItem switchItemWithTitle: NSLocalizedString( @"PLAY_SOUNDS", nil )
                                                                                                                        isOn: settings_.playSounds
                                                                                                                switchAction: ^(PFTableViewSwitchItem* item_)
                                                                                  {
@@ -159,8 +154,7 @@
                                                       {
                                                           settings_.showTradingHalt = item_.on;
                                                           [ settings_ save ];
-                                                      } ],
-                                                     nil ] ];
+                                                      } ]] ];
 }
 
 @end

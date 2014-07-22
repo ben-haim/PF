@@ -25,14 +25,14 @@
 - (IBAction)btnAddPressed:(id)sender; 
 - (bool)IsMainIndSection:(int)section;
 
-@property (nonatomic, retain)	PropertiesStore* default_properties;
-@property (nonatomic, retain)	PropertiesStore* properties;
-@property (nonatomic, retain)	UITableView* indicatorsList;
-@property (nonatomic, retain)	UIToolbar* tbNormal;
-@property (nonatomic, retain)	UIToolbar* tbEditing;
-@property (nonatomic, retain)	UIBarButtonItem* btnClose;
-@property (nonatomic, retain)	UIBarButtonItem* btnEdit;
-@property (nonatomic, retain)	UIBarButtonItem* lblCaption1;
-@property (nonatomic, retain)	UIBarButtonItem* lblCaption2;
-@property (nonatomic, retain)	UIBarButtonItem* btnDone;
+@property (nonatomic, strong)	PropertiesStore* default_properties;
+@property (nonatomic, strong)	PropertiesStore* properties;
+@property (nonatomic, strong)	UITableView* indicatorsList;
+@property (nonatomic, strong)	UIToolbar* tbNormal;
+@property (nonatomic, strong)	UIToolbar* tbEditing;
+@property (nonatomic, strong)	UIBarButtonItem* btnClose;
+@property (nonatomic, strong)	UIBarButtonItem* btnEdit;
+@property (nonatomic, strong)	UIBarButtonItem* lblCaption1;
+@property (nonatomic, strong)	UIBarButtonItem* lblCaption2;
+@property (nonatomic, strong)	UIBarButtonItem* btnDone;
 @end

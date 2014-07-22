@@ -40,11 +40,11 @@ toRowWithIndex:( NSUInteger )row_index_
    if ( !cell_ )
       return;
 
-   NSMutableArray* row_ = [ self.viewsByRow objectForKey: @(row_index_) ];
+   NSMutableArray* row_ = (self.viewsByRow)[@(row_index_)];
    if ( !row_ )
    {
       row_ = [ NSMutableArray arrayWithObject: cell_ ];
-      [ self.viewsByRow setObject: row_ forKey: @(row_index_) ];
+      (self.viewsByRow)[@(row_index_)] = row_;
    }
    else
    {
@@ -76,7 +76,7 @@ toRowWithIndex:( NSUInteger )row_index_
 
 -(void)enqueueRowWithIndex:( NSUInteger )row_index_
 {
-   NSArray* row_ = [ self.viewsByRow objectForKey: @(row_index_) ];
+   NSArray* row_ = (self.viewsByRow)[@(row_index_)];
    [ self enqueueRow: row_ ];
    [ self.viewsByRow removeObjectForKey: @(row_index_) ];
 }
@@ -85,7 +85,7 @@ toRowWithIndex:( NSUInteger )row_index_
 {
    for ( id row_number_ in self.viewsByRow )
    {
-      [ self enqueueRow: [ self.viewsByRow objectForKey: row_number_ ] ];
+      [ self enqueueRow: (self.viewsByRow)[row_number_] ];
    }
    self.viewsByRow = nil;
 }
@@ -94,7 +94,7 @@ toRowWithIndex:( NSUInteger )row_index_
 {
    for ( id row_number_ in self.viewsByRow )
    {
-      [ self updateRow: [ self.viewsByRow objectForKey: row_number_ ] ];
+      [ self updateRow: (self.viewsByRow)[row_number_] ];
    }
 }
 

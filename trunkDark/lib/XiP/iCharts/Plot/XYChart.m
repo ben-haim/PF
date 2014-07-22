@@ -58,21 +58,6 @@
     return self;
 }
 
--(void)dealloc
-{
-    //[DataStore release];
-    //[parentFChart release];
-    [priceFormatter release];
-    [layers release];
-    NSLog(@"legendBox %lu", (unsigned long)[legendBox retainCount] );
-    [legendBox release];
-    
-    [plotArea release];
-    [cursorLayer release];
-    [taLayer release];
-    [yAxis release];
-	[super dealloc];
-}
 -(void)Build
 {
     /*if (mouseSensor != null)
@@ -329,7 +314,7 @@
     {
         [cursorLayer setChartCursorKey:_layerName AndColor:_color];
     }
-    return [lineLayer autorelease];
+    return lineLayer;
 }
 
 -(DOTLayer*) addDotLayer:(BaseDataStore*)srcDS
@@ -360,7 +345,7 @@
     {
         [cursorLayer setChartCursorKey:_layerName AndColor:_color1];
     }
-    return [dotLayer autorelease];
+    return dotLayer;
 }
 
 -(AreaLayer*) addAreaLayer:(BaseDataStore*)srcDS
@@ -387,7 +372,7 @@
     {
         [cursorLayer setChartCursorKey:_layerName AndColor:_color];
     }
-    return [areaLayer autorelease];
+    return areaLayer;
     
 }
 
@@ -428,7 +413,7 @@
     {
         [cursorLayer setChartCursorKey:_layerName AndColor:_color];
     }
-    return [interLineGraph autorelease];
+    return interLineGraph;
 }
 
 -(HLOCLayer*)addHLOCLayer:(BaseDataStore*)srcDS
@@ -443,7 +428,7 @@
     }
     [cursorLayer setChartCursorKey:@"HLOC" AndColor:_color];
     
-    return [hlayer autorelease];
+    return hlayer;
 }
 
 -(HLOCLayer*)addHLOCLayer:(BaseDataStore*)srcDS
@@ -460,7 +445,7 @@
    }
    [cursorLayer setChartCursorKey:@"HLOC" AndColor:_color];
    
-   return [hlayer autorelease];
+   return hlayer;
 }
 
 -(CandleStickLayer*)addCandleStickLayer:(BaseDataStore*)srcDS
@@ -482,7 +467,7 @@
     }
     [cursorLayer setChartCursorKey:@"CandleStick" AndColor:0x3463B0FF];
 
-    return [candles autorelease];
+    return candles;
 }
 -(BarLayer*)addBarLayer:(BaseDataStore*)srcDS
          ForSourceField:(NSString*)srcField
@@ -511,7 +496,7 @@
     {
         [cursorLayer setChartCursorKey:_layerName AndColor:_color];
     }
-    return [barLayer autorelease];
+    return barLayer;
 }
 
 -(ArrowsLayer*)addArrowsLayer:(BaseDataStore*)srcDS
@@ -543,7 +528,7 @@
     {
         [cursorLayer setChartCursorKey:_layerName AndColor:upArrowColor];
     }
-    return [arrowsLayer autorelease];
+    return arrowsLayer;
 }
 
 -(InterLineOverlappingColorLayer*)addInterLineLayer:(BaseDataStore*)srcDS
@@ -580,7 +565,7 @@
     {
         [cursorLayer setChartCursorKey:_layerName AndColor:spanAColor];
     }
-    return [interLineGraph autorelease];
+    return interLineGraph;
 }
 
 -(BarTrendLayer*)addBarTrendLayer:(BaseDataStore*)srcDS
@@ -608,7 +593,7 @@
     {
         [cursorLayer setChartCursorKey:_layerName AndColor:_color];
     }
-    return [barLayer autorelease];
+    return barLayer;
 }
 
 -(void)setChartCursorValue:(int)dataIndex

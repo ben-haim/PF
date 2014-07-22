@@ -11,7 +11,7 @@
 @class FinanceChart;
 @interface ChartSensorView : UIView 
 {
-    FinanceChart *chart;
+    FinanceChart *__unsafe_unretained chart;
 }
-@property (assign) FinanceChart *chart;
+@property (unsafe_unretained) FinanceChart *chart;
 @end

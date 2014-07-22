@@ -70,15 +70,15 @@
 -(void)showDetailController:( UIViewController* )detail_controller_
 {
    UINavigationController* second_controller_ = detail_controller_ ? [ detail_controller_ wrapIntoNavigationController ] : [ [ self emptyController ] wrapIntoNavigationController ];
-   self.viewControllers = @[ [ self.viewControllers objectAtIndex: 0 ], second_controller_ ];
+   self.viewControllers = @[ (self.viewControllers)[0], second_controller_ ];
 }
 
 -(void)viewDidLayoutSubviews
 {
    [ super viewDidLayoutSubviews ];
    
-   UIViewController* master_view_controller_ = self.viewControllers.count > 0 ? [ self.viewControllers objectAtIndex: 0 ] : nil;
-   UIViewController* detail_view_controller_ = self.viewControllers.count > 1 ? [ self.viewControllers objectAtIndex: 1 ] : nil;
+   UIViewController* master_view_controller_ = self.viewControllers.count > 0 ? (self.viewControllers)[0] : nil;
+   UIViewController* detail_view_controller_ = self.viewControllers.count > 1 ? (self.viewControllers)[1] : nil;
    
    if ( detail_view_controller_.view.frame.origin.x > 0.f )
    {

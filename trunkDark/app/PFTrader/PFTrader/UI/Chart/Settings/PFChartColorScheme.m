@@ -77,7 +77,7 @@
 
 +(id)schemeWithType:( PFChartColorSchemeType )scheme_type_
 {
-   return [ [ self schemesByType ] objectAtIndex: scheme_type_ ];
+   return [ self schemesByType ][scheme_type_];
 }
 
 @end

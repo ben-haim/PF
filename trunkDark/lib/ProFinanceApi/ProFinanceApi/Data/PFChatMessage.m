@@ -19,13 +19,12 @@
 +(PFMetaObject*)metaObject
 {
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects: [ PFMetaObjectField fieldWithId: PFFieldTextMessageType name: @"type" ]
+           @[[ PFMetaObjectField fieldWithId: PFFieldTextMessageType name: @"type" ]
             , [ PFMetaObjectField fieldWithId: PFFieldId name: @"messageId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldSenderId name: @"senderId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldTargetId name: @"targetId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldText name: @"text" ]
-            , [ PFMetaObjectField fieldWithId: PFFieldDate name: @"date" ]
-            , nil ] ];
+            , [ PFMetaObjectField fieldWithId: PFFieldDate name: @"date" ]] ];
 }
 
 +(id)messageWithText:( NSString* )text_

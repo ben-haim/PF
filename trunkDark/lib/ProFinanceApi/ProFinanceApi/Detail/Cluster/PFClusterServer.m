@@ -122,12 +122,12 @@
 
 -(id< PFTradeCommander >)commanderForAccountWithId:( PFInteger )account_id_
 {
-   return [ self.tradeApiByAccount objectForKey: @(account_id_) ];
+   return (self.tradeApiByAccount)[@(account_id_)];
 }
 
 -(id< PFQuoteCommander >)commanderForRouteWithId:( PFInteger )route_id_
 {
-   return [ self.quoteApiByRoute objectForKey: @(route_id_) ];
+   return (self.quoteApiByRoute)[@(route_id_)];
 }
 
 -(id< PFCommander >)commanderForVerificationId:( PFInteger )verification_id_
@@ -289,14 +289,14 @@
    NSMutableDictionary* routers_ = [ NSMutableDictionary new ];
    for ( id< PFSymbolId > symbol_id_ in symbols_ )
    {
-      PFSymbolsRouter* router_ = [ routers_ objectForKey: @(symbol_id_.routeId) ];
+      PFSymbolsRouter* router_ = routers_[@(symbol_id_.routeId)];
 
       if ( !router_ )
       {
          router_ = [ PFSymbolsRouter routerWithCommander: [ self commanderForRouteWithId: symbol_id_.routeId ]
                                                  symbols: nil ];
 
-         [ routers_ setObject: router_ forKey: @(symbol_id_.routeId) ];
+         routers_[@(symbol_id_.routeId)] = router_;
       }
 
       [ router_ addSymbol: symbol_id_ ];
@@ -307,14 +307,14 @@
 -(void)api:( PFApi* )api_ didLoadAccountMessage:( PFMessage* )message_
 {
    PFInteger account_id_ = [ (PFIntegerField*)[ message_ fieldWithId: PFFieldAccountId ] integerValue ];
-   [ self.tradeApiByAccount setObject: api_ forKey: @(account_id_) ];
+   (self.tradeApiByAccount)[@(account_id_)] = api_;
    [ self.delegate server: self didLoadAccountMessage: message_ ];
 }
 
 -(void)logonForRouteWithId:( PFInteger )route_id_
           availableServers:( NSArray* )servers_
 {
-   PFQuoteApi* api_ = [ self.quoteApiByRoute objectForKey: @(route_id_) ];
+   PFQuoteApi* api_ = (self.quoteApiByRoute)[@(route_id_)];
 
    if ( api_ )
    {
@@ -339,7 +339,7 @@
    api_ = ( PFQuoteApi* )[ self.quotesCluster apiWithServer: less_loaded_server_.server ];
    if ( api_ )
    {
-      [ self.quoteApiByRoute setObject: api_ forKey: @(route_id_) ];
+      (self.quoteApiByRoute)[@(route_id_)] = api_;
       return;
    }
 
@@ -352,7 +352,7 @@
    else
    {
       [ self.quotesCluster addApi: api_ ];
-      [ self.quoteApiByRoute setObject: api_ forKey: @(route_id_) ];
+      (self.quoteApiByRoute)[@(route_id_)] = api_;
    }
 }
 
@@ -401,7 +401,7 @@
 
    for ( id route_id_ in self.quoteApiByRoute )
    {
-      PFApi* current_api_ = [ self.quoteApiByRoute objectForKey: route_id_ ];
+      PFApi* current_api_ = (self.quoteApiByRoute)[route_id_];
       if ( current_api_ == api_ )
       {
          [ routes_for_modification_ removeObjectForKey: route_id_ ];

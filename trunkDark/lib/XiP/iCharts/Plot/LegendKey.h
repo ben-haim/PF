@@ -11,8 +11,8 @@
     uint color2;    
 }
 - (id)initWithKey:(NSString*)_legendKeyString color1:(uint)_legendColor color2:(uint)_legendColor2;
-@property (nonatomic, retain) NSString *key;
-@property (nonatomic, retain) NSString *text;
+@property (nonatomic, strong) NSString *key;
+@property (nonatomic, strong) NSString *text;
 @property (assign) uint color1;
 @property (assign) uint color2;
 

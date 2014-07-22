@@ -21,7 +21,7 @@
    {
       CTPP::CDT line_row_;
       for ( NSInteger i_ = 0; i_ < report_.header.count ; ++i_ )
-         HTMLTemplateAssign( line_row_[ ( i_ == 0 ? "LINE0" : "LINE1" ) ], [ row_ objectForKey: [ report_.header objectAtIndex: i_ ] ] );
+         HTMLTemplateAssign( line_row_[ ( i_ == 0 ? "LINE0" : "LINE1" ) ], row_[(report_.header)[i_]] );
       
       template_[ "LINES" ].PushBack( line_row_ );
    }

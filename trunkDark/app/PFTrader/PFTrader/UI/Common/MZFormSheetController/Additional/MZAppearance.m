@@ -86,14 +86,14 @@ static NSMutableDictionary *instanceOfClassesDictionary = nil;
         instanceOfClassesDictionary = [[NSMutableDictionary alloc] init];
     });
     
-    if (![instanceOfClassesDictionary objectForKey:NSStringFromClass(aClass)])
+    if (!instanceOfClassesDictionary[NSStringFromClass(aClass)])
     {
         id appearance = [[self alloc] initWithClass:aClass];
-        [instanceOfClassesDictionary setObject:appearance forKey:NSStringFromClass(aClass)];
+        instanceOfClassesDictionary[NSStringFromClass(aClass)] = appearance;
         return appearance;
     }
     else {
-        return [instanceOfClassesDictionary objectForKey:NSStringFromClass(aClass)];
+        return instanceOfClassesDictionary[NSStringFromClass(aClass)];
     }
         
 }

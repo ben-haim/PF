@@ -38,14 +38,6 @@ enum
    return self;
 }
 
--(void)dealloc
-{
-   [color_up release];
-   [color_down release];
-   [color_down_border release];
-   [color_up_border release];
-   [super dealloc];
-}
 
 - (void)drawInContext:(CGContextRef)ctx
                InRect:(CGRect)rect
@@ -267,7 +259,7 @@ enum
                           [parentChart formatPrice:closePrice]];
 
    [parentChart.legendBox setText:LegendMsg ForKey:legendKey];
-   [LegendMsg autorelease];
+//   [LegendMsg autorelease];
 
 }
 

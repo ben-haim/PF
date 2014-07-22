@@ -67,7 +67,7 @@
 
 BOOL mz_areObjCTypesEqual(NSString *argmuentType, const char *encodingType) {
     
-    NSString *encoding = [NSString stringWithUTF8String:encodingType];
+    NSString *encoding = @(encodingType);
     return [[argmuentType mz_stringByRemovingMethodEnodingQualifiers] isEqualToString:[encoding mz_stringByRemovingMethodEnodingQualifiers]];
 }
 
@@ -87,7 +87,7 @@ BOOL mz_areObjCTypesEqual(NSString *argmuentType, const char *encodingType) {
         for (int i = 0; i < (numberOfArguments - 2); i++) {
             NSInteger index = i+2;
             
-            NSString *argumentType = [NSString stringWithUTF8String:[self.methodSignature getArgumentTypeAtIndex:index]];
+            NSString *argumentType = @([self.methodSignature getArgumentTypeAtIndex:index]);
 
             if (mz_areObjCTypesEqual(argumentType, @encode(char))) {
                 char arg;

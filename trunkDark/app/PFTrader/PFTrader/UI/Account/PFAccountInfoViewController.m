@@ -89,7 +89,7 @@
    self.headerView.backgroundColor = [ UIColor navigationBarColor ];
 
    self.infoTypeSegmentedControl.font = [ UIFont systemFontOfSize: 17.f ];
-   self.infoTypeSegmentedControl.items = [ NSArray arrayWithObjects: NSLocalizedString( @"TODAY", nil ), NSLocalizedString( @"ACTIVITY", nil ), nil ];
+   self.infoTypeSegmentedControl.items = @[NSLocalizedString( @"TODAY", nil ), NSLocalizedString( @"ACTIVITY", nil )];
    self.infoTypeSegmentedControl.selectedSegmentIndex = 0;
    self.infoTypeSegmentedControl.delegate = self;
 
@@ -102,8 +102,8 @@
       self.assetInfoTable.hidden = NO;
       self.assetTable.tableView.scrollEnabled = NO;
 
-      self.assetTable.categories = [ NSArray arrayWithObject: [ PFTableViewCategory assetAccountCategoryWithAccount: self.account ] ];
-      self.assetInfoTable.categories = [ NSArray arrayWithObject: [ PFTableViewCategory generalAssetCategoryWithAccount: self.account ] ];
+      self.assetTable.categories = @[[ PFTableViewCategory assetAccountCategoryWithAccount: self.account ]];
+      self.assetInfoTable.categories = @[[ PFTableViewCategory generalAssetCategoryWithAccount: self.account ]];
       self.assetInfoTable.tableFooterView = self.buttonsView;
    }
    else
@@ -151,7 +151,7 @@
 {
    if ( self.account.accountType == PFAccountTypeMultiAsset )
    {
-      self.assetInfoTable.categories = [ NSArray arrayWithObject: [ PFTableViewCategory generalAssetCategoryWithAccount: self.account ] ];
+      self.assetInfoTable.categories = @[[ PFTableViewCategory generalAssetCategoryWithAccount: self.account ]];
       [ self.assetInfoTable reloadData ];
    }
    else

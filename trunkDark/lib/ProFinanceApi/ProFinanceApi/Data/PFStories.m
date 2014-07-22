@@ -14,7 +14,7 @@
 
 -(void)addStory:( PFStory* )story_
 {
-   [ self addStories: [ NSArray arrayWithObject: story_ ] ];
+   [ self addStories: @[story_] ];
 }
 
 -(void)addStories:( NSArray* )stories_

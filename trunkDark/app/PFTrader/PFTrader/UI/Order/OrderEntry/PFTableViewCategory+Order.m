@@ -74,7 +74,7 @@
                                lots:( PFDouble )lots_
 {
    return [ self categoryWithTitle: nil
-                             items: [ NSArray arrayWithObject: [ PFTableViewItem quantityItemWithController: controller_ lots: lots_ ] ] ];
+                             items: @[[ PFTableViewItem quantityItemWithController: controller_ lots: lots_ ]] ];
 }
 
 +(id)categoryWithValidity:( PFOrderValidityType )validity_
@@ -114,10 +114,10 @@
                       isLevel4Mode:( BOOL )is_level4_mode_
 {
    return [ self categoryWithTitle: nil
-                             items: [ NSArray arrayWithObject: [ PFTableViewItem accountItemWithController: controller_
+                             items: @[[ PFTableViewItem accountItemWithController: controller_
                                                                                                       type: order_type_
                                                                                                level2Quote: level2_quote_
-                                                                                              isLevel4Mode: is_level4_mode_] ] ];
+                                                                                              isLevel4Mode: is_level4_mode_]] ];
 }
 
 @end

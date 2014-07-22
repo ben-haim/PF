@@ -11,7 +11,7 @@
 }
 // element views should know how display themselves based on selected status
 - (void)setSelectedElement:(BOOL)selected;
-@property (nonatomic, retain) NSArray *colors;
+@property (nonatomic, strong) NSArray *colors;
 @property (assign) bool isSelected;
 @property (assign) int item_index;
 @end

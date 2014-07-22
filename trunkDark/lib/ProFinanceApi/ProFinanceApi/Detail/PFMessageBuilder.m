@@ -25,7 +25,7 @@ static NSString* compileDateString()
    {
       NSDateFormatter* date_formatter_ = [ NSDateFormatter compileDateFormatter ];
       [ date_formatter_ setDateFormat: @"MMM d yyyy" ];
-      compile_date_string_ = [ [ NSDateFormatter compileDateFormatter ] stringFromDate: [ date_formatter_ dateFromString: [ NSString stringWithUTF8String: __DATE__ ] ] ];
+      compile_date_string_ = [ [ NSDateFormatter compileDateFormatter ] stringFromDate: [ date_formatter_ dateFromString: @__DATE__ ] ];
    }
    
    return compile_date_string_;
@@ -108,7 +108,7 @@ static NSString* compileDateString()
    {
       PFGroupField* group_ = [ message_ writeGroupFieldWithId: PFGroupKeyValueBean ];
       [ [ group_ writeFieldWithId: PFFieldKey ] setStringValue: key_ ];
-      [ [ group_ writeFieldWithId: PFFieldValue ] setStringValue: [ dictionary_ objectForKey: key_ ] ];
+      [ [ group_ writeFieldWithId: PFFieldValue ] setStringValue: dictionary_[key_] ];
    }
 
    return message_;
@@ -176,7 +176,7 @@ static NSString* compileDateString()
    {
       PFGroupField* criteria_group_ = [ message_ writeGroupFieldWithId: PFGroupKeyValueBean ];
 
-      NSString* value_ = [ keys_and_values_ objectForKey: key_ ];
+      NSString* value_ = keys_and_values_[key_];
 
       [ [ criteria_group_ writeFieldWithId: PFFieldKey ] setStringValue: key_ ];
       [ [ criteria_group_ writeFieldWithId: PFFieldValue ] setStringValue: value_ ];

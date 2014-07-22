@@ -70,7 +70,7 @@ id< PFPosition > PFMarketOperationAsPosition( id< PFMarketOperation > operation_
    };
 
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects: [ PFMetaObjectField fieldWithId: PFFieldAccountId name: @"accountId" ]
+           @[[ PFMetaObjectField fieldWithId: PFFieldAccountId name: @"accountId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldOperationType name: @"operationType" ]
             , [ PFMetaObjectField fieldWithId: PFFieldAmount name: @"amount" ]
             , [ PFMetaObjectField fieldWithId: PFFieldPrice name: @"price" ]
@@ -84,8 +84,7 @@ id< PFPosition > PFMarketOperationAsPosition( id< PFMarketOperation > operation_
                                        filter: ^BOOL( id self_ ){ return [ self_ takeProfitPrice ] > 0.0; }
                                   transformer: price_transformer_ ]
             , [ PFMetaObjectField fieldWithId: PFFieldSlTrOffset name: @"slTrailingOffset" ]
-            , [ PFMetaObjectField fieldWithId: PFFieldTrOffset name: @"trailingOffset" ]
-            , nil ] ];
+            , [ PFMetaObjectField fieldWithId: PFFieldTrOffset name: @"trailingOffset" ]] ];
 }
 
 -(PFInteger)operationId

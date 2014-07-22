@@ -94,7 +94,7 @@
       symbol_cell_ = [ PFWatchlistEditorSymbolCell cell ];
    }
    
-   id< PFSymbol > symbol_ = [ self.sortedSymbols objectAtIndex: index_path_.row ];
+   id< PFSymbol > symbol_ = (self.sortedSymbols)[index_path_.row];
    [ symbol_cell_ setSymbol: symbol_
                   watchlist: self.watchlist ];
    

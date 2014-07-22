@@ -48,7 +48,7 @@
                                                                isDefault: account_ == accounts_.defaultAccount ];
       account_item_.action = ^( PFTableViewItem* item_ ) { [ weak_controller_ showDetailsForAccount: account_ ]; };
       [ account_categories_ addObject: [ PFTableViewCategory categoryWithTitle: nil
-                                                                         items: [ NSArray arrayWithObject: account_item_ ] ] ];
+                                                                         items: @[account_item_] ] ];
    }
    
    self.tableView.categories = account_categories_;

@@ -10,7 +10,7 @@
                                                                                                 title: NSLocalizedString( @"OLD_PASSWORD", nil ) ];
    old_password_item_.secureTextEntry = YES;
    
-   id old_category_ = [ self categoryWithTitle: nil  items: [ NSArray arrayWithObject: old_password_item_ ] ];
+   id old_category_ = [ self categoryWithTitle: nil  items: @[old_password_item_] ];
    
    
    PFTableViewEditableDetailItem* new_password_item_ = [ PFTableViewEditableDetailItem itemWithAction: nil
@@ -21,13 +21,11 @@
                                                                                                     title: NSLocalizedString( @"CONFIRM_PASSWORD", nil ) ];
    confirm_password_item_.secureTextEntry = YES;
    
-   id new_category_ = [ self categoryWithTitle: nil  items: [ NSArray arrayWithObjects: new_password_item_
-                                                             , confirm_password_item_
-                                                             , nil ] ];
+   id new_category_ = [ self categoryWithTitle: nil  items: @[new_password_item_
+                                                             , confirm_password_item_] ];
    
-   return [ NSArray arrayWithObjects: old_category_
-           , new_category_
-           , nil ];
+   return @[old_category_
+           , new_category_];
 }
 
 @end

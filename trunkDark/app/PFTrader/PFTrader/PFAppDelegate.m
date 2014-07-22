@@ -370,9 +370,9 @@ didReceiveTradingHaltForSymbol:( id< PFSymbol > )symbol_
                                         brandingServer: [ PFBrandingSettings sharedBranding ].brandingServer
                                            brandingKey: [ PFBrandingSettings sharedBranding ].brandingKey ] getBrandingWithDoneBlock: ^(NSDictionary *result_, NSError *error_)
        {
-          [ PFBrandingSettings sharedBranding ].dowJonesToken = [ result_ objectForKey: @"BRANDING_DOWJONES_ENCRYPTED_TOKEN" ];
-          [ PFBrandingSettings sharedBranding ].demoRegistrationServer = [ result_ objectForKey: @"BRANDING_DEMOREGISTRATION_URL" ];
-          [ PFBrandingSettings sharedBranding ].ipServices = [ [ result_ objectForKey: @"BRANDING_IP_SERVICE_URL" ] componentsSeparatedByString: @";" ];
+          [ PFBrandingSettings sharedBranding ].dowJonesToken = result_[@"BRANDING_DOWJONES_ENCRYPTED_TOKEN"];
+          [ PFBrandingSettings sharedBranding ].demoRegistrationServer = result_[@"BRANDING_DEMOREGISTRATION_URL"];
+          [ PFBrandingSettings sharedBranding ].ipServices = [ result_[@"BRANDING_IP_SERVICE_URL"] componentsSeparatedByString: @";" ];
           
           self.loginController.registerButton.hidden = [ [ PFBrandingSettings sharedBranding ].demoRegistrationServer isEqualToString: @"0" ];
           

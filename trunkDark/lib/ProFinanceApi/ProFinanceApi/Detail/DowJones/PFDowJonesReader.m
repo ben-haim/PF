@@ -80,7 +80,7 @@ static NSString* const PFDowJonesPrefix = @"DJ";
 
    if ( !context_ )
    {
-      [ arguments_ setObject: @"25" forKey: @"Records" ];
+      arguments_[@"Records"] = @"25";
    }
 
    NSURL* url_ = [ NSURL URLWithString: PFDowJonesServer arguments: arguments_ ];

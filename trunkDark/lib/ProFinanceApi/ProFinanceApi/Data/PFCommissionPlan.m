@@ -31,13 +31,11 @@
 +(PFMetaObject*)metaObject
 {
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects:
-              [ PFMetaObjectField fieldWithId: PFFieldCommissionPlanId name: @"planId" ]
+           @[[ PFMetaObjectField fieldWithId: PFFieldCommissionPlanId name: @"planId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldName name: @"name" ]
             , [ PFMetaObjectField fieldWithId: PFFieldDescription name: @"description" ]
             , [ PFMetaObjectField fieldWithId: PFFieldCounterAccountId name: @"counterAccountId" ]
-            , [ PFMetaObjectField fieldWithId: PFFieldCommissionForTransferValue name: @"comissionForTransfer" ]
-            , nil ] ];
+            , [ PFMetaObjectField fieldWithId: PFFieldCommissionForTransferValue name: @"comissionForTransfer" ]] ];
 }
 
 -(void)didUpdateWithFieldOwner:( PFFieldOwner* )field_owner_
@@ -90,20 +88,20 @@
    {
       if ((comm_level_group_.instrumentId != -1) && (comm_level_group_.instrumentId == instument_.instrumentId))
       {
-         [ commissions_entries_by_operation_type_ setObject: comm_level_group_ forKey: @(comm_level_group_.type) ];
+         commissions_entries_by_operation_type_[@(comm_level_group_.type)] = comm_level_group_;
       }
       else
       {
-         PFCommissionLevelGroup* curr_comm_level_ = [ commissions_entries_by_operation_type_ objectForKey: @(comm_level_group_.type) ];
+         PFCommissionLevelGroup* curr_comm_level_ = commissions_entries_by_operation_type_[@(comm_level_group_.type)];
          
          if ((comm_level_group_.instrumentTypeId != -1) && (comm_level_group_.instrumentTypeId == instument_.groupId)
              && (!curr_comm_level_ || ((curr_comm_level_.instrumentId == -1) && (curr_comm_level_.instrumentTypeId == -1))))
          {
-            [ commissions_entries_by_operation_type_ setObject: comm_level_group_ forKey: @(comm_level_group_.type) ];
+            commissions_entries_by_operation_type_[@(comm_level_group_.type)] = comm_level_group_;
          }
          else if (!curr_comm_level_ && (comm_level_group_.instrumentId == -1) && (comm_level_group_.instrumentTypeId == -1))
          {
-            [ commissions_entries_by_operation_type_ setObject: comm_level_group_ forKey: @(comm_level_group_.type) ];
+            commissions_entries_by_operation_type_[@(comm_level_group_.type)] = comm_level_group_;
          }
       }
    }
@@ -114,11 +112,11 @@
    {
       for (PFCommissionGroup* comm_group_ in comm_level_group_.commissionGroup)
       {
-         PFCommissionGroup* comm_group_by_type_ = [comm_group_via_com_type_id_ objectForKey: @(comm_group_.type)];
+         PFCommissionGroup* comm_group_by_type_ = comm_group_via_com_type_id_[@(comm_group_.type)];
          if (!comm_group_by_type_)
          {
             comm_group_by_type_ = [PFCommissionGroup new];
-            [ comm_group_via_com_type_id_ setObject: comm_group_by_type_ forKey: @(comm_group_.type) ];
+            comm_group_via_com_type_id_[@(comm_group_.type)] = comm_group_by_type_;
             comm_group_by_type_.type = comm_group_.type;
             comm_group_by_type_.paymentType = comm_group_.paymentType;
             comm_group_by_type_.currency = comm_level_group_.specifiedCurrency;

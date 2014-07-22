@@ -27,23 +27,19 @@
    
    if ( self )
    {
-      self.askLevelColors = [ [ NSArray alloc ] initWithObjects:
-                             [ UIColor colorWithRed: 192.f / 255.f green: 72.f / 255.f blue: 72.f / 255.f alpha: 1.f ]
+      self.askLevelColors = @[[ UIColor colorWithRed: 192.f / 255.f green: 72.f / 255.f blue: 72.f / 255.f alpha: 1.f ]
                              , [ UIColor colorWithRed: 192.f / 255.f green: 72.f / 255.f blue: 72.f / 255.f alpha: 0.75f ]
                              , [ UIColor colorWithRed: 192.f / 255.f green: 72.f / 255.f blue: 72.f / 255.f alpha: 0.6f ]
                              , [ UIColor colorWithRed: 192.f / 255.f green: 72.f / 255.f blue: 72.f / 255.f alpha: 0.45f ]
                              , [ UIColor colorWithRed: 192.f / 255.f green: 72.f / 255.f blue: 72.f / 255.f alpha: 0.3f ]
-                             , [ UIColor colorWithRed: 192.f / 255.f green: 72.f / 255.f blue: 72.f / 255.f alpha: 0.15f ]
-                             , nil ];
+                             , [ UIColor colorWithRed: 192.f / 255.f green: 72.f / 255.f blue: 72.f / 255.f alpha: 0.15f ]];
       
-      self.bidLevelColors = [ [ NSArray alloc ] initWithObjects:
-                             [ UIColor colorWithRed: 17.f / 255.f green: 135.f / 255.f blue: 226.f / 255.f alpha: 1.f ]
+      self.bidLevelColors = @[[ UIColor colorWithRed: 17.f / 255.f green: 135.f / 255.f blue: 226.f / 255.f alpha: 1.f ]
                              , [ UIColor colorWithRed: 17.f / 255.f green: 135.f / 255.f blue: 226.f / 255.f alpha: 0.75f ]
                              , [ UIColor colorWithRed: 17.f / 255.f green: 135.f / 255.f blue: 226.f / 255.f alpha: 0.6f ]
                              , [ UIColor colorWithRed: 17.f / 255.f green: 135.f / 255.f blue: 226.f / 255.f alpha: 0.45f ]
                              , [ UIColor colorWithRed: 17.f / 255.f green: 135.f / 255.f blue: 226.f / 255.f alpha: 0.3f ]
-                             , [ UIColor colorWithRed: 17.f / 255.f green: 135.f / 255.f blue: 226.f / 255.f alpha: 0.15f ]
-                             , nil ];
+                             , [ UIColor colorWithRed: 17.f / 255.f green: 135.f / 255.f blue: 226.f / 255.f alpha: 0.15f ]];
    }
    
    return self;
@@ -59,10 +55,9 @@
 {
    PFLevel2QuotesViewController* controller_ = [ self new ];
    
-   controller_.columns = [ NSArray arrayWithObjects: [ PFLevel2QuoteColumn level2PriceColumnWithDelegate: delegate_ ]
+   controller_.columns = @[[ PFLevel2QuoteColumn level2PriceColumnWithDelegate: delegate_ ]
                           , [ PFLevel2QuoteColumn level2SizeColumn ]
-                          , [ PFLevel2QuoteColumn level2CCYSizeColumnWithSymbolName: symbol_.instrument.exp2 ]
-                          , nil ];
+                          , [ PFLevel2QuoteColumn level2CCYSizeColumnWithSymbolName: symbol_.instrument.exp2 ]];
    
    return controller_;
 }
@@ -106,7 +101,7 @@
             index_ = self.askLevelColors.count - 1;
          }
          
-         [ background_colors_ addObject: [ self.askLevelColors objectAtIndex: index_ ] ];
+         [ background_colors_ addObject: (self.askLevelColors)[index_] ];
       }
       else
       {
@@ -117,7 +112,7 @@
             index_ = self.bidLevelColors.count - 1;
          }
          
-         [ background_colors_ addObject: [ self.bidLevelColors objectAtIndex: index_ ] ];
+         [ background_colors_ addObject: (self.bidLevelColors)[index_] ];
       }
    }
 
@@ -162,7 +157,7 @@ backgroundViewForRowAtIndex:( NSUInteger )row_index_
      columnAtIndex:( NSUInteger )column_index_
 {
    UIImageView* background_view_ = [ [ UIImageView alloc ] initWithImage: [ UIImage  transparentCellBackgroundImage ] ];
-   background_view_.backgroundColor = [ self.backgroundColors objectAtIndex: row_index_ ];
+   background_view_.backgroundColor = (self.backgroundColors)[row_index_];
 
    return background_view_;
 }

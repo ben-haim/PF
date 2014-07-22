@@ -102,7 +102,7 @@ static NSString* PFSearchCriteriaFalseValue = @"false";
 
 -(NSString*)stringForKey:( NSString* )key_
 {
-   return [ self.criteria objectForKey: key_ ];
+   return (self.criteria)[key_];
 }
 
 -(NSDate*)dateForKey:( NSString* )key_

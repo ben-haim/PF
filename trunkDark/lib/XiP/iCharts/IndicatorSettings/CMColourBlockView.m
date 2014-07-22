@@ -32,8 +32,6 @@
 @synthesize colour, cornerRadius;
 
 - (void)setColour:(UIColor *)newColour {
-	[newColour retain];
-	[colour release];
 	colour = newColour;
 	
 	[self setNeedsDisplay];
@@ -96,11 +94,6 @@
 	CGContextDrawPath(c, kCGPathFill);
 }
 
-- (void)dealloc {
-	[colour release];
-	
-    [super dealloc];
-}
 
 
 @end

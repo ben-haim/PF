@@ -32,7 +32,7 @@
 
 -(NSString*)valueForRow:( NSInteger )row_
 {
-    return [ [ self.availableAssetAccounts objectAtIndex: row_ ] currency ];
+    return [ (self.availableAssetAccounts)[row_] currency ];
 }
 
 -(NSString*)value
@@ -63,7 +63,7 @@
       didSelectRow:( NSInteger )row_
        inComponent:( NSInteger )component_
 {
-    self.selectedAssetAccount = [ self.availableAssetAccounts objectAtIndex: row_ ];
+    self.selectedAssetAccount = (self.availableAssetAccounts)[row_];
     picker_field_.text = self.selectedAssetAccount.currency;
 
     [ super pickerField: picker_field_ didSelectRow: row_ inComponent: component_ ];

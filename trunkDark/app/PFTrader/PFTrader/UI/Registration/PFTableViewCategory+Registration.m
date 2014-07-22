@@ -50,7 +50,7 @@
       account_.login = [ ( PFTableViewEditableDetailItem* )item_ value ];
    };
    
-   id login_category_ = [ self categoryWithTitle: nil  items: [ NSArray arrayWithObject: login_item_ ] ];
+   id login_category_ = [ self categoryWithTitle: nil  items: @[login_item_] ];
    
    PFTableViewEditableDetailItem* password_item_ = [ PFTableViewEditableDetailItem itemWithAction: nil
                                                                                             title: NSLocalizedString( @"PASSWORD", nil ) ];
@@ -71,7 +71,7 @@
       account_.confirmedPassword = [ ( PFTableViewEditableDetailItem* )item_ value ];
    };
    
-   id password_category_ = [ self categoryWithTitle: nil  items: [ NSArray arrayWithObjects: password_item_, confirm_password_item_, nil ] ];
+   id password_category_ = [ self categoryWithTitle: nil  items: @[password_item_, confirm_password_item_] ];
    
    PFTableViewEditableDetailItem* first_name_item_ = [ PFTableViewEditableDetailItem itemWithAction: nil
                                                                                             title: NSLocalizedString( @"FIRST_NAME", nil ) ];
@@ -89,7 +89,7 @@
       account_.lastName = [ ( PFTableViewEditableDetailItem* )item_ value ];
    };
    
-   id name_category_ = [ self categoryWithTitle: nil  items: [ NSArray arrayWithObjects: first_name_item_, last_name_item_, nil ] ];
+   id name_category_ = [ self categoryWithTitle: nil  items: @[first_name_item_, last_name_item_] ];
    
    PFTableViewCountryItem* country_item_ = [ PFTableViewCountryItem itemWithAction: nil
                                                                              title: NSLocalizedString( @"COUNTRY", nil )
@@ -110,7 +110,7 @@
    
    country_item_.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
    
-   id country_category_ = [ self categoryWithTitle: nil  items: [ NSArray arrayWithObject: country_item_ ] ];
+   id country_category_ = [ self categoryWithTitle: nil  items: @[country_item_] ];
 
    PFTableViewEditableDetailItem* phone_item_ = [ PFTableViewEditableDetailItem itemWithAction: nil
                                                                                          title: NSLocalizedString( @"PHONE", nil )
@@ -125,7 +125,7 @@
       account_.phone = [ ( PFTableViewEditableDetailItem* )item_ value ];
    };
 
-   id phone_category_ = [ self categoryWithTitle: nil  items: [ NSArray arrayWithObject: phone_item_ ] ];
+   id phone_category_ = [ self categoryWithTitle: nil  items: @[phone_item_] ];
    
    PFTableViewEditableDetailItem* email_item_ = [ PFTableViewEditableDetailItem itemWithAction: nil
                                                                                          title: NSLocalizedString( @"EMAIL", nil )
@@ -139,7 +139,7 @@
       account_.email = [ ( PFTableViewEditableDetailItem* )item_ value ];
    };
 
-   id email_category_ = [ self categoryWithTitle: nil  items: [ NSArray arrayWithObject: email_item_ ] ];
+   id email_category_ = [ self categoryWithTitle: nil  items: @[email_item_] ];
    
    PFTableViewChoicesPickerItem* currency_item_ = [ PFTableViewChoicesPickerItem itemWithAction: nil
                                                                                           title: NSLocalizedString( @"ACCOUNT_CURRENCY", nil ) ];
@@ -173,16 +173,15 @@
       account_.isOnePosition = [ ( PFTableViewSwitchItem* )item_ on ];
    };
 
-   id balance_category_ = [ self categoryWithTitle: nil  items: [ NSArray arrayWithObjects: currency_item_, balance_item_, position_item_, nil ] ];
+   id balance_category_ = [ self categoryWithTitle: nil  items: @[currency_item_, balance_item_, position_item_] ];
    
-   return [ NSArray arrayWithObjects: login_category_
+   return @[login_category_
            , password_category_
            , name_category_
            , country_category_
            , phone_category_
            , email_category_
-           , balance_category_
-           , nil ];
+           , balance_category_];
 }
 
 @end

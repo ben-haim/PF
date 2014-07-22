@@ -37,11 +37,9 @@
 {
    if ( !_categories )
    {
-      _categories = [ NSArray arrayWithObjects:
-                     [ PFTableViewCategory generalCategoryWithSettings: self.settings ]
+      _categories = @[[ PFTableViewCategory generalCategoryWithSettings: self.settings ]
                      , [ PFTableViewCategory tradingLayersCategoryWithSettings: self.settings ]
-                     , [ PFTableViewCategory additionalCategoryWithSettings: self.settings ]
-                     , nil ];
+                     , [ PFTableViewCategory additionalCategoryWithSettings: self.settings ]];
    }
    return _categories;
 }

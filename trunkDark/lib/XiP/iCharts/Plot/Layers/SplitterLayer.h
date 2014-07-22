@@ -26,7 +26,7 @@
 
 @interface SplitterLayer : NSObject 
 {
-    FinanceChart* parentFChart;
+    FinanceChart* __unsafe_unretained parentFChart;
     NSMutableArray* iChartClicks;
     CGFloat scale;
 }
@@ -41,6 +41,6 @@
 
 -(BOOL)splitterModeFromTouches: (NSSet*)touches;
 
-@property (assign) FinanceChart* parentFChart;
-@property (nonatomic, retain) NSMutableArray* iChartClicks;
+@property (unsafe_unretained) FinanceChart* parentFChart;
+@property (nonatomic, strong) NSMutableArray* iChartClicks;
 @end

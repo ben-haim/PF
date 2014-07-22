@@ -67,7 +67,7 @@
 {
    @synchronized ( self )
    {
-      [ self.mutableDictionary setObject: object_ forKey: key_ ];
+      (self.mutableDictionary)[key_] = object_;
       [ self.mutableArray addObject: [ ADPair pairWithObject: object_ forKey: key_ ] ];
    }
 }
@@ -76,7 +76,7 @@
 {
    @synchronized ( self )
    {
-      return [ self.mutableDictionary objectForKey: key_ ];
+      return (self.mutableDictionary)[key_];
    }
 }
 

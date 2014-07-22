@@ -40,13 +40,12 @@
       }
       else
       {
-         self.types = [ NSArray arrayWithObjects: @(PFOrderMarket)
+         self.types = @[@(PFOrderMarket)
                        , @(PFOrderLimit)
                        , @(PFOrderStop)
                        , @(PFOrderStopLimit)
                        , @(PFOrderTrailingStop)
-                       , @(PFOrderOCO)
-                       , nil ];
+                       , @(PFOrderOCO)];
          
          self.currentType = order_type_;
       }
@@ -73,7 +72,7 @@
             titleForRow:( NSInteger )row_
            forComponent:( NSInteger )component_
 {
-   return NSStringFromPFOrderType( [ [ self.types objectAtIndex: row_ ] shortValue ] );
+   return NSStringFromPFOrderType( [ (self.types)[row_] shortValue ] );
 }
 
 -(void)pickerField:( PFPickerField* )picker_field_
@@ -81,7 +80,7 @@
        inComponent:( NSInteger )component_
 {
    self.oldType = self.currentType;
-   self.currentType = [ [ self.types objectAtIndex: row_ ] shortValue ];
+   self.currentType = [ (self.types)[row_] shortValue ];
    picker_field_.text = self.value;
    [ super pickerField: picker_field_ didSelectRow: row_ inComponent: component_ ];
 }

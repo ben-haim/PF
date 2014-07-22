@@ -46,11 +46,9 @@
       [ [ self appearance ] setBackgroundImage: [ UIImage imageNamed: @"PFNavigation" ] forBarMetrics: UIBarMetricsDefault ];
       [ [ UINavigationBar appearance ] setShadowImage: [ UIImage headerDarkShadowImage ] ];
       
-      NSDictionary* text_attributes_ = [ NSDictionary dictionaryWithObjectsAndKeys:
-                                        [ UIFont systemFontOfSize: 20.f ], UITextAttributeFont
-                                        , [ NSValue valueWithUIOffset: UIOffsetMake( 0.f, 0.f ) ], UITextAttributeTextShadowOffset
-                                        , [ UIColor mainTextColor ], UITextAttributeTextColor
-                                        , nil ];
+      NSDictionary* text_attributes_ = @{UITextAttributeFont: [ UIFont systemFontOfSize: 20.f ]
+                                        , UITextAttributeTextShadowOffset: [ NSValue valueWithUIOffset: UIOffsetMake( 0.f, 0.f ) ]
+                                        , UITextAttributeTextColor: [ UIColor mainTextColor ]};
 
       [ [ self appearance ] setTitleTextAttributes: text_attributes_ ];
    }
@@ -78,11 +76,9 @@
                             barMetrics: UIBarMetricsDefault ];
       
       
-      NSDictionary* text_attributes_ = [ NSDictionary dictionaryWithObjectsAndKeys:
-                                        [ UIFont systemFontOfSize: 16.f ], UITextAttributeFont
-                                        , [ NSValue valueWithUIOffset: UIOffsetMake( 0.f, 0.f ) ], UITextAttributeTextShadowOffset
-                                        , [ UIColor mainTextColor ], UITextAttributeTextColor
-                                        , nil ];
+      NSDictionary* text_attributes_ = @{UITextAttributeFont: [ UIFont systemFontOfSize: 16.f ]
+                                        , UITextAttributeTextShadowOffset: [ NSValue valueWithUIOffset: UIOffsetMake( 0.f, 0.f ) ]
+                                        , UITextAttributeTextColor: [ UIColor mainTextColor ]};
       
       [ appearance_ setTitleTextAttributes: text_attributes_ forState: UIControlStateNormal ];
       [ appearance_ setTitleTextAttributes: text_attributes_ forState: UIControlStateHighlighted ];

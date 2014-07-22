@@ -341,7 +341,7 @@ static NSString* nameForTradingBalance( int trading_balance_ )
          
          if ([commission_group_.intervals count] == 1)
          {
-            PFCommissionInterval* firstInterval = [commission_group_.intervals objectAtIndex: 0];
+            PFCommissionInterval* firstInterval = (commission_group_.intervals)[0];
             double short_price_ = firstInterval.shortPrice + firstInterval.allPrice;
             double buy_sell_price_ = firstInterval.buySellPrice + firstInterval.allPrice;
             
@@ -382,7 +382,7 @@ static NSString* nameForTradingBalance( int trading_balance_ )
       {
          if ([commission_group_.intervals count] == 1)
          {
-            PFCommissionInterval* firstInterval = [commission_group_.intervals objectAtIndex: 0];
+            PFCommissionInterval* firstInterval = (commission_group_.intervals)[0];
             
             NSString* value = (commission_group_.paymentType == PFCommissionPaymentTypeVolumePercent) ?
                [ NSString stringWithPercent: firstInterval.allPrice showPercentSign: YES ] :

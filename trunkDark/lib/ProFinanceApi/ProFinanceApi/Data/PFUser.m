@@ -19,12 +19,11 @@
 +(PFMetaObject*)metaObject
 {
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects: [ PFMetaObjectField fieldWithId: PFFieldUserId name: @"userId" ]
+           @[[ PFMetaObjectField fieldWithId: PFFieldUserId name: @"userId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldSessionId name: @"sessionId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldTimeZoneOffset name: @"timeZoneOffset" ]
             , [ PFMetaObjectField fieldWithId: PFFieldAccounts name: @"accountIdStrings" ]
-            , [ PFMetaObjectField fieldWithName: @"servers" ]
-            , nil ] ];
+            , [ PFMetaObjectField fieldWithName: @"servers" ]] ];
 }
 
 -(void)didUpdateWithFieldOwner:( PFFieldOwner* )field_owner_

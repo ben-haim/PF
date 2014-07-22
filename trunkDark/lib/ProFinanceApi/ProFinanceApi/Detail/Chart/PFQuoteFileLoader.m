@@ -93,7 +93,7 @@ didFailParseWithError:( NSError* )error_
    NSData* current_chunk_ = nil;
    for ( PFLong offset_ = 0; offset_ < size_; offset_ += [ current_chunk_ length ] )
    {
-      current_chunk_ = [ self.chunkByOffset objectForKey: @(offset_) ];
+      current_chunk_ = (self.chunkByOffset)[@(offset_)];
       NSAssert( current_chunk_, @"invalid chunk offset" );
       [ all_chunk_data_ appendData: current_chunk_ ];
    }
@@ -113,7 +113,7 @@ didReceiveMessage:( PFMessage* )message_
    self.currentSize += [ data_ length ];
 
    PFLong pointer_ = [ ( PFLongField* )[ message_ fieldWithId: PFFieldPointer ] longValue ];
-   [ self.chunkByOffset setObject: data_ forKey: @(pointer_) ];
+   (self.chunkByOffset)[@(pointer_)] = data_;
 
    PFLong size_ = [ ( PFLongField* )[ message_ fieldWithId: PFFieldSize ] longValue ];
    if ( self.currentSize != size_ )

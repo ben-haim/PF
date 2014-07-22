@@ -54,8 +54,8 @@
    NSCalendar* calendar_ = [ [ NSCalendar alloc ] initWithCalendarIdentifier: NSGregorianCalendar ];
    calendar_.timeZone = self.currentTimeZone;
    
-   return [ self.mutableSessionDaysDictionary objectForKey: @( shorted_day_ ?
-           (7) : [ [ calendar_ components: NSWeekdayCalendarUnit fromDate: [ NSDate date ] ] weekday ] - 1  ) ];
+   return (self.mutableSessionDaysDictionary)[@( shorted_day_ ?
+           (7) : [ [ calendar_ components: NSWeekdayCalendarUnit fromDate: [ NSDate date ] ] weekday ] - 1  )];
 }
 
 -(NSMutableDictionary*)mutableSessionDaysDictionary
@@ -75,7 +75,7 @@
       
       for ( int i = 0; i < allowed_order_types_strings_.count; i++ )
       {
-         if ( [ [ allowed_order_types_strings_ objectAtIndex: i ] isEqualToString: @"1" ] )
+         if ( [ allowed_order_types_strings_[i] isEqualToString: @"1" ] )
          {
             switch ( i )
             {
@@ -120,7 +120,7 @@
       
       for ( int i = 0; i < allowed_operations_strings_.count; i++ )
       {
-         if ( [ [ allowed_operations_strings_ objectAtIndex: i ] isEqualToString: @"1" ] )
+         if ( [ allowed_operations_strings_[i] isEqualToString: @"1" ] )
          {
             switch ( i )
             {
@@ -143,15 +143,14 @@
    };
    
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects: [ PFMetaObjectField fieldWithId: PFFieldId name: @"tradeSessionId" ]
+           @[[ PFMetaObjectField fieldWithId: PFFieldId name: @"tradeSessionId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldSessionIsIntaday name: @"isIntraday" ]
             , [ PFMetaObjectField fieldWithId: PFFieldSessionPeriodType name: @"periodType" ]
             , [ PFMetaObjectField fieldWithId: PFFieldSessionSubPeriodType name: @"subPeriodType" ]
             , [ PFMetaObjectField fieldWithId: PFFieldSessionDayPeriod name: @"dayPeriodType" ]
             , [ PFMetaObjectField fieldWithId: PFFieldName name: @"name" ]
             , [ PFMetaObjectField fieldWithId: PFFieldSessionAllowedOrderTypes name: @"allowedOrderTypes" transformer: order_types_transformer_ ]
-            , [ PFMetaObjectField fieldWithId: PFFieldSessionAllowedOperations name: @"allowedOperations" transformer: operation_types_transformer_ ]
-            , nil ] ];
+            , [ PFMetaObjectField fieldWithId: PFFieldSessionAllowedOperations name: @"allowedOperations" transformer: operation_types_transformer_ ]] ];
 }
 
 -(void)didUpdateWithFieldOwner:( PFFieldOwner* )field_owner_
@@ -162,7 +161,7 @@
    {
       PFTradeSessionDay* trade_day_ = [ PFTradeSessionDay objectWithFieldOwner: trade_session_day_.fieldOwner ];
       trade_day_.currentTimeZone = self.currentTimeZone;
-      [ self.mutableSessionDaysDictionary setObject: trade_day_ forKey: @( trade_day_.dayIndex ) ];
+      (self.mutableSessionDaysDictionary)[@( trade_day_.dayIndex )] = trade_day_;
    }
 }
 

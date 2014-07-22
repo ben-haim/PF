@@ -16,10 +16,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [super dealloc];
-}
 
 //called to do the first build based on the whole source vector
 -(void)build

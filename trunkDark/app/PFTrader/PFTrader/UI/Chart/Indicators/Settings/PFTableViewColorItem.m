@@ -50,7 +50,7 @@
 
 -(UIColor*)colorForRow:( NSInteger )row_
 {
-   return [ UIColor colorWithInteger: [ [ self.availableColors objectAtIndex: row_ ] unsignedIntValue ] ];
+   return [ UIColor colorWithInteger: [ (self.availableColors)[row_] unsignedIntValue ] ];
 }
 
 -(UIView*)pickerField:( PFPickerField* )picker_field_
@@ -87,7 +87,7 @@
    PFFrameView* frame_view_ = ( PFFrameView* )picker_field_.overlayView;
    frame_view_.color = [ self colorForRow: row_ ];
 
-   self.color.colorValue = [ [ self.availableColors objectAtIndex: row_ ] unsignedIntValue ];
+   self.color.colorValue = [ (self.availableColors)[row_] unsignedIntValue ];
 
    [ super pickerField: picker_field_ didSelectRow: row_ inComponent: component_ ];
 }

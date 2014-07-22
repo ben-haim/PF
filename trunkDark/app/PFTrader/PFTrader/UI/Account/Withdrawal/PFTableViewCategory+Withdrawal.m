@@ -20,9 +20,8 @@
                                                               currency: account_.currency
                                                              colorSign: NO ];
    
-   NSArray* general_items_ = [ NSArray arrayWithObjects: available_item_
-                              , remains_item_
-                              , nil ];
+   NSArray* general_items_ = @[available_item_
+                              , remains_item_];
    
    return [ self categoryWithTitle: nil
                              items: general_items_ ];
@@ -37,7 +36,7 @@
                                                                                         step: 0.01 ];
    
    return [ self categoryWithTitle: nil
-                             items: [ NSArray arrayWithObject: pad_item_ ] ];
+                             items: @[pad_item_] ];
 }
 
 @end

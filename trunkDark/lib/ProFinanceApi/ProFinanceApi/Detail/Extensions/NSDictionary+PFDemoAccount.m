@@ -18,9 +18,9 @@
    [ dictionary_ setIfNotNilObject: account_.email forKey: @"email" ];
    [ dictionary_ setIfNotNilObject: account_.phone forKey: @"phone" ];
 
-   [ dictionary_ setObject: account_.isOnePosition ? @"true" : @"false" forKey: @"isOnePosition" ];
-   [ dictionary_ setObject: [ NSString stringWithFormat: @"%d", account_.countryId ] forKey: @"countryId" ];
-   [ dictionary_ setObject: [ NSString stringWithFormat: @"%@=%lld", account_.currency, account_.balance ] forKey: @"accountInfo" ];
+   dictionary_[@"isOnePosition"] = account_.isOnePosition ? @"true" : @"false";
+   dictionary_[@"countryId"] = [ NSString stringWithFormat: @"%d", account_.countryId ];
+   dictionary_[@"accountInfo"] = [ NSString stringWithFormat: @"%@=%lld", account_.currency, account_.balance ];
 
    return dictionary_;
 }

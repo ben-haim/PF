@@ -21,7 +21,7 @@
       [ unsafe_controller_  showReportWithDate: item_.date ];
    };
    
-   return [ self categoryWithTitle: nil items: [ NSArray arrayWithObject: date_item_ ] ];
+   return [ self categoryWithTitle: nil items: @[date_item_] ];
 }
 
 @end

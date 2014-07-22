@@ -15,7 +15,7 @@
       PFTableViewAllOperationsItem* operation_item_ = [ PFTableViewAllOperationsItem itemWithOperation: operation_
                                                                                             controller: controller_ ];
       operation_item_.action = ^( PFTableViewItem* item_ ) { [ (PFTableViewAllOperationsItem*)item_ selectCurrentItem ]; };
-      [ categories_array_ addObject: [ PFTableViewCategory categoryWithTitle: nil items: [ NSArray arrayWithObject: operation_item_ ] ] ];
+      [ categories_array_ addObject: [ PFTableViewCategory categoryWithTitle: nil items: @[operation_item_] ] ];
    }
    
    return categories_array_;

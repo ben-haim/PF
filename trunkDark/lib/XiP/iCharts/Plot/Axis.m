@@ -19,8 +19,8 @@
     if(self == nil)
         return self;    
 	
-	[self setDateFormatter:[[[NSDateFormatter alloc] init] autorelease]];
-	[self setTickPositions:[[[NSMutableArray alloc] initWithCapacity:10] autorelease]];
+	[self setDateFormatter:[[NSDateFormatter alloc] init]];
+	[self setTickPositions:[[NSMutableArray alloc] initWithCapacity:10]];
     self.parentChart		= _parentChart;
     self.parentFChart		= _parentFChart;
 	self.isAutoScale		= true;
@@ -33,12 +33,6 @@
     return self;
 }
 
--(void)dealloc
-{	
-    [tickPositions release];
-	[dateFormatter release];
-	[super dealloc];
-}
 
 - (void)layoutInRect:(CGRect)rect
 {
@@ -112,7 +106,7 @@
 								(rect.origin.x)+_x, 
 								(lineY));
 		
-		[tickPositions addObject:[NSNumber numberWithDouble:(lineY)]];
+		[tickPositions addObject:@(lineY)];
 		//end draw nail
 
 		lineY+=realCellSize;
@@ -141,7 +135,7 @@
 								(rect.origin.x)+_x, 
 								(lineY));
 		CGContextStrokePath(ctx);
-		[tickPositions addObject:[NSNumber numberWithDouble:(lineY)]];
+		[tickPositions addObject:@(lineY)];
 	}
 	
 	
@@ -317,7 +311,7 @@
 			lineX = [self XIndexToX:bar_index];
 			
 			//save minor tick position
-			[tickPositions addObject:[NSNumber numberWithDouble:lineX]];
+			[tickPositions addObject:@(lineX)];
 			
 			//measure the string
 	//		CGContextSetTextDrawingMode(ctx, kCGTextInvisible); 

@@ -42,8 +42,6 @@
                                                   XIndex:x2_index 
                                                   YValue:y2];
     [anchors addObject:p2];
-    [p1 release];
-    [p2 release];
     return self;
 }
 
@@ -60,8 +58,8 @@
     if(xa==xb)
         return true;
     
-    TAAnchor* a1 = [anchors objectAtIndex:0];
-    TAAnchor* a2 = [anchors objectAtIndex:1];
+    TAAnchor* a1 = anchors[0];
+    TAAnchor* a2 = anchors[1];
     double k = (a2.y_value-a1.y_value)/(a2.x_index-a1.x_index);
     double l = (a1.y_value*a2.x_index - a2.y_value*a1.x_index)/(a2.x_index-a1.x_index);
     
@@ -93,8 +91,8 @@
 
 -(CGPoint)getP1
 {
-    TAAnchor* p1 = [anchors objectAtIndex:0];
-    TAAnchor* p2 = [anchors objectAtIndex:1];
+    TAAnchor* p1 = anchors[0];
+    TAAnchor* p2 = anchors[1];
     double x1 = p1.x_coord;
     double y1 = p1.y_coord;
     double k = (p2.y_value-p1.y_value)/(p2.x_index-p1.x_index);
@@ -119,8 +117,8 @@
 
 -(CGPoint)getP2
 {
-    TAAnchor* p1 = [anchors objectAtIndex:0];
-    TAAnchor* p2 = [anchors objectAtIndex:1];
+    TAAnchor* p1 = anchors[0];
+    TAAnchor* p2 = anchors[1];
     double x2 = p2.x_coord;
     double y2 = p2.y_coord;
     double k = (p2.y_value-p1.y_value)/(p2.x_index-p1.x_index);
@@ -148,8 +146,8 @@
                AndDPI:(double)pen_1px 
         AndCursorMode:(uint)cursorMode
 {
-    TAAnchor* a1 = [anchors objectAtIndex:0];
-    TAAnchor* a2 = [anchors objectAtIndex:1];
+    TAAnchor* a1 = anchors[0];
+    TAAnchor* a2 = anchors[1];
     double k = (a2.y_value-a1.y_value) / (a2.x_index-a1.x_index);
     double l = (a1.y_value*a2.x_index - a2.y_value*a1.x_index)/(a2.x_index-a1.x_index);
     

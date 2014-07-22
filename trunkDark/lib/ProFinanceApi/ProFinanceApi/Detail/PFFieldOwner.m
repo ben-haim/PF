@@ -150,18 +150,18 @@
 {
    [ self.mutableFields addObject: field_ ];
    PFPlainFieldKey* key_ = [ PFPlainFieldKey keyWithFieldId: field_.fieldId ];
-   [ self.fieldsById setObject: field_ forKey: key_ ];
+   (self.fieldsById)[key_] = field_;
 }
 
 -(NSMutableArray*)mutableGroupFieldsWithId:( PFInteger )group_id_
 {
    PFGroupFieldKey* key_ = [ PFGroupFieldKey keyWithGroupId: group_id_ ];
-   NSMutableArray* groups_ = [ self.fieldsById objectForKey: key_ ];
+   NSMutableArray* groups_ = (self.fieldsById)[key_];
 
    if ( !groups_ )
    {
       groups_ = [ NSMutableArray array ];
-      [ self.fieldsById setObject: groups_ forKey: key_ ];
+      (self.fieldsById)[key_] = groups_;
    }
 
    return groups_;
@@ -172,7 +172,7 @@
    NSAssert( id_ != PFFieldGroup, @"can't be group id" );
 
    PFPlainFieldKey* key_ = [ PFPlainFieldKey keyWithFieldId: id_ ];
-   return [ self.fieldsById objectForKey: key_ ];
+   return (self.fieldsById)[key_];
 }
 
 -(id)writeFieldWithId:( PFShort )id_
@@ -195,7 +195,7 @@
 -(PFGroupField*)groupFieldWithId:( PFInteger )group_id_
 {
    NSArray* groups_ = [ self groupFieldsWithId: group_id_ ];
-   return [ groups_ count ] > 0 ? [ groups_ objectAtIndex: 0 ] : nil;
+   return [ groups_ count ] > 0 ? groups_[0] : nil;
 }
 
 -(void)addGroupField:( PFGroupField* )group_

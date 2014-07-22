@@ -22,11 +22,10 @@
 +(PFMetaObject*)metaObject
 {
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects:  [ PFMetaObjectField fieldWithId: PFFieldPrice name: @"price" ]
+           @[[ PFMetaObjectField fieldWithId: PFFieldPrice name: @"price" ]
             , [ PFMetaObjectField fieldWithId: PFFieldVolume name: @"size" ]
             , [ PFMetaObjectField fieldWithId: PFFieldExchange name: @"exchange" ]
-            , [ PFMetaObjectField fieldWithId: PFFieldDate name: @"date" ]
-            , nil ] ];
+            , [ PFMetaObjectField fieldWithId: PFFieldDate name: @"date" ]] ];
 }
 
 -(NSString*)symbolName

@@ -28,7 +28,7 @@
    PFReportCell* cell_ = (PFReportCell*)[ super cellForGridView: grid_view_ context: context_ ];
 
    NSDictionary* report_row_ = ( NSDictionary* )context_;
-   cell_.valueLabel.text = [ report_row_ objectForKey: self.columnName ];
+   cell_.valueLabel.text = report_row_[self.columnName];
 
    return cell_;
 }

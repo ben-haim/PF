@@ -60,19 +60,16 @@
     
     contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, 1)];
     [self addSubview:contentView];
-    [contentView release];
     
     Axis* xx = [[Axis alloc] initWithType:CHART_AXIS_HORIZONTAL 
                             parentXYChart:nil 
                        parentFinanceChart:self];
     [self setXAxis:xx];
-    [xx release];
     splitter_layer = [[SplitterLayer alloc] initWithParentChart:self];
     
     //setup handling for pinch zooming as we don't use standard zoom
     UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchGesture:)];
     [self addGestureRecognizer:pinchGesture]; 
-    [pinchGesture release];    
     
     chart_data          = nil;
     imgCachedChart      = nil;
@@ -90,36 +87,6 @@
 }
 
 
--(void)dealloc
-{
-    if(chartSensor)
-        [chartSensor release];
-    if(chart_data!=nil)
-        [chart_data release];
-    if(imgCachedChart!=nil)
-        [imgCachedChart release];
-    if(mainChart!=nil)
-        [mainChart release];
-    mainChart = nil;
-    if(properties!=nil)
-        [properties release];
-    if(default_properties!=nil)
-        [default_properties release];
-    if(symbol!=nil)
-        [symbol release];
-    if (indFactory != nil) 
-    {
-        [((IndicatorFactory*)indFactory) release];
-    }
-    [addIndCharts release];
-    [orderLevels release];
-    [xAxis release];
-    [splitter_layer release];
-   
-    self.tapBlock = nil;
-   
-	 [super dealloc];
-}
 
 - (void)updateChartSensor:(ChartSensorView*)val;
 {
@@ -157,7 +124,7 @@
     
     for(int i=0; i<cnt; i++)
     {
-        UITouch *touch = [[touches allObjects] objectAtIndex:i];
+        UITouch *touch = [touches allObjects][i];
         CGPoint p = [touch locationInView:self];
         [points addObject:[NSValue valueWithCGPoint:p]];
     }    
@@ -179,7 +146,7 @@
    BOOL need_cursors_ = cursorMode == CHART_MODE_CROSSHAIR || cursorMode == CHART_MODE_DRAW || cursorMode == CHART_MODE_RESIZE;
    if (need_cursors_ )
    {
-      CGPoint cursorPoint = [(NSValue*)[points objectAtIndex:0] CGPointValue];
+      CGPoint cursorPoint = [(NSValue*)points[0] CGPointValue];
       
       [self hideCursors];
       int dataIndex = [self.xAxis getXDataIndex:cursorPoint.x] - self.startIndex;
@@ -190,7 +157,6 @@
       [self showCursors:dataIndex AndXY:cursorPoint];
    }
    
-    [points release];
     [self setNeedsDisplay];
 }
 - (void)sensor_touchesMoved:(NSSet *)touches
@@ -200,7 +166,7 @@
     
     for(int i=0; i<cnt; i++)
     {
-        UITouch *touch = [[touches allObjects] objectAtIndex:i];
+        UITouch *touch = [touches allObjects][i];
         CGPoint p = [touch locationInView:self];
         //p.x-=self.contentOffset.x;
         [points addObject:[NSValue valueWithCGPoint:p]];
@@ -222,7 +188,7 @@
    BOOL need_cursors_ = cursorMode == CHART_MODE_CROSSHAIR || cursorMode == CHART_MODE_DRAW || cursorMode == CHART_MODE_RESIZE;
    if (need_cursors_ )
    {
-      CGPoint cursorPoint = [(NSValue*)[points objectAtIndex:0] CGPointValue];
+      CGPoint cursorPoint = [(NSValue*)points[0] CGPointValue];
       
       [self hideCursors];
       int dataIndex = [self.xAxis getXDataIndex:cursorPoint.x] - self.startIndex;
@@ -235,7 +201,6 @@
       [self showCursors:dataIndex AndXY:cursorPoint];
    }
    
-    [points release];
     [self setNeedsDisplay];
 }
 - (void)sensor_touchesEnded:(NSSet *)touches
@@ -245,7 +210,7 @@
     
     for(int i=0; i<cnt; i++)
     {
-        UITouch *touch = [[touches allObjects] objectAtIndex:i];
+        UITouch *touch = [touches allObjects][i];
         CGPoint p = [touch locationInView:self];
         [points addObject:[NSValue valueWithCGPoint:p]];
     }    
@@ -268,7 +233,6 @@
       [self hideCursors];
    }
    
-    [points release];
     [self setNeedsDisplay];    
 }
 - (void)sensor_touchesCancelled:(NSSet *)touches
@@ -450,22 +414,18 @@
 
 -(void) fillDefaultChartSettings:(NSString*)strSettings
 {
-    if(default_properties!=nil)
-        [default_properties release];
     
     default_properties = [[PropertiesStore alloc] initWithString:strSettings];
 }
 -(void)setChartSettingsWithString:(NSString*)strSettings
 {
-   [ self setChartSettingsWithPropertiesStore: [[[PropertiesStore alloc] initWithString:strSettings]autorelease] ];
+   [ self setChartSettingsWithPropertiesStore: [[PropertiesStore alloc] initWithString:strSettings] ];
 }
 
 -(void) setChartSettingsWithPropertiesStore:(PropertiesStore*)properties_
 {
-   if(properties!=nil)
-      [properties release];
 
-   properties = [ properties_ retain ];
+   properties = properties_;
    currentZoom = [[properties getParam:@"view.zoom"] doubleValue];
    chartType = [[properties getParam:@"view.chartType"] intValue];
    duration = currentZoom;
@@ -535,8 +495,6 @@
 
 -(void)clean
 {
-    if(mainChart!=nil)
-        [mainChart release];
     mainChart = nil;
     [addIndCharts removeAllObjects];
     [properties ClearCache];
@@ -809,10 +767,9 @@
       img = UIGraphicsGetImageFromCurrentImageContext();
       if(imgCachedChart)
       {
-         [imgCachedChart release];
          imgCachedChart = nil;
       }
-      imgCachedChart = [img retain];
+      imgCachedChart = img;
       dataChanged = false;
    }
    
@@ -891,15 +848,14 @@
         double percentHeight = 1.0/(2.0 + [indAdd count]);
         if([panelHeights count]==[indAdd count])
         {
-            percentHeight = [[panelHeights objectAtIndex:c] doubleValue];
+            percentHeight = [panelHeights[c] doubleValue];
         }
-        [newHeights addObject:[NSNumber numberWithDouble:percentHeight]];
+        [newHeights addObject:@(percentHeight)];
         
         summHeight+=percentHeight;
         
         [indChart setPercentHeight:percentHeight];
         [addIndCharts addObject:indChart];
-        [indChart release];
         
         NSString *path = [NSString stringWithFormat:@"indicators.%@", indName];
         [indFactory addAuxIndicator:indCode WithProperties:path ToChart:indChart];
@@ -911,8 +867,6 @@
         [mainChart setPercentHeight:1-summHeight];
         //2.0/(2.0 + [indAdd count])  //double as height as any of the add indicators
     }  
-    [newHeights release];
-    [mutable_indAdd_ release];
     //NSLog(@"data %@", properties.settings);   
 }
 - (void)setCursorMode:(uint)ChartModeValue
@@ -1001,7 +955,6 @@
     
     [self deleteOrderLevel:order_no isOrder:is_order];
     [orderLevels addObject:ol];
-    [ol release];
 }
 - (void)deleteOrderLevel:(uint)order_no isOrder:(BOOL)is_order
 {
@@ -1017,7 +970,7 @@
 }
 - (NSMutableArray*)getOrderLevelsBetween:(double)p1 And:(double)p2
 {
-    NSMutableArray *res = [[[NSMutableArray alloc] init] autorelease];
+    NSMutableArray *res = [[NSMutableArray alloc] init];
     
     for (TAOrderLevel *ol in orderLevels) 
     {

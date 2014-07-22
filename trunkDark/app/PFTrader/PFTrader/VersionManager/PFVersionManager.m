@@ -38,15 +38,15 @@
                             
                             if ( [ versions_in_store_ count ] > 0 )
                             {
-                               NSString* appStore_version_ = [ versions_in_store_ objectAtIndex: 0 ];
+                               NSString* appStore_version_ = versions_in_store_[0];
                                
                                NSArray* appStore_version_parts_ = [ appStore_version_ componentsSeparatedByString: @"."];
                                NSArray* current_version_parts_ = [ CURRENT_APP_VERSION componentsSeparatedByString: @"."];
                                
-                               NSComparisonResult main_version_comparation = [ [ current_version_parts_ objectAtIndex: 0 ] compare: [ appStore_version_parts_ objectAtIndex: 0 ]
+                               NSComparisonResult main_version_comparation = [ current_version_parts_[0] compare: appStore_version_parts_[0]
                                                                                                                            options: NSNumericSearch ];
                                
-                               NSComparisonResult sub_version_comparation =  [ [ current_version_parts_ objectAtIndex: 1 ] compare: [ appStore_version_parts_ objectAtIndex: 1 ]
+                               NSComparisonResult sub_version_comparation =  [ current_version_parts_[1] compare: appStore_version_parts_[1]
                                                                                                                            options: NSNumericSearch ];
                                
                                if ( main_version_comparation == NSOrderedAscending ||

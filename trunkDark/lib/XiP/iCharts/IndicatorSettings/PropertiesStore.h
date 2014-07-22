@@ -32,6 +32,6 @@
        AtNewPath:(NSString*)new_path 
       AndNewName:(NSString*)new_name;
 
-@property (nonatomic, retain) NSDictionary *settings;
-@property (nonatomic, retain) NSMutableDictionary *cache;
+@property (nonatomic, strong) NSDictionary *settings;
+@property (nonatomic, strong) NSMutableDictionary *cache;
 @end

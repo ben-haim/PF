@@ -20,10 +20,9 @@
 +(PFMetaObject*)metaObject
 {
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects: [ PFMetaObjectField fieldWithId: PFFieldPrice name: @"price" ]
+           @[[ PFMetaObjectField fieldWithId: PFFieldPrice name: @"price" ]
             , [ PFMetaObjectField fieldWithId: PFFieldNameExp1 name: @"exp1Name" ]
-            , [ PFMetaObjectField fieldWithId: PFFieldNameExp2 name: @"exp2Name" ]
-            , nil ] ];
+            , [ PFMetaObjectField fieldWithId: PFFieldNameExp2 name: @"exp2Name" ]] ];
 }
 
 @end

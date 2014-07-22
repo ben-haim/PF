@@ -85,7 +85,7 @@
       
       _node = (xmlNodePtr)theDoc;
       NSAssert(_node->_private == NULL, @"TODO");
-      _node->_private = self; // Note. NOT retained (TODO think more about _private usage)
+      _node->_private = (__bridge void *)(self); // Note. NOT retained (TODO think more about _private usage)
 
       if (xpathObject)
         xmlXPathFreeObject (xpathObject);
@@ -97,9 +97,7 @@
 		{
 			xmlErrorPtr theLastErrorPtr = xmlGetLastError();
 			
-			NSDictionary *theUserInfo = [NSDictionary dictionaryWithObjectsAndKeys:
-																	 theLastErrorPtr ? [NSString stringWithUTF8String:theLastErrorPtr->message] : @"unknown", NSLocalizedDescriptionKey,
-																	 NULL];
+			NSDictionary *theUserInfo = @{NSLocalizedDescriptionKey: theLastErrorPtr ? @(theLastErrorPtr->message) : @"unknown"};
 			
 			theError = [NSError errorWithDomain:@"CXMLErrorDomain" code:1 userInfo:theUserInfo];
 			
@@ -111,7 +109,6 @@
 		
 		if (theError != NULL)
 		{
-			[self release];
 			self = NULL;
 		}
 	}
@@ -139,7 +136,7 @@
       if (theDoc != NULL)
 			{
         _node = (xmlNodePtr)theDoc;
-        _node->_private = self; // Note. NOT retained (TODO think more about _private usage)
+        _node->_private = (__bridge void *)(self); // Note. NOT retained (TODO think more about _private usage)
 			}
       else
 			{
@@ -152,7 +149,6 @@
     
     if (theError != NULL)
 		{
-      [self release];
       self = NULL;
 		}
 	}

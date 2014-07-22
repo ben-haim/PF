@@ -115,7 +115,7 @@
 
       [ self save ];
 
-      [ self.delegate watchlist: self didRemoveSymbols: [ NSArray arrayWithObject: symbol_ ] ];
+      [ self.delegate watchlist: self didRemoveSymbols: @[symbol_] ];
    }
 }
 

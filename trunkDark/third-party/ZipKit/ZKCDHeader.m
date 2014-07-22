@@ -225,7 +225,7 @@
 
 - (NSNumber *) posixPermissions {
 	// if posixPermissions are 0, e.g. on Windows-produced archives, then default them to rwxr-wr-w a la Archive Utility
-	return [NSNumber numberWithUnsignedInteger:(self.externalFileAttributes >> 16 & 0x1FF) ?: 0755U];
+	return @((self.externalFileAttributes >> 16 & 0x1FF) ?: 0755U);
 }
 
 - (BOOL) isDirectory {

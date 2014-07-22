@@ -23,6 +23,6 @@
             AndLineWidth:(uint)_linewidth 
              AndLineDash:(uint)_linedash;
 -(TAAnchor*)get_a2;
-@property (nonatomic, retain) NSDateFormatter* dateformatter;
+@property (nonatomic, strong) NSDateFormatter* dateformatter;
 @end
 

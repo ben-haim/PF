@@ -13,9 +13,9 @@
     NSString* propertyPath;
 }
 -(void)SelectApplyTo:(uint)_apply_to_field;
-@property (nonatomic, retain) UILabel *lblTitle;
-@property (nonatomic, retain) NSMutableArray *pickerViewArray;
-@property (nonatomic, retain) V8HorizontalPickerView* valueHPicker;
-@property (nonatomic, retain) NSString* propertyPath;
-@property (nonatomic, retain) PropertiesStore* properties;
+@property (nonatomic, strong) UILabel *lblTitle;
+@property (nonatomic, strong) NSMutableArray *pickerViewArray;
+@property (nonatomic, strong) V8HorizontalPickerView* valueHPicker;
+@property (nonatomic, strong) NSString* propertyPath;
+@property (nonatomic, strong) PropertiesStore* properties;
 @end

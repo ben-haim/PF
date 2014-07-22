@@ -95,12 +95,12 @@
          break;
    }
    
-   NSMutableSet* quotes_grop_ = [ quotes_ objectForKey: quote_.expirationDate ];
+   NSMutableSet* quotes_grop_ = quotes_[quote_.expirationDate];
    
    if (  ! quotes_grop_ )
    {
       quotes_grop_ = [ NSMutableSet new ];
-      [ quotes_ setObject: quotes_grop_ forKey: quote_.expirationDate ];
+      quotes_[quote_.expirationDate] = quotes_grop_;
    }
    else
    {
@@ -138,7 +138,7 @@
          break;
    }
    
-   for ( PFLevel4Quote* level4Quote_ in [ [ quotes_ objectForKey: symbol_id_.expirationDate ] allObjects ] )
+   for ( PFLevel4Quote* level4Quote_ in [ quotes_[symbol_id_.expirationDate] allObjects ] )
    {
       if ( level4Quote_.strikePrice == symbol_id_.strikePrice )
       {

@@ -30,18 +30,18 @@
 
 -(void)addRoute:( id< PFRoute > )route_
 {
-   [ self.routesByName setObject: route_ forKey: route_.name ];
-   [ self.routesById setObject: route_ forKey: @(route_.routeId) ];
+   (self.routesByName)[route_.name] = route_;
+   (self.routesById)[@(route_.routeId)] = route_;
 }
 
 -(id< PFRoute >)routeByName:( NSString* )name_
 {
-   return [ self.routesByName objectForKey: name_ ];
+   return (self.routesByName)[name_];
 }
 
 -(id< PFRoute >)routeById:( PFInteger )id_
 {
-   return [ self.routesById objectForKey: @(id_) ];
+   return (self.routesById)[@(id_)];
 }
 
 -(NSString*)description
@@ -51,7 +51,7 @@
 
 -(PFRoute*)writeRouteWithName:( NSString* )name_
 {
-   PFRoute* route_ = [ self.routesByName objectForKey: name_ ];
+   PFRoute* route_ = (self.routesByName)[name_];
    if ( !route_ )
    {
       route_ = [ PFRoute routeWithName: name_ ];

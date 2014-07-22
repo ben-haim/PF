@@ -29,15 +29,14 @@
 +(PFMetaObject*)metaObject
 {
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects: [ PFMetaObjectField fieldWithId: PFFieldPrice name: @"realPrice" ]
+           @[[ PFMetaObjectField fieldWithId: PFFieldPrice name: @"realPrice" ]
             , [ PFMetaObjectField fieldWithId: PFFieldSide name: @"side" ]
             , [ PFMetaObjectField fieldWithId: PFFieldVolume name: @"size" ]
             , [ PFMetaObjectField fieldWithId: PFFieldSource name: @"source" ]
             , [ PFMetaObjectField fieldWithId: PFFieldQuoteId name: @"quoteId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldDate name: @"date" ]
             , [ PFMetaObjectField fieldWithId: PFFieldDayTradeVolume name: @"dayTradeVolume" ]
-            , [ PFMetaObjectField fieldWithId: PFFieldIsClosed name: @"isClosed" ]
-            , nil ] ];
+            , [ PFMetaObjectField fieldWithId: PFFieldIsClosed name: @"isClosed" ]] ];
 }
 
 -(id<PFSymbol>)symbol

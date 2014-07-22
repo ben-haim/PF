@@ -48,10 +48,10 @@
 
       for ( NSUInteger i_ = 0; i_ < [ self.header count ]; ++i_ )
       {
-         NSString* key_ = [ self.header objectAtIndex: i_ ];
-         NSString* value_ = [ values_ objectAtIndex: i_ ];
+         NSString* key_ = (self.header)[i_];
+         NSString* value_ = values_[i_];
 
-         [ row_ setObject: value_ forKey: key_ ];
+         row_[key_] = value_;
       }
 
       [ self.mutableRows addObject: row_ ];
@@ -70,15 +70,15 @@
    report_.name = message_;
    report_.date = [ NSDate date ];
    report_.dialog = @"";
-   report_.header = [ NSArray arrayWithObjects: @"Title", @"Value", nil ];
-   [ report_.mutableRows addObject: [ NSDictionary dictionaryWithObjectsAndKeys: @"Event:", @"Title", message_, @"Value", nil ] ];
+   report_.header = @[@"Title", @"Value"];
+   [ report_.mutableRows addObject: @{@"Title": @"Event:", @"Value": message_} ];
    
    return report_;
 }
 
 -(PFReportTable*)transformedTable
 {
-    if ( self.rows.count == 1 && self.header.count > 1 && [ [ self.rows objectAtIndex: 0 ] count ] > 0 )
+    if ( self.rows.count == 1 && self.header.count > 1 && [ (self.rows)[0] count ] > 0 )
     {
         PFReportTable* transformed_table_ = [ PFReportTable new ];
         
@@ -86,11 +86,11 @@
         transformed_table_.name = self.name;
         transformed_table_.dialog = self.dialog;
         transformed_table_.date = self.date;
-        transformed_table_.header = [ NSArray arrayWithObjects: [ self.header objectAtIndex: 0 ], [ [ self.rows objectAtIndex: 0 ] objectForKey: [ self.header objectAtIndex: 0 ] ] , nil ];
+        transformed_table_.header = @[(self.header)[0], (self.rows)[0][(self.header)[0]]];
         
         for ( int index_ = 1; index_ < self.header.count; index_++ )
         {
-            [ transformed_table_ addRow: [ NSArray arrayWithObjects: [ self.header objectAtIndex: index_ ], [ [ self.rows objectAtIndex: 0 ] objectForKey: [ self.header objectAtIndex: index_ ] ], nil ] ];
+            [ transformed_table_ addRow: @[(self.header)[index_], (self.rows)[0][(self.header)[index_]]] ];
         }
         
         return transformed_table_;

@@ -86,20 +86,18 @@
       
       if ( self.level4Mode )
       {
-         self.categories = [ NSArray arrayWithObjects: self.accountCategory
+         self.categories = @[self.accountCategory
                             , self.quantityCategory
-                            , self.validityCategory
-                            , nil ];
+                            , self.validityCategory];
       }
       else
       {
-         self.categories = self.accountCategory ? [ NSArray arrayWithObject: self.accountCategory ] : [ NSArray new ];
-         self.categories = [ self.categories arrayByAddingObjectsFromArray: [ NSArray arrayWithObjects: self.orderTypeCategory
+         self.categories = self.accountCategory ? @[self.accountCategory] : [ NSArray new ];
+         self.categories = [ self.categories arrayByAddingObjectsFromArray: @[self.orderTypeCategory
                                                                              , self.quantityCategory
                                                                              , self.validityCategory
                                                                              , self.slCategory
-                                                                             , self.tpCategory
-                                                                             , nil ] ];
+                                                                             , self.tpCategory] ];
       }
    }
    

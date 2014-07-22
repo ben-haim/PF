@@ -13,9 +13,9 @@
     NSString* propertyPath;
 }
 -(void)SelectColor:(uint)_color;
-@property (nonatomic, retain) UILabel *lblTitle;
+@property (nonatomic, strong) UILabel *lblTitle;
 //@property (nonatomic, retain) NSMutableArray *pickerViewArray;
-@property (nonatomic, retain) V8HorizontalPickerView* valueHPicker;
-@property (nonatomic, retain) NSString* propertyPath;
-@property (nonatomic, retain) PropertiesStore* properties;
+@property (nonatomic, strong) V8HorizontalPickerView* valueHPicker;
+@property (nonatomic, strong) NSString* propertyPath;
+@property (nonatomic, strong) PropertiesStore* properties;
 @end

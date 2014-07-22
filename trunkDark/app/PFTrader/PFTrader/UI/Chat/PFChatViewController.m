@@ -120,7 +120,7 @@ didLoadChatMessage:( id< PFChatMessage > )message_
    NSIndexPath* reload_index_path_ = [ NSIndexPath indexPathForRow: [ self.messages indexOfObject: message_ ]
                                                          inSection: 0 ];
 
-   NSArray* index_pathes_ = [ NSArray arrayWithObject: reload_index_path_ ];
+   NSArray* index_pathes_ = @[reload_index_path_];
 
    [ self.tableView insertRowsAtIndexPaths: index_pathes_
                           withRowAnimation: UITableViewRowAnimationLeft ];
@@ -186,14 +186,14 @@ didLoadChatMessage:( id< PFChatMessage > )message_
       cell_ = [ PFChatCell cell ];
    }
 
-   cell_.message = [ self.messages objectAtIndex: index_path_.row ];
+   cell_.message = (self.messages)[index_path_.row];
 
    return cell_;
 }
 
 -(CGFloat)tableView:( UITableView* )table_view_ heightForRowAtIndexPath:(NSIndexPath *)index_path_
 {
-   return [ PFChatCell cellHeightForMessage: [ self.messages objectAtIndex: index_path_.row ]
+   return [ PFChatCell cellHeightForMessage: (self.messages)[index_path_.row]
                                    forWidth: table_view_.bounds.size.width ];
 }
 

@@ -9,8 +9,8 @@
     NSString* name;
     NSArray* props;
 }
-@property (nonatomic, retain)	NSString* name;
-@property (nonatomic, retain)	NSArray* props;
+@property (nonatomic, strong)	NSString* name;
+@property (nonatomic, strong)	NSArray* props;
 @end
 
 @interface EditPropertiesViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
@@ -30,8 +30,8 @@
 
 - (IBAction)btnDonePressed:(id)sender;
 
-@property (nonatomic, retain)	NSMutableArray		*tableLayout;
-@property (nonatomic, retain)	PropertiesStore*    properties;
-@property (nonatomic, retain)	UIBarButtonItem*    lblTitle;
-@property (nonatomic, retain)	UIBarButtonItem*    btnDone;
+@property (nonatomic, strong)	NSMutableArray		*tableLayout;
+@property (nonatomic, strong)	PropertiesStore*    properties;
+@property (nonatomic, strong)	UIBarButtonItem*    lblTitle;
+@property (nonatomic, strong)	UIBarButtonItem*    btnDone;
 @end

@@ -23,12 +23,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [name release];
-    [props release];
-    [super dealloc];
-}
 @end
 
 
@@ -49,17 +43,10 @@
 
 - (void)dealloc
 {
-    [settingsTableView release];
-    [tableLayout release];
-    if (properties) [properties release];
-    [lblTitle release];
 
     settingsTableView = nil;
-    properties = nil;
-    lblTitle = nil;
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
-    [super dealloc];
 }
 
 - (void)didReceiveMemoryWarning
@@ -104,8 +91,6 @@
               ForPath:(NSString*)path 
            WithNotify:(NSString*)_notify_msg
 {      
-    if(properties)
-        [properties release];
     [self setProperties:store];
     notify_msg = _notify_msg; 
     title = __title;
@@ -127,8 +112,6 @@
         PropertySection *sect = [[PropertySection alloc] initWithName:sect_title_loc
                                                              andProps:props_list];
         [tableLayout addObject:sect]; 
-        [props_list release];
-        [sect release];        
     }
     //NSLog(@"sec order %@", tableLayout);
 }
@@ -153,23 +136,23 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
 {
-    PropertySection *sect = [tableLayout objectAtIndex:section];
+    PropertySection *sect = tableLayout[section];
     return [sect.props count];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    PropertySection *sect = [tableLayout objectAtIndex:section];
+    PropertySection *sect = tableLayout[section];
     return sect.name;
 }
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {    
-    PropertySection *sect = [tableLayout objectAtIndex:indexPath.section];    
-    NSString* propertyPath = [sect.props objectAtIndex:indexPath.row];
+    PropertySection *sect = tableLayout[indexPath.section];    
+    NSString* propertyPath = (sect.props)[indexPath.row];
     NSDictionary * property = [properties getDict:propertyPath];
-    int dataType = [[property objectForKey:@"type"] intValue];
+    int dataType = [property[@"type"] intValue];
     //NSLog(@"dataType %d", dataType);
     if(dataType==PROPERTY_TYPE_COLOR)
     {
@@ -177,14 +160,14 @@
         ColorEditCell *cell = (ColorEditCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) 
         {
-            cell = (ColorEditCell*)[[[NSBundle mainBundle] loadNibNamed:@"ColorEditCell" 
+            cell = (ColorEditCell*)[[NSBundle mainBundle] loadNibNamed:@"ColorEditCell" 
                                            owner:self 
-                                         options:nil] objectAtIndex:0];
+                                         options:nil][0];
         }    
         
-        cell.lblTitle.text = NSLocalizedString([property objectForKey:@"label"], @"field label");
+        cell.lblTitle.text = NSLocalizedString(property[@"label"], @"field label");
         //read the color value
-        NSString *colorString = [property objectForKey:@"value"];
+        NSString *colorString = property[@"value"];
         uint outVal;
         NSScanner* scanner = [NSScanner scannerWithString:colorString];
         [scanner scanHexInt:&outVal];
@@ -201,14 +184,14 @@
         LineWidthEditCell *cell = (LineWidthEditCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) 
         {
-            cell = (LineWidthEditCell*)[[[NSBundle mainBundle] loadNibNamed:@"LineWidthEditCell" 
+            cell = (LineWidthEditCell*)[[NSBundle mainBundle] loadNibNamed:@"LineWidthEditCell" 
                                                                   owner:self 
-                                                                options:nil] objectAtIndex:0];
+                                                                options:nil][0];
         }    
         
-        cell.lblTitle.text = NSLocalizedString([property objectForKey:@"label"], @"field label");
+        cell.lblTitle.text = NSLocalizedString(property[@"label"], @"field label");
         //read the width value
-        int lineWidth = [[property objectForKey:@"value"] intValue];
+        int lineWidth = [property[@"value"] intValue];
         
         [cell SelectWidth:lineWidth];
         [cell setPropertyPath:propertyPath];
@@ -222,14 +205,14 @@
         LineDashEditCell *cell = (LineDashEditCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) 
         {
-            cell = (LineDashEditCell*)[[[NSBundle mainBundle] loadNibNamed:@"LineDashEditCell" 
+            cell = (LineDashEditCell*)[[NSBundle mainBundle] loadNibNamed:@"LineDashEditCell" 
                                                                       owner:self 
-                                                                    options:nil] objectAtIndex:0];
+                                                                    options:nil][0];
         }    
         
-        cell.lblTitle.text = NSLocalizedString([property objectForKey:@"label"], @"field label");
+        cell.lblTitle.text = NSLocalizedString(property[@"label"], @"field label");
         //read the width value
-        int lineDash = [[property objectForKey:@"value"] intValue];
+        int lineDash = [property[@"value"] intValue];
         [cell SelectDash:lineDash];
         [cell setPropertyPath:propertyPath];
         [cell setProperties:properties];
@@ -242,14 +225,14 @@
         ApplyToEditCell *cell = (ApplyToEditCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) 
         {
-            cell = (ApplyToEditCell*)[[[NSBundle mainBundle] loadNibNamed:@"ApplyToEditCell" 
+            cell = (ApplyToEditCell*)[[NSBundle mainBundle] loadNibNamed:@"ApplyToEditCell" 
                                                                      owner:self 
-                                                                   options:nil] objectAtIndex:0];
+                                                                   options:nil][0];
         }    
         
-        cell.lblTitle.text = NSLocalizedString([property objectForKey:@"label"], @"field label");
+        cell.lblTitle.text = NSLocalizedString(property[@"label"], @"field label");
         //read the width value
-        int applyTo = [[property objectForKey:@"value"] intValue];
+        int applyTo = [property[@"value"] intValue];
         [cell SelectApplyTo:applyTo];
         [cell setPropertyPath:propertyPath];
         [cell setProperties:properties];
@@ -262,14 +245,14 @@
         YesNoCell *cell = (YesNoCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) 
         {
-            cell = (YesNoCell*)[[[NSBundle mainBundle] loadNibNamed:@"YesNoCell" 
+            cell = (YesNoCell*)[[NSBundle mainBundle] loadNibNamed:@"YesNoCell" 
                                                                    owner:self 
-                                                                 options:nil] objectAtIndex:0];
+                                                                 options:nil][0];
         }    
         
-        cell.lblTitle.text = NSLocalizedString([property objectForKey:@"label"], @"field label");
+        cell.lblTitle.text = NSLocalizedString(property[@"label"], @"field label");
         //read the width value
-        int value = [[property objectForKey:@"value"] intValue];
+        int value = [property[@"value"] intValue];
         [cell SelectBool:value];
         [cell setPropertyPath:propertyPath];
         [cell setProperties:properties];
@@ -283,16 +266,16 @@
         PeriodEditCell *cell = (PeriodEditCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) 
         {
-            cell = (PeriodEditCell*)[[[NSBundle mainBundle] loadNibNamed:@"PeriodEditCell" 
+            cell = (PeriodEditCell*)[[NSBundle mainBundle] loadNibNamed:@"PeriodEditCell" 
                                                                     owner:self 
-                                                                  options:nil] objectAtIndex:0];
+                                                                  options:nil][0];
         }    
         
-        cell.lblTitle.text = NSLocalizedString([property objectForKey:@"label"], @"field label");
+        cell.lblTitle.text = NSLocalizedString(property[@"label"], @"field label");
         //read the width value
-        int value = [[property objectForKey:@"value"] intValue];
-        int min = [[property objectForKey:@"min"] intValue];
-        int max = [[property objectForKey:@"max"] intValue];
+        int value = [property[@"value"] intValue];
+        int min = [property[@"min"] intValue];
+        int max = [property[@"max"] intValue];
         [cell SetMin:min AndMax:max];
         [cell SelectValue:value];
         [cell setPropertyPath:propertyPath];
@@ -306,18 +289,18 @@
         PeriodEditCell *cell = (PeriodEditCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) 
         {
-            cell = (PeriodEditCell*)[[[NSBundle mainBundle] loadNibNamed:@"PeriodEditCell" 
+            cell = (PeriodEditCell*)[[NSBundle mainBundle] loadNibNamed:@"PeriodEditCell" 
                                                                    owner:self 
-                                                                 options:nil] objectAtIndex:0];
+                                                                 options:nil][0];
         }    
         
-        cell.lblTitle.text = NSLocalizedString([property objectForKey:@"label"], @"field label");
+        cell.lblTitle.text = NSLocalizedString(property[@"label"], @"field label");
         //read the width value
-        double value = [[property objectForKey:@"value"] doubleValue];
-        double min = [[property objectForKey:@"min"] doubleValue];
-        double max = [[property objectForKey:@"max"] doubleValue];
-        double step = [[property objectForKey:@"step"] doubleValue];
-        int digits = [[property objectForKey:@"digits"] intValue];
+        double value = [property[@"value"] doubleValue];
+        double min = [property[@"min"] doubleValue];
+        double max = [property[@"max"] doubleValue];
+        double step = [property[@"step"] doubleValue];
+        int digits = [property[@"digits"] intValue];
         [cell SetInternalMin:min AndMax:max AndStep:step AndDigits:digits];
         [cell SelectValue:value];
         [cell setPropertyPath:propertyPath];

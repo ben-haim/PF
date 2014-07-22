@@ -20,7 +20,7 @@
     double deviation;    
 }
 
-@property (nonatomic, retain) NSString *priceField;
+@property (nonatomic, strong) NSString *priceField;
 @property (assign) uint period;
 @property (assign) double deviation;
 

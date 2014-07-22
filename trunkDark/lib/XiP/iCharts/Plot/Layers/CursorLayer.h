@@ -11,7 +11,7 @@
     int index;
 }
 -(id)initWithKey:(NSString*)_key AndColor:(uint)_color;
-@property (nonatomic, retain) NSString* key;
+@property (nonatomic, strong) NSString* key;
 @property (assign) uint color;
 @property (assign) double x;
 @property (assign) double y;
@@ -20,7 +20,7 @@
 
 @interface CursorLayer : NSObject 
 {
-    XYChart* parentChart;
+    XYChart* __unsafe_unretained parentChart;
     NSMutableArray* chartCursors;
     UIWindow *loupeWindow;
     bool chartCursorVisible;
@@ -41,12 +41,12 @@
 - (UIImage*)cropImage:(UIImage*)originalImage toRect:(CGRect)rect;
 - (void)showLoupe;
 - (void)hideLoupe;
-@property (assign) XYChart* parentChart;
-@property (nonatomic, retain) NSMutableArray* chartCursors;
-@property (nonatomic, retain) UIWindow *loupeWindow;
+@property (unsafe_unretained) XYChart* parentChart;
+@property (nonatomic, strong) NSMutableArray* chartCursors;
+@property (nonatomic, strong) UIWindow *loupeWindow;
 @property (assign) bool chartCursorVisible;
 @property (assign) double cursorX;
 @property (assign) double cursorY;
-@property (nonatomic, retain) UIImage* glass;
-@property (nonatomic, retain) UIImage* mask;
+@property (nonatomic, strong) UIImage* glass;
+@property (nonatomic, strong) UIImage* mask;
 @end

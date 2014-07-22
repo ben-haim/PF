@@ -142,7 +142,7 @@ static bool visibleDemoRegistrationButton = NO;
    [ self.loginButton setTitle: NSLocalizedString( @"LOGIN_BUTTON", nil ) forState: UIControlStateNormal ];
    [ self.registerButton setTitle: NSLocalizedString( @"REGISTER_BUTTON", nil ) forState: UIControlStateNormal ];
    
-   self.serverTypeControl.items = [ NSArray arrayWithObjects: NSLocalizedString(@"LIVE_SERVER", nil), NSLocalizedString(@"DEMO_SERVER", nil), nil ];
+   self.serverTypeControl.items = @[NSLocalizedString(@"LIVE_SERVER", nil), NSLocalizedString(@"DEMO_SERVER", nil)];
    self.serverTypeControl.selectedSegmentIndex = 0;
    
    if ( [ PFBrandingSettings sharedBranding ].defaultDemoServer.length > 0 )

@@ -39,20 +39,20 @@
 
 -(void)activateItemWithIndex:( NSInteger )active_index_
 {
-   ESSelectableButton* selected_button_ = [ self.selectableButtons objectAtIndex: active_index_ ];
+   ESSelectableButton* selected_button_ = (self.selectableButtons)[active_index_];
    selected_button_.selected = YES;
 
-   [ self.mutableActiveIndexes addObject: [ NSNumber numberWithInt: (int)active_index_ ] ];
+   [ self.mutableActiveIndexes addObject: @((int)active_index_) ];
 
    [ self.delegate groupController: self didChangeButtonState: selected_button_ ];
 }
 
 -(void)deactivateItemWithIndex:( NSInteger )active_index_
 {
-   ESSelectableButton* selected_button_ = [ self.selectableButtons objectAtIndex: active_index_ ];
+   ESSelectableButton* selected_button_ = (self.selectableButtons)[active_index_];
    selected_button_.selected = NO;
 
-   [ self.mutableActiveIndexes removeObject: [ NSNumber numberWithInt: (int)active_index_ ] ];
+   [ self.mutableActiveIndexes removeObject: @((int)active_index_) ];
 
    [ self.delegate groupController: self didChangeButtonState: selected_button_ ];
 }
@@ -85,12 +85,12 @@
 
 -(void)setActiveIndex:( NSInteger )active_index_
 {
-   [ self setActiveIndexes: [ NSSet setWithObject: [ NSNumber numberWithInt: (int)active_index_ ] ] ];
+   [ self setActiveIndexes: [ NSSet setWithObject: @((int)active_index_) ] ];
 }
 
 -(void)setTitle:( NSString* )title_ forButtonAtIndex:( NSUInteger )index_
 {
-   UIButton* button_ = [ self.selectableButtons objectAtIndex: index_ ];
+   UIButton* button_ = (self.selectableButtons)[index_];
    NSAssert( button_, @"undefined button index" );
    [ button_ setTitle: title_ forState: UIControlStateNormal ];
 }
@@ -105,12 +105,12 @@
 
    for ( NSUInteger button_index_ = 0; button_index_ < [ self.selectableButtons count ]; ++button_index_ )
    {
-      ESSelectableButton* check_box_ = [ self.selectableButtons objectAtIndex: button_index_ ];
+      ESSelectableButton* check_box_ = (self.selectableButtons)[button_index_];
       check_box_.delegate = self;
 
       if ( check_box_.selected )
       {
-         [ active_indexes_ addObject: [ NSNumber numberWithInt: (int)button_index_ ] ];
+         [ active_indexes_ addObject: @((int)button_index_) ];
       }
 
       [ self.view addSubview: check_box_ ];
@@ -125,7 +125,7 @@
    {
       for ( NSNumber* selected_index_ in self.activeIndexes )
       {
-         UIButton* selected_button_ = [ self.selectableButtons objectAtIndex: [ selected_index_ intValue ] ];
+         UIButton* selected_button_ = (self.selectableButtons)[[ selected_index_ intValue ]];
          selected_button_.selected = NO;
       }
       self.mutableActiveIndexes = nil;
@@ -151,7 +151,7 @@
 
 -(ESSelectableButton*)buttonAtIndex:( NSUInteger )index_
 {
-   return [ self.selectableButtons objectAtIndex: index_ ];
+   return (self.selectableButtons)[index_];
 }
 
 -(NSInteger)indexOfButton:( UIButton* )button_

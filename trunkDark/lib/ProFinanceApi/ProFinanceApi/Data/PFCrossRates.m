@@ -33,7 +33,7 @@
    for ( PFGroupField* rate_group_ in [ message_ groupFieldsWithId: PFGroupCrossRate ] )
    {
       PFCrossRate* cross_rate_ = [ PFCrossRate objectWithFieldOwner: rate_group_.fieldOwner ];
-      [ self.crossRatesDictionary setObject: cross_rate_ forKey: [ cross_rate_.exp1Name stringByAppendingFormat: @"/%@", cross_rate_.exp2Name ] ];
+      (self.crossRatesDictionary)[[ cross_rate_.exp1Name stringByAppendingFormat: @"/%@", cross_rate_.exp2Name ]] = cross_rate_;
    }
 }
 
@@ -43,12 +43,12 @@
    if ([base_currency_ isEqualToString: to_currency_])
       return 1.0;
 
-   PFCrossRate* cross_rate_ = [ self.crossRatesDictionary objectForKey: [ base_currency_ stringByAppendingFormat: @"/%@", to_currency_ ] ];
+   PFCrossRate* cross_rate_ = (self.crossRatesDictionary)[[ base_currency_ stringByAppendingFormat: @"/%@", to_currency_ ]];
 
    if (cross_rate_)
       return cross_rate_.price;
 
-   cross_rate_ = [ self.crossRatesDictionary objectForKey: [ to_currency_ stringByAppendingFormat: @"/%@", base_currency_ ] ];
+   cross_rate_ = (self.crossRatesDictionary)[[ to_currency_ stringByAppendingFormat: @"/%@", base_currency_ ]];
 
    return (cross_rate_) ? (1.0 / cross_rate_.price) : (-1.0);
 }

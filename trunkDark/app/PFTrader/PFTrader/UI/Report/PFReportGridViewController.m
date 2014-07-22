@@ -36,8 +36,7 @@
       self.elements = [ self.table.rows map: ^id( id row_ )
       {
          NSMutableDictionary* rows_dictionary_ = (NSMutableDictionary*)row_;
-         [ rows_dictionary_ setObject: NSLocalizedString( [ rows_dictionary_ objectForKey: [ self.table.header objectAtIndex: 0 ] ], nil )
-                               forKey: [ self.table.header objectAtIndex: 0 ] ];
+         rows_dictionary_[(self.table.header)[0]] = NSLocalizedString( rows_dictionary_[(self.table.header)[0]], nil );
          
          return rows_dictionary_;
       } ];

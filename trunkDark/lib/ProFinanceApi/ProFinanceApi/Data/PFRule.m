@@ -40,16 +40,15 @@ enum
       NSString* string_value_ = ( NSString* )value_;
       NSArray* name_value_ = [ string_value_ componentsSeparatedByString: @"=" ];
       PFRule* rule_ = ( PFRule* )object_;
-      rule_.name = [ name_value_ objectAtIndex: RFRuleIndexName ];
-      return [ name_value_ objectAtIndex: RFRuleIndexValue ];
+      rule_.name = name_value_[RFRuleIndexName];
+      return name_value_[RFRuleIndexValue];
    };
 
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects: [ PFMetaObjectField fieldWithName: @"name" ]
+           @[[ PFMetaObjectField fieldWithName: @"name" ]
             , [ PFMetaObjectField fieldWithId: PFFieldValue name: @"value" transformer: name_value_splitter_ ]
             , [ PFMetaObjectField fieldWithId: PFFieldId name: @"accountId" ]
-            , [ PFMetaObjectField fieldWithId: PFFieldOwnerType name: @"ownerType" ]
-            , nil ] ];
+            , [ PFMetaObjectField fieldWithId: PFFieldOwnerType name: @"ownerType" ]] ];
 }
 
 -(id)init

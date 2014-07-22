@@ -31,8 +31,8 @@
 
 -(void)setSpanAColor:(uint)spanAColor AndSpanBColor:(uint)spanBColor AndFillColor:(uint)_fillAlpha;
 
-@property (nonatomic, retain) NSString* mSpanAData; 
-@property (nonatomic, retain) NSString* mSpanBData;
+@property (nonatomic, strong) NSString* mSpanAData; 
+@property (nonatomic, strong) NSString* mSpanBData;
 @property (assign) uint fillAlpha;
 @property (assign) uint mSpanAColor;
 @property (assign) uint mSpanBColor;

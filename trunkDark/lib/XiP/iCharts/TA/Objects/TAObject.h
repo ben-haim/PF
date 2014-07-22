@@ -14,7 +14,7 @@
 @class HitTestResult;
 @interface TAObject : NSObject 
 {
-    XYChart* parentChart;
+    XYChart* __unsafe_unretained parentChart;
     NSMutableArray* anchors; 
     uint color;
     uint linewidth;
@@ -39,8 +39,8 @@
 - (void)setIsSelected:(bool)input;
 - (bool)isSelected;
 
-@property (assign) XYChart* parentChart;
-@property (nonatomic, retain) NSMutableArray* anchors;
+@property (unsafe_unretained) XYChart* parentChart;
+@property (nonatomic, strong) NSMutableArray* anchors;
 @property (assign) uint color;
 @property (assign) uint linewidth;
 @property (assign) uint linedash;

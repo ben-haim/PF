@@ -71,10 +71,8 @@ static BOOL use_unsafe_SSL_ = NO;
    else if ( secure_ )
    {
       NSDictionary* options_ = use_unsafe_SSL_ ?
-      [ NSDictionary dictionaryWithObject: [ NSNumber numberWithBool: NO ]
-                                   forKey: ( NSString* )kCFStreamSSLValidatesCertificateChain ] :
-      [ NSDictionary dictionaryWithObject: ( NSString* )kCFStreamSocketSecurityLevelNegotiatedSSL
-                                   forKey: ( NSString* )kCFStreamSSLLevel ];
+      @{( NSString* )kCFStreamSSLValidatesCertificateChain: @NO} :
+      @{( NSString* )kCFStreamSSLLevel: ( NSString* )kCFStreamSocketSecurityLevelNegotiatedSSL};
 
       [ self.socket startTLS: options_ ];
    }

@@ -46,7 +46,7 @@ static double PFThousand = 1000.0;
    double abs_money_round_ = fabs(round(money_ * step) / step);
    double floor_money_ = floor(abs_money_round_);
 
-   NSString* integer_part_ = [ money_formatter_ stringFromNumber: [ NSNumber numberWithDouble: floor_money_ * (money_ >= 0 ? 1 : -1) ] ];
+   NSString* integer_part_ = [ money_formatter_ stringFromNumber: @(floor_money_ * (money_ >= 0 ? 1 : -1)) ];
    NSString* double_format_ = [ NSString stringWithFormat: @"%%.%df", (int)precision_ ];
    NSString* real_part_ = [NSString stringWithFormat: double_format_, abs_money_round_ - floor_money_ ];
 
@@ -111,7 +111,7 @@ static double PFThousand = 1000.0;
    [ nf_ setMinimumIntegerDigits: 1 ];
    [ nf_ setUsesSignificantDigits: NO ];
 
-   return [ nf_ stringFromNumber: [ NSNumber numberWithDouble: amount_ ] ];
+   return [ nf_ stringFromNumber: @(amount_) ];
 }
 
 +(id)stringWithVolume:( double )volume_

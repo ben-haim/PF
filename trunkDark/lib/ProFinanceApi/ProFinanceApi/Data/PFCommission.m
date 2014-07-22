@@ -14,12 +14,10 @@
 +(PFMetaObject*)metaObject
 {
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects:
-            [ PFMetaObjectField fieldWithId: PFFieldOperationType name: @"operationType" ]
+           @[[ PFMetaObjectField fieldWithId: PFFieldOperationType name: @"operationType" ]
             , [ PFMetaObjectField fieldWithId: PFFieldFromAmount name: @"fromAmount" ]
             , [ PFMetaObjectField fieldWithId: PFFieldToAmount name: @"toAmount" ]
-            , [ PFMetaObjectField fieldWithId: PFFieldCommissionValue name: @"value" ]
-            ,nil ] ];
+            , [ PFMetaObjectField fieldWithId: PFFieldCommissionValue name: @"value" ]] ];
 }
 
 -(NSString*)description

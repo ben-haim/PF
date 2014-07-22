@@ -88,7 +88,7 @@
       if ( [ (PFIntegerField*)[ message_ fieldWithId: PFFieldOrderStatus ] integerValue ] == PFOrderStatusReplaced )
       {
          PFInteger order_id_ = [ (PFIntegerField*)[ message_ fieldWithId: PFFieldOrderId ] integerValue ];
-         PFReplaceOrderDoneBlock done_block_ = [ self.replaceOrderHandlers objectForKey: @(order_id_) ];
+         PFReplaceOrderDoneBlock done_block_ = (self.replaceOrderHandlers)[@(order_id_)];
          
          if ( done_block_ )
          {
@@ -207,7 +207,7 @@
 {
    if ( done_block_ )
    {
-      [ self.replaceOrderHandlers setObject: done_block_ forKey: @(order_.orderId) ];
+      (self.replaceOrderHandlers)[@(order_.orderId)] = done_block_;
    }
    
    [ self sendMessage: [ self.messageBuilder messageForReplaceOrder: order_ ]

@@ -35,12 +35,6 @@
     return self;
 }
 
-- (void)dealloc
-{	
-    if(lastHitTest!=nil)
-        [lastHitTest release];
-	[super dealloc];    
-}
 @end
 
 @implementation TALayer
@@ -52,20 +46,13 @@
     if(self == nil)
         return self;
     self.parentChart        = _parentChart;
-    self.objects            = [[[NSMutableArray alloc] init] autorelease];   
-    self.ta_touches         = [[[NSMutableArray alloc] init] autorelease]; 
+    self.objects            = [[NSMutableArray alloc] init];   
+    self.ta_touches         = [[NSMutableArray alloc] init]; 
     self.ta_anchor_img      = [UIImage imageNamed:@"ta_grip.png"];
     self.ta_anchor_img_off  = [UIImage imageNamed:@"ta_grip_del.png"];
     return self;
 }
 
-- (void)dealloc
-{	
-    [objects release];
-    [ta_touches release];
-    [ta_anchor_img release];
-	[super dealloc];    
-}
 
 -(void)Clear
 {
@@ -73,7 +60,6 @@
 //    [objects release];
     NSMutableArray *tempArray = [[NSMutableArray alloc] init];
     [self setObjects:tempArray];
-    [tempArray release];
 //    self.objects = [[NSMutableArray alloc] init]; 		
 }
 -(void)AddObject:(TAObject*)o
@@ -115,7 +101,7 @@
 }
 -(HitTestResult*)hitTest:(CGPoint)p AndThreshold:(double)threshold
 {
-    HitTestResult* htResult = [[[HitTestResult alloc] initWithRes:CHART_HT_NONE] autorelease];
+    HitTestResult* htResult = [[HitTestResult alloc] initWithRes:CHART_HT_NONE];
     double minDistance = HUGE_VAL;
     for(TAObject* o in objects)
     {
@@ -143,7 +129,7 @@
         bool isFound = false;
         for (ht in ta_touches) 
         {
-            if(ht.address == (void*)touch)
+            if(ht.address == (__bridge void*)touch)
             {
                 isFound = true;
                 break;
@@ -213,8 +199,7 @@
             [objects addObject:oLine];             
             
             lastHitTest = [[HitTestResult alloc] initWithRes:CHART_HT_ANCHOR];
-            lastHitTest.a = [oLine.anchors objectAtIndex:1]; 
-            [oLine release];
+            lastHitTest.a = (oLine.anchors)[1]; 
         }
         break;
         case CHART_DRAW_CHANNEL:
@@ -232,8 +217,7 @@
             [objects addObject:oChannel];             
             
             lastHitTest = [[HitTestResult alloc] initWithRes:CHART_HT_ANCHOR];
-            lastHitTest.a = [oChannel.anchors objectAtIndex:1];
-            [oChannel release];
+            lastHitTest.a = (oChannel.anchors)[1];
         }
         break;
         case CHART_DRAW_RAY:	
@@ -249,8 +233,7 @@
             [objects addObject:oRay];             
             
             lastHitTest = [[HitTestResult alloc] initWithRes:CHART_HT_ANCHOR];
-            lastHitTest.a = [oRay.anchors objectAtIndex:1]; 
-            [oRay release];
+            lastHitTest.a = (oRay.anchors)[1]; 
         }
         break;
         case CHART_DRAW_SEGMENT:
@@ -266,8 +249,7 @@
             [objects addObject:oSeg];             
             
             lastHitTest = [[HitTestResult alloc] initWithRes:CHART_HT_ANCHOR];
-            lastHitTest.a = [oSeg.anchors objectAtIndex:1]; 
-            [oSeg release];
+            lastHitTest.a = (oSeg.anchors)[1]; 
         }
         break;
         case CHART_DRAW_FIB_RETR:
@@ -283,8 +265,7 @@
             [objects addObject:oFib];             
             
             lastHitTest = [[HitTestResult alloc] initWithRes:CHART_HT_ANCHOR];
-            lastHitTest.a = [oFib.anchors objectAtIndex:1];       
-            [oFib release];
+            lastHitTest.a = (oFib.anchors)[1];       
         }
         break;            
         case CHART_DRAW_FIB_CIRC:	
@@ -300,8 +281,7 @@
             [objects addObject:oFibArcs];             
             
             lastHitTest = [[HitTestResult alloc] initWithRes:CHART_HT_ANCHOR];
-            lastHitTest.a = [oFibArcs.anchors objectAtIndex:1]; 
-            [oFibArcs release];
+            lastHitTest.a = (oFibArcs.anchors)[1]; 
         }
         break;           
         case CHART_DRAW_FIB_FAN:	
@@ -317,8 +297,7 @@
             [objects addObject:oFibFan];             
             
             lastHitTest = [[HitTestResult alloc] initWithRes:CHART_HT_ANCHOR];
-            lastHitTest.a = [oFibFan.anchors objectAtIndex:1]; 
-            [oFibFan release];
+            lastHitTest.a = (oFibFan.anchors)[1]; 
         }
         break;            
         case CHART_DRAW_HLINE:	
@@ -332,8 +311,7 @@
             [objects addObject:oHLine];             
             
             lastHitTest = [[HitTestResult alloc] initWithRes:CHART_HT_ANCHOR];
-            lastHitTest.a = [oHLine.anchors objectAtIndex:0]; 
-            [oHLine release];
+            lastHitTest.a = (oHLine.anchors)[0]; 
         }  
         break;          
         case CHART_DRAW_VLINE:	
@@ -347,8 +325,7 @@
             [objects addObject:oVLine];             
             
             lastHitTest = [[HitTestResult alloc] initWithRes:CHART_HT_ANCHOR];
-            lastHitTest.a = [oVLine.anchors objectAtIndex:0]; 
-            [oVLine release];
+            lastHitTest.a = (oVLine.anchors)[0]; 
         }
         break; 
     }
@@ -357,10 +334,8 @@
     ChartTATouchInfo* touch_info = [[ChartTATouchInfo alloc] init];
     [touch_info setLastHitTest:lastHitTest];
     [touch_info setPtMouseDown:pt];
-    touch_info.address = (void*)touch;
+    touch_info.address = (__bridge void*)touch;
     [ta_touches addObject:touch_info];
-    [lastHitTest release];
-    [touch_info release];
 }
 
 //+++denis
@@ -411,7 +386,7 @@
                    t.lastHitTest.a == lastHitTest.a &&
                    t.lastHitTest._ht_res!= CHART_HT_NONE)
                 {
-                    t.address = (void*)touch;//+++denis not clickable zone fix
+                    t.address = (__bridge void*)touch;//+++denis not clickable zone fix
                     alreadyExists = true;
                     break;
                 }
@@ -422,9 +397,8 @@
                 new_touch = [[ChartTATouchInfo alloc] init];
                 [new_touch setLastHitTest:lastHitTest];
                 [new_touch setPtMouseDown:pt];
-                new_touch.address = (void*)touch;
+                new_touch.address = (__bridge void*)touch;
                 [ta_touches addObject:new_touch];
-                [new_touch release];
                 
                 if(lastHitTest._ht_res == CHART_HT_OBJECT)
                     lastHitTest.o.isSelected = true;
@@ -486,7 +460,7 @@
         ChartTATouchInfo* ht;
         for (ht in ta_touches) 
         {
-            if(ht.address == (void*)touch)
+            if(ht.address == (__bridge void*)touch)
             {
                 iFound = c;
                 break;
@@ -547,19 +521,16 @@
             [a_props setValue:[NSString stringWithFormat:@"%f",a.y_value] forKey:@"y_value"];            
             
             [o_anchors addObject:a_props];
-            [a_props release];
         }        
         [o_props setValue:o_anchors forKey:@"anchors"];
-        [o_anchors release];
         
         //push to the list
         [drawings addObject:o_props];
-        [o_props release];
 
         if(c++>50)//we don't want to save too much
             break;
     }
-    return [drawings autorelease];
+    return drawings;
 }
 -(void)SetDrawings:(NSArray*)_objects
 {
@@ -567,27 +538,27 @@
 
     for(NSMutableDictionary* od in _objects)
     {
-        NSString *type = [od objectForKey:@"type"];
-        uint draw_color = (uint)[[od objectForKey:@"color"] longLongValue];
-        uint draw_lwidth = (uint)[[od objectForKey:@"linewidth"] longLongValue];
-        uint draw_ldash = (uint)[[od objectForKey:@"linedash"] longLongValue];
-        NSArray *anchors = [od objectForKey:@"anchors"];
+        NSString *type = od[@"type"];
+        uint draw_color = (uint)[od[@"color"] longLongValue];
+        uint draw_lwidth = (uint)[od[@"linewidth"] longLongValue];
+        uint draw_ldash = (uint)[od[@"linedash"] longLongValue];
+        NSArray *anchors = od[@"anchors"];
         int max_anc = (int)[anchors count]-1;
         
-        NSDictionary *a1 = [anchors objectAtIndex:MIN(0, max_anc)];
-        NSDictionary *a2 = [anchors objectAtIndex:MIN(1, max_anc)];
-        NSDictionary *a3 = [anchors objectAtIndex:MIN(2, max_anc)];
+        NSDictionary *a1 = anchors[MIN(0, max_anc)];
+        NSDictionary *a2 = anchors[MIN(1, max_anc)];
+        NSDictionary *a3 = anchors[MIN(2, max_anc)];
         
         NSLog(@"a1 %@", a1);
         NSLog(@"a2 %@", a2);
         
-        double a1_index = [parentChart getTimeValueIndex:[[a1 objectForKey:@"x_time"] doubleValue]];
-        double a2_index = [parentChart getTimeValueIndex:[[a2 objectForKey:@"x_time"] doubleValue]];
-        double a3_index = [parentChart getTimeValueIndex:[[a3 objectForKey:@"x_time"] doubleValue]];
+        double a1_index = [parentChart getTimeValueIndex:[a1[@"x_time"] doubleValue]];
+        double a2_index = [parentChart getTimeValueIndex:[a2[@"x_time"] doubleValue]];
+        double a3_index = [parentChart getTimeValueIndex:[a3[@"x_time"] doubleValue]];
         
-        double y1_value = [[a1 objectForKey:@"y_value"] doubleValue];
-        double y2_value = [[a2 objectForKey:@"y_value"] doubleValue];
-        double y3_value = [[a3 objectForKey:@"y_value"] doubleValue];
+        double y1_value = [a1[@"y_value"] doubleValue];
+        double y2_value = [a2[@"y_value"] doubleValue];
+        double y3_value = [a3[@"y_value"] doubleValue];
         
         if(a1_index==-1 || a2_index==-1 || a3_index==-1)
             continue;
@@ -703,7 +674,6 @@
         if(res!=nil)
         {
             [objects addObject:res];
-            [res release];
         }
     }
     

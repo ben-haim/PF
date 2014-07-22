@@ -99,7 +99,7 @@
    {
       NSArray* events_ = [ PFSession sharedSession ].events;
       NSUInteger index_ = [ events_ indexOfObject: self.report ];
-      [ self loadReport: [ events_ objectAtIndex: index_ + 1 ] ];
+      [ self loadReport: events_[index_ + 1] ];
    }
 }
 
@@ -109,7 +109,7 @@
    {
       NSArray* events_ = [ PFSession sharedSession ].events;
       NSUInteger index_ = [ events_ indexOfObject: self.report ];
-      [ self loadReport: [ events_ objectAtIndex: index_ - 1 ] ];
+      [ self loadReport: events_[index_ - 1] ];
    }
 }
 

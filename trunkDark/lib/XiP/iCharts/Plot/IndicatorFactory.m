@@ -34,12 +34,6 @@
     return  self;
 }
 
--(void)dealloc
-{
-    [numberFormatter release];
-    
-    [super dealloc];
-}
 
 - (BaseBoxLayer*)addMainIndicator:(NSString*)code WithProperties:(NSString*)path ForChart:(FinanceChart*)chart
 {
@@ -134,7 +128,7 @@
     [numberFormatter setMinimumFractionDigits:0];
     [numberFormatter setMaximumFractionDigits:0];
     [numberFormatter setGeneratesDecimalNumbers:NO];
-    NSNumber *number = [NSNumber numberWithInt:(int)sma.period];
+    NSNumber *number = @((int)sma.period);
     NSString *numberString = [numberFormatter stringFromNumber:number];
     
     NSString* legendName = [NSString stringWithFormat:@"SMA(%@)", numberString]; 
@@ -149,7 +143,6 @@
                                       ShowInLegend:true
                                         forceFirst:false];
     ll.subtype = 1;
-    [sma release];
     return ll;
 }
 -(LineLayer*)addExpMovingAvg:(NSString*)path ForChart:(FinanceChart*)chart
@@ -170,7 +163,7 @@
     [numberFormatter setMinimumFractionDigits:0];
     [numberFormatter setMaximumFractionDigits:0];
     [numberFormatter setGeneratesDecimalNumbers:NO];
-    NSNumber *number = [NSNumber numberWithInt:(int)ema.period];
+    NSNumber *number = @((int)ema.period);
     NSString *numberString = [numberFormatter stringFromNumber:number];
 
     NSString* legendName = [NSString stringWithFormat:@"EMA(%@)", numberString]; 
@@ -185,7 +178,6 @@
                                       ShowInLegend:true
                                         forceFirst:false];
     ll.subtype = 1;
-    [ema release];
     return ll;    
 }
 -(DOTLayer*)addPSAR:(NSString*)path ForChart:(FinanceChart*)chart
@@ -221,7 +213,6 @@
                                      ShowInLegend:true 
                                        forceFirst:false];
 
-    [psar release];
     return dl;  
     
 }
@@ -241,9 +232,9 @@
     [numberFormatter setMinimumFractionDigits:0];
     [numberFormatter setMaximumFractionDigits:0];
     [numberFormatter setGeneratesDecimalNumbers:NO];
-    NSNumber *number1 = [NSNumber numberWithInt:(int)bb.period];
+    NSNumber *number1 = @((int)bb.period);
     NSString *number1String = [numberFormatter stringFromNumber:number1];
-    NSNumber *number2 = [NSNumber numberWithInt:(int)bb.deviation];
+    NSNumber *number2 = @((int)bb.deviation);
     NSString *number2String = [numberFormatter stringFromNumber:number2];
     
     NSString* bb_name = [NSString stringWithFormat:@"BB(%@, %@)", number1String, number2String]; 
@@ -261,7 +252,6 @@
                                                    lineDash:lineDash                                                  legend_key:bb_name 
                                                    ToLegend:true];
     
-    [bb release];
     return ilLayer;
 }
 
@@ -289,8 +279,8 @@
    [ numberFormatter setMaximumFractionDigits: 0];
    [ numberFormatter setGeneratesDecimalNumbers: NO ];
    
-   NSString* number1String = [numberFormatter stringFromNumber: [ NSNumber numberWithInt: (int)bands_.period ] ];
-   NSString* number2String = [numberFormatter stringFromNumber: [ NSNumber numberWithInt: (int)bands_.deviation ] ];
+   NSString* number1String = [numberFormatter stringFromNumber: @((int)bands_.period) ];
+   NSString* number2String = [numberFormatter stringFromNumber: @((int)bands_.deviation) ];
    NSString* bands_name_ = [ NSString stringWithFormat: @"Bands(%@, %@)", number1String, number2String ];
    /*
     [ chart_.mainChart addInterLineLayer: bands_
@@ -336,7 +326,6 @@
                       ShowInLegend: false
                         forceFirst: false ];
    
-   [ bands_ release ];
 }
 
 -(void)addENV:(NSString*)path ForChart:(FinanceChart*)chart
@@ -357,7 +346,7 @@
     [numberFormatter setMinimumFractionDigits:0];
     [numberFormatter setMaximumFractionDigits:0];
     [numberFormatter setGeneratesDecimalNumbers:NO];
-    NSNumber *number = [NSNumber numberWithInt:(int)env.period];
+    NSNumber *number = @((int)env.period);
     NSString *numberString = [numberFormatter stringFromNumber:number];
     
     NSString* legendName = [NSString stringWithFormat:@"ENV(%@)", numberString]; 
@@ -392,7 +381,6 @@
                         LegendKey:nil
                      ShowInLegend:false
                        forceFirst:false];
-    [env release];
 }
 
 - (void)addMTM:(NSString*)path ToChart:(XYChart*)indChart
@@ -412,7 +400,7 @@
     [numberFormatter setMinimumFractionDigits:0];
     [numberFormatter setMaximumFractionDigits:0];
     [numberFormatter setGeneratesDecimalNumbers:NO];
-    NSNumber *number = [NSNumber numberWithInt:(int)mtm.period];
+    NSNumber *number = @((int)mtm.period);
     NSString *numberString = [numberFormatter stringFromNumber:number];
     
     NSString* legendName = [NSString stringWithFormat:@"MTM(%@)", numberString]; 
@@ -427,7 +415,6 @@
                                ShowInLegend:true
                                  forceFirst:false];
     ll.subtype = 1;
-    [mtm release];            	    
 }
 - (void)addRSI:(NSString*)path ToChart:(XYChart*)indChart
 {
@@ -449,7 +436,7 @@
     [numberFormatter setMinimumFractionDigits:0];
     [numberFormatter setMaximumFractionDigits:0];
     [numberFormatter setGeneratesDecimalNumbers:NO];
-    NSNumber *number = [NSNumber numberWithInt:(int)rsi.period];
+    NSNumber *number = @((int)rsi.period);
     NSString *numberString = [numberFormatter stringFromNumber:number];
     
     NSString* legendName = [NSString stringWithFormat:@"RSI(%@)", numberString]; 
@@ -520,7 +507,6 @@
     indChart.yAxis.upperLimit = 100;
     [indChart.yAxis setIsAutoLower:false];
     [indChart.yAxis setIsAutoScale:false];
-    [rsi release];            	    
 }
 
 - (void)addVOL:(NSString*)path ToChart:(XYChart*)indChart
@@ -562,9 +548,9 @@
     [numberFormatter setMinimumFractionDigits:0];
     [numberFormatter setMaximumFractionDigits:0];
     [numberFormatter setGeneratesDecimalNumbers:NO];
-    NSNumber *number = [NSNumber numberWithInt:(int)macd.ema1];
+    NSNumber *number = @((int)macd.ema1);
     NSString *numberString = [numberFormatter stringFromNumber:number];
-    NSNumber *number2 = [NSNumber numberWithInt:(int)macd.ema2];
+    NSNumber *number2 = @((int)macd.ema2);
     NSString *number2String = [numberFormatter stringFromNumber:number2];
     
     NSString* legendName = [NSString stringWithFormat:@"MACD(%@, %@)", numberString, number2String]; 
@@ -578,7 +564,7 @@
                 LegendKey:legendName
              ShowInLegend:true];
     
-    NSNumber *number3 = [NSNumber numberWithInt:(int)macd.sma_period];
+    NSNumber *number3 = @((int)macd.sma_period);
     NSString *number3String = [numberFormatter stringFromNumber:number3];
     
     legendName = [NSString stringWithFormat:@"SMA(%@)", number3String]; 
@@ -609,7 +595,6 @@
                 forceFirst:false];    
     
     indChart.yAxis.showZero = true;
-    [macd release];   
 }
 
 
@@ -630,7 +615,7 @@
     [numberFormatter setMinimumFractionDigits:0];
     [numberFormatter setMaximumFractionDigits:0];
     [numberFormatter setGeneratesDecimalNumbers:NO];
-    NSNumber *number = [NSNumber numberWithInt:(int)will.period];
+    NSNumber *number = @((int)will.period);
     NSString *numberString = [numberFormatter stringFromNumber:number];
     
     NSString* legendName = [NSString stringWithFormat:@"%%R(%@)", numberString]; 
@@ -645,7 +630,6 @@
                                ShowInLegend:true
                                  forceFirst:false];
     ll.subtype = 1;
-    [will release];            	    
 }
 
 - (void)addSTO:(NSString*)path ToChart:(XYChart*)indChart
@@ -665,9 +649,9 @@
     [numberFormatter setMinimumFractionDigits:0];
     [numberFormatter setMaximumFractionDigits:0];
     [numberFormatter setGeneratesDecimalNumbers:NO];
-    NSNumber *number = [NSNumber numberWithInt:(int)stoh.k_period];
+    NSNumber *number = @((int)stoh.k_period);
     NSString *numberString = [numberFormatter stringFromNumber:number];
-    NSNumber *number2 = [NSNumber numberWithInt:(int)stoh.smoothing];
+    NSNumber *number2 = @((int)stoh.smoothing);
     NSString *number2String = [numberFormatter stringFromNumber:number2];
     
     NSString* legendName = [NSString stringWithFormat:@"STO %%K(%@, %@)", numberString, number2String]; 
@@ -685,7 +669,7 @@
     lineWidth = [properties getUIntParam:[NSString stringWithFormat:@"%@.perc_d.width",path]];
     lineDash = [properties getUIntParam:[NSString stringWithFormat:@"%@.perc_d.dash",path]];
     
-    NSNumber *number3 = [NSNumber numberWithInt:(int)stoh.d_period];
+    NSNumber *number3 = @((int)stoh.d_period);
     NSString *number3tring = [numberFormatter stringFromNumber:number3];
     
     NSString* legendName2 = [NSString stringWithFormat:@"STO %%D(%@)", number3tring]; 
@@ -699,7 +683,6 @@
                                   LegendKey:legendName2
                                ShowInLegend:true
                                  forceFirst:false];
-    [stoh release];            	    
 }
 
 - (void)addDMI:(NSString*)path ToChart:(XYChart*)indChart
@@ -719,7 +702,7 @@
     [numberFormatter setMinimumFractionDigits:0];
     [numberFormatter setMaximumFractionDigits:0];
     [numberFormatter setGeneratesDecimalNumbers:NO];
-    NSNumber *number = [NSNumber numberWithInt:(int)dmi.period];
+    NSNumber *number = @((int)dmi.period);
     NSString *numberString = [numberFormatter stringFromNumber:number];
     
     NSString* legendName = [NSString stringWithFormat:@"ADX(%@)", numberString]; 
@@ -764,6 +747,5 @@
                  LegendKey:legendName3
               ShowInLegend:true
                 forceFirst:false];
-    [dmi release];            	    
 }
 @end

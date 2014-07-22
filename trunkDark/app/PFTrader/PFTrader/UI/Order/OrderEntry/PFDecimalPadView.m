@@ -148,16 +148,16 @@ static const int accountLabelsCount = 8;
    {
       id< PFAccount > default_account_ = [ PFSession sharedSession ].accounts.defaultAccount;
       
-      ((UILabel*)[ self.accountLabels objectAtIndex: 0 ]).text =  [ NSLocalizedString( @"ACCOUNT_NAME", nil ) stringByAppendingString: @":" ];
-      ((UILabel*)[ self.accountLabels objectAtIndex: 1 ]).text = default_account_.name;
-      ((UILabel*)[ self.accountLabels objectAtIndex: 2 ]).text = [ NSLocalizedString( @"ACCOUNT_BALANCE", nil ) stringByAppendingString: @":" ];
-      ((UILabel*)[ self.accountLabels objectAtIndex: 3 ]).text = [ NSString stringWithFormat: @"%@ %@",
+      ((UILabel*)(self.accountLabels)[0]).text =  [ NSLocalizedString( @"ACCOUNT_NAME", nil ) stringByAppendingString: @":" ];
+      ((UILabel*)(self.accountLabels)[1]).text = default_account_.name;
+      ((UILabel*)(self.accountLabels)[2]).text = [ NSLocalizedString( @"ACCOUNT_BALANCE", nil ) stringByAppendingString: @":" ];
+      ((UILabel*)(self.accountLabels)[3]).text = [ NSString stringWithFormat: @"%@ %@",
                                                                   [ NSString stringWithMoney: default_account_.balance ]
                                                                   , default_account_.currency ];
-      ((UILabel*)[ self.accountLabels objectAtIndex: 4 ]).text = [ NSLocalizedString( @"OPEN_NET_PL", nil ) stringByAppendingString: @":" ];
-      [(UILabel*)[ self.accountLabels objectAtIndex: 5 ]  showColouredValue: default_account_.totalNetPl precision: 2 suffix: default_account_.currency  ];
-      ((UILabel*)[ self.accountLabels objectAtIndex: 6 ]).text = [ NSLocalizedString( @"CURRENT_MARGIN", nil ) stringByAppendingString: @":" ];
-      ((UILabel*)[ self.accountLabels objectAtIndex: 7 ]).text = [ NSString stringWithPercent: default_account_.currentMargin showPercentSign: YES ];
+      ((UILabel*)(self.accountLabels)[4]).text = [ NSLocalizedString( @"OPEN_NET_PL", nil ) stringByAppendingString: @":" ];
+      [(UILabel*)(self.accountLabels)[5]  showColouredValue: default_account_.totalNetPl precision: 2 suffix: default_account_.currency  ];
+      ((UILabel*)(self.accountLabels)[6]).text = [ NSLocalizedString( @"CURRENT_MARGIN", nil ) stringByAppendingString: @":" ];
+      ((UILabel*)(self.accountLabels)[7]).text = [ NSString stringWithPercent: default_account_.currentMargin showPercentSign: YES ];
    }
 }
 

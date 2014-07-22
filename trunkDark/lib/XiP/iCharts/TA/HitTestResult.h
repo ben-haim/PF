@@ -12,15 +12,15 @@
 @class TAAnchor;
 @interface HitTestResult : NSObject 
 {
-    TAObject* o;
-    TAAnchor* a;
+    TAObject* __unsafe_unretained o;
+    TAAnchor* __unsafe_unretained a;
     uint _ht_res;    
     float distance;
 }
 - (id)initWithRes:(uint)res;
 
-@property (assign) TAObject* o;
-@property (assign) TAAnchor* a;
+@property (unsafe_unretained) TAObject* o;
+@property (unsafe_unretained) TAAnchor* a;
 @property (assign) uint _ht_res;
 @property (assign) float distance;
 @end

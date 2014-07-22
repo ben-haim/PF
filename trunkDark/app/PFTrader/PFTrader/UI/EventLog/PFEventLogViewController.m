@@ -91,7 +91,7 @@
       cell_ = [ PFStoryCell cell ];
    }
    
-   cell_.report = [ self.events objectAtIndex: index_path_.row ];
+   cell_.report = (self.events)[index_path_.row];
    
    return cell_;
 }
@@ -100,7 +100,7 @@
 
 - (void)tableView:(UITableView *)table_view_ didSelectRowAtIndexPath:(NSIndexPath *)index_path_
 {
-   id< PFReportTable > report_ = [ self.events objectAtIndex: index_path_.row ];
+   id< PFReportTable > report_ = (self.events)[index_path_.row];
    
    if ( [ self.delegate respondsToSelector: @selector(eventLogViewController:didSelectReport:) ] )
    {

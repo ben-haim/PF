@@ -39,7 +39,7 @@
                                                                      value: [ NSString stringWithFormat: @"%d", account_.tradesCount ] ];
 
    return [ self categoryWithTitle: nil
-                             items: [ NSArray arrayWithObjects: gross_pl_, net_pl_, fees_, volume_, trades_count_, nil ] ];
+                             items: @[gross_pl_, net_pl_, fees_, volume_, trades_count_] ];
 }
 
 +(id)activityCategoryWithAccount:( id< PFAccount > )account_
@@ -94,8 +94,7 @@
                                                                       currency: account_.currency
                                                                      colorSign: NO ];
    
-   NSArray* activity_items_ = [ NSArray arrayWithObjects:
-                                  gross_pl_,
+   NSArray* activity_items_ = @[gross_pl_,
                                   net_pl_,
                                   orders_,
                                   positions_,
@@ -103,8 +102,7 @@
                                   positions_margin_,
                                   current_fund_capital_,
                                   fund_capital_gain_,
-                                  invested_fund_capital_,
-                                  nil ];
+                                  invested_fund_capital_];
 
    return [ self categoryWithTitle: nil items: activity_items_ ];
 }
@@ -165,8 +163,7 @@
                                                               currency: account_.currency
                                                              colorSign: NO ];
 
-   NSArray* general_items_ = [ NSArray arrayWithObjects:
-                              balance_,
+   NSArray* general_items_ = @[balance_,
                               projected_balance_,
                               value_,
                               margin_avaliable_,
@@ -174,8 +171,7 @@
                               margin_warning_,
                               blocked_balance_,
                               cash_balance_,
-                              withdrawal_,
-                              nil ];
+                              withdrawal_];
 
    return [ self categoryWithTitle: nil items: general_items_ ];
 }
@@ -205,7 +201,7 @@
                                                                  currency: account_.currency
                                                                 colorSign: NO ];
    
-   NSArray* general_asset_items_ = [ [ NSArray arrayWithObjects: trades_count_, volume_, fees_, orders_margin_, nil ] arrayByAddingObjectsFromArray: general_category_.items ];
+   NSArray* general_asset_items_ = [ @[trades_count_, volume_, fees_, orders_margin_] arrayByAddingObjectsFromArray: general_category_.items ];
    
    return [ self categoryWithTitle: nil items: general_asset_items_ ];
 }
@@ -223,7 +219,7 @@
       }
    };
    
-   return [ self categoryWithTitle: nil items: [ NSArray arrayWithObject: asset_account_ ] ];
+   return [ self categoryWithTitle: nil items: @[asset_account_] ];
 }
 
 @end

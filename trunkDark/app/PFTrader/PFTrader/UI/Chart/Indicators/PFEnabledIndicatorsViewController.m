@@ -29,8 +29,7 @@
 
 -(id)initWithSettings:( PFChartSettings* )settings_
 {
-   NSArray* items_ = [ NSArray arrayWithObjects:
-                      [ PFTabItem itemWithControllerBuilder: ^UIViewController*() { return [ PFEnabledIndicatorsInfoController controllerWithSettings: settings_
+   NSArray* items_ = @[[ PFTabItem itemWithControllerBuilder: ^UIViewController*() { return [ PFEnabledIndicatorsInfoController controllerWithSettings: settings_
                                                                                                                                              delegate: self
                                                                                                                                                isMain: YES ]; }
                                                       title: PFIndicatorLocalizedString( @"MAIN_INDICATORS", nil )
@@ -39,8 +38,7 @@
                                                                                                                                              delegate: self
                                                                                                                                                isMain: NO ]; }
                                                       title: PFIndicatorLocalizedString( @"ADDITIONAL_INDICATORS", nil )
-                                                       icon: nil ],
-                      nil ];
+                                                       icon: nil ]];
    
    self = [ self initWithTabItems: items_
                  selectedTabIndex: 0 ];

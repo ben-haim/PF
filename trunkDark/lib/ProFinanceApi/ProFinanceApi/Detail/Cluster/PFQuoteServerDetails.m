@@ -13,9 +13,9 @@
    self = [ super init ];
    if ( self )
    {
-      self.server = [ components_ objectAtIndex: 0 ];
+      self.server = components_[0];
       self.load = [ components_ count ] > 1
-         ? [ [ components_ objectAtIndex: 1 ] integerValue ]
+         ? [ components_[1] integerValue ]
          : 0;
    }
 

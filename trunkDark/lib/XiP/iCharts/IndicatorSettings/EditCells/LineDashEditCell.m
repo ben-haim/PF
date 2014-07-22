@@ -19,16 +19,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [lblTitle release];
-    [valueHPicker release];
-    if(properties)
-        [properties release];
-    if(propertyPath)
-        [propertyPath release];
-    [super dealloc];
-}
 
 - (id)initWithCoder:(NSCoder *)coder
 {
@@ -78,7 +68,7 @@
 {
     LineDashRenderer *lwView = [[LineDashRenderer alloc] initWithFrame:CGRectMake(0, 0, 40, 30)];
     lwView.item_index = (int)index;
-    return [lwView autorelease];
+    return lwView;
 }
 
 - (NSInteger) horizontalPickerView:(V8HorizontalPickerView *)picker widthForElementAtIndex:(NSInteger)index 

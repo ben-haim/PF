@@ -25,7 +25,7 @@
         return self;
     self.parentChart        = _parentChart;
     self.color              = _color;
-    self.anchors            = [[[NSMutableArray alloc] init] autorelease];
+    self.anchors            = [[NSMutableArray alloc] init];
     self.isSelected         = false;  
     self.linewidth          = _linewidth;
     self.linedash           = _linedash;
@@ -39,15 +39,6 @@
     return self;
 }
 
-- (void)dealloc
-{	
-    [anchors release];
-    if (numberFormatter != nil)
-    {
-        [numberFormatter release];
-    }
-	[super dealloc];    
-}
 
 -(bool)isVisibleWithin:(int)x_start And:(int)x_end
 {
@@ -91,7 +82,7 @@
         }
     }
     if(res._ht_res == CHART_HT_ANCHOR)
-        return [res autorelease];
+        return res;
     double oDistance = [self GetDistance:p];
     if(oDistance<=threshold && oDistance < minDistance)
     {
@@ -100,7 +91,7 @@
         res.distance = oDistance;
     }
     
-    return [res autorelease];
+    return res;
 }
 -(void) setIsSelected:(bool)input
 {

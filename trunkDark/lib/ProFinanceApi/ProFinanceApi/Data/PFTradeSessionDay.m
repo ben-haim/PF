@@ -53,10 +53,9 @@
    PFMetaObjectFieldTransformer time_transformer_ = ^id( id object_, PFFieldOwner* field_owner_, id value_ ) { return @( [ (NSDate*)value_ timeIntervalSince1970 ] ); };
    
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects: [ PFMetaObjectField fieldWithId: PFFieldDayIndex name: @"dayIndex" ]
+           @[[ PFMetaObjectField fieldWithId: PFFieldDayIndex name: @"dayIndex" ]
             , [ PFMetaObjectField fieldWithId: PFFieldSessionBegin name: @"beginInterval" transformer: time_transformer_ ]
-            , [ PFMetaObjectField fieldWithId: PFFieldSessionEnd name: @"endInterval" transformer: time_transformer_ ]
-            , nil ] ];
+            , [ PFMetaObjectField fieldWithId: PFFieldSessionEnd name: @"endInterval" transformer: time_transformer_ ]] ];
 }
 
 -(NSString*)description

@@ -61,7 +61,7 @@
 {
    return [ ids_ map: ^id( id id_ )
     {
-       return [ self.indicatorsById objectForKey: id_ ];
+       return (self.indicatorsById)[id_];
     }];
 }
 
@@ -92,7 +92,7 @@
       NSMutableDictionary* by_id_ = [ NSMutableDictionary dictionaryWithCapacity: [ self.indicators count ] ];
       for ( PFIndicator* indicator_ in self.indicators )
       {
-         [ by_id_ setObject: indicator_ forKey: indicator_.indicatorId ];
+         by_id_[indicator_.indicatorId] = indicator_;
       }
       _indicatorsById = by_id_;
    }
@@ -221,7 +221,7 @@
    for ( NSUInteger index_ = 0; ; ++index_ )
    {
       NSString* free_id_ = [ code_ stringByAppendingFormat: @"_%d", (int)index_ ];
-      if ( [ self.indicatorsById objectForKey: free_id_ ] == nil )
+      if ( (self.indicatorsById)[free_id_] == nil )
       {
          return free_id_;
       }
@@ -236,7 +236,7 @@
 
    [ [ self mutableIndicatorsMain: default_indicator_.main ] addObject: added_indicator_ ];
    [ self.indicators addObject: added_indicator_ ];
-   [ self.indicatorsById setObject: added_indicator_ forKey: added_indicator_.indicatorId ];
+   (self.indicatorsById)[added_indicator_.indicatorId] = added_indicator_;
 }
 
 -(void)removeIndicator:( PFIndicator* )indicator_
@@ -334,7 +334,7 @@
    {
       [ self.properties setParamValue: @"value"
                                inPath: path_
-                            WithValue: [ scheme_.properties objectForKey: path_ ] ];
+                            WithValue: (scheme_.properties)[path_] ];
    }
 }
 

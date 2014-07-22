@@ -24,7 +24,7 @@
 +(PFMetaObject*)metaObject
 {
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects: [ PFMetaObjectField fieldWithId: PFFieldRouteId name: @"routeId" ]
+           @[[ PFMetaObjectField fieldWithId: PFFieldRouteId name: @"routeId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldQuoteRouteId name: @"quoteRouteId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldName name: @"name" ]
             , [ PFMetaObjectField fieldWithId: PFFieldTifModification name: @"allowsTifModification" ]
@@ -40,17 +40,17 @@
                      NSArray* orderType_tif_strings_ = [ pair_ componentsSeparatedByString: @":" ];
                      if ( orderType_tif_strings_.count == 2 )
                      {
-                        PFOrderType order_type_ = [ [ orderType_tif_strings_ objectAtIndex: 0 ] intValue ];
+                        PFOrderType order_type_ = [ orderType_tif_strings_[0] intValue ];
                         
-                        PFOrderValidityType order_validity_ = [ [ orderType_tif_strings_ objectAtIndex: 1 ] intValue ];
+                        PFOrderValidityType order_validity_ = [ orderType_tif_strings_[1] intValue ];
                         
                         if ( order_validity_ == PFOrderValidityDay || order_validity_ == PFOrderValidityGtc || order_validity_ == PFOrderValidityIoc || order_validity_ == PFOrderValidityGtd )
                         {
-                           NSMutableArray* validities_ = [ orderTypes_validity_ objectForKey: @(order_type_) ];
+                           NSMutableArray* validities_ = orderTypes_validity_[@(order_type_)];
                            if ( !validities_ )
                            {
                               validities_ = [ NSMutableArray arrayWithCapacity: 4 ];
-                              [ orderTypes_validity_ setObject: validities_ forKey: @(order_type_) ];
+                              orderTypes_validity_[@(order_type_)] = validities_;
                            }
                            
                            if ( ![ validities_ containsObject: @(order_validity_) ] )
@@ -60,8 +60,7 @@
                   }
                   
                   return orderTypes_validity_;
-               } ]
-            , nil ] ];
+               } ]] ];
 }
 
 +(id)routeWithName:( NSString* )name_
@@ -80,8 +79,8 @@
 {
    if ( order_type_ == PFOrderOCO )
    {
-      NSMutableSet* limit_validities_set_ = [ NSMutableSet setWithArray: [ self.validitiesForOrderTypes objectForKey: @(PFOrderLimit) ] ];
-      NSSet* stop_validities_set_ = [ NSSet setWithArray: [ self.validitiesForOrderTypes objectForKey: @(PFOrderStop) ] ];
+      NSMutableSet* limit_validities_set_ = [ NSMutableSet setWithArray: (self.validitiesForOrderTypes)[@(PFOrderLimit)] ];
+      NSSet* stop_validities_set_ = [ NSSet setWithArray: (self.validitiesForOrderTypes)[@(PFOrderStop)] ];
       
       [ limit_validities_set_ intersectSet: stop_validities_set_ ];
       
@@ -89,7 +88,7 @@
    }
    else
    {
-      return [ self.validitiesForOrderTypes objectForKey: @(order_type_) ];
+      return (self.validitiesForOrderTypes)[@(order_type_)];
    }
 }
 

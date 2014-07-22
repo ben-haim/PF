@@ -20,10 +20,6 @@
     return self;
 }
 
--(void)dealloc
-{	
-	[super dealloc];
-}
 
 - (void)drawInContext:(CGContextRef)ctx InRect:(CGRect)rect AndDPI:(double)pen_1px DrawPositionAndOrders:(BOOL) isPosOrdDraw
 {

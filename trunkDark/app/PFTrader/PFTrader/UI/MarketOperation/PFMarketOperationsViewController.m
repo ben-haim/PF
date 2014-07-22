@@ -166,7 +166,7 @@
    didSelectItemAtIndex:( NSInteger )index_
 {
    [ self.activeDataSource deactivate ];
-   self.activeDataSource = [ self.dataSources objectAtIndex: index_ ];
+   self.activeDataSource = (self.dataSources)[index_];
    [ self.activeDataSource activateInController: self ];
 
    self.title = self.navigationTitle;

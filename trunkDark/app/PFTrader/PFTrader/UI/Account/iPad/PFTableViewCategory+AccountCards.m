@@ -22,7 +22,7 @@
    {
       PFTableViewAccountCardItem* account_item_ = [ PFTableViewAccountCardItem itemWithAccount: account_ controller: controller_ ];
       account_item_.action = ^( PFTableViewItem* item_ ) { [ (PFTableViewAccountCardItem*)item_ selectCurrentItem ]; };
-      [ categories_array_ addObject: [ PFTableViewCategory categoryWithTitle: nil items: [ NSArray arrayWithObject: account_item_ ] ] ];
+      [ categories_array_ addObject: [ PFTableViewCategory categoryWithTitle: nil items: @[account_item_] ] ];
    }
    
    return categories_array_;

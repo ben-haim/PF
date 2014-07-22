@@ -44,16 +44,14 @@
                                                   XIndex:x2_index 
                                                   YValue:y2];
     [anchors addObject:p2];
-    [p1 release];
-    [p2 release];
     return self;
 }
 
 
 -(bool)isVisibleWithin:(int)x_start And:(int)x_end
 {	 
-    TAAnchor *p1 = [anchors objectAtIndex:0];
-    TAAnchor *p2 = [anchors objectAtIndex:1];
+    TAAnchor *p1 = anchors[0];
+    TAAnchor *p2 = anchors[1];
     
     return !(MAX(p1.x_index, p2.x_index)<x_start ||  
              MIN(p1.x_index, p2.x_index)>x_end);
@@ -94,8 +92,8 @@
 
 -(CGPoint)getP1
 {
-    TAAnchor* p1 = [anchors objectAtIndex:0];
-    TAAnchor* p2 = [anchors objectAtIndex:1];
+    TAAnchor* p1 = anchors[0];
+    TAAnchor* p2 = anchors[1];
     double x1 = p1.x_coord;
     double y1 = p1.y_coord;
     double k = (p2.y_value-p1.y_value)/(p2.x_index-p1.x_index);
@@ -120,8 +118,8 @@
 
 -(CGPoint)getP2
 {
-    TAAnchor* p1 = [anchors objectAtIndex:0];
-    TAAnchor* p2 = [anchors objectAtIndex:1];
+    TAAnchor* p1 = anchors[0];
+    TAAnchor* p2 = anchors[1];
     double x2 = p2.x_coord;
     double y2 = p2.y_coord;
     double k = (p2.y_value-p1.y_value)/(p2.x_index-p1.x_index);

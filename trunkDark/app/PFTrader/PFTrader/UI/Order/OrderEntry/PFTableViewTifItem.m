@@ -33,11 +33,10 @@
       }
       else
       {
-         self.validities = [ NSArray arrayWithObjects: @(PFOrderValidityDay)
+         self.validities = @[@(PFOrderValidityDay)
                             , @(PFOrderValidityGtc)
                             , @(PFOrderValidityGtd)
-                            , @(PFOrderValidityIoc)
-                            , nil ];
+                            , @(PFOrderValidityIoc)];
          
          self.currentValidity = validity_type_;
       }
@@ -61,14 +60,14 @@
             titleForRow:( NSInteger )row_
            forComponent:( NSInteger )component_
 {
-   return NSStringFromPFOrderValidityType( [ [ self.validities objectAtIndex: row_ ] shortValue ] );
+   return NSStringFromPFOrderValidityType( [ (self.validities)[row_] shortValue ] );
 }
 
 -(void)pickerField:( PFPickerField* )picker_field_
       didSelectRow:( NSInteger )row_
        inComponent:( NSInteger )component_
 {
-   self.currentValidity = [ [ self.validities objectAtIndex: row_ ] shortValue ];
+   self.currentValidity = [ (self.validities)[row_] shortValue ];
    picker_field_.text = self.value;
    [ super pickerField: picker_field_ didSelectRow: row_ inComponent: component_ ];
 }

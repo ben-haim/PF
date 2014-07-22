@@ -60,7 +60,7 @@
 
 -(NSString*)value
 {
-   return [ self.choices objectAtIndex: self.currentChoice ];
+   return (self.choices)[self.currentChoice];
 }
 
 #pragma mark PFPickerFieldDelegate
@@ -81,7 +81,7 @@
             titleForRow:( NSInteger )row_
            forComponent:( NSInteger )component_
 {
-   return [ self.choices objectAtIndex: row_ ];
+   return (self.choices)[row_];
 }
 
 -(void)pickerField:( PFPickerField* )picker_field_

@@ -30,8 +30,8 @@
               LineWidth:(uint)line_width
                LineDash:(uint)line_dash; 
 
-@property (nonatomic, retain) NSString* srcField1; 
-@property (nonatomic, retain) NSString* srcField2;
+@property (nonatomic, strong) NSString* srcField1; 
+@property (nonatomic, strong) NSString* srcField2;
 @property (assign) uint fillAlpha;
 @property (assign) uint color12;
 @property (assign) uint color21;

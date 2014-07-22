@@ -34,12 +34,6 @@
     return self;
 }
 
--(void)dealloc
-{	
-    if(iChartClicks)
-        [iChartClicks release];
-	[super dealloc];    
-}
 
 - (void)drawInContext:(CGContextRef)ctx 
                InRect:(CGRect)rect
@@ -179,10 +173,9 @@
                 ChartSplitterHittest *ht = [[ChartSplitterHittest alloc] init];
                 ht.iChart = iChart;
                 ht.y = y;
-                ht.address = (void*)touch;
+                ht.address = (__bridge void*)touch;
                 ht.state = 0;
                 [iChartClicks addObject:ht];
-                [ht release];
             }
         }
         //+++denis touch on empty space
@@ -212,7 +205,7 @@
         double prevY = NAN;
         for (ht in iChartClicks) 
         {
-            if(ht.address == (void*)touch)
+            if(ht.address == (__bridge void*)touch)
             {
                 prevY = ht.y;
                 ht.y = pt.y;
@@ -224,7 +217,7 @@
         }
         if(iFound>=0 && ht.iChart>=0)
         {
-            XYChart *ownerChart = [parentFChart.addIndCharts objectAtIndex:ht.iChart];
+            XYChart *ownerChart = (parentFChart.addIndCharts)[ht.iChart];
             CGRect r = ownerChart.chart_rect;
             
             if(ht.y<r.origin.y)//moved up
@@ -254,7 +247,7 @@
                 //we will not take those that are being dragged and have been checked above
                 for(int i=0; i<ht.iChart; i++)
                 {
-                    XYChart* aboveChart = [parentFChart.addIndCharts objectAtIndex:i];
+                    XYChart* aboveChart = (parentFChart.addIndCharts)[i];
                     
                     //check if it is being dragged
 //                    bool isDragged = false;
@@ -315,7 +308,7 @@
                 //we will not take those that are being dragged and have been checked above
                 for(int i=ht.iChart+1; i<[parentFChart.addIndCharts count]; i++)
                 {
-                    XYChart* belowChart = [parentFChart.addIndCharts objectAtIndex:i];
+                    XYChart* belowChart = (parentFChart.addIndCharts)[i];
                     
                     //check if it is being dragged
 //                    bool isDragged = false;
@@ -340,7 +333,7 @@
                 }
                 if(ht.iChart == [parentFChart.addIndCharts count]-1)//the bottom chart
                 {
-                    XYChart* chart = [parentFChart.addIndCharts objectAtIndex:ht.iChart];
+                    XYChart* chart = (parentFChart.addIndCharts)[ht.iChart];
                     if(chart.chart_rect.origin.y + chart.chart_rect.size.height - ht.y<minGap)
                     {
                         //we are too close
@@ -367,7 +360,7 @@
         ChartSplitterHittest* ht;
         for (ht in iChartClicks) 
         {
-            if(ht.address == (void*)touch)
+            if(ht.address == (__bridge void*)touch)
             {
                 iFound = c;
                 break;
@@ -377,7 +370,7 @@
         if(iFound>=0 && ht.iChart>=0)
         {
             //fix the corresponding splitter
-            XYChart *ownerChart = [parentFChart.addIndCharts objectAtIndex:ht.iChart];
+            XYChart *ownerChart = (parentFChart.addIndCharts)[ht.iChart];
             CGRect r = ownerChart.chart_rect;
             
             
@@ -388,24 +381,24 @@
                 double OwnerChartRatio = 1 + deltaY/r.size.height;
                 if (ht.iChart>0)
                 {
-                    XYChart* prevChart = [parentFChart.addIndCharts objectAtIndex:ht.iChart-1];
+                    XYChart* prevChart = (parentFChart.addIndCharts)[ht.iChart-1];
                     double prevChartRatio = 1 - deltaY/prevChart.chart_rect.size.height;
                         
                     for(int i=0; i<ht.iChart-1; i++)
                     {
-                        XYChart* aboveChart = [parentFChart.addIndCharts objectAtIndex:i];
-                        [newHeights addObject:[NSNumber numberWithDouble:aboveChart.percentHeight]];
+                        XYChart* aboveChart = (parentFChart.addIndCharts)[i];
+                        [newHeights addObject:@(aboveChart.percentHeight)];
                     }  
                     prevChart.percentHeight*=prevChartRatio;
-                    [newHeights addObject:[NSNumber numberWithDouble:prevChart.percentHeight]];
+                    [newHeights addObject:@(prevChart.percentHeight)];
                 }
                 ownerChart.percentHeight*=OwnerChartRatio;
-                [newHeights addObject:[NSNumber numberWithDouble:ownerChart.percentHeight]];  
+                [newHeights addObject:@(ownerChart.percentHeight)];  
                         
                 for(int i=ht.iChart+1; i< [parentFChart.addIndCharts count];i++)
                 {
-                    XYChart* belowChart = [parentFChart.addIndCharts objectAtIndex:i];
-                    [newHeights addObject:[NSNumber numberWithDouble:belowChart.percentHeight]];
+                    XYChart* belowChart = (parentFChart.addIndCharts)[i];
+                    [newHeights addObject:@(belowChart.percentHeight)];
                 }  
             }
             else //moved down
@@ -415,24 +408,24 @@
 
                 if (ht.iChart>0)
                 {
-                    XYChart* prevChart = [parentFChart.addIndCharts objectAtIndex:ht.iChart-1];
+                    XYChart* prevChart = (parentFChart.addIndCharts)[ht.iChart-1];
                     double prevChartRatio = 1 + deltaY/prevChart.chart_rect.size.height;
                     
                     for(int i=0; i<ht.iChart-1; i++)
                     {
-                        XYChart* aboveChart = [parentFChart.addIndCharts objectAtIndex:i];
-                        [newHeights addObject:[NSNumber numberWithDouble:aboveChart.percentHeight]];
+                        XYChart* aboveChart = (parentFChart.addIndCharts)[i];
+                        [newHeights addObject:@(aboveChart.percentHeight)];
                     }  
                     prevChart.percentHeight*=prevChartRatio;
-                    [newHeights addObject:[NSNumber numberWithDouble:prevChart.percentHeight]];
+                    [newHeights addObject:@(prevChart.percentHeight)];
                 }
                 ownerChart.percentHeight*=OwnerChartRatio;
-                [newHeights addObject:[NSNumber numberWithDouble:ownerChart.percentHeight]];  
+                [newHeights addObject:@(ownerChart.percentHeight)];  
                 
                 for(int i=ht.iChart+1; i< [parentFChart.addIndCharts count];i++)
                 {
-                    XYChart* belowChart = [parentFChart.addIndCharts objectAtIndex:i];
-                    [newHeights addObject:[NSNumber numberWithDouble:belowChart.percentHeight]];
+                    XYChart* belowChart = (parentFChart.addIndCharts)[i];
+                    [newHeights addObject:@(belowChart.percentHeight)];
                 }  
             }
             [iChartClicks removeObjectAtIndex:iFound];//remove the hittest info
@@ -452,7 +445,6 @@
     
     parentFChart.dataChanged = true;
     [self.parentFChart draw];
-    [newHeights release];
 }
 
 - (void)touchesCanceled:(NSSet*)points
@@ -464,7 +456,7 @@
         int iFound = -1;
         for (ChartSplitterHittest* ht in iChartClicks) 
         {
-            if(ht.address == (void*)touch)
+            if(ht.address == (__bridge void*)touch)
             {
                 iFound = c;
                 break;

@@ -28,12 +28,10 @@
 +(PFMetaObject*)metaObject
 {
    return [ PFMetaObject metaObjectWithFields:
-           [ NSArray arrayWithObjects:
-              [ PFMetaObjectField fieldWithId: PFFieldInstrumentTypeId name: @"instrumentTypeId" ]
+           @[[ PFMetaObjectField fieldWithId: PFFieldInstrumentTypeId name: @"instrumentTypeId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldInstrumentId name: @"instrumentId" ]
             , [ PFMetaObjectField fieldWithId: PFFieldCurrency name: @"specifiedCurrency" ]
-            , [ PFMetaObjectField fieldWithId: PFFieldType name: @"type" ]
-            , nil ] ];
+            , [ PFMetaObjectField fieldWithId: PFFieldType name: @"type" ]] ];
 }
 
 -(void)didUpdateWithFieldOwner:( PFFieldOwner* )field_owner_

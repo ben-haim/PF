@@ -40,7 +40,7 @@ typedef enum
       
       if ( self.servers && self.servers.count > self.currentIndex )
       {
-         self.activeServer = [ self.servers objectAtIndex: self.currentIndex ];
+         self.activeServer = (self.servers)[self.currentIndex];
       }
    }
 }
@@ -88,7 +88,7 @@ typedef enum
 {
    if ( self.currentIndex + 1 < self.servers.count )
    {
-      self.activeServer = [ self.servers objectAtIndex: ++self.currentIndex ];
+      self.activeServer = (self.servers)[++self.currentIndex];
       return YES;
    }
    else
@@ -101,7 +101,7 @@ typedef enum
 {
    static NSString* const host_port_separator_ = @":";
    NSArray* host_port_ = [ self.activeServer componentsSeparatedByString: host_port_separator_ ];
-   return component_index_ < [ host_port_ count ] ? [ host_port_ objectAtIndex: component_index_ ] : nil;
+   return component_index_ < [ host_port_ count ] ? host_port_[component_index_] : nil;
 }
 
 -(NSString*)host
@@ -130,8 +130,8 @@ typedef enum
    
    if ( componentes_.count == 2 )
    {
-      host_name_ = [ componentes_ objectAtIndex: 0 ];
-      port_ = [ componentes_ objectAtIndex: 1 ];
+      host_name_ = componentes_[0];
+      port_ = componentes_[1];
    }
    else
    {
@@ -159,7 +159,7 @@ typedef enum
    else
    {
       struct hostent* host_entry_ = gethostbyname([ host_name_ cStringUsingEncoding: NSUTF8StringEncoding ]);
-      ip_name_ = [ NSString stringWithUTF8String: inet_ntoa(*((struct in_addr *)host_entry_->h_addr_list[0])) ];
+      ip_name_ = @(inet_ntoa(*((struct in_addr *)host_entry_->h_addr_list[0])));
    }
 
    return [ NSString stringWithFormat: @"%@:%@", ip_name_, port_ ];
