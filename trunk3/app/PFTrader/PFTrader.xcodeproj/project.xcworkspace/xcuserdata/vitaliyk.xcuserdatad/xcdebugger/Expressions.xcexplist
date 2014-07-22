@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[PFSymbol highLimitPrice]:PFSymbol.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.instrument.highLimitPrice">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PFWatchlistViewController_iPad showSymbolManagerForRow:]:PFWatchlistViewController_iPad.m">
+      </ContextState>
+      <ContextState
+         contextName = "__64+[PFTableViewItem(OrderEntry) orderTypeItemWithController:type:]_block_invoke:PFTableViewItem+Order.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PFSymbol limitMeasure]:PFSymbol.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.instrument.isFutures">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PFSymbolManagerViewController clearSymbol]:PFSymbolManagerViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.symbol">
+            </PersistentString>
+            <PersistentString
+               value = "self.symbols">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PFSymbol highLimit]:PFSymbol.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.quote.settlementPrice">
+            </PersistentString>
+            <PersistentString
+               value = " self.highLimitPrice">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__87+[PFTableViewItem(OrderEntry) accountItemWithController:type:level2Quote:isLevel4Mode:]_block_invoke:PFTableViewItem+Order.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "unsafe_controller_.slCategory.items">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PFSymbolManagerViewController isDataLoaded]:PFSymbolManagerViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "dataSource">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

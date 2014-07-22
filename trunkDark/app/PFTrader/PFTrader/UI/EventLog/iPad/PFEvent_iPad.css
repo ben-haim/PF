@@ -1,0 +1,39 @@
+body
+{
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   background-color: #26262A;
+   font-family: "Helvetica";
+   text-shadow: #111 0px 0px 0px;
+}
+
+.event-header
+{
+   font-family: "Helvetica";
+   font-size: 20px;
+   color: #FFFFFF;
+   text-shadow: #111 0px 0px 0px;
+   matgin-bottom: 0px;
+}
+
+.event-date
+{
+   margin-top: 0px;
+   margin-bottom: 10px;
+   font-size: 15px;
+   color: #FFFFFF;
+}
+
+.event-line-left
+{
+   margin-top: 5px;
+   color: #FFFFFF;
+   font-size: 14px;
+}
+
+.event-line-right
+{
+   margin-top: 5px;
+   color: #9C9C9E;
+   font-size: 15px;
+}

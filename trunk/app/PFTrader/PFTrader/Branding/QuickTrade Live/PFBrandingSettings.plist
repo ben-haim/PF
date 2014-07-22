@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PFUsePrivateLogs</key>
+	<false/>
+	<key>PFUseChangePassword</key>
+	<true/>
+	<key>PFUseChat</key>
+	<true/>
+	<key>PFUseNews</key>
+	<false/>
+	<key>PFUseTransfer</key>
+	<true/>
+	<key>PFUseSecure</key>
+	<false/>
+	<key>PFUseDemoSecure</key>
+	<false/>
+	<key>PFShowFundValues</key>
+	<true/>
+	<key>PFShowEquityValue</key>
+	<true/>
+	<key>PFDefaultServer</key>
+	<string>app.za.velocitytrade.com:8080</string>
+	<key>PFDefaultDemoServer</key>
+	<string>app.demo.za.velocitytrade.com:8080</string>
+	<key>PFAppID</key>
+	<string>879408836</string>
+	<key>PFScriptsServer</key>
+	<string></string>
+	<key>PFDefaultSymbols</key>
+	<array>
+		<string>Har CFD</string>
+		<string>USD/ZAR mini</string>
+		<string>MGOLD</string>
+	</array>
+	<key>PFBrandingKey</key>
+	<string>QT</string>
+	<key>PFBrandingServer</key>
+	<string>app.za.velocitytrade.com:8080</string>
+	<key>PFUseBrandingSecure</key>
+	<false/>
+	<key>PFUseValidityIOC</key>
+	<true/>
+</dict>
+</plist>

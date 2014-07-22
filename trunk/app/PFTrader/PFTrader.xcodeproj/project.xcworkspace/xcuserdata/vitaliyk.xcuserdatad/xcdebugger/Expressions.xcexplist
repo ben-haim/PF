@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[PFDatePickerField setDate:]:PFDatePickerField.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PFTableViewTifItem pickerField:didSelectRow:inComponent:]:PFTableViewTifItem.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "picker_field_.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PFAppDelegate logoutSession:]:PFAppDelegate.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.window.rootViewController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PFMarketOperationViewController showControllerWithController:]:PFMarketOperationViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PFMarketOperationViewController didShowKeyboardWithHeight:inRect:]:PFMarketOperationViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.view">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

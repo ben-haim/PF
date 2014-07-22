@@ -1,0 +1,7 @@
+typedef enum
+{
+	TRADE_PANE_FAVORITES,
+	TRADE_PANE_RATES,
+	
+	TRADE_PANE_TOTAL
+} TradePaneType;

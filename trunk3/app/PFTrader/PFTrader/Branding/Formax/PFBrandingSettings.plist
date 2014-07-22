@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PFUsePrivateLogs</key>
+	<false/>
+	<key>PFUseChat</key>
+	<true/>
+	<key>PFUseNews</key>
+	<true/>
+	<key>PFUseTransfer</key>
+	<true/>
+	<key>PFUseSecure</key>
+	<false/>
+	<key>PFUseHTTP</key>
+	<false/>
+	<key>PFDefaultServer</key>
+	<string>demopro.formaxmarket.com:80</string>
+	<key>PFAppID</key>
+	<string>717101081</string>
+	<key>PFScriptsServer</key>
+	<string></string>
+	<key>PFDefaultSymbols</key>
+	<array>
+		<string>AUD/CAD</string>
+		<string>SILVER</string>
+		<string>EUR/USD</string>
+		<string>GOLD</string>
+		<string>AUD/USD</string>
+		<string>GBP/USD</string>
+		<string>USD/CAD</string>
+		<string>USD/CHF</string>
+		<string>USD/JPY</string>
+		<string>AUD/JPY</string>
+		<string>GBP/JPY</string>
+		<string>CHF/JPY</string>
+		<string>EUR/AUD</string>
+		<string>EUR/CAD</string>
+		<string>GBP/AUD</string>
+		<string>GBP/CAD</string>
+		<string>CAD/JPY</string>
+		<string>EUR/CHF</string>
+		<string>GBP/CHF</string>
+		<string>EUR/JPY</string>
+		<string>EUR/GBP</string>
+	</array>
+	<key>PFBrandingKey</key>
+	<string>formax</string>
+	<key>PFBrandingServer</key>
+	<string>demopro.formaxmarket.com:80</string>
+</dict>
+</plist>

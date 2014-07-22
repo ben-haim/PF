@@ -1,0 +1,176 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf320
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 Menlo-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red170\green13\blue145;\red92\green38\blue153;\red63\green110\blue116;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww14340\viewh18880\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\b\fs36 \cf0 iPhone
+\b0\fs24 \
+\
+
+\b\fs28 Modifications
+\b0\fs24 \
+
+\b \ul GetServer.m\
+
+\b0 \ulnone You may implement this class if you would like to have server load balancing functionality\
+\
+
+\b \ul GetToken.m\
+
+\b0 \ulnone You may implement this class if you would like to get from your server a key to be used in encrypting/decrypting the messages exchanged between the server and this client\
+\
+
+\b \ul ParamsStorage.m\
+\pard\tx560\pardeftab560\pardirnatural
+
+\f1\b0\fs22 \cf0 \ulnone \CocoaLigature0 The following function will need to be changed to your needs, see code
+\f0\b\fs24 \ul \CocoaLigature1 \
+
+\f1\b0\fs22 \ulnone \CocoaLigature0 -(\cf2 id\cf0 ) init\
+\
+The following functions will need to be modified to handle your protocol, more info in the code:\
+- (\cf2 void\cf0 ) PutSymbolGroups:(\cf3 NSArray\cf0  *)sg_args\
+- (\cf2 void\cf0 ) PutSymbols:(\cf3 NSArray\cf0  *)symbol_args AndUserCurency:(\cf3 NSString\cf0 *)cur\
+- (\cf2 void\cf0 ) PutPrices:(\cf3 NSArray\cf0  *)prices_args\
+- (\cf2 void\cf0 ) ProcessMargin:(\cf3 NSArray\cf0  *)margin\
+\
+
+\f2\b \ul Calendar.m\
+
+\f1\b0 \ulnone The following function will need to be changed to your needs, see code\
+-(\cf2 void\cf0 )refreshClicked:(\cf2 id\cf0 )sender\
+- (\cf2 BOOL\cf0 )webView:(\cf3 UIWebView\cf0  *)webView shouldStartLoadWithRequest:(\cf3 NSURLRequest\cf0  *)request navigationType:(\cf3 UIWebViewNavigationType\cf0 )navigationType\
+\
+
+\f2\b \ul ClientSettings.m\
+
+\f1\b0 \ulnone Go through this class and provide information to match your demo registration, more comments in the code\
+\pard\tx220\tx720\tx1133\pardeftab560\li720\fi-720\pardirnatural
+\ls1\ilvl0\cf0 \
+\pard\tx220\tx720\tx1133\pardeftab560\li720\fi-720\pardirnatural
+\ls1\ilvl0
+\f2\b \cf0 \ul \ulc0 iTraderAppDelegate.m\
+\pard\tx13\tx220\tx720\pardeftab560\li40\fi-40\pardirnatural
+\ls1\ilvl0
+\f1\b0 \cf0 \ulnone The following function will need to be changed to match your server protocol, you will find TODO comments:
+\f2\b \ul \
+\pard\tx560\pardeftab560\pardirnatural
+
+\f1\b0 \cf0 \ulnone - (\cf2 void\cf0 )dataReceived:(\cf3 NSArray\cf0  *)cmdArgs\
+\
+Modify this function if you have provided more implementation in the GetServer.m\
+- (\cf2 void\cf0 )serverResolved:(\cf3 NSNotification\cf0  *)notification\
+\
+Modify this function if you have provided more implementation in the GetToken.m\
+- (\cf2 void\cf0 )tokenResolved:(\cf3 NSNotification\cf0  *)notification\
+\
+
+\f2\b \ul ServerConnection.m\
+
+\f1\b0 \ulnone The following functions will need to be modified to handle to handle your protocol, more info in the code:\
+-(\cf2 void\cf0 )onSocket:(\cf4 AsyncSocket\cf0  *)sock didReadData:(\cf3 NSData\cf0 *)data withTag:(\cf2 long\cf0 )tag\
+-(\cf2 void\cf0 )SendCommand:(\cf3 NSString\cf0  *)cmd\
+\
+List of functions you will need to implement the commands to be send to the server, parameters description is provided in the code:\
+-(\cf2 void\cf0 )SendLogin:(\cf3 NSString\cf0 *)aLogin AndPAss:(\cf3 NSString\cf0 *)aPass\
+-(\cf2 void\cf0 )SendLoginNoPump:(\cf3 NSString\cf0 *)aLogin AndPAss:(\cf3 NSString\cf0 *)aPass\
+-(\cf2 void\cf0 )SendCred:(\cf3 NSString\cf0 *)aLogin AndPAss:(\cf3 NSString\cf0 *)aPass\
+-(\cf2 void\cf0 )SendSymGroupsRequest\
+-(\cf2 void\cf0 )SendSymbolsRequest\
+-(\cf2 void\cf0 )SendReady\
+-(\cf2 void\cf0 )SendGetOpenTrades\
+-(\cf2 void\cf0 )SendGetOpenTradesList\
+-(\cf2 void\cf0 )SendChartRequest:(\cf3 NSString\cf0 *)symbol AndRange:(\cf3 NSString\cf0 *)RangeType\
+-(\cf2 void\cf0 )SendTradeCancel\
+-(\cf2 void\cf0 )SendTradeRequest:(\cf4 TradeRecord\cf0 *)trade\
+-(\cf2 void\cf0 )SendTradeCloseRequest:(\cf4 TradeRecord\cf0 *)trade AtPrice:(\cf2 double\cf0 )price forVolume:(\cf2 double\cf0 )vol\
+-(\cf2 void\cf0 )SendTradeUpdateRequest:(\cf4 TradeRecord\cf0 *)trade\
+-(\cf2 void\cf0 )SendTradeDeleteRequest:(\cf4 TradeRecord\cf0 *)trade\
+-(\cf2 void\cf0 )SendHistoryRequestForStart:(\cf3 NSDate\cf0 *)start AndFinish:(\cf3 NSDate\cf0 *)end\
+-(\cf2 void\cf0 )SendNewsRequest:(\cf2 int\cf0 )news_id\
+-(\cf2 void\cf0 )SendDemoAccountRequestWithName:(\cf3 NSString\cf0  *)name \
+							withGroup:(\cf3 NSString\cf0  *)group \
+						  withCountry:(\cf3 NSString\cf0  *)country \
+							withState:(\cf3 NSString\cf0  *)state\
+							 withCity:(\cf3 NSString\cf0  *)city \
+						  withZipcode:(\cf3 NSString\cf0  *)zip \
+						  withAddress:(\cf3 NSString\cf0  *)address \
+ 							withPhone:(\cf3 NSString\cf0  *)phone \
+							withEmail:(\cf3 NSString\cf0  *)email \
+						 withLeverage:(\cf3 NSString\cf0  *)leverage \
+						  withDeposit:(\cf3 NSString\cf0  *)deposit\
+\
+\
+
+\f2\b \ul Codec.m\
+
+\f1\b0 \ulnone You might want to implement the following functions if you want to have some kind of encryption/decryption. Thus code can use the key acquired by the GetToken class\
+-(\cf2 void\cf0 )DecryptData:(\cf2 char\cf0  *)src OfLength:(\cf3 UInt32\cf0 )len\
+-(\cf2 void\cf0 )EncryptData:(\cf2 unsigned\cf0  \cf2 char\cf0  *)src OfLength:(\cf3 UInt32\cf0 )len\
+\
+
+\f2\b \ul OpenPosWatch.m\
+
+\f1\b0 \ulnone The following functions will need to be modified to handle your protocol, more info in the code:\
+- (\cf2 void\cf0 ) UpdateTradesList:(\cf3 NSArray\cf0  *)trade\
+- (\cf2 void\cf0 ) UpdateTrades:(\cf3 NSArray\cf0  *)trade\
+\
+
+\f2\b \ul SymbolChart.m\
+
+\f1\b0 \ulnone You will need to modify this function accord to your needs, you will find TODO comments for the parts you will need to modify:\
+-(\cf2 void\cf0 )OnChartReceived:(\cf3 NSString\cf0 *)RangeType \
+                  data:(\cf3 NSArray\cf0  *)cmdArgs\
+\
+
+\f2\b \ul TradeProgress.m\
+
+\f1\b0 \ulnone The following function will need to be modified to handle your protocol, more info in the code:
+\f2\b \ul \
+
+\f1\b0 \ulnone -(\cf2 void\cf0 )SetNotification:(\cf3 NSArray\cf0 *)args\
+\
+
+\f2\b \ul HistoryViewController.m\
+
+\f1\b0 \ulnone The following functions will need to be modified to handle your protocol, more info in the code:\
+- (\cf2 void\cf0 )dataReceived:(\cf3 NSArray\cf0  *)cmdArgs\
+\
+
+\f2\b \ul MailList.m\
+
+\f1\b0 \ulnone The foliowing functions will need to be modified to handle your protocol, more info in the code:\
+-(\cf2 void\cf0 ) ProcessMail:(\cf3 NSArray\cf0  *)mail_args\
+\
+
+\f2\b \ul NewsList.m\
+
+\f1\b0 \ulnone The following functions will need to be modified to handle your protocol, more info in the code:\
+-(\cf2 void\cf0 ) ProcessNews:(\cf3 NSArray\cf0  *)news_args\
+\
+
+\f2\b \ul NewsView.m\
+
+\f1\b0 \ulnone The following functions will need to be modified to handle your protocol, more info in the code:\
+-(\cf2 void\cf0 ) showNews:(\cf3 NSString\cf0 *)htmlBody AndTitle:(\cf3 NSString\cf0 *)title;\
+-(\cf2 void\cf0 ) showNewsData:(\cf3 NSData\cf0 *)htmlBody AndTitle:(\cf3 NSString\cf0 *)title\
+\
+
+\f2\b \ul DemoRegistrationController.m\
+
+\f1\b0 \ulnone Modify this function if you have provided more implementation in the GetServer.m\
+- (\cf2 void\cf0 )serverResolved:(\cf3 NSNotification\cf0  *)notification\
+\
+Modify this function if you have provided more implementation in the GetToken.m\
+- (\cf2 void\cf0 )tokenResolved:(\cf3 NSNotification\cf0  *)notification\
+\
+\pard\tx13\tx220\tx720\pardeftab560\li40\fi-40\pardirnatural
+\cf0 The following function will need to be changed to match your server protocol, you will find TODO comments:\
+\pard\tx560\pardeftab560\pardirnatural
+\cf0 - (\cf2 void\cf0 )dataReceived:(\cf3 NSArray\cf0  *)cmdArgs\
+}

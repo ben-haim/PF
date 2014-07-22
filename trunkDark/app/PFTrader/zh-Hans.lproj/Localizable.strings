@@ -1,0 +1,1366 @@
+/*Reconnection*/
+"RECONNECTING" = "Reconnecting";
+
+"RECONNECTING_ALERT_TEXT" = "Server connection is not available";
+
+"NO_INTERNET_CONNECTION" = "Internet connection is not available";
+
+/*Update*/
+"UPDATE_APP" = "立即更新";
+
+"LOGOUT" = "退出";
+
+/*Login screen*/
+"LOGIN" = "帐号";
+
+"PASSWORD" = "密码";
+
+"REMEMBER_PASSWORD" = "保存密码";
+
+"LOGIN_BUTTON" = "登录";
+
+"REGISTER_BUTTON" = "注册";
+
+"LIVE_SERVER" = "真实";
+
+"DEMO_SERVER" = "模拟";
+
+"EMPTY_LOGIN" = "Login field is empty";
+
+"EMPTY_PASSWORD" = "Password field is empty";
+
+"WRONG_SERVER_TEXT" = "The version of your client application is not compatible with server version!  Some functions of the platform may work incorrectly! Please, make sure you are connected to the server with corresponding version!";
+
+"NEW_PASSWORD_IS_EMPTY" = "Please enter new password";
+
+/*Login progress*/
+
+"User/password combination is not valid" = "Incorrect current password or login";
+
+"VERIFICATION_TITLE" = "短信验证";
+
+"SMS_PASSWORD" = "短信密码";
+
+"SERVER_CONNECTING" = "连接...";
+
+"AUTHENTICATION" = "授权...";
+
+"READING_DATA" = "读取数据...";
+
+"CONNECTION_FAILED" = "连接失败";
+
+"CHECK_NETWORK" = "请检查网络连接!";
+
+"SSL_CERTIFICATE_WARNING" = "SSL证书无效，确认想继续吗?";
+
+"CHANGE_PASSWORD_TITLE" = "修改密码";
+
+"OLD_PASSWORD" = "原密码";
+
+"NEW_PASSWORD" = "新密码";
+
+"CHANGE_PASSWORD_OK" = "密码修改成功";
+
+"CHANGE_PASSWORD_VERIFICATION_WRONG" = "短信验证密码错误";
+
+"CHANGE_PASSWORD_ERROR" = "修改密码错误";
+
+"SMS_VERIFICATION_CANCELLED" = "短信验证取消";
+
+"CHANGE_PASSWORD_CANCELLED" = "Change password cancelled";
+
+"Password required with level - 1" = "Different character register and number in password required";
+
+"Password required with level - 2" = "Different character register, 8+ length and number in password required";
+
+"Password required with level - 3" = "Different character register, 8+ length, special character and number in password required";
+
+"terminal type error" = "Access denied due to user rights. Please contact support.";
+
+/*Accounts*/
+
+"ASSET_ACCOUNTS" = "Asset accounts";
+
+"CURRENT_ASSET" = "Current asset";
+
+"ACCOUNTS" = "账户";
+
+"ACTIVE_ACCOUNT" = "当前账户";
+
+"ACCOUNT_DETAILS" = "账户详情";
+
+/*Account Information*/
+
+"PERFORMANCE" = "Account performance";
+
+"MAKE_ACTIVE" = "设为当前";
+
+"TODAY" = "今日";
+
+"ACTIVITY" = "当前";
+
+"GENERAL" = "常规";
+
+"GROSS_PL" = "总盈亏";
+
+"NET_PL" = "净盈亏";
+
+"FEES" = "费用";
+
+"VOLUME" = "成交量";
+
+"TRADES" = "交易";
+
+"OPEN_GROSS_PL" = "持仓总盈亏";
+
+"OPEN_NET_PL" = "持仓净盈亏";
+
+"N_ORDERS" = "持单数";
+
+"N_POSITIONS" = "持仓数";
+
+"ORDERS_MARGIN" = "持单保证金";
+
+"POSITIONS_MARGIN" = "持仓保证金";
+
+"BLOCKED_FOR_FUNDS" = "基金冻结";
+
+"STOCK_VALUE" = "股值";
+
+"ACCOUNT_NAME" = "账户";
+
+"ACCOUNT_BALANCE" = "账户余额";
+
+"ACCOUNT_EQUITY" = "账户净值";
+
+"ACCOUNT_VALUE" = "账户价值";
+
+"BLOCKED_BALANCE" = "冻结资金";
+
+"CASH_BALANCE" = "现有资金";
+
+"MARGIN_AVAILABLE" = "可用保证金";
+
+"CURRENT_MARGIN" = "当前保证金";
+
+"MARGIN_WARNING" = "保证金警告线";
+
+"STOP_TRADING" = "停止交易线";
+
+"STOP_OUT" = "强制平仓线";
+
+"WITHDRAWAL_AVAILABLE" = "可取金额";
+
+"INVESTED_FUND_CAPITAL" = "Invested fund capital";
+
+"CURRENT_FUND_CAPITAL" = "Current fund capital";
+
+"FUND_CAPITAL_GAIN" = "Fund capital gain";
+
+"ALLOWS_OVERNIGHT" = "Allows overnight";
+
+"PROJECTED_BALANCE" = "Projected balance";
+
+/*Overnight warning*/
+
+"OVERNIGHT_WARNING" = "Warning: on %@ “Exchange”  will be closed. The margin requirements will be recalculated with the overnight coefficients before closing. If you don’t have margin for overnight, we forced close some positions and cancel orders";
+
+"AVAILABLE_MARGIN" = "Available margin";
+
+"MAINTANCE_MARGIN" = "Maintenance margin";
+
+"OVERNIGHT_MARGIN" = "Overnight margin available";
+
+/*Trading Halt Warning*/
+
+"TRADING_HALT_TITLE" = "Trading halt";
+
+"TRADING_HALT_TEXT_FORMAT" = "Warning. On instrument %@ trading limits are reached. Trading temporarily suspended. Available actions: cancel orders. After halt trading limits will be expanded.";
+
+/*Symbols screen*/
+"SEARCH" = "Search";
+
+"SYMBOLS" = "产品代码";
+
+"SYMBOL" = "产品代码";
+
+"BID" = "卖价";
+
+"ASK" = "买价";
+
+"BSIZE" = "卖量";
+
+"CHANGE_PERCENT" = "涨跌幅";
+
+"ASIZE" = "买量";
+
+"SPREAD" = "点差";
+
+"LAST" = "最新";
+
+"VOLUME" = "成交量";
+
+"CHANGE" = "涨跌额";
+
+"LAST_UPDATE" = "更新";
+
+"OPEN" = "今开";
+
+"LOW" = "最低";
+
+"CLOSE" = "昨收";
+
+"HIGH" = "最高";
+
+"REMOVE_ALL_SYMBOLS_PROMPT" = "确认从观察列表中全部删除?";
+
+"REMOVE_ALL" = "全部删除";
+
+"NO_OPTION_FOR_SYMBOL" = "当前产品无期权";
+
+"DAYS" = "日";
+
+"HOURS" = "时";
+
+"MINUTES" = "分";
+
+"SECONDS" = "秒";
+
+"MIN_SECONDS" = "小于1";
+
+"SETTLEMENT_PRICE" = "Settl. price";
+
+"PREV_SETTLEMENT_PRICE" = "Pr. settl. price";
+
+/*Positions & Orders screen*/
+"POSITIONS" = "持仓";
+
+"ORDERS" = "订单";
+
+"OPEN_TIME" = "开仓时间";
+
+"QUANTITY" = "数量";
+
+"SIDE" = "方向";
+
+"OPEN_PRICE" = "开仓价";
+
+"EXPIRATION_DATE" = "Expiration date";
+
+"PL_TICKS" = "盈亏（点）";
+
+"COMMISSION" = "费用";
+
+"SWAPS" = "隔夜";
+
+"SL" = "止损";
+
+"TP" = "获利";
+
+"MARGIN_USED" = "使用保证金";
+
+"EXPIRY_DATE" = "过期";
+
+"INSTRUMENT_TYPE" = "产品组";
+
+"BOUGHT" = "Bought";
+
+"SOLD" = "Sold";
+
+"POSITION_ID" = "仓位号";
+
+"TYPE" = "类型";
+
+"PRICE" = "价格";
+
+"SIZE" = "Size";
+
+"LAST_PRICE" = "市价";
+
+"TIF" = "时效";
+
+"EXCHANGE" = "交易所";
+
+"STATUS" = "Status";
+
+"ORDER_ID" = "订单号";
+
+"BUY" = "买入";
+
+"SELL" = "卖出";
+
+"CANCEL_ALL_ORDERS_PROMPT" = "确认取消全部订单?";
+
+"CANCEL_ALL" = "全部取消";
+
+"CLOSE_ALL_POSITIONS_PROMPT" = "确认全部平仓?";
+
+"CLOSE_ALL" = "全部平仓";
+
+"EVENT" = "事件";
+
+"ORDER_STAUS_NONE" = "空";
+
+"ORDER_STAUS_PENDING_NEW" = "新挂单";
+
+"ORDER_STAUS_PENDING_EXECUTION" = "挂单执行";
+
+"ORDER_STAUS_PENDING_CANCEL" = "挂单取消";
+
+"ORDER_STAUS_PENDING_REPLACE" = "挂单替换";
+
+"ORDER_STAUS_PENDING_STP" = "STP挂单";
+
+"ORDER_STAUS_NEW" = "创建";
+
+"ORDER_STAUS_CANCELLED" = "取消";
+
+"ORDER_STAUS_PART_FILLED" = "部分成交";
+
+"ORDER_STAUS_FILLED" = "执行";
+
+"ORDER_STAUS_REPLACED" = "修改";
+
+"NOT_AVAILABLE_VALUE" = "-";
+
+"CONTRACT" = "Contract";
+
+"OPEN_INTEREST" = "Open interest";
+
+"POSITION_EXPOSURE" = "Position exposure";
+
+"ORDER_EXPOSURE" = "Order exposure";
+
+"CURRENT_PRICE" = "市价";
+
+"ORDER_FILLED_QTY" = "Qty. filled";
+
+"ORDER_REMAINING_QTY" = "Qty. remaining";
+
+"ORDER_INITIAL_REQ" = "Initial req.";
+
+/*Trades screen*/
+"TRADE_ID" = "交易编号";
+
+"PURCHASE_PRICE" ="成交价";
+
+"ACCOUNT" = "账户";
+
+/*Order types*/
+"ORDER_MANUAL" = "手动";
+
+"ORDER_MARKET" = "市价";
+
+"ORDER_STOP" = "止损";
+
+"ORDER_LIMIT" = "限价";
+
+"ORDER_STOP_LIMIT" = "止损限价";
+
+"ORDER_TRAILING_STOP" = "追踪止损";
+
+"ORDER_OCO" = "OCO";
+
+"WATCHLIST" = "观察列表";
+
+"DASHBOARD" = "Dashboard";
+
+/**/
+"WATCHLIST_EDITOR" = "编辑列表";
+
+"ACTIVE_MODE" = "活动";
+
+"ACTIVE" = "活动";
+
+"HIDDEN" = "隐藏";
+
+"ACTIVE_ORDERS" = "活动";
+
+"ALL" = "全部";
+
+"FILLED" = "成交";
+
+/*Order entry*/
+"OE" = "下单";
+
+"ORDER_CREATED" = "下单成功";
+
+"CLOSE_OE" = "下单关闭";
+
+"ORDER_ENTRY" = "下单";
+
+"CLOSING_ORDERS" = "取消订单";
+
+"QUANTITY_FORMAT" = "%@ 手";
+
+"LOTS" = "手";
+
+"ORDER_TYPE" = "类型";
+
+"ENABLE" = "启用";
+
+"DISABLE" = "禁用";
+
+"STOP_LOSS" = "止损";
+
+"TRAILING_STOP_LOSS" = "追踪盈亏";
+
+"TRAILING" = "追踪";
+
+"S_L_PRICE" = "止损价格";
+
+"SL_OFFSET" = "止损偏量";
+
+"TP_OFFSET" = "T/P Offset";
+
+"TAKE_PROFIT" = "获利";
+
+"T_P_PRICE" = "获利价格";
+
+"STOP_PRICE" = "止损";
+
+"LIMIT_PRICE" = "限价";
+
+"PRICE_OFFSET" = "Price Offset";
+
+"DAY" = "即日";
+
+"GTC" = "GTC";
+
+"IOC" = "IOC";
+
+"GTD" = "GTD";
+
+"GTD_TO" = "GTD";
+
+"FOK" = "FOK";
+
+"MOO" = "MOO";
+
+"MOC" = "MOC";
+
+"MINUS_1" = "-1";
+
+"MINUS_5" = "-5";
+
+"PLUS_1" = "+1";
+
+"PLUS_5" = "+5";
+
+"PLACE_CONFIRMATION" = "确认下单?";
+
+"MODIFY_CONFIRMATION" = "Modify order?";
+
+"CANCEL_CONFIRMATION" = "Cancel order?";
+
+"EXECUTE_CONFIRMATION" = "Execute order?";
+
+"PLACE_ORDER" = "下单";
+
+"PLACE_ORDER_BUTTON" = "下单";
+
+"CLOSE_BUTTON" = "关闭";
+
+"INVALID_SL_PRICE" = "无效止损价格";
+
+"INVALID_TP_PRICE" = "无效获利价格";
+
+"INVALID_TR_OFFSET" = "Tr. Stop price is too big";
+
+/*Modify order*/
+"MODIFY_ORDER" = "修改订单";
+
+"MODIFY_ORDER_BUTTON" = "修改订单";
+
+"CANCEL_ORDER_BUTTON" = "取消订单";
+
+"EXECUTE_ORDER_BUTTON" = "市价执行";
+
+/*Modify position*/
+"MODIFY_POSITION" = "修改";
+
+"LONG" = "做多";
+
+"SHORT" = "做空";
+
+"MODIFY_POSITION_CONFIRMATION" = "Modify position?";
+
+"CLOSE_CONFIRMATION" = "确认平仓?";
+
+"CLOSE_POSITION" = "平仓";
+
+"MODIFY_POSITION_BUTTON" = "修改仓位";
+
+"CLOSE_POSITION_BUTTON" = "平仓";
+
+"MODIFY_BUTTON" = "Modify";
+
+"CLOSE_BUTTON" = "Close";
+
+"CANCEL_BUTTON" = "Cancel";
+
+/*Charts*/
+"CHART" = "图表";
+
+"EMPTY_WATCHLIST" = "Add symbols to watchlist";
+
+"SELECT_RANGE" = "范围";
+
+"INVALID_AMOUNT" = "无效数量";
+
+"QTY" = "数量 :";
+
+"M1" = "M1";
+
+"M5" = "M5";
+
+"M15" = "M15";
+
+"M30" = "M30";
+
+"H1" = "H1";
+
+"H4" = "H4";
+
+"D1" = "D1";
+
+"W1" = "W1";
+
+"MN1" = "MN1";
+
+"TICK" = "波动";
+
+"CANCEL" = "取消";
+
+"SEGMENT" = "片段";
+
+"LINE" = "直线";
+
+"RAY" = "射线";
+
+"CHANNEL" = "通道";
+
+"FIB_RETR" = "斐波纳契回撤";
+
+"FIB_CIRC" = "斐波那契圆弧";
+
+"FIB_FAN" = "斐波那契扇形";
+
+"HLINE" = "水平线";
+
+"VLINE" = "垂直线";
+
+"CHART_MODE_FREE" = "释放";
+
+"CHART_MODE_CROSSHAIR" = "十字";
+
+"CHART_MODE_SPLITTER" = "分割";
+
+"CHART_MODE_RESIZE" = "调整";
+
+"CHART_MODE_DELETE" = "删除";
+
+"CHART_MODE_DRAW" = "绘制";
+
+"DRAWINGS" = "图样";
+
+"SELECT_DRAWING" = "选择图样";
+
+"SELECT_MODE" = "选择模式";
+
+"INDICATORS" = "指标";
+
+"ALL_INDICATORS" = "全部指标";
+
+"INDICATORS_LIMIT" = "指标能达到的最大数";
+
+"SHOW_VOLUME" = "成交量";
+
+"SHOW_LOUPE" = "Show loupe";
+
+"SHOW_ORDERS" = "Orders";
+
+"SHOW_POSITIONS" ="Positions";
+
+"TRADING_LAYERS" = "Trading layers";
+
+"INCLUDE_IN_SCALING" = "Include in scaling";
+
+"CHART_COLOR_SCHEME" = "颜色";
+
+"CHART_SCHEME_DEFAULT" = "Default";
+
+"CHART_SCHEME_GREEN" = "绿色";
+
+"CHART_STYLE_TYPE" = "样式";
+
+"CHART_STYLE_CANDLE" = "蜡烛";
+
+"CHART_STYLE_BAR" = "柱";
+
+"CHART_STYLE_LINE" = "线";
+
+"CHART_STYLE_AREA" = "面";
+
+"СHART_SETTINGS" = "设置";
+
+"ADD" = "Add";
+
+/*News*/
+"NEWS" = "资讯";
+
+"NEWS_BROWSER" = "浏览资讯";
+
+/*Chat*/
+"CHAT" = "聊天";
+
+"SEND_BUTTON" = "发送";
+
+/*Update message*/
+"NEW_CHAT_MESSAGE" = "接收新消息";
+
+"OPEN_POSITION_MESSAGE" = "建立仓位%d ";
+
+"MODIFY_POSITION_MESSAGE" = "修改仓位#%d";
+
+"CLOSE_POSITION_MESSAGE" = "平掉仓位#%d";
+
+"CREATE_ORDER_MESSAGE" = "放置订单#%d";
+
+"MODIFY_ORDER_MESSAGE" = "修改订单#%d";
+
+"REMOVE_ORDER_MESSAGE" = "取消订单#%d ";
+
+/*Settings*/
+
+"SETTINGS" = "设置";
+
+"DEFAULTS" = "默认";
+
+"ADDITIONAL" = "Additional";
+
+"CONFIRMATIONS" = "确认";
+
+"ORDER_SENDING" = "下单";
+
+"ORDER_MODIFY" = "Order modification";
+
+"ORDER_CANCELLING" = "Order cancelling";
+
+"EXECUTING_AS_MARKET" = "Order executing";
+
+"POSITION_MODIFY" = "Position modification";
+
+"POSITION_CLOSING" = "平仓";
+
+"USE_NUMERIC_PAD" = "启用数字板";
+
+"CHART_CASHE_SIZE" = "缓存大小";
+
+"CHART_DEFAULT_PERIOD" = "周期";
+
+"TRADING_PANELS" = "交易面板";
+
+"SHOW_MODAL" = "显示模态";
+
+"USE_SLTP_OFFSET" = "SL/TP offset";
+
+"USE_LOTS_QUANTITY" = "Show quantity in lots";
+
+"ENVIRONMENT_SETTINGS" = "Environment";
+
+"PLAY_SOUNDS" = "Play sounds";
+
+"SHOW_TRADING_HALT" = "Warning if Trading Halt";
+
+/*Registration*/
+
+"LOGIN" = "账户";
+
+"PASSWORD" = "密码";
+
+"CONFIRM_PASSWORD" = "确认密码";
+
+"INCORRECT_CONFIRM_PASSWORD" = "两次密码不同";
+
+"REGISTRATION" = "注册";
+
+"FIRST_NAME" = "名";
+
+"LAST_NAME" = "姓";
+
+"COUNTRY" = "国家";
+
+"PHONE" = "电话";
+
+"EMAIL" = "邮箱";
+
+"ACCOUNT_CURRENCY" = "账户币种";
+
+"DEMO_ACCOUNT_BALANCE" = "账户余额";
+
+"ONE_POSITION_PER_INSTRUMENT" = "同品同仓";
+
+"SELECT_COUNTRY" = "选择国家";
+
+/*Market Depth*/
+"MARKET_DEPTH" = "市场深度";
+
+/*Option Chain*/
+"OPTION_CHAIN" = "期权链";
+
+"STRIKE" = "行权";
+
+"STRIKES_COUNT_PROMPT" = "选择行权数";
+
+"ALL_STRIKES" = "全部行权";
+
+"4_STRIKES" = "4行权";
+
+"8_STRIKES" = "8行权";
+
+"12_STRIKES" = "12行权";
+
+"16_STRIKES" = "16行权";
+
+"ALL_COUNT" = "全部";
+
+"CALL" = "买权";
+
+"PUT" = "卖权";
+
+"NO_EXPIRATION_DATES" = "未到期";
+
+"DELTA" = "Delta";
+
+"GAMMA" = "Gamma";
+
+"VEGA" = "Vega";
+
+"THETA" = "Theta";
+
+/*Scripts*/
+"SCRIPTS" = "脚本列表";
+
+/*Reports*/
+
+"GET_REPORT_BUTTON" = "获取报告";
+
+"REPORTS" = "报告";
+
+"REPORT_TYPE" = "报告类型";
+
+"REPORT_STATEMENT" = "账户账单";
+
+"REPORT_BALANCE" = "余额";
+
+"REPORT_BALANCE_SUMMARY" = "资金汇总";
+
+"REPORT_COMMISSIONS" = "佣金";
+
+"REPORT_TRADES" = "交易";
+
+"REPORT_ORDER_HISTORY" = "订单历史";
+
+"REPORT_SUMMARY" = "汇总";
+
+"FROM" = "从";
+
+"TO" = "到";
+
+"EMPTY_REPORT" = "该报告没有数据";
+
+"account name" = "账户";
+
+"login" = "登录";
+
+"group name" = "组别";
+
+"balance" = "账户余额";
+
+"blockedbalance" = "冻结资金";
+
+"unrealized p/l" = "持仓盈亏";
+
+"gi.cur_balance" = "当前资金";
+
+"gi.min_margin" = "初始保证金";
+
+"gi.cur_margin" = "维持保证金%";
+
+"gi.available_margin" = "可用保证金";
+
+"gi.margin_warning" = "保证金警告";
+
+"gi.margin_stoptrade" = "停止交易";
+
+"gi.margin_stopout" = "强制平仓";
+
+"gi.withdrawal_available" = "可取金额";
+
+"gi.today_released_pnl" = "平仓盈亏";
+
+"gi.balance_blocked_by_orders" = "订单保证金";
+
+"gi.stock_value" = "股值";
+
+"accountcurrency" = "货币";
+
+"orderid" = "订单编号";
+
+"createdat" = "创建于";
+
+"boundtoorderid" = "绑定编号";
+
+"instrumentname" = "产品代码";
+
+"openclosebuysell" = "方向";
+
+"ordertype" = "类型";
+
+"price" = "价格";
+
+"amount" = "数量";
+
+"tif" = "时效";
+
+"updatedtime" = "更新";
+
+"instrument" = "产品代码";
+
+"balance.buy" = "买入";
+
+"balance.everbuy" = "平均买入";
+
+"balance.sell" = "卖出";
+
+"balance.eversell" = "平均卖出";
+
+"balance.net" = "净额";
+
+"balance.profit" = "获利";
+
+"balance.exposure" = "风险";
+
+"balance.exposurenet" = "净风险";
+
+"accountoperationid" = "操作编号";
+
+"operation" = "操作";
+
+"debit" = "支出";
+
+"credit" = "收入";
+
+"currency" = "货币";
+
+"balance_before" = "收支前";
+
+"trading_in" = "交易收入";
+
+"trading_out" = "交易支出";
+
+"deposit" = "入金";
+
+"widthdraw" = "出金";
+
+"commission_out" = "佣金支出";
+
+"swaps_in" = "隔夜收入";
+
+"swaps_out" = "隔夜支出";
+
+"interest" = "利息";
+
+"total" = "合计";
+
+"balance_after" = "收支后";
+
+"operationtype" = "操作类型";
+
+"basis" = "价格";
+
+"sum" = "汇总";
+
+"creator" = "创建人";
+
+"messageid" = "消息编号";
+
+"actualtime" = "具体时间";
+
+"sender" = "发件人";
+
+"recipient" = "收件人";
+
+"groupid" = "组编号";
+
+"message" = "内容";
+
+"senderip" = "发送人IP";
+
+"delivered" = "送达";
+
+"type" = "类型";
+
+"actualprice" = "实际价格";
+
+"instrumenttype" = "产品类型";
+
+"quoteticker" = "报价行情";
+
+"minchange" = "最小变动价位";
+
+"lotsize" = "手大小";
+
+"crosstype" = "兑换类型";
+
+"spread" = "点差";
+
+"discount" = "折扣";
+
+"swapplan" = "掉期计划";
+
+"swapsell" = "掉期卖出";
+
+"swapbuy" = "掉期买入";
+
+"closedbyorderid" = "按单号平仓";
+
+"executedat" = "执行";
+
+"usage" = "使用";
+
+"username" = "用户";
+
+"role" = "职位";
+
+"phone" = "电话";
+
+"email" = "邮件";
+
+"phonepassword" = "电话密码";
+
+"irdnumber" = "税号";
+
+"address" = "地址";
+
+"brokerlogin" = "经纪商登录";
+
+"locked" = "锁定";
+
+"expiresat" = "过期";
+
+"openorderid" = "持单编号";
+
+"openprice" = "开仓价格";
+
+"opentime" = "开仓市价";
+
+"closeprice" = "平仓价格";
+
+"stoploss" = "止损";
+
+"takeprofit" = "获利";
+
+"swaps" = "隔夜";
+
+"comission" = "佣金";
+
+"routename" = "通路";
+
+"closedat" = "平仓于";
+
+"route" = "通路";
+
+"rate" = "费用";
+
+"description" = "描述";
+
+"submitted" = "提交";
+
+"tradeid" = "交易编号";
+
+"externalid" = "外部编号";
+
+"time" = "时间";
+
+"crossprice" = "兑换汇率";
+
+"extprice" = "外部价格";
+
+"User" = "用户";
+
+"Account" = "账户";
+
+"Position" = "持仓";
+
+"number" = "数量";
+
+"Instrument" = "交易产品";
+
+"Amount" = "数量";
+
+"Operation" = "操作";
+
+"Price" = "价格";
+
+"Open" = "开仓";
+
+"order" = "下单";
+
+"type" = "类型";
+
+"Commissions" = "佣金";
+
+"Time" = "时间";
+
+"Order" = "下单";
+
+"number" = "数量";
+
+"price" = "价格";
+
+"Type" = "类型";
+
+"Open date" = "开仓日期";
+
+"Open price" = "开仓价格";
+
+"Close order type" = "平仓订单类型";
+
+"Realised profit/loss" = "平仓盈亏";
+
+"Oreder Number" = "订单号";
+
+"Order Price" = "订价";
+
+"Position number" = "仓位编号";
+
+"Open order type" = "类型";
+
+"Order number" = "订单号";
+
+"Order price" = "订价";
+
+"accname" = "账户";
+
+"action" = "方向";
+
+"event" = "事件";
+
+"price" = "价格";
+
+"remoteid" = "远程编号";
+
+"trader" = "交易者";
+
+"stopprice" = "止损价";
+
+"margin" = "保证金";
+
+"groupname" = "组别";
+
+"account" = "账户";
+
+"accountname" = "账户";
+
+"userid" = "用户编号";
+
+"profit" = "获利";
+
+"tradevolume" = "成交量";
+
+"purchaseprice" = "成交价";
+
+"exchange" = "交易所";
+
+"valuedate" = "日期";
+
+"expiredate" = "过期";
+
+"autotrade" = "自动交易";
+
+"instrumentgroup" = "产品组";
+
+"dividends" = "股息";
+
+"other_account" = "其他账户";
+
+"terminaltype" = "终端类型";
+
+"commission" = "佣金";
+
+/* Transfer and Withdrawal*/
+
+"BROKER_MESSAGE" = "Broker Message";
+
+"TRANSFER_TITLE" = "Transfer money";
+
+"TRANSFER" = "Transfer";
+
+"TRANSFER_RATE" = "Transfer rate";
+
+"SUBMIT_BUTTON" = "Submit";
+
+"INVALID_TRANSFER_SUM" = "Current transfer value is invalid";
+
+"AVAILABLE" = "Available";
+
+"REMAINS" = "Remains";
+
+"SOURCE_ACCOUNT" = "Source account";
+
+"TRANSFER" = "Transfer";
+
+"TRANSFER_VALUE" = "Transfer value";
+
+"DEPOSIT" = "Deposit";
+
+"TARGET_ACCOUNT" = "Target account";
+
+"WITHDRAWAL_TITLE" = "Withdrawal";
+
+"INVALID_WITHDRAWAL_SUM" = "Current withdrawal value is invalid";
+
+"WITHDRAWAL" = "Withdrawal";
+
+"WITHDRAWAL_VALUE" = "Withdrawal value";
+
+/*Event log*/
+
+"EVENT_LOG" = "Event Log";
+
+"EVENT_BROWSER" = "Event Browser";
+
+/*Symbol Info*/
+
+"INSTRUMENT_FOREX" = "Forex";
+
+"INSTRUMENT_STOCKS" = "Stocks";
+
+"INSTRUMENT_FUTURES" = "Futures";
+
+"INSTRUMENT_OPTIONS" = "Options";
+
+"INSTRUMENT_CFDINDEX" = "CFD Index";
+
+"INSTRUMENT_FORWARD" = "Forward";
+
+"INSTRUMENT_CFDFUTURES" = "CFD Futures";
+
+"INSTRUMENT_INDICES" = "Indicies";
+
+"INSTRUMENT_GENERAL" = "General";
+
+"INSTRUMENT_ACTIVE" = "Active";
+
+"INSTRUMENT_CLOSED" = "Closed";
+
+"INSTRUMENT_HALT" = "Trading halt";
+
+"INSTRUMENT_WAIT_FOR_PRICE" = "Wait for Price";
+
+"INSTRUMENT_DELIVERED" = "Delivered";
+
+"INSTRUMENT_READY" = "Ready";
+
+"TRADING_SESSION_AUCTION" = "Auction";
+
+"TRADING_SESSION_MAINTRADE" = "Main Trade";
+
+"TRADING_SESSION_EXTTRADE" = "Ext. Trade";
+
+"TRADING_SESSION_CLEARING" = "Clearing";
+
+"SYMBOL_INFO_SYMBOL" = "Symbol";
+
+"SYMBOL_INFO_DESCRIPTION" = "Description";
+
+"SYMBOL_INFO_FUTURES_CLASS" = "Futures class";
+
+"SYMBOL_INFO_EXANGE" = "Exchange";
+
+"SYMBOL_INFO_ASSET_CLASS" = "Asset class";
+
+"SYMBOL_INFO_DELIVERY_METHOD" = "Delivery method";
+
+"SYMBOL_INFO_CONTRACT_MONTH" = "Contract date";
+
+"SYMBOL_INFO_FIRST_TRADE_DATE" = "First trade date";
+
+"SYMBOL_INFO_LAST_TRADE_DATE" = "Last trade date";
+
+"SYMBOL_INFO_NOTICE_DATE" = "Notice date";
+
+"SYMBOL_INFO_SETTLEMENT_DATE" = "Settlement date";
+
+"SYMBOL_INFO_CLOSE_OUT_DATE" = "Closeout date";
+
+"SYMBOL_INFO_TRADING_BALANCE" = "Trading balance";
+
+"SYMBOL_INFO_TRADING_ALLOWED" = "Trade mode";
+
+"SYMBOL_INFO_DELIVERY_STATUS" = "Delivery status";
+
+"SYMBOL_INFO_CURRENT_SESSION" = "Current session";
+
+"SYMBOL_INFO_CURRENT_SESSION_NOT_TRDING_DAY" = "Non trading day";
+
+"SYMBOL_INFO_CURRENT_SESSION_SHORTENED" = "Shortened";
+
+"SYMBOL_INFO_NEXT_HOLIDAY" = "Next holiday";
+
+"SYMBOL_INFO_NOT_DEFINED" = "Not defined";
+
+"SYMBOL_INFO_EXP" = "Quoting currency";
+
+"SYMBOL_INFO_LOT_SIZE" = "Lot size";
+
+"SYMBOL_INFO_CONTRACT_SIZE" = "Contract size";
+
+"SYMBOL_INFO_TICK_COAST" = "Tick cost";
+
+"SYMBOL_INFO_TICK_SIZE" = "Tick size";
+
+"SYMBOL_INFO_TICKS" = "Ticks";
+
+"SYMBOL_INFO_MINIMAL_LOT" = "Minimal lot";
+
+"SYMBOL_INFO_LOT_STEP" = "Lot step";
+
+"SYMBOL_INFO_HIGH_LIMIT" = "High limit";
+
+"SYMBOL_INFO_LOW_LIMIT" = "Low limit";
+
+"SYMBOL_INFO" = "Info";
+
+"SYMBOL_INFO_GROUP_TRADING" = "Trading";
+
+"SYMBOL_INFO_GROUP_MARGIN" = "Margin";
+
+"SYMBOL_INFO_GROUP_FEES" = "Fees";
+
+"SYMBOL_INFO_GROUP_SESSION" = "Sessions";
+
+"SYMBOL_INFO_GROUP_GENERAL" = "General";
+
+"SYMBOL_INFO_FEES_SWAPBUY" = "Long Swap";
+
+"SYMBOL_INFO_FEES_SWAPSELL" = "Short Swap";
+
+"SYMBOL_INFO_FEES_OPEN" = "Open";
+
+"SYMBOL_INFO_FEES_CLOSE" = "Close";
+
+"SYMBOL_INFO_FEES_ORDER_MIN" = "MIN per order";
+
+"SYMBOL_INFO_FEES_ORDER_MAX" = "MAX per order";
+
+"SYMBOL_INFO_FEES_FREE" = "Free Amount";
+
+"SYMBOL_INFO_FEES_PHONE" = "Phone order";
+
+"SYMBOL_INFO" = "Info";
+
+"SYMBOL_INFO_GROUP_TRADING" = "Trading";
+
+"SYMBOL_INFO_GROUP_MARGIN" = "Margin";
+
+"SYMBOL_INFO_GROUP_FEES" = "Fees";
+
+"SYMBOL_INFO_GROUP_SESSION" = "Sessions";
+
+"SYMBOL_INFO_GROUP_GENERAL" = "General";
+
+"SYMBOL_INFO_FEES_PER_LOT" = "Per lot";
+
+"SYMBOL_INFO_FEES_PER_FILL" = "Per fill";
+
+"SYMBOL_INFO_FEES_PER_TRANSACTION" = "Per transaction";
+
+"SYMBOL_INFO_FEES_PER_PHONE_TRANSACTION" = "Per phone trans.";
+
+"SYMBOL_INFO_FEES_VOLUME" = "Per volume";
+
+"SYMBOL_INFO_FEES_VAT" = "VAT";
+
+"SYMBOL_INFO_FEES_BUY_SELL" = " (Buy/Sell)";
+
+"SYMBOL_INFO_FEES_SHORT" = " (Short)";
+
+"SYMBOL_INFO_FEES_LOTS" = "lots:";
+
+"SYMBOL_INFO_CASH" = "Cash";
+
+"SYMBOL_INFO_PHYSICALLY" = "Physically";
+
+/*Secure Logs*/
+
+"SECURE_LOG" = "Secure Log";
+
+"LOG_DATE" = "Log Date";
+
+/*Dashboard*/
+
+"DASHBOARD_BID" = "Bid";
+
+"DASHBOARD_CHANGE_PERCENT" = "Change";
+
+"DASHBOARD_HIGH" = "High";
+
+"DASHBOARD_SPREAD" = "Spread";
+
+"DASHBOARD_LAST" = "Last";
+
+"DASHBOARD_LOW" = "Low";
+
+"DASHBOARD_ASK" = "Ask";
+
+"DASHBOARD_CLOSE" = "Prev. close";
+
+"DASHBOARD_OPEN" = "Open";
+
+"gi.balance" = "Balance";
+
+"gi.fund_used" = "Fund used";
+
+"gi.avaliable_funds" = "Avail. funds";
+
+"gi.margin_used" = "Margin used";
+
+"gi.maintain_margin" = "Maint.margin";
+
+"gi.risk_lvl" = "Risk level";
+
+"gi.margin_orders" = "Margin_ord.";
+
+"gi.margin_positions" = "Margin_pos.";
+
+"gi.fund_capital" = "Fund capital";
+
+"gi.pos_maintenance_req" = "Pos.main_req";
+
+"terminal_type" = "Termin.type";
+
+"dealercommission" = "Dealer com-n";
+
+"other_account_operations" = "Other oper-s";
+
+"opengrosspnl" = "OpengrossP/L";
+
+/*ErrorCode for change password*/
+"BUSINESS_REJECT_MESSAGE_28" = "Incorrect current password or login";
+
+"BUSINESS_REJECT_MESSAGE_31" = "Incorrect new password: you cannot use the same password";
+
+"BUSINESS_REJECT_MESSAGE_201" = "New password contains prohibited symbols";
+
+"BUSINESS_REJECT_MESSAGE_202" = "Password cannot be the same as login";
+
+"BUSINESS_REJECT_MESSAGE_203" = "Please enter new password";
+
+"BUSINESS_REJECT_MESSAGE_221" = "Incorrect new password: password should contain chars and numbers";
+
+"BUSINESS_REJECT_MESSAGE_222" = "Incorrect new password: password should contain at least 8 chars and numbers";
+
+"BUSINESS_REJECT_MESSAGE_223" = "Incorrect new password: password should contain at least 8 symbols including chars, numbers and special symbols";

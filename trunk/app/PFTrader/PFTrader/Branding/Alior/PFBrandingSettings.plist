@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PFUsePrivateLogs</key>
+	<false/>
+	<key>PFUseChangePassword</key>
+	<false/>
+	<key>PFUseChat</key>
+	<true/>
+	<key>PFUseNews</key>
+	<true/>
+	<key>PFUseTransfer</key>
+	<false/>
+	<key>PFUseSecure</key>
+	<true/>
+	<key>PFUseDemoSecure</key>
+	<true/>
+	<key>PFShowFundValues</key>
+	<true/>
+	<key>PFShowEquityValue</key>
+	<true/>
+	<key>PFDefaultServer</key>
+	<string>aliortrader.pl:443</string>
+	<key>PFDefaultDemoServer</key>
+	<string>demo.aliortrader.pl:443</string>
+	<key>PFAppID</key>
+	<string>714132932</string>
+	<key>PFScriptsServer</key>
+	<string></string>
+	<key>PFDefaultSymbols</key>
+	<array>
+		<string>EUR/USD</string>
+		<string>AUD/CAD</string>
+		<string>EUR/AUD</string>
+	</array>
+	<key>PFBrandingKey</key>
+	<string></string>
+	<key>PFBrandingServer</key>
+	<string></string>
+	<key>PFUseBrandingSecure</key>
+	<false/>
+	<key>PFUseValidityIOC</key>
+	<true/>
+</dict>
+</plist>

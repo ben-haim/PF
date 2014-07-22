@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PFUsePrivateLogs</key>
+	<false/>
+	<key>PFUseChangePassword</key>
+	<true/>
+	<key>PFUseChat</key>
+	<false/>
+	<key>PFUseNews</key>
+	<false/>
+	<key>PFUseTransfer</key>
+	<true/>
+	<key>PFUseSecure</key>
+	<true/>
+	<key>PFShowFundValues</key>
+	<true/>
+	<key>PFShowEquityValue</key>
+	<true/>
+	<key>PFDefaultServer</key>
+	<string>sys.capital4c.com:443,sys2.capital4c.com:443</string>
+	<key>PFAppID</key>
+	<string>687270087</string>
+	<key>PFScriptsServer</key>
+	<string></string>
+	<key>PFDefaultSymbols</key>
+	<array>
+		<string>USDJPY SCALPING</string>
+		<string>GBPUSD SCALPING</string>
+		<string>GBPJPY SCALPING</string>
+		<string>EURUSD SCALPING</string>
+		<string>EURJPY SCALPING</string>
+		<string>AUDUSD SCALPING</string>
+		<string>AUDJPY SCALPING</string>
+		<string>AUDJPY STANDARD ECN</string>
+		<string>AUDUSD STANDARD ECN</string>
+		<string>CADJPY STANDARD ECN</string>
+		<string>CHFJPY STANDARD ECN</string>
+		<string>EURAUD STANDARD ECN</string>
+		<string>EURCHF STANDARD ECN</string>
+		<string>EURGBP STANDARD ECN</string>
+		<string>EURJPY STANDARD ECN</string>
+		<string>EURUSD STANDARD ECN</string>
+		<string>GBPJPY STANDARD ECN</string>
+		<string>GBPUSD STANDARD ECN</string>
+		<string>GOLD SPOT  STANDARD ECN</string>
+		<string>NZDJPY STANDARD ECN</string>
+		<string>NZDUSD STANDARD ECN</string>
+		<string>USDCAD STANDARD ECN</string>
+		<string>USDCHF STANDARD ECN</string>
+		<string>USDJPY STANDARD ECN</string>
+		<string>AUDJPY TRUE ECN</string>
+		<string>AUDUSD TRUE ECN</string>
+		<string>CADJPY TRUE ECN</string>
+		<string>CHFJPY TRUE ECN</string>
+		<string>EURAUD TRUE ECN</string>
+		<string>EURCHF TRUE ECN</string>
+		<string>EURGBP TRUE ECN</string>
+		<string>EURJPY TRUE ECN</string>
+		<string>EURUSD TRUE ECN</string>
+		<string>GBPJPY TRUE ECN</string>
+		<string>GBPUSD TRUE ECN</string>
+		<string>GOLD SPOT  TRUE ECN</string>
+		<string>NZDJPY TRUE ECN</string>
+		<string>NZDUSD TRUE ECN</string>
+		<string>USDCAD TRUE ECN</string>
+		<string>USDCHF TRUE ECN</string>
+		<string>USDJPY TRUE ECN</string>
+	</array>
+	<key>PFBrandingKey</key>
+	<string>protrader</string>
+	<key>PFBrandingServer</key>
+	<string>demo.capital4c.com:8071</string>
+	<key>PFUseBrandingSecure</key>
+	<false/>
+	<key>PFUseValidityIOC</key>
+	<true/>
+</dict>
+</plist>

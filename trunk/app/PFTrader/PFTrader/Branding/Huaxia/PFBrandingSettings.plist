@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PFUsePrivateLogs</key>
+	<false/>
+	<key>PFUseChangePassword</key>
+	<true/>
+	<key>PFUseChat</key>
+	<true/>
+	<key>PFUseNews</key>
+	<true/>
+	<key>PFUseTransfer</key>
+	<true/>
+	<key>PFUseSecure</key>
+	<false/>
+	<key>PFUseDemoSecure</key>
+	<false/>
+	<key>PFShowFundValues</key>
+	<true/>
+	<key>PFShowEquityValue</key>
+	<true/>
+	<key>PFDefaultServer</key>
+	<string>trade1.china1858.com,trade2.china1858.com</string>
+	<key>PFDefaultDemoServer</key>
+	<string>demo.china1858.com</string>
+	<key>PFAppID</key>
+	<string></string>
+	<key>PFScriptsServer</key>
+	<string></string>
+	<key>PFDefaultSymbols</key>
+	<array>
+		<string>000538.SZ</string>
+		<string>600111.SZ</string>
+		<string>000024.SZ</string>
+		<string>002673.SZ</string>
+		<string>601888.SZ</string>
+		<string>601117.SZ</string>
+		<string>002387.SZ</string>
+		<string>002594.SZ</string>
+		<string>AUD/USD澳元兑美元</string>
+		<string>.DJI道琼斯工业指数</string>
+	</array>
+	<key>PFBrandingKey</key>
+	<string>huaxia</string>
+	<key>PFBrandingServer</key>
+	<string>demo.china1858.com</string>
+	<key>PFUseBrandingSecure</key>
+	<false/>
+	<key>PFUseValidityIOC</key>
+	<true/>
+</dict>
+</plist>

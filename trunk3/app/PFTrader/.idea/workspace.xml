@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" readonly="true" id="1ae66802-aedb-4edf-8e7f-a8c2af4d5457" name="Default" comment="" />
+    <ignored path="PFTrader.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_iPad_7.1" />
+  <component name="FavoritesManager">
+    <favorites_list name="PFTrader" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="main.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PFTrader/main.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="0" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="360">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PFTableView.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PFTrader/UI/Common/TableView/PFTableView.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="111" column="0" selection-start="2446" selection-end="2446" vertical-scroll-proportion="0.0" vertical-offset="1665" max-vertical-offset="3930">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NSRange.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="2" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="795">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PFMessage.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../lib/ProFinanceApi/ProFinanceApi/Detail/PFMessage.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="5" selection-start="367" selection-end="367" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PFApi.m" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../lib/ProFinanceApi/ProFinanceApi/Detail/PFApi.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="403" column="22" selection-start="12336" selection-end="12336" vertical-scroll-proportion="0.7154213" vertical-offset="5385" max-vertical-offset="6540">
+              <folding>
+                <element signature="e#0#17#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PFTableViewItem+Order.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PFTrader/UI/Order/OrderEntry/PFTableViewItem+Order.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="265" column="77" selection-start="12840" selection-end="12840" vertical-scroll-proportion="0.0" vertical-offset="3660" max-vertical-offset="6150">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PFMarketOperationViewController.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PFTrader/UI/MarketOperation/PFMarketOperationViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="58" selection-start="1502" selection-end="1502" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="960">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PFMarketOperationViewController.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PFTrader/UI/MarketOperation/PFMarketOperationViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="12" selection-start="1154" selection-end="1154" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="5175">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PFTableView.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PFTrader/UI/Common/TableView/PFTableView.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="5" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="555">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PFLevel2QuotesViewController.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PFTrader/UI/MarketDepth/PFLevel2QuotesViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="106" column="51" selection-start="4260" selection-end="4260" vertical-scroll-proportion="0.0" vertical-offset="1590" max-vertical-offset="2685">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../../third-party/CTPP2/src/CTPP2VMFileLoader.cpp" />
+        <option value="$PROJECT_DIR$/PFTrader/UI/Common/TableView/PFTableView.h" />
+        <option value="$PROJECT_DIR$/PFTrader/UI/Common/TableView/PFTableView.m" />
+        <option value="$PROJECT_DIR$/PFTrader/UI/MarketDepth/PFLevel2QuotesViewController.m" />
+        <option value="$PROJECT_DIR$/PFTrader/UI/Order/OrderEntry/PFTableViewItem+Order.m" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1920" />
+    <option name="y" value="166" />
+    <option name="width" value="1920" />
+    <option name="height" value="970" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PFTrader" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PFTrader" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProFinanceApi" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PFTrader" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProFinanceApi" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProFinanceApi" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PFTrader" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProFinanceApi" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProFinanceApi" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Detail" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PFTrader" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProFinanceApi" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProFinanceApi" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Data" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Cidr.FilesView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PFTrader" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$1$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.C/C++/Objective-C" />
+    <property name="FullScreen" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RunManager" selected="Application.PFTrader">
+    <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PROJECT_NAME="PFTrader" TARGET_NAME="PFTrader" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="PFTrader" RUN_TARGET_NAME="PFTrader" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" PASS_PARENT_ENVS="FALSE" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="OCGoogleTestRunConfigurationType" factoryName="Google Test" PROJECT_NAME="PFTrader" TARGET_NAME="PFTrader" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="CopperLark" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="CopperLark" PROJECT_NAME="PFTrader" TARGET_NAME="CopperLark" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="PFTrader" RUN_TARGET_NAME="CopperLark" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Formax" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="Formax" PROJECT_NAME="PFTrader" TARGET_NAME="Formax" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="PFTrader" RUN_TARGET_NAME="Formax" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="PFTrader" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="PFTrader" PROJECT_NAME="PFTrader" TARGET_NAME="PFTrader" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="PFTrader" RUN_TARGET_NAME="PFTrader" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <RunnerSettings RunnerId="AppRunner" />
+      <ConfigurationWrapper RunnerId="AppRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Universal library" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="Universal library" PROJECT_NAME="XiP" TARGET_NAME="Universal library" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="XiP" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="XiP" PROJECT_NAME="XiP" TARGET_NAME="XiP" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="XiP" RUN_TARGET_NAME="XiP" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="XiPFramework" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="XiPFramework" PROJECT_NAME="XiP" TARGET_NAME="XiPFramework" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="XiPLib-iPad" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="XiPLib-iPad" PROJECT_NAME="XiP" TARGET_NAME="XiPLib-iPad" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="XiPLib-iPhone" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="XiPLib-iPhone" PROJECT_NAME="XiP" TARGET_NAME="XiPLib-iPhone" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="XiPLib" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="XiPLib" PROJECT_NAME="XiP" TARGET_NAME="XiPLib" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="JFF" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="JFF" PROJECT_NAME="JFF" TARGET_NAME="JFF" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="CTPP2-clang" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="CTPP2-clang" PROJECT_NAME="CTPP2" TARGET_NAME="CTPP2-clang" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="CTPP2" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="CTPP2" PROJECT_NAME="CTPP2" TARGET_NAME="CTPP2" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="NetworkReachability-clang" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="NetworkReachability-clang" PROJECT_NAME="NetworkReachability" TARGET_NAME="NetworkReachability-clang" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="NetworkReachability" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="NetworkReachability" PROJECT_NAME="NetworkReachability" TARGET_NAME="NetworkReachability" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ESButtonGroup" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="ESButtonGroup" PROJECT_NAME="ESButtonGroup" TARGET_NAME="ESButtonGroup" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="NotificationBanner" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="NotificationBanner" PROJECT_NAME="NotificationBanner" TARGET_NAME="NotificationBanner" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="URLHelpers" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="URLHelpers" PROJECT_NAME="URLHelpers" TARGET_NAME="URLHelpers" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="TTTAttributedLabel" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="TTTAttributedLabel" PROJECT_NAME="TTTAttributedLabel" TARGET_NAME="TTTAttributedLabel" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ExpandableTree-clang" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="ExpandableTree-clang" PROJECT_NAME="ExpandableTree" TARGET_NAME="ExpandableTree-clang" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ExpandableTree" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="ExpandableTree" PROJECT_NAME="ExpandableTree" TARGET_NAME="ExpandableTree" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ExpandableTreeFW" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="ExpandableTreeFW" PROJECT_NAME="ExpandableTree" TARGET_NAME="ExpandableTreeFW" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="PFResources" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="PFResources" PROJECT_NAME="ProFinanceApi" TARGET_NAME="PFResources" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ProFinanceApi" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="ProFinanceApi" PROJECT_NAME="ProFinanceApi" TARGET_NAME="ProFinanceApi" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="TouchXMLLib-clang" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="TouchXMLLib-clang" PROJECT_NAME="TouchXMLLib" TARGET_NAME="TouchXMLLib-clang" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="TouchXMLLib" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="TouchXMLLib" PROJECT_NAME="TouchXMLLib" TARGET_NAME="TouchXMLLib" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="touchzipkit" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="touchzipkit" PROJECT_NAME="ZipKit" TARGET_NAME="touchzipkit" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="zipkit" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="zipkit" PROJECT_NAME="ZipKit" TARGET_NAME="zipkit" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ZipKit Touch" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="ZipKit Touch" PROJECT_NAME="ZipKit Touch" TARGET_NAME="ZipKit Touch" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="ZipKit Touch" RUN_TARGET_NAME="ZipKit Touch" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ZipKit Utility" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="ZipKit Utility" PROJECT_NAME="ZipKit Utility" TARGET_NAME="ZipKit Utility" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="ZipKit Utility" RUN_TARGET_NAME="ZipKit Utility" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="zku" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="zku" PROJECT_NAME="zku" TARGET_NAME="zku" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="zku" RUN_TARGET_NAME="zku" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="AsyncSocket" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="AsyncSocket" PROJECT_NAME="AsyncSocket" TARGET_NAME="AsyncSocket" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Appledoc" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="Appledoc" PROJECT_NAME="AsyncDispatcher" TARGET_NAME="Appledoc" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="AsyncDispatcher" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="AsyncDispatcher" PROJECT_NAME="AsyncDispatcher" TARGET_NAME="AsyncDispatcher" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="AsyncSaxParser" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="AsyncSaxParser" PROJECT_NAME="AsyncDispatcher" TARGET_NAME="AsyncSaxParser" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="DDMenuController" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="DDMenuController" PROJECT_NAME="DDMenuController" TARGET_NAME="DDMenuController" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="JFFMessageBox" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="JFFMessageBox" PROJECT_NAME="JFFMessageBox" TARGET_NAME="JFFMessageBox" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <list size="36">
+      <item index="0" class="java.lang.String" itemvalue="Application.CopperLark" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Formax" />
+      <item index="2" class="java.lang.String" itemvalue="Application.PFTrader" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Universal library" />
+      <item index="4" class="java.lang.String" itemvalue="Application.XiP" />
+      <item index="5" class="java.lang.String" itemvalue="Application.XiPFramework" />
+      <item index="6" class="java.lang.String" itemvalue="Application.XiPLib-iPad" />
+      <item index="7" class="java.lang.String" itemvalue="Application.XiPLib-iPhone" />
+      <item index="8" class="java.lang.String" itemvalue="Application.XiPLib" />
+      <item index="9" class="java.lang.String" itemvalue="Application.JFF" />
+      <item index="10" class="java.lang.String" itemvalue="Application.CTPP2-clang" />
+      <item index="11" class="java.lang.String" itemvalue="Application.CTPP2" />
+      <item index="12" class="java.lang.String" itemvalue="Application.NetworkReachability-clang" />
+      <item index="13" class="java.lang.String" itemvalue="Application.NetworkReachability" />
+      <item index="14" class="java.lang.String" itemvalue="Application.ESButtonGroup" />
+      <item index="15" class="java.lang.String" itemvalue="Application.NotificationBanner" />
+      <item index="16" class="java.lang.String" itemvalue="Application.URLHelpers" />
+      <item index="17" class="java.lang.String" itemvalue="Application.TTTAttributedLabel" />
+      <item index="18" class="java.lang.String" itemvalue="Application.ExpandableTree-clang" />
+      <item index="19" class="java.lang.String" itemvalue="Application.ExpandableTree" />
+      <item index="20" class="java.lang.String" itemvalue="Application.ExpandableTreeFW" />
+      <item index="21" class="java.lang.String" itemvalue="Application.PFResources" />
+      <item index="22" class="java.lang.String" itemvalue="Application.ProFinanceApi" />
+      <item index="23" class="java.lang.String" itemvalue="Application.TouchXMLLib-clang" />
+      <item index="24" class="java.lang.String" itemvalue="Application.TouchXMLLib" />
+      <item index="25" class="java.lang.String" itemvalue="Application.touchzipkit" />
+      <item index="26" class="java.lang.String" itemvalue="Application.zipkit" />
+      <item index="27" class="java.lang.String" itemvalue="Application.ZipKit Touch" />
+      <item index="28" class="java.lang.String" itemvalue="Application.ZipKit Utility" />
+      <item index="29" class="java.lang.String" itemvalue="Application.zku" />
+      <item index="30" class="java.lang.String" itemvalue="Application.AsyncSocket" />
+      <item index="31" class="java.lang.String" itemvalue="Application.Appledoc" />
+      <item index="32" class="java.lang.String" itemvalue="Application.AsyncDispatcher" />
+      <item index="33" class="java.lang.String" itemvalue="Application.AsyncSaxParser" />
+      <item index="34" class="java.lang.String" itemvalue="Application.DDMenuController" />
+      <item index="35" class="java.lang.String" itemvalue="Application.JFFMessageBox" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="true" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <configuration useDefault="false">$USER_HOME$/.subversion</configuration>
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ae66802-aedb-4edf-8e7f-a8c2af4d5457" name="Default" comment="" />
+      <created>1396618462881</created>
+      <updated>1396618462881</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1920" y="166" width="1920" height="970" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31294116" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16657881" sideWeight="0.7729412" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22705883" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="4" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../../lib/ProFinanceApi/ProFinanceApi/PFSession.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1080" column="6" selection-start="30389" selection-end="30389" vertical-scroll-proportion="0.3321033" vertical-offset="14640" max-vertical-offset="25845">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../third-party/CTPP2/src/CTPP2Compiler.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1167" column="56" selection-start="39453" selection-end="39453" vertical-scroll-proportion="-1.0793358" vertical-offset="18000" max-vertical-offset="22710" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../third-party/CTPP2/src/CTPP2VMFileLoader.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="198" column="23" selection-start="6569" selection-end="6569" vertical-scroll-proportion="0.52583027" vertical-offset="2490" max-vertical-offset="3675" />
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSException.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="8" selection-start="1995" selection-end="1995" vertical-scroll-proportion="0.33195022" vertical-offset="725" max-vertical-offset="4335" />
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="196" column="8" selection-start="13056" selection-end="13056" vertical-scroll-proportion="0.29545453" vertical-offset="2683" max-vertical-offset="4590">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PFTrader/UI/MarketOperation/PFTableViewItem+MarketOperation.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="93" selection-start="4427" selection-end="4427" vertical-scroll-proportion="-2.6568265" vertical-offset="2535" max-vertical-offset="4230" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PFTrader/UI/Common/TableView/PFTableView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="5" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="2" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PFTrader/UI/MarketDepth/PFLevel2QuotesViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="106" column="51" selection-start="4260" selection-end="4260" vertical-scroll-proportion="0.0" vertical-offset="1590" max-vertical-offset="2685">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PFTrader/main.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PFTrader/UI/MarketOperation/PFMarketOperationViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="12" selection-start="1154" selection-end="1154" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="4920">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PFTrader/UI/MarketOperation/PFMarketOperationViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="58" selection-start="1502" selection-end="1502" vertical-scroll-proportion="0.0" vertical-offset="299" max-vertical-offset="900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PFTrader/UI/Common/TableView/PFTableView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="0" selection-start="2446" selection-end="2446" vertical-scroll-proportion="0.0" vertical-offset="1665" max-vertical-offset="3930">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PFTrader/UI/Order/OrderEntry/PFTableViewItem+Order.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="265" column="77" selection-start="12840" selection-end="12840" vertical-scroll-proportion="0.0" vertical-offset="3660" max-vertical-offset="6150">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/ProFinanceApi/ProFinanceApi/Detail/PFMessage.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="5" selection-start="367" selection-end="367" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/ProFinanceApi/ProFinanceApi/Detail/PFApi.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="403" column="22" selection-start="12336" selection-end="12336" vertical-scroll-proportion="0.7154213" vertical-offset="5385" max-vertical-offset="6540">
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

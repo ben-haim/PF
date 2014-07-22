@@ -1,0 +1,1381 @@
+/*Reconnection*/
+"RECONNECTING" = "Подключение";
+
+"RECONNECTING_ALERT_TEXT" = "Соединение с сервером недоступно";
+
+"NO_INTERNET_CONNECTION" = "Отсутствует интернет соединение";
+
+/*Update*/
+"UPDATE_APP" = "Обновить";
+
+"LOGOUT" = "Выход";
+
+/*Login screen*/
+"LOGIN" = "Имя";
+
+"PASSWORD" = "Пароль";
+
+"REMEMBER_PASSWORD" = "Сохранить пароль";
+
+"LOGIN_BUTTON" = "Вход";
+
+"REGISTER_BUTTON" = "Регистрация";
+
+"LIVE_SERVER" = "Торговый";
+
+"DEMO_SERVER" = "Демо";
+
+"EMPTY_LOGIN" = "Введите логин";
+
+"EMPTY_PASSWORD" = "Веедите пароль";
+
+"WRONG_SERVER_TEXT" = "The version of your client application is not compatible with server version!  Some functions of the platform may work incorrectly! Please, make sure you are connected to the server with corresponding version!";
+
+"terminal type error" = "Access denied due to user rights. Please contact support.";
+
+/*Login progress*/
+
+"VERIFICATION_TITLE" = "СМС проверка";
+
+"SMS_PASSWORD" = "СМС пароль";
+
+"SERVER_CONNECTING" = "Соединение...";
+
+"AUTHENTICATION" = "Аутентификация...";
+
+"READING_DATA" = "Чтение данных...";
+
+"CONNECTION_FAILED" = "Соединение не удалось установить";
+
+"CHECK_NETWORK" = "Проверьте Ваше подключение к сети!";
+
+"SSL_CERTIFICATE_WARNING" = "Возможно SSL сертификат недостоверный. Хотите продолжать?";
+
+"CHANGE_PASSWORD_TITLE" = "Смена пароля";
+
+"OLD_PASSWORD" = "Старый пароль";
+
+"NEW_PASSWORD" = "Новый пароль";
+
+"CHANGE_PASSWORD_OK" = "Пароль удачно сменен";
+
+"CHANGE_PASSWORD_VERIFICATION_WRONG" = "Неверный SMS-пароль";
+
+"CHANGE_PASSWORD_ERROR" = "Ошибка при смене пароля";
+
+"SMS_VERIFICATION_CANCELLED" = "SMS-проверка отменена";
+
+"CHANGE_PASSWORD_CANCELLED" = "смена пароля отменена";
+
+"Password required with level - 1" = "Пароль должен содержать цифры и символы в разном регистре";
+
+"Password required with level - 2" = "Пароль должен быть длинной 8+, содержать цифры и символы в разном регистре";
+
+"Password required with level - 3" = "Пароль должен быть длинной 8+, содержать цифрыб специальные символы и символы в разном регистре";
+
+/*Accounts*/
+
+"ACCOUNTS" = "Счета";
+
+"ACTIVE_ACCOUNT" = "Активный";
+
+"ACCOUNT_DETAILS" = "Список счетов";
+
+/*Account Information*/
+
+"MAKE_ACTIVE" = "Сделать активным";
+
+"TODAY" = "Сегодня";
+
+"ACTIVITY" = "Активность";
+
+"GENERAL" = "Общие";
+
+"GROSS_PL" = "Gross P/L";
+
+"NET_PL" = "Net P/L";
+
+"FEES" = "Комиссии";
+
+"VOLUME" = "Объем ";
+
+"TRADES" = "Сделки";
+
+"OPEN_GROSS_PL" = "Откр.grossP/L";
+
+"OPEN_NET_PL" = "Откр.net P/L";
+
+"N_ORDERS" = "#Ордера";
+
+"N_POSITIONS" = "#Позиции";
+
+"ORDERS_MARGIN" = "Мар.на ордера";
+
+"POSITIONS_MARGIN" = "Мар.на позиции";
+
+"BLOCKED_FOR_FUNDS" = "В фондах";
+
+"STOCK_VALUE" = "Стои-сть акций";
+
+"ACCOUNT_NAME" = "Имя счета";
+
+"ACCOUNT_BALANCE" = "Баланс";
+
+"ACCOUNT_EQUITY" = "Средства";
+
+"ACCOUNT_VALUE" = "Стоимость";
+
+"BLOCKED_BALANCE" = "Заблокировано";
+
+"CASH_BALANCE" = "В наличии";
+
+"MARGIN_AVAILABLE" = "Доступ.маржа";
+
+"CURRENT_MARGIN" = "Текущая маржа";
+
+"MARGIN_WARNING" = "Уров.пред.";
+
+"STOP_TRADING" = "Стоп торговля";
+
+"STOP_OUT" = "Стоп аут";
+
+"WITHDRAWAL_AVAILABLE" = "К снятию";
+
+"INVESTED_FUND_CAPITAL" = "Invested fund capital";
+
+"CURRENT_FUND_CAPITAL" = "Current fund capital";
+
+"FUND_CAPITAL_GAIN" = "Fund capital gain";
+
+/*Symbols screen*/
+"SYMBOLS" = "Инструменты";
+
+"SYMBOL" = "Инструмент";
+
+"BID" = "Бид";
+
+"ASK" = "Аск";
+
+"BSIZE" = "Разм.Бид";
+
+"CHANGE_PERCENT" = "%Изменен";
+
+"ASIZE" = "Разм.Аск";
+
+"SPREAD" = "Спрэд";
+
+"LAST" = "Последняя";
+
+"VOLUME" = "Объем";
+
+"CHANGE" = "Изменение";
+
+"LAST_UPDATE" = "Посл.обнов.";
+
+"OPEN" = "Открытие";
+
+"LOW" = "Низ";
+
+"CLOSE" = "Закрытие";
+
+"HIGH" = "Верх";
+
+"REMOVE_ALL_SYMBOLS_PROMPT" = "Очистить список инструментов?";
+
+"REMOVE_ALL" = "Удалить все";
+
+"NO_OPTION_FOR_SYMBOL" = "Для этого инструмента опцион отсутствует";
+
+"DAYS" = "дней";
+
+"HOURS" = "часов";
+
+"MINUTES" = "мин.";
+
+"SECONDS" = "сек.";
+
+"MIN_SECONDS" = "Менее 1";
+
+/*Positions & Orders screen*/
+"POSITIONS" = "Позиции";
+
+"ORDERS" = "Ордера";
+
+"OPEN_TIME" = "Время открытия";
+
+"QUANTITY" = "Кол-во";
+
+"SIDE" = "Сторона";
+
+"OPEN_PRICE" = "Цена откр.";
+
+"EXPIRATION_DATE" = "Дата эксп.";
+
+"PL_TICKS" = "P/L Тики";
+
+"COMMISSION" = "Комиссия";
+
+"SWAPS" = "Свопы";
+
+"SL" = "SL";
+
+"TP" = "TP";
+
+"MARGIN_USED" = "Исп.маржа";
+
+"EXPIRY_DATE" = "Дата оконч.";
+
+"INSTRUMENT_TYPE" = "Тип инстр.";
+
+"POSITION_ID" = "#Позиции";
+
+"TYPE" = "Тип";
+
+"PRICE" = "Цена";
+
+"LAST_PRICE" = "Последний";
+
+"TIF" = "Экспирация";
+
+"EXCHANGE" = "Биржа";
+
+"STATUS" = "Статус";
+
+"ORDER_ID" = "#Ордера";
+
+"BUY" = "Купить";
+
+"SELL" = "Продать";
+
+"CANCEL_ALL_ORDERS_PROMPT" = "Отменить все ордера?";
+
+"CANCEL_ALL" = "Отменить все";
+
+"CLOSE_ALL_POSITIONS_PROMPT" = "Закрыть все позиции?";
+
+"CLOSE_ALL" = "Закрыть все";
+
+"EVENT" = "Событие";
+
+"ORDER_STAUS_NONE" = "Нет ";
+
+"ORDER_STAUS_PENDING_NEW" = "Отложенный Новый";
+
+"ORDER_STAUS_PENDING_EXECUTION" = "Ожидает Исполнение";
+
+"ORDER_STAUS_PENDING_CANCEL" = "Ожидает Отмены";
+
+"ORDER_STAUS_PENDING_REPLACE" = "Ожидает Замены";
+
+"ORDER_STAUS_PENDING_STP" = "Отложенный STP";
+
+"ORDER_STAUS_NEW" = "Созданный";
+
+"ORDER_STAUS_CANCELLED" = "Отмененный";
+
+"ORDER_STAUS_PART_FILLED" = "Частично исполненный";
+
+"ORDER_STAUS_FILLED" = "Исполненный";
+
+"ORDER_STAUS_REPLACED" = "Изменен";
+
+"NOT_AVAILABLE_VALUE" = "-";
+
+/*Trades screen*/
+"COMMISSION" = "Комиссии";
+
+"TRADE_ID" = "ID Сделки";
+
+"PURCHASE_PRICE" ="Цена покупки";
+
+"ACCOUNT" = "Счет";
+
+/*Order types*/
+"ORDER_MANUAL" = "Ручной";
+
+"ORDER_MARKET" = "Рыночный";
+
+"ORDER_STOP" = "Стоп";
+
+"ORDER_LIMIT" = "Лимитный";
+
+"ORDER_STOP_LIMIT" = "Стоп лимит";
+
+"ORDER_TRAILING_STOP" = "Тр. стоп";
+
+"ORDER_OCO" = "OCO";
+
+"WATCHLIST" = "Инструменты";
+
+/**/
+"WATCHLIST_EDITOR" = "Редактор";
+
+"ACTIVE_MODE" = "Акти-е";
+
+"ACTIVE" = "ВКЛ.";
+
+"HIDDEN" = "ВЫКЛ.";
+
+"ACTIVE_ORDERS" = "Активные";
+
+"ALL" = "Все";
+
+"FILLED" = "Исполненные";
+
+/*Order entry*/
+"OE" = "ВО";
+
+"ORDER_CREATED" = "Ордер создан успешно";
+
+"CLOSE_OE" = "Закрыть ВО";
+
+"ORDER_ENTRY" = "Ввод Ордера";
+
+"CLOSING_ORDERS" = "Закрывающие ордера";
+
+"QUANTITY_FORMAT" = "%@ лот";
+
+"ORDER_TYPE" = "Тип ордера";
+
+"ENABLE" = "ВКЛ.";
+
+"DISABLE" = "ВЫКЛ.";
+
+"STOP_LOSS" = "Стоп Лосс";
+
+"TRAILING_STOP_LOSS" = "Тр. С/Л";
+
+"TRAILING" = "Трейлинг";
+
+"S_L_PRICE" = "Цена С/Л";
+
+"SL_OFFSET" = "Сдвиг С/Л";
+
+"TP_OFFSET" = "Сдвиг Т/П";
+
+"TAKE_PROFIT" = "Тейк Профит";
+
+"T_P_PRICE" = "Цена Т/П";
+
+"STOP_PRICE" = "Цена Стоп";
+
+"LIMIT_PRICE" = "Цена Лимит";
+
+"PRICE_OFFSET" = "Сдвиг цены";
+
+"DAY" = "Дневной";
+
+"GTC" = "GTC";
+
+"IOC" = "IOC";
+
+"GTD" = "GTD";
+
+"GTD_TO" = "GTD";
+
+"FOK" = "FOK";
+
+"MOO" = "MOO";
+
+"MOC" = "MOC";
+
+"MINUS_1" = "-1";
+
+"MINUS_5" = "-5";
+
+"PLUS_1" = "+1";
+
+"PLUS_5" = "+5";
+
+"PLACE_CONFIRMATION" = "Отправить ордер?";
+
+"MODIFY_CONFIRMATION" = "Модифицировать ордер?";
+
+"CANCEL_CONFIRMATION" = "Отменить ордер?";
+
+"EXECUTE_CONFIRMATION" = "Выполнить ордер?";
+
+"PLACE_ORDER" = "Отправить";
+
+"PLACE_ORDER_BUTTON" = "Отправить ордер";
+
+"CLOSE_BUTTON" = "Закрыть";
+
+"INVALID_SL_PRICE" = "Некорректная SL цена";
+
+"INVALID_TP_PRICE" = "Некорректная TP цена";
+
+"INVALID_TR_OFFSET" = "Tr. Stop цена очень большая";
+
+/*Modify order*/
+"MODIFY_ORDER" = "Изменение";
+
+"MODIFY_ORDER_BUTTON" = "Изменить ордер";
+
+"CANCEL_ORDER_BUTTON" = "Отменить ордер";
+
+"EXECUTE_ORDER_BUTTON" = "Исполнить ордер";
+
+/*Modify position*/
+"MODIFY_POSITION" = "Изменение";
+
+"LONG" = "Покупка";
+
+"SHORT" = "Продажа";
+
+"MODIFY_POSITION_CONFIRMATION" = "Модифицировать позицию?";
+
+"CLOSE_CONFIRMATION" = "Закрыть позицию?";
+
+"CLOSE_POSITION" = "Закрыть";
+
+"MODIFY_POSITION_BUTTON" = "Изменить позицию";
+
+"CLOSE_POSITION_BUTTON" = "Закрыть позицию";
+
+/*Charts*/
+"CHART" = "График";
+
+"SELECT_RANGE" = "Выбрать период";
+
+"INVALID_AMOUNT" = "Количество неверно";
+
+"QTY" = "К-во:";
+
+"M1" = "M1";
+
+"M5" = "M5";
+
+"M15" = "M15";
+
+"M30" = "M30";
+
+"H1" = "Ч1";
+
+"H4" = "Ч4";
+
+"D1" = "Д";
+
+"W1" = "1Нед";
+
+"MN1" = "1Мес";
+
+"TICK" = "Тик";
+
+"CANCEL" = "Отмена";
+
+"SEGMENT" = "Сегмент";
+
+"LINE" = "Линия";
+
+"RAY" = "Луч";
+
+"CHANNEL" = "Канал";
+
+"FIB_RETR" = "Уровни коррекции Фибоначчи";
+
+"FIB_CIRC" = "Дуги Фибоначчи";
+
+"FIB_FAN" = "Веер Фибоначчи";
+
+"HLINE" = "Гориз. линия";
+
+"VLINE" = "Верт. линия";
+
+"CHART_MODE_FREE" = "Обычный";
+
+"CHART_MODE_CROSSHAIR" = "Перекрестие";
+
+"CHART_MODE_SPLITTER" = "Разделитель";
+
+"CHART_MODE_RESIZE" = "Изменить рисунки";
+
+"CHART_MODE_DELETE" = "Удалить рисунки";
+
+"CHART_MODE_DRAW" = "Рисовать";
+
+"DRAWINGS" = "Рисунки";
+
+"SELECT_DRAWING" = "Выбрать элемент";
+
+"SELECT_MODE" = "Выбор режима";
+
+"INDICATORS" = "Индикаторы";
+
+"ALL_INDICATORS" = "Все индикаторы";
+
+"INDICATORS_LIMIT" = "Размещено максимальное количество индикаторов";
+
+"SHOW_VOLUME" = "Объем";
+
+"SHOW_ORDERS" = "Ордера";
+
+"SHOW_POSITIONS" ="Позиции";
+
+"TRADING_LAYERS" = "Торговые операции";
+
+"INCLUDE_IN_SCALING" = "Учитывать в масштабе";
+
+"CHART_COLOR_SCHEME" = "Цветовая схема";
+
+"CHART_SCHEME_DARK" = "Темная";
+
+"CHART_SCHEME_LITE" = "Светлая";
+
+"CHART_SCHEME_GREEN" = "Зеленая";
+
+"CHART_STYLE_TYPE" = "Стиль";
+
+"CHART_STYLE_CANDLE" = "Свечи";
+
+"CHART_STYLE_BAR" = "Бары";
+
+"CHART_STYLE_LINE" = "Линия";
+
+"CHART_STYLE_AREA" = "Цельный";
+
+"СHART_SETTINGS" = "Настройки";
+
+/*News*/
+"NEWS" = "Новости";
+
+"NEWS_BROWSER" = "Новости";
+
+/*Chat*/
+"CHAT" = "Чат";
+
+"SEND_BUTTON" = "Отпр.";
+
+/*Update message*/
+"NEW_CHAT_MESSAGE" = "Принято новое сообщение";
+
+"OPEN_POSITION_MESSAGE" = "Позиция #% открыта";
+
+"MODIFY_POSITION_MESSAGE" = "Позиция #% изменена";
+
+"CLOSE_POSITION_MESSAGE" = "Позиция #% закрыта";
+
+"CREATE_ORDER_MESSAGE" = "Ордер #% создан";
+
+"MODIFY_ORDER_MESSAGE" = "Ордер #% изменен";
+
+"REMOVE_ORDER_MESSAGE" = "Ордер #% отменен";
+
+/*Settings*/
+
+"SETTINGS" = "Настройки";
+
+"DEFAULTS" = "Общие";
+
+"ADDITIONAL" = "Дополнительно";
+
+"CONFIRMATIONS" = "Подтверждения";
+
+"ORDER_SENDING" = "Отправка ордера";
+
+"ORDER_MODIFY" = "Модификация ордера";
+
+"ORDER_CANCELLING" = "Отмена ордера";
+
+"EXECUTING_AS_MARKET" = "Исполнение ордера";
+
+"POSITION_MODIFY" = "Модификация позиции";
+
+"POSITION_CLOSING" = "Закрытие позиции";
+
+"USE_NUMERIC_PAD" = "Цифровая клавиатура";
+
+"CHART_CASHE_SIZE" = "Размер кэша";
+
+"CHART_DEFAULT_PERIOD" = "Период";
+
+"TRADING_PANELS" = "Торговые панели";
+
+"SHOW_MODAL" = "Показывать модально";
+
+"USE_SLTP_OFFSET" = "SL/TP сдвиг";
+
+/*Registration*/
+
+"LOGIN" = "Логин";
+
+"PASSWORD" = "Пароль";
+
+"CONFIRM_PASSWORD" = "Подтверждение";
+
+"INCORRECT_CONFIRM_PASSWORD" = "Пароль введен неверно";
+
+"REGISTRATION" = "Регистрация";
+
+"FIRST_NAME" = "Имя";
+
+"LAST_NAME" = "Фамилия";
+
+"COUNTRY" = "Страна";
+
+"PHONE" = "Телефон.";
+
+"EMAIL" = "Email";
+
+"ACCOUNT_CURRENCY" = "Валюта";
+
+"DEMO_ACCOUNT_BALANCE" = "Баланс";
+
+"ONE_POSITION_PER_INSTRUMENT" = "Отключить хеджирование";
+
+"SELECT_COUNTRY" = "Выбор страны";
+
+/*Market Depth*/
+"MARKET_DEPTH" = "Стакан Заявок";
+
+/*Option Chain*/
+"OPTION_CHAIN" = "Опционы";
+
+"STRIKE" = "Страйк";
+
+"STRIKES_COUNT_PROMPT" = "Количество страйков";
+
+"ALL_STRIKES" = "Все страйки";
+
+"4_STRIKES" = "4 страйка";
+
+"8_STRIKES" = "8 страйков";
+
+"12_STRIKES" = "12 страйков";
+
+"16_STRIKES" = "16 страйков";
+
+"ALL_COUNT" = "Все";
+
+"CALL" = "Кол";
+
+"PUT" = "Пут";
+
+"NO_EXPIRATION_DATES" = "Нет экспираций";
+
+"DELTA" = "Дельта";
+
+"GAMMA" = "Гамма";
+
+"VEGA" = "Вега";
+
+"THETA" = "Тета";
+
+/*Scripts*/
+"SCRIPTS" = "Список скриптов";
+
+/*Reports*/
+
+"GET_REPORT_BUTTON" = "Получить отчет";
+
+"REPORTS" = "Отчеты";
+
+"REPORT_TYPE" = "Тип отчета";
+
+"REPORT_STATEMENT" = "Cостояние Счета";
+
+"REPORT_BALANCE" = "Баланс";
+
+"REPORT_BALANCE_SUMMARY" = "Общий Баланс";
+
+"REPORT_COMMISSIONS" = "Комиссии";
+
+"REPORT_TRADES" = "Сделки";
+
+"REPORT_ORDER_HISTORY" = "Ордера";
+
+"REPORT_SUMMARY" = "Общий";
+
+"FROM" = "От";
+
+"TO" = "До";
+
+"EMPTY_REPORT" = "Нет данных по выбранному отчету";
+
+"account name" = "Счет";
+
+"login" = "Логин";
+
+"group name" = "Группа";
+
+"balance" = "Баланс";
+
+"blockedbalance" = "Заблок.";
+
+"unrealized p/l" = "Нереализ.P/L";
+
+"gi.cur_balance" = "Средства";
+
+"gi.min_margin" = "Мин.Марж";
+
+"gi.cur_margin" = "Тек.Марж%";
+
+"gi.available_margin" = "Дост.Марж";
+
+"gi.margin_warning" = "Уров.пред.";
+
+"gi.margin_stoptrade" = "Стоп торг.";
+
+"gi.margin_stopout" = "Стоп аут";
+
+"gi.withdrawal_available" = "К снятию";
+
+"gi.today_released_pnl" = "Реализ.P/L";
+
+"gi.balance_blocked_by_orders" = "БлокПоОрд";
+
+"gi.stock_value" = "Акция";
+
+"accountcurrency" = "Валюта";
+
+"orderid" = "IDордера";
+
+"createdat" = "Создать";
+
+"boundtoorderid" = " IDприв.ордера";
+
+"instrumentname" = "Инструмент";
+
+"openclosebuysell" = "ТипОперац";
+
+"ordertype" = "ТипОрдера";
+
+"price" = "Цена";
+
+"amount" = "Кол-во";
+
+"tif" = "Экспирац";
+
+"updatedtime" = "ВремяОбнов";
+
+"instrument" = "Инструмент";
+
+"balance.buy" = "Купить";
+
+"balance.everbuy" = "ЦенаПокупки";
+
+"balance.sell" = "Продать";
+
+"balance.eversell" = "ЦенаПродажи";
+
+"balance.net" = "Net";
+
+"balance.profit" = "Прибыль";
+
+"balance.exposure" = "Экспозиция";
+
+"balance.exposurenet" = "NetЭкспоз";
+
+"accountoperationid" = "IDоперац";
+
+"operation" = "Операция";
+
+"debit" = "Дебет";
+
+"credit" = "Кредит";
+
+"currency" = "Валюта";
+
+"balance_before" = "Баланс До";
+
+"trading_in" = "Дебет";
+
+"trading_out" = "Кредит";
+
+"deposit" = "Депозит";
+
+"widthdraw" = "Снятие";
+
+"commission_out" = "Комиссии";
+
+"swaps_in" = "Своп(Приход)";
+
+"swaps_out" = "Своп(Расход)";
+
+"interest" = "Процент";
+
+"total" = "Общий";
+
+"balance_after" = "Бал.После";
+
+"operationtype" = "ТипОпер";
+
+"basis" = "Основа";
+
+"sum" = "Сумма";
+
+"creator" = "Создатель";
+
+"messageid" = "IDсообщ";
+
+"actualtime" = "Время";
+
+"sender" = "Отпра-тель";
+
+"recipient" = "Получатель";
+
+"groupid" = "IDгруппы";
+
+"message" = "Сообщение";
+
+"senderip" = "IPотпра-теля";
+
+"delivered" = "Доставлено";
+
+"type" = "Тип";
+
+"actualprice" = "Актуал.цена";
+
+"instrumenttype" = "Тип инструм.";
+
+"quoteticker" = "Тикер";
+
+"minchange" = "Мин.Измен";
+
+"lotsize" = "РазмерЛота";
+
+"crosstype" = "ТипКросса";
+
+"spread" = "Спред";
+
+"discount" = "Скидка";
+
+"swapplan" = "СвопПлан";
+
+"swapsell" = "ПродатьСвоп";
+
+"swapbuy" = "КупитьСвоп";
+
+"closedbyorderid" = "Закр.ПоIDорд";
+
+"executedat" = "Исполнить";
+
+"usage" = "Использование";
+
+"username" = "Пользователь";
+
+"role" = "Роль";
+
+"phone" = "Тел.";
+
+"email" = "Email";
+
+"phonepassword" = "Пароль Тел.";
+
+"irdnumber" = "Номер IR";
+
+"address" = "Адрес";
+
+"brokerlogin" = "Логин Брокера";
+
+"locked" = "Заблокирован";
+
+"expiresat" = "Истекает";
+
+"openorderid" = "IDоткрывОрд";
+
+"openprice" = "ЦенаОткр";
+
+"opentime" = "ВремяОткр";
+
+"closeprice" = "ЦенаЗакр";
+
+"stoploss" = "SL";
+
+"takeprofit" = "TP";
+
+"swaps" = "Свопы";
+
+"comission" = "Комиссия";
+
+"routename" = "Роут";
+
+"closedat" = "Закрыть";
+
+"route" = "Роут";
+
+"rate" = "Курс";
+
+"description" = "Описание";
+
+"submitted" = "Добавлено";
+
+"tradeid" = "IDсделки";
+
+"externalid" = "ВнешнийID";
+
+"time" = "Время";
+
+"crossprice" = "КроссЦена";
+
+"extprice" = "Внешн.цена";
+
+"User" = "Пользователь";
+
+"Account" = "Счет";
+
+"Position" = "Позиция";
+
+"number" = "Номер";
+
+"Instrument" = "Инструмент";
+
+"Amount" = "Количество";
+
+"Operation" = "Операция";
+
+"Price" = "Цена";
+
+"Open" = "Открыть";
+
+"order" = "Ордер";
+
+"type" = "Тип";
+
+"Commissions" = "Комиссии";
+
+"Time" = "Время";
+
+"Order" = "Ордер";
+
+"number" = "Номер";
+
+"price" = "Цена";
+
+"Type" = "Тип";
+
+"Open date" = "ДатаОткр";
+
+"Open price" = "ЦенаОткр";
+
+"Close order type" = "ЗакрТипОрд";
+
+"Realised profit/loss" = "РеализP/L";
+
+"Oreder Number" = "№Ордера";
+
+"Order Price" = "ЦенаОрд";
+
+"Position number" = "№Позиции";
+
+"Open order type" = "ТипОткрОрд";
+
+"Order number" = "№Ордера";
+
+"Order price" = "ЦенаОрд";
+
+"accname" = "ИмяСчета";
+
+"action" = "Сторона";
+
+"event" = "Событие";
+
+"price" = "Цена";
+
+"remoteid" = "Удаленн.ID";
+
+"trader" = "Трейдер";
+
+"stopprice" = "СтопЦена";
+
+"margin" = "Маржа";
+
+"currentprice" = "ТекущЦена";
+
+"groupname" = "Группа";
+
+"account" = "Счет";
+
+"accountname" = "Счет";
+
+"userid" = "IDпользоват.";
+
+"profit" = "Прибыль";
+
+"tradevolume" = "Торг.Объем";
+
+"purchaseprice" = "ЦенаПокупки";
+
+"exchange" = "Обмен";
+
+"valuedate" = "Дата";
+
+"expiredate" = "ДатаОконч";
+
+"autotrade" = "Автоторговля";
+
+"instrumentgroup" = "Группа инструм.";
+
+"dividends" = "Дивиденды";
+
+"other_account" = "Др.счет";
+
+"terminaltype" = "Тип Терминала";
+
+"commission" = "Комиссия";
+
+"BROKER_MESSAGE" = "Сообщение брокера";
+
+/* Transfer and Withdrawal*/
+
+"TRANSFER_TITLE" = "Перевод средств";
+
+"SUBMIT_BUTTON" = "Выполнить";
+
+"INVALID_TRANSFER_SUM" = "Текущая сумма перевода некорректна";
+
+"AVAILABLE" = "Доступно";
+
+"REMAINS" = "Остается";
+
+"SOURCE_ACCOUNT" = "Счет-источник";
+
+"TRANSFER" = "Перевод";
+
+"TRANSFER_VALUE" = "Сумма перевода";
+
+"DEPOSIT" = "Депозит";
+
+"TARGET_ACCOUNT" = "Счет-получатель";
+
+"WITHDRAWAL_TITLE" = "Вывод средств";
+
+"INVALID_WITHDRAWAL_SUM" = "Текущая сумма для вывода некорректна";
+
+"WITHDRAWAL" = "Вывод";
+
+"WITHDRAWAL_VALUE" = "Сумма вывода";
+
+/*Event log*/
+
+"EVENT_LOG" = "Протокол событий";
+
+"EVENT_BROWSER" = "Событие";
+
+/*Symbol Info*/
+
+"INSTRUMENT_FOREX" = "Форекс";
+
+"INSTRUMENT_STOCKS" = "Акция";
+
+"INSTRUMENT_FUTURES" = "Фьючерс";
+
+"INSTRUMENT_OPTIONS" = "Опцион";
+
+"INSTRUMENT_CFDINDEX" = "Индекс CFD";
+
+"INSTRUMENT_FORWARD" = "Форвард";
+
+"INSTRUMENT_CFDFUTURES" = "СFD фьючерс";
+
+"INSTRUMENT_INDICES" = "Индекс";
+
+"INSTRUMENT_GENERAL" = "Общие";
+
+"INSTRUMENT_ACTIVE" = "Активный";
+
+"INSTRUMENT_CLOSED" = "Закрытый";
+
+"INSTRUMENT_WAIT_FOR_PRICE" = "Ожидание постав. цены";
+
+"INSTRUMENT_DELIVERED" = "Поставлено";
+
+"INSTRUMENT_READY" = "Готов";
+
+"TRADING_SESSION_AUCTION" = "Аукцион";
+
+"TRADING_SESSION_MAINTRADE" = "Осн.сессия";
+
+"TRADING_SESSION_EXTTRADE" = "Доп.сессия";
+
+"TRADING_SESSION_CLEARING" = "Клиринг";
+
+"SYMBOL_INFO_SYMBOL" = "Инструмент";
+
+"SYMBOL_INFO_DESCRIPTION" = "Описание";
+
+"SYMBOL_INFO_FUTURES_CLASS" = "Класс фьючерса";
+
+"SYMBOL_INFO_EXANGE" = "Биржа";
+
+"SYMBOL_INFO_ASSET_CLASS" = "Тип";
+
+"SYMBOL_INFO_DELIVERY_METHOD" = "Тип поставки";
+
+"SYMBOL_INFO_CONTRACT_MONTH" = "Контрактная дата";
+
+"SYMBOL_INFO_FIRST_TRADE_DATE" = "Дата первой сделки";
+
+"SYMBOL_INFO_LAST_TRADE_DATE" = "Дата послед сделки";
+
+"SYMBOL_INFO_NOTICE_DATE" = "Дата оповещения";
+
+"SYMBOL_INFO_SETTLEMENT_DATE" = "Расчетный день";
+
+"SYMBOL_INFO_CLOSE_OUT_DATE" = "Дата ликвидации";
+
+"SYMBOL_INFO_TRADING_BALANCE" = "Торговый баланс";
+
+"SYMBOL_INFO_TRADING_ALLOWED" = "Режим";
+
+"SYMBOL_INFO_DELIVERY_STATUS" = "Статус поставки";
+
+"SYMBOL_INFO_CURRENT_SESSION" = "Текущая сессия";
+
+"SYMBOL_INFO_CURRENT_SESSION_NOT_TRDING_DAY" = "Non trading day";
+
+"SYMBOL_INFO_CURRENT_SESSION_SHORTENED" = "Shortened";
+
+"SYMBOL_INFO_NEXT_HOLIDAY" = "Next holiday";
+
+"SYMBOL_INFO_NOT_DEFINED" = "Not defined";
+
+"SYMBOL_INFO_EXP" = "Кот. валюта";
+
+"SYMBOL_INFO_LOT_SIZE" = "Размер лота";
+
+"SYMBOL_INFO_TICK_COAST" = "Цена тика";
+
+"SYMBOL_INFO_TICK_SIZE" = "Размер тика";
+
+"SYMBOL_INFO_MINIMAL_LOT" = "Мин лот";
+
+"SYMBOL_INFO_LOT_STEP" = "Шаг лота";
+
+"SYMBOL_INFO_FEES_SWAPBUY" = "Длинный своп";
+
+"SYMBOL_INFO_FEES_SWAPSELL" = "Короткий своп";
+
+"SYMBOL_INFO_FEES_OPEN" = "Открытие";
+
+"SYMBOL_INFO_FEES_CLOSE" = "Закрытие";
+
+"SYMBOL_INFO_FEES_ORDER_MIN" = "Мин за ордер";
+
+"SYMBOL_INFO_FEES_ORDER_MAX" = "Макс за ордер";
+
+"SYMBOL_INFO_FEES_FREE" = "Свободное кол-во";
+
+"SYMBOL_INFO_FEES_PHONE" = "Заказ по тел.";
+
+"SYMBOL_INFO" = "Инфо";
+
+"SYMBOL_INFO_GROUP_TRADING" = "Торговля";
+
+"SYMBOL_INFO_GROUP_MARGIN" = "Маржа";
+
+"SYMBOL_INFO_GROUP_FEES" = "Комиссии";
+
+"SYMBOL_INFO_GROUP_SESSION" = "Сессии";
+
+"SYMBOL_INFO_GROUP_GENERAL" = "Общее";
+
+/*Secure Logs*/
+
+"SECURE_LOG" = "Защищенный лог";
+
+"LOG_DATE" = "Дата лога";
+
+/*Event Log for header*/
+"Delayed Stop Order Removed" = "Отложенный Стоп ордер удален";
+"Delayed Limit Order Created" = "Отложенный Лимит ордер создан";
+"Delayed Stop Order Created" = "Отложенный Стоп ордер создан";
+"Delayed OCO Order Created" = "Отложенный OCO ордер создан";
+"Delayed Limit Order Modified" = "Отложенный Лимит ордер изменен";
+"Delayed Stop Order Modified" = "Отложенный Стоп ордер изменен";
+"Stop Limit Order Created" = "Стоп лимит ордер создан";
+"Stop Limit Order Modified" = "Стоп лимит ордер изменен";
+"Stop Limit Order Removed" = "Стоп лимит ордер удален";
+"Trailing Stop Order Created" = "Трейлинг стоп ордер создан";
+"Trailing Stop Order Modified" = "Трейлинг стоп ордер изменен";
+"Trailing Stop Order Removed" = "Трейлинг стоп ордер удален";
+"Delayed Stop Limit Order Created" = "Отложенный Стоп лимит ордер создан";
+"Delayed Stop Limit Order Modified" = "Отложенный Стоп лимит ордер изменен";
+"Delayed Stop Limit Order Removed" = "Отложенный Стоп лимит ордер удален";
+"Delayed Trailing Stop Order Created" = "Отложенный Трейлинг стоп ордер создан";
+"Delayed Trailing Stop Order Modified" = "Отложенный Трейлинг стоп ордер изменен";
+"Delayed Trailing Stop Order Removed" = "Отложенный Трейлинг стоп ордер удален";
+"Limit Order Removed" = "Лимит ордер удален";
+"Stop Order Removed" = "Стоп ордер удален";
+"Stop Order Removed" = "Стоп ордер удален";
+"Limit Order Created" = "Лимит ордер создан";
+"Stop Order Created" = "Стоп ордер создан";
+"OCO Order Created" = "OCO ордер создан";
+"Stop Order Removed" = "Стоп ордер удален";
+"Tr.SL Order Removed" = "Тр.СЛ ордер удален";
+"Stop Order Removed" = "Стоп ордер удален";
+"Limit Order Created" = "Лимит ордер создан";
+"Stop Order Created" = "Стоп ордер создан";
+"OCO Order Created" = "OCO ордер создан";
+"Limit Order Modified" = "Лимит ордер изменен";
+"Stop Order Modified" = "Стоп ордер изменен";
+"Position Opened" = "Позиция открыта";
+"TP Order Modified" = "ТП ордер изменен";
+"SL Order Modified" = "СЛ ордер изменен";
+"Position Closed" = "Позиция закрыта";
+"Order placing request" = "Запрос на размещение ордера";
+"Position Closed (TP)" = "Позиция закрыта(ТП)";
+"Position Closed (SL)" = "Позиция закрыта(СЛ)";
+"Trade executed (Mutual)" = "Сделка выполнена (вручную)";
+"Fill Market Order" = "Рыночный ордер исполнен";
+"Market Order Modified" = "Рыночный ордер изменен";
+"Margin Call Reached" = "Требование поддержки маржи выполнено";
+"Margin Call Warning." = "Предупреждение о требовании поддержки маржи.";
+"Account operation confirmation." = "Подтверждение операции со счетом.";
+"Market Order Removed" = "Рыночный ордер удален";
+"Not enough Margin to open position" = "Не хватает маржи для открытия позиции.";
+"Trade executed" = "Сделка выполнена";
+"SL Order Removed" = "СЛ ордер удален";
+"TP Order Removed" = "ТП ордер удален";
+"SL Order Created" = "СЛ ордер создан";
+"TP Order Created" = "ТП ордер создан";
+"Trailing Stop Order Created" = "Трейлинг стоп ордер создан";
+"POSITION MODIFIED" = "Позиция изменена";
+"Market Close Order Removed" = "Рыночный закрывающий ордер удален";
+"Position Opened (Limit Order)" = "Позиция открыта (Лимит ордер)";
+"Informational message" = "Информационное сообщение";
+"Trade executed (SL)" = "Сделка выполнена(СЛ)";
+"Order Modified" = "Ордер изменен";
+"Fill Close Market Order" = "Закрывающий рыночный ордер заполнен";
+"Fill Market Order" = "Рыночный ордер исполнен";
+"Fill Close Market Order (Mutual)" = "Закрывающий рыночный ордер заполнен (Вручную)";
+"Fill Market Order (Mutual)" = "Рыночный ордер заполнен (Вручную)";
+"Fill Close Limit Order" = "Закрывающий лимит ордер заполнен";
+"Fill Limit Order" = "Лимит ордер заполнен";
+"Fill Close Stop Order" = "Закрывающий стоп ордер заполнен";
+"Fill Close Traling Stop Order" = "Закрывающий Трейлинг стоп ордер заполнен";
+"Fill Stop Order" = "Стоп ордер заполнен";
+"Fill Traling Stop Order" = "Трейлинг стоп ордер заполнен";
+"Fill Stop Limit Order" = "Стоп лимит ордер заполнен";
+"Partially Reject Close Market Order" = "Закрывающий рыночный ордер частично отклонен";
+"Partially Reject Market Order" = "Рыночный ордер частично отклонен";
+"Partially Reject Close Limit Order" = "Закрывающий лимит ордер частично отклонен";
+"Partially Reject Limit Order" = "Лимит ордер частично отклонен";
+"Partially Reject Close Stop Order" = "Закрывающий стоп ордер частично отклонен";
+"Partially Reject Close Traling Stop Order" = "Закрывающий Трейлинг стоп ордер частично отклонен";
+"Partially Reject Stop Order" = "Стоп ордер частично отклонен";
+"Partially Reject Traling Stop Order" = "Трейлинг стоп ордер частично отклонен";
+"Partially Reject Stop Limit Order" = "Стоп лимит ордер частично отклонен";
+"Fill Stop Limit Order" = "Стоп лимит ордер заполнен";
+"SL Order Modified" = "СЛ ордер изменен";
+"TP Order Modified" = "ТП ордер изменен";
+"Market Close Order Modified" = "Закрывающий рыночный ордер изменен";
+"Close Market Order Created" = "Закрывающий рыночный ордер создан";
+"Market Order Created" = "Рыночный ордер создан";
+"Fund processing failed." = "Ошибка при обработке фонда.";
+"Limit order Filled" = "Лимит ордер заполнен";
+"Stop order Filled" = "Стоп ордер заполнен";
+"StopLimit order Filled" = "Стоп лимит ордер заполнен";
+"Market_order_Filled" = "Рыночный ордер заполнен";
+"Limit_order_Filled_Mutual" = "Лимит ордер заполнен (Вручную)";
+"Stop_order_Filled_Mutual" = "Стоп ордер заполнен (Вручную)";
+"StopLimit_order_Filled_Mutual" = "Стоп лимит ордер заполнен (Вручную)";
+"Market order Filled Mutual" = "Рыночный ордер заполнен (Вручную)";
+"Limit order Filled (Stop Order)" = "Лимит ордер заполнен (Стоп ордер)";
+"Stop order Filled (Stop Order)" = "Стоп ордер заполнен (Стоп ордер)";
+"StopLimit order Filled (Stop Order)" = "Стоп лимит ордер заполнен (Стоп ордер)";
+"Market order Filled (Stop Order)" = "Рыночный ордер заполнен (Стоп ордер)";
+"Limit order Filled (Trailing Stop Order)" = "Лимит ордер заполнен (Трейлинг стоп ордер)";
+"Stop order Filled (Trailing Stop Order)" = "Стоп ордер заполнен (Трейлинг стоп ордер)";
+"StopLimit order Filled (Trailing Stop Order)" = "Стоп лимит ордер заполнен (Трейлинг стоп ордер)";
+"Market order Filled (Trailing Stop Order)" = "Рыночный ордер заполнен (Трейлинг стоп ордер)";
+"Limit order Filled (Limit Order)" = "Лимит ордер заполнен (Лимит ордер)";
+"Stop order Filled (Limit Order)" = "Стоп ордер заполнен (Лимит ордер)";
+"StopLimit order Filled (Limit Order)" = "Стоп лимит ордер заполнен (Лимит ордер)";
+"Market order Filled (Limit Order)" = "Рыночный ордер заполнен (Лимит ордер)";
+"Position Closed" = "Позиция закрыта";
+"Trade executed" = "Сделка выполнена";
+"Position Closed (Mutual)" = "Позиция закрыта (Вручную)";
+"Trade executed (Mutual)" = "Сделка выполнена (Вручную)";
+"Position Closed (Margin Call)" = "Позиция закрыта (Маржинальное требование)";
+"Trade executed (Margin Call)" = "Сделка выполнена (Маржинальное требование)";
+"Position Closed (Option Expired)" = "Позиция закрыта (Опцион истек)";
+"Trade executed (Option Expired)" = "Сделка выполнена (Опцион истек)";
+"Position Closed (SL)" = "Позиция закрыта(СЛ)";
+"Trade executed (SL)" = "Сделка выполнена(СЛ)";
+"Position Closed (TrSL)" = "Позиция закрыта (Тр.СЛ)";
+"Trade executed (TrSL)" = "Сделка выполнена (Тр.СЛ)";
+"Position Closed (TP)" = "Позиция закрыта(ТП)";
+"Trade executed (TP)" = "Сделка выполнена (ТП)";
+"Position is already closing" = "Позиция уже закрыта";
+
+/*Event Log for value*/
+"User" = "Пользователь";
+"Account" = "Счет";
+"Order number" = "# ордера";
+"Instrument" = "Инструмент";
+"Amount" = "Объем";
+"Operation" = "Операция";
+"Average filled price" = "Средняя цена заполнения";
+"Last fill price" = "Последняя цена заполнения";
+"Time" = "Время";
+"Sell" = "Продажа";
+"Buy" = "Покупка";
+"Position number" = "# позиции";
+"Price" = "Цена";
+"Margin Call" = "Маржинальное требование";
+"Stop Out Type" = "Тип Стоп аута";
+"Deposit" = "Депозит";
+"Message" = "Сообщение";
+"Please deposit on your account." = "Пожалуйста, внесите деньги на счет.";
+"Fund User" = "Пользователь фонда";
+"Fund Account" = "Счет фонда";
+"Investor User" = "Инвестор";
+"Investor Account" = "Счет инвестора";
+"Share Price" = "Цена пая";
+"Pending Shares" = "Ожид. паи";
+"Pending Capital" = "Ожид. капитал";
+"Pending Gross P/L" = "Ожид. валовая Пр./Уб.";
+"Event" = "Событие";
+"Can't finish investment period" = "Невозможно закончить инвест. период";
+"Can't perform rollover" = "Невозможно выполнить ролловер";
+"Notification" = "Уведомление";
+"Share Price" = "Цена пая";
+"Reason" = "Причина";
+"Account Name" = "Имя счета";
+"Counter Account Name" = "Имя контр счета";
+"Operation Id" = "ID операции";
+"Counter Operation Id" = "ID контр операции";
+"Operation Type" = "Тип операции";
+"Sum" = "Сумма";
+"Basis" = "Основа";
+"Open lots" = "Откр. лоты";
+"Lots to open" = "Лоты к открытию";
+"Commission" = "Комиссии";
+"Available funds" = "Доступные фонды";
+"Init margin req." = "Треб. нач. маржи";
+"Minimum Open Margin" = "Мин. маржи открытия";
+"Current Balance" = "Текущий баланс";
+"Required Balance" = "Требуемый баланс";
+"Open lots" = "Откр. лоты";
+"Comission" = "Комиссии";
+"Operation" = "Операция";
+"Avg.Price" = "Сред.цена";
+"SL trailing offset" = "Смещение Трейлинг СЛ";
+"SL price" = "Цена СЛ";
+"TP price" = "Цена ТП";
+"Open order type" = "Тип открывающего ордера";
+"Commissions" = "Комиссии";
+"Modifyied by" = "Изменено";
+"Position number" = "# позиции";
+"Open date" = "Дата открытия";
+"Open price" = "Цена открытия";
+"Close order type" = "Тип закрывающего ордера";
+"Realised profit/loss" = "Реализованная Прибыль/Убыток";
+"Market" = "Рыночный";
+"Limit" = "Лимит";
+"Stop" = "Стоп";
+"Traling Stop" = "Трейлинг стоп";
+"Stop Limit" = "Стоп лимит";
+"Unknown" = "Неизвестно";
+"Route Name" = "Имя маршрута";
+"Refused Amount" = "Отклон. объем";
+"Bound To" = "Связан с";
+"Route" = "Маршрут";
+"Limit price" = "Цена лимит";
+"Stop price" = "Цена стоп";
+"Order price" = "Цена ордера";
+"Type" = "Тип";
+"Stop-loss" = "Стоп лосс";
+"Take-profit" = "Тейк профит";
+"SettleDate" = "Расч. день";

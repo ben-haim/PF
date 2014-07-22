@@ -1,0 +1,79 @@
+"chart_sma_title" = "简单移动平均线";
+
+"chart_ema_title" = "指数移动平均线";
+
+"chart_psar_title" = "抛物线转向指标";
+
+"chart_vol_title" = "成交量";
+
+"chart_env_title" = "包络线";
+
+"chart_bb_title" = "布林线指标";
+
+"chart_bands_title" = "带类指标";
+
+"chart_mtm_title" = "动量指标";
+
+"chart_macd_title" = "MACD";
+
+"chart_will_title" = "威廉%R指标";
+
+"chart_rsi_title" = "相对强弱指数指标";
+
+"chart_stoh_title" = "随机震荡指标";
+
+"chart_dmi_title" = "动向指标";
+
+"chart_main_chart" = "主图表";
+
+"chart_main_panels" = "主面板";
+
+"APPLY_TYPE_CLOSE" = "收盘";
+
+"APPLY_TYPE_OPEN" = "开盘";
+
+"APPLY_TYPE_HIGH" = "最高";
+
+"APPLY_TYPE_LOW" = "最低";
+
+"APPLY_TYPE_HL2" = "HL/2";
+
+"APPLY_TYPE_HLC2" = "HLC/2";
+
+"APPLY_TYPE_HLC3" = "HLC/3";
+
+"APPLY_TYPE_HLCC4" = "HLCC/3";
+
+"chart_settings_interval" = "间隔";
+
+"chart_settings_slowing" = "缓慢";
+
+"chart_settings_deviation" = "偏量";
+
+"chart_settings_apply_to" = "应用到";
+
+"chart_settings_color" = "颜色";
+
+"chart_settings_level" = "Level";
+
+"chart_settings_dash" = "直线";
+
+"chart_settings_width" = "线宽";
+
+"chart_settings_fillcolor" = "填充";
+
+"chart_settings_step" = "步长";
+
+"chart_settings_max" = "最大";
+
+"MAIN_INDICATORS" = "主要指标";
+
+"ADDITIONAL_INDICATORS" = "附加指标";
+
+"Line 1" = "Line 1";
+
+"Line 2" = "Line 2";
+
+"Line 3" = "Line 3";
+
+"Lines" = "Lines";

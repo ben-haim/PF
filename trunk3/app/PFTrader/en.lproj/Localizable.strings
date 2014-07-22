@@ -1,0 +1,1463 @@
+/*Reconnection*/
+"RECONNECTING" = "Reconnecting";
+
+"RECONNECTING_ALERT_TEXT" = "Server connection is not available";
+
+"NO_INTERNET_CONNECTION" = "Internet connection is not available";
+
+/*Update*/
+"UPDATE_APP" = "Update now";
+
+"LOGOUT" = "Log out";
+
+/*Login screen*/
+"LOGIN" = "Login";
+
+"PASSWORD" = "Password";
+
+"REMEMBER_PASSWORD" = "Remember password";
+
+"LOGIN_BUTTON" = "Log in";
+
+"REGISTER_BUTTON" = "Register";
+
+"LIVE_SERVER" = "Live";
+
+"DEMO_SERVER" = "Demo";
+
+"EMPTY_LOGIN" = "Login field is empty";
+
+"EMPTY_PASSWORD" = "Password field is empty";
+
+"WRONG_SERVER_TEXT" = "The version of your client application is not compatible with server version!  Some functions of the platform may work incorrectly! Please, make sure you are connected to the server with corresponding version!";
+
+"NEW_PASSWORD_IS_EMPTY" = "Please enter new password";
+
+/*Login progress*/
+
+"User/password combination is not valid" = "Incorrect current password or login";
+
+"VERIFICATION_TITLE" = "SMS verification";
+
+"SMS_PASSWORD" = "SMS password";
+
+"SERVER_CONNECTING" = "Connecting...";
+
+"AUTHENTICATION" = "Authentication...";
+
+"READING_DATA" = "Reading data...";
+
+"CONNECTION_FAILED" = "Connection failed";
+
+"CHECK_NETWORK" = "Please check your network connection!";
+
+"SSL_CERTIFICATE_WARNING" = "SSL certificate is not valid. Do you want to continue?";
+
+"CHANGE_PASSWORD_TITLE" = "Change password";
+
+"OLD_PASSWORD" = "Old password";
+
+"NEW_PASSWORD" = "New password";
+
+"CHANGE_PASSWORD_OK" = "Password changed successfully";
+
+"CHANGE_PASSWORD_VERIFICATION_WRONG" = "Wrong SMS verification password";
+
+"CHANGE_PASSWORD_ERROR" = "Change password error";
+
+"SMS_VERIFICATION_CANCELLED" = "SMS verification cancelled";
+
+"CHANGE_PASSWORD_CANCELLED" = "Change password cancelled";
+
+"Password required with level - 1" = "Different character register and number in password required";
+
+"Password required with level - 2" = "Different character register, 8+ length and number in password required";
+
+"Password required with level - 3" = "Different character register, 8+ length, special character and number in password required";
+
+"terminal type error" = "Access denied due to user rights. Please contact support.";
+
+/*Accounts*/
+
+"ASSET_ACCOUNTS" = "Asset accounts";
+
+"ACCOUNTS" = "Accounts";
+
+"ACTIVE_ACCOUNT" = "Active account";
+
+"ACCOUNT_DETAILS" = "Account details";
+
+/*Account Information*/
+
+"MAKE_ACTIVE" = "Make active";
+
+"TODAY" = "Today";
+
+"ACTIVITY" = "Activity";
+
+"GENERAL" = "General";
+
+"GROSS_PL" = "Gross P/L";
+
+"NET_PL" = "Net P/L";
+
+"FEES" = "Fees";
+
+"VOLUME" = "Volume";
+
+"TRADES" = "Trades";
+
+"OPEN_GROSS_PL" = "Open gross P/L";
+
+"OPEN_NET_PL" = "Open net P/L";
+
+"N_ORDERS" = "#Orders";
+
+"N_POSITIONS" = "#Positions";
+
+"ORDERS_MARGIN" = "Margin used for orders";
+
+"POSITIONS_MARGIN" = "Margin used for positions";
+
+"BLOCKED_FOR_FUNDS" = "In funds";
+
+"STOCK_VALUE" = "Stock value";
+
+"ACCOUNT_NAME" = "Account name";
+
+"ACCOUNT_BALANCE" = "Balance (start of day)";
+
+"PROJECTED_BALANCE" = "Projected balance";
+
+"ACCOUNT_EQUITY" = "Equity";
+
+"ACCOUNT_VALUE" = "Account Value";
+
+"BLOCKED_BALANCE" = "Blocked balance";
+
+"CASH_BALANCE" = "Cash balance";
+
+"MARGIN_AVAILABLE" = "Margin available";
+
+"CURRENT_MARGIN" = "Margin used";
+
+"MARGIN_WARNING" = "Margin warning";
+
+"STOP_TRADING" = "Stop trading";
+
+"STOP_OUT" = "Stop out";
+
+"WITHDRAWAL_AVAILABLE" = "Withdrawal available";
+
+"INVESTED_FUND_CAPITAL" = "Invested fund capital";
+
+"CURRENT_FUND_CAPITAL" = "Current fund capital";
+
+"FUND_CAPITAL_GAIN" = "Fund capital gain";
+
+"ALLOWS_OVERNIGHT" = "Allows overnight";
+
+/*Overnight warning*/
+
+"OVERNIGHT_WARNING" = "Warning: on %@ “Exchange”  will be closed. The margin requirements will be recalculated with the overnight coefficients before closing. If you don’t have margin for overnight, we forced close some positions and cancel orders";
+
+"AVAILABLE_MARGIN" = "Available margin";
+
+"MAINTANCE_MARGIN" = "Maintenance margin";
+
+"OVERNIGHT_MARGIN" = "Overnight margin available";
+
+/*Trading Halt Warning*/
+
+"TRADING_HALT_TITLE" = "Trading halt";
+
+"TRADING_HALT_TEXT_FORMAT" = "Warning. On instrument %@ trading limits are reached. Trading temporarily suspended. Available actions: cancel orders. After halt trading limits will be expanded.";
+
+/*Symbols screen*/
+"SYMBOLS" = "Symbols";
+
+"SYMBOL" = "Symbol";
+
+"BID" = "Bid";
+
+"ASK" = "Ask";
+
+"BSIZE" = "Bid size";
+
+"CHANGE_PERCENT" = "%Change";
+
+"ASIZE" = "Ask size";
+
+"SPREAD" = "Spread";
+
+"LAST" = "Last";
+
+"VOLUME" = "Volume";
+
+"CHANGE" = "Change";
+
+"LAST_UPDATE" = "Last update";
+
+"OPEN" = "Open";
+
+"LOW" = "Low";
+
+"CLOSE" = "Close";
+
+"HIGH" = "High";
+
+"REMOVE_ALL_SYMBOLS_PROMPT" = "Remove all symbols from watchlist?";
+
+"REMOVE_ALL" = "Remove all";
+
+"NO_OPTION_FOR_SYMBOL" = "No options for current symbol";
+
+"DAYS" = "Days";
+
+"HOURS" = "Hours";
+
+"MINUTES" = "Min.";
+
+"SECONDS" = "sec.";
+
+"MIN_SECONDS" = "Less 1";
+
+"SETTLEMENT_PRICE" = "Settl. price";
+
+"PREV_SETTLEMENT_PRICE" = "Pr. settl. price";
+
+/*Positions & Orders screen*/
+"POSITIONS" = "Positions";
+
+"ORDERS" = "Orders";
+
+"OPEN_TIME" = "Open time";
+
+"QUANTITY" = "Quantity";
+
+"SIDE" = "Side";
+
+"OPEN_PRICE" = "Open price";
+
+"EXPIRATION_DATE" = "Exp. date";
+
+"PL_TICKS" = "P/L ticks";
+
+"COMMISSION" = "Fee";
+
+"SWAPS" = "Swaps";
+
+"SL" = "Stop loss";
+
+"TP" = "Take profit";
+
+"MARGIN_USED" = "Margin used";
+
+"EXPIRY_DATE" = "Expiry date";
+
+"INSTRUMENT_TYPE" = "Symb. type";
+
+"BOUGHT" = "Bought";
+
+"SOLD" = "Sold";
+
+"POSITION_ID" = "#Position";
+
+"TYPE" = "Type";
+
+"PRICE" = "Price";
+
+"SIZE" = "Size";
+
+"LAST_PRICE" = "Last";
+
+"TIF" = "TIF";
+
+"EXCHANGE" = "Exchange";
+
+"STATUS" = "Status";
+
+"ORDER_ID" = "#Order";
+
+"BUY" = "Buy";
+
+"SELL" = "Sell";
+
+"CANCEL_ALL_ORDERS_PROMPT" = "Cancel all orders?";
+
+"CANCEL_ALL" = "Cancel all";
+
+"CLOSE_ALL_POSITIONS_PROMPT" = "Close all positions?";
+
+"CLOSE_ALL" = "Close all";
+
+"EVENT" = "Event";
+
+"ORDER_STAUS_NONE" = "None";
+
+"ORDER_STAUS_PENDING_NEW" = "Pending new";
+
+"ORDER_STAUS_PENDING_EXECUTION" = "Pending execution";
+
+"ORDER_STAUS_PENDING_CANCEL" = "Pending cancel";
+
+"ORDER_STAUS_PENDING_REPLACE" = "Pending replace";
+
+"ORDER_STAUS_PENDING_STP" = "Pending STP";
+
+"ORDER_STAUS_NEW" = "Created";
+
+"ORDER_STAUS_CANCELLED" = "Cancelled";
+
+"ORDER_STAUS_PART_FILLED" = "Part filled";
+
+"ORDER_STAUS_FILLED" = "Executed";
+
+"ORDER_STAUS_REPLACED" = "Modified";
+
+"NOT_AVAILABLE_VALUE" = "-";
+
+"CONTRACT" = "Contract";
+
+"OPEN_INTEREST" = "Open Int.";
+
+/*Trades screen*/
+"TRADE_ID" = "Trade ID";
+
+"PURCHASE_PRICE" ="Purchase price";
+
+"ACCOUNT" = "Account";
+
+/*Order types*/
+"ORDER_MANUAL" = "Manual";
+
+"ORDER_MARKET" = "Market";
+
+"ORDER_STOP" = "Stop";
+
+"ORDER_LIMIT" = "Limit";
+
+"ORDER_STOP_LIMIT" = "Stop limit";
+
+"ORDER_TRAILING_STOP" = "Tr. stop";
+
+"ORDER_OCO" = "OCO";
+
+"WATCHLIST" = "Watchlist";
+
+"DASHBOARD" = "Dashboard";
+
+/**/
+"WATCHLIST_EDITOR" = "Watchlist editor";
+
+"ACTIVE_MODE" = "Active";
+
+"ACTIVE" = "Active";
+
+"HIDDEN" = "Hidden";
+
+"ACTIVE_ORDERS" = "Active";
+
+"ALL" = "All";
+
+"FILLED" = "Filled";
+
+/*Order entry*/
+"OE" = "OE";
+
+"ORDER_CREATED" = "Order created successfully";
+
+"CLOSE_OE" = "Close OE";
+
+"ORDER_ENTRY" = "Order entry";
+
+"CLOSING_ORDERS" = "Closing orders";
+
+"QUANTITY_FORMAT" = "%@, lots";
+
+"ORDER_TYPE" = "Order type";
+
+"ENABLE" = "Enable";
+
+"DISABLE" = "Disable";
+
+"STOP_LOSS" = "Stop loss";
+
+"TRAILING_STOP_LOSS" = "Tr. SL";
+
+"TRAILING" = "Trailing";
+
+"S_L_PRICE" = "SL price";
+
+"SL_OFFSET" = "SL offset";
+
+"TP_OFFSET" = "TP offset";
+
+"TAKE_PROFIT" = "Take profit";
+
+"T_P_PRICE" = "TP price";
+
+"STOP_PRICE" = "Stop price";
+
+"LIMIT_PRICE" = "Limit price";
+
+"PRICE_OFFSET" = "Price offset";
+
+"DAY" = "Day";
+
+"GTC" = "GTC";
+
+"IOC" = "IOC";
+
+"GTD" = "GTD";
+
+"GTD_TO" = "GTD";
+
+"FOK" = "FOK";
+
+"MOO" = "MOO";
+
+"MOC" = "MOC";
+
+"MINUS_1" = "-1";
+
+"MINUS_5" = "-5";
+
+"PLUS_1" = "+1";
+
+"PLUS_5" = "+5";
+
+"PLACE_CONFIRMATION" = "Place order?";
+
+"MODIFY_CONFIRMATION" = "Modify order?";
+
+"CANCEL_CONFIRMATION" = "Cancel order?";
+
+"EXECUTE_CONFIRMATION" = "Execute order?";
+
+"PLACE_ORDER" = "Place";
+
+"PLACE_ORDER_BUTTON" = "Place order";
+
+"CLOSE_BUTTON" = "Close";
+
+"INVALID_SL_PRICE" = "Invalid SL price";
+
+"INVALID_TP_PRICE" = "Invalid TP price";
+
+"INVALID_TR_OFFSET" = "Tr. Stop price is too big";
+
+/*Modify order*/
+"MODIFY_ORDER" = "Modify order";
+
+"MODIFY_ORDER_BUTTON" = "Modify order";
+
+"CANCEL_ORDER_BUTTON" = "Cancel order";
+
+"EXECUTE_ORDER_BUTTON" = "Execute as market";
+
+/*Modify position*/
+"MODIFY_POSITION" = "Modify";
+
+"LONG" = "Long";
+
+"SHORT" = "Short";
+
+"MODIFY_POSITION_CONFIRMATION" = "Modify position?";
+
+"CLOSE_CONFIRMATION" = "Close position?";
+
+"CLOSE_POSITION" = "Close";
+
+"MODIFY_POSITION_BUTTON" = "Modify position";
+
+"CLOSE_POSITION_BUTTON" = "Close position";
+
+/*Charts*/
+"CHART" = "Chart";
+
+"EMPTY_WATCHLIST" = "Add symbols to watchlist";
+
+"SELECT_RANGE" = "Select range";
+
+"INVALID_AMOUNT" = "Invalid quantity";
+
+"QTY" = "QTY :";
+
+"M1" = "M1";
+
+"M5" = "M5";
+
+"M15" = "M15";
+
+"M30" = "M30";
+
+"H1" = "H1";
+
+"H4" = "H4";
+
+"D1" = "D1";
+
+"W1" = "W1";
+
+"MN1" = "MN1";
+
+"TICK" = "Tick";
+
+"CANCEL" = "Cancel";
+
+"SEGMENT" = "Segment";
+
+"LINE" = "Line";
+
+"RAY" = "Ray";
+
+"CHANNEL" = "Channel";
+
+"FIB_RETR" = "Fibonacci Retracement";
+
+"FIB_CIRC" = "Fibonacci Arc";
+
+"FIB_FAN" = "Fibonacci Fans";
+
+"HLINE" = "Horizontal Line";
+
+"VLINE" = "Vertical Line";
+
+"CHART_MODE_FREE" = "Free";
+
+"CHART_MODE_CROSSHAIR" = "Crosshair";
+
+"CHART_MODE_SPLITTER" = "Splitter";
+
+"CHART_MODE_RESIZE" = "Drawings resize";
+
+"CHART_MODE_DELETE" = "Drawings delete";
+
+"CHART_MODE_DRAW" = "Draw";
+
+"DRAWINGS" = "Drawings";
+
+"SELECT_DRAWING" = "Select drawing";
+
+"SELECT_MODE" = "Select mode";
+
+"INDICATORS" = "Indicators";
+
+"ALL_INDICATORS" = "All indicators";
+
+"INDICATORS_LIMIT" = "Maximum number of indicators has been reached";
+
+"SHOW_VOLUME" = "Volume";
+
+"SHOW_LOUPE" = "Show loupe";
+
+"SHOW_ORDERS" = "Orders";
+
+"SHOW_POSITIONS" ="Positions";
+
+"TRADING_LAYERS" = "Trading layers";
+
+"INCLUDE_IN_SCALING" = "Include in scaling";
+
+"CHART_COLOR_SCHEME" = "Color scheme";
+
+"CHART_SCHEME_DEFAULT" = "Default";
+
+"CHART_SCHEME_GREEN" = "Green";
+
+"CHART_STYLE_TYPE" = "Style";
+
+"CHART_STYLE_CANDLE" = "Candle";
+
+"CHART_STYLE_BAR" = "Bar";
+
+"CHART_STYLE_LINE" = "Line";
+
+"CHART_STYLE_AREA" = "Area";
+
+"СHART_SETTINGS" = "Settings";
+
+"ADD" = "Add";
+
+/*News*/
+"NEWS" = "News";
+
+"NEWS_BROWSER" = "News browser";
+
+/*Chat*/
+"CHAT" = "Help chat";
+
+"SEND_BUTTON" = "Send";
+
+/*Update message*/
+"NEW_CHAT_MESSAGE" = "New message received";
+
+"OPEN_POSITION_MESSAGE" = "Position #%d was opened";
+
+"MODIFY_POSITION_MESSAGE" = "Position #%d was modified";
+
+"CLOSE_POSITION_MESSAGE" = "Position #%d was closed";
+
+"CREATE_ORDER_MESSAGE" = "Order #%d was created";
+
+"MODIFY_ORDER_MESSAGE" = "Order #%d was modified";
+
+"REMOVE_ORDER_MESSAGE" = "Order #%d was removed";
+
+/*Settings*/
+
+"SETTINGS" = "Settings";
+
+"DEFAULTS" = "Defaults";
+
+"ADDITIONAL" = "Additional";
+
+"CONFIRMATIONS" = "Confirmations";
+
+"ORDER_SENDING" = "Order sending";
+
+"ORDER_MODIFY" = "Order modification";
+
+"ORDER_CANCELLING" = "Order cancelling";
+
+"EXECUTING_AS_MARKET" = "Order executing";
+
+"POSITION_MODIFY" = "Position modification";
+
+"POSITION_CLOSING" = "Position closing";
+
+"USE_NUMERIC_PAD" = "Use decimal pad";
+
+"CHART_CASHE_SIZE" = "Cache Size";
+
+"CHART_DEFAULT_PERIOD" = "Period";
+
+"TRADING_PANELS" = "Trading panels";
+
+"SHOW_MODAL" = "Show modal";
+
+"USE_SLTP_OFFSET" = "SL/TP offset";
+
+"USE_LOTS_QUANTITY" = "Show quantity in lots";
+
+"ENVIRONMENT_SETTINGS" = "Environment";
+
+"PLAY_SOUNDS" = "Play sounds";
+
+"SHOW_TRADING_HALT" = "Warning if Trading Halt";
+
+/*Registration*/
+
+"LOGIN" = "Login";
+
+"PASSWORD" = "Password";
+
+"CONFIRM_PASSWORD" = "Confirm password";
+
+"INCORRECT_CONFIRM_PASSWORD" = "Incorrect password confirmation";
+
+"REGISTRATION" = "Registration";
+
+"FIRST_NAME" = "First name";
+
+"LAST_NAME" = "Last name";
+
+"COUNTRY" = "Country";
+
+"PHONE" = "Phone";
+
+"EMAIL" = "Email";
+
+"ACCOUNT_CURRENCY" = "Account currency";
+
+"DEMO_ACCOUNT_BALANCE" = "Account balance";
+
+"ONE_POSITION_PER_INSTRUMENT" = "One position per instrument";
+
+"SELECT_COUNTRY" = "Select country";
+
+/*ErrorCode for change password*/
+"BUSINESS_REJECT_MESSAGE_28" = "Incorrect current password or login";
+
+"BUSINESS_REJECT_MESSAGE_31" = "Incorrect new password: you cannot use the same password";
+
+"BUSINESS_REJECT_MESSAGE_201" = "New password contains prohibited symbols";
+
+"BUSINESS_REJECT_MESSAGE_202" = "Password cannot be the same as login";
+
+"BUSINESS_REJECT_MESSAGE_203" = "Please enter new password";
+
+"BUSINESS_REJECT_MESSAGE_221" = "Incorrect new password: password should contain chars and numbers";
+
+"BUSINESS_REJECT_MESSAGE_222" = "Incorrect new password: password should contain at least 8 chars and numbers";
+
+"BUSINESS_REJECT_MESSAGE_223" = "Incorrect new password: password should contain at least 8 symbols including chars, numbers and special symbols";
+
+/*Market Depth*/
+"MARKET_DEPTH" = "Market depth";
+
+/*Option Chain*/
+"OPTION_CHAIN" = "Option chain";
+
+"STRIKE" = "Strike";
+
+"STRIKES_COUNT_PROMPT" = "Select strikes count";
+
+"ALL_STRIKES" = "All Strikes";
+
+"4_STRIKES" = "4 Strikes";
+
+"8_STRIKES" = "8 Strikes";
+
+"12_STRIKES" = "12 Strikes";
+
+"16_STRIKES" = "16 Strikes";
+
+"ALL_COUNT" = "All";
+
+"CALL" = "Call";
+
+"PUT" = "Put";
+
+"NO_EXPIRATION_DATES" = "No expirations";
+
+"DELTA" = "Delta";
+
+"GAMMA" = "Gamma";
+
+"VEGA" = "Vega";
+
+"THETA" = "Theta";
+
+/*Scripts*/
+"SCRIPTS" = "Scripts List";
+
+/*Reports*/
+
+"GET_REPORT_BUTTON" = "Get report";
+
+"REPORTS" = "Reports";
+
+"REPORT_TYPE" = "Report type";
+
+"REPORT_STATEMENT" = "Account statement";
+
+"REPORT_BALANCE" = "Balance";
+
+"REPORT_BALANCE_SUMMARY" = "Balance summary";
+
+"REPORT_COMMISSIONS" = "Commissions";
+
+"REPORT_TRADES" = "Trades";
+
+"REPORT_ORDER_HISTORY" = "Order history";
+
+"REPORT_SUMMARY" = "Summary";
+
+"FROM" = "From";
+
+"TO" = "To";
+
+"EMPTY_REPORT" = "No data for selected report";
+
+"account name" = "Account";
+
+"login" = "Login";
+
+"group name" = "Group";
+
+"balance" = "Balance";
+
+"blockedbalance" = "Blocked";
+
+"unrealized p/l" = "Unrealized P/L";
+
+"gi.cur_balance" = "Current balance";
+
+"gi.min_margin" = "Min. margin";
+
+"gi.cur_margin" = "Cur. margin %";
+
+"gi.available_margin" = "Avail. margin";
+
+"gi.margin_warning" = "Margin warning";
+
+"gi.margin_stoptrade" = "Stop trade";
+
+"gi.margin_stopout" = "Stop out";
+
+"gi.withdrawal_available" = "Withdrawal available";
+
+"gi.today_released_pnl" = "Realize P/L";
+
+"gi.balance_blocked_by_orders" = "Blocked by orders";
+
+"gi.stock_value" = "Stock";
+
+"accountcurrency" = "Currency";
+
+"orderid" = "Order ID";
+
+"createdat" = "Create";
+
+"boundtoorderid" = "Bound order ID";
+
+"instrumentname" = "Symbol";
+
+"openclosebuysell" = "Operation type";
+
+"ordertype" = "Order type";
+
+"price" = "Price";
+
+"amount" = "Quantity";
+
+"tif" = "TIF";
+
+"updatedtime" = "Updated Time";
+
+"instrument" = "Symbol";
+
+"balance.buy" = "Buy";
+
+"balance.everbuy" = "Average buy";
+
+"balance.sell" = "Sell";
+
+"balance.eversell" = "Average sell";
+
+"balance.net" = "Net";
+
+"balance.profit" = "Profit";
+
+"balance.exposure" = "Exposure";
+
+"balance.exposurenet" = "Exposure net";
+
+"accountoperationid" = "Account operation ID";
+
+"operation" = "Operation";
+
+"debit" = "Debit";
+
+"credit" = "Credit";
+
+"currency" = "Currency";
+
+"balance_before" = "Balance before";
+
+"trading_in" = "Trading in";
+
+"trading_out" = "Trading out";
+
+"deposit" = "Deposit";
+
+"widthdraw" = "Withdrawal";
+
+"commission_out" = "Commission out";
+
+"swaps_in" = "Swap in";
+
+"swaps_out" = "Swaps out";
+
+"interest" = "Interest";
+
+"total" = "Total";
+
+"balance_after" = "Balance after";
+
+"operationtype" = "Operation type";
+
+"basis" = "Basis";
+
+"sum" = "Sum";
+
+"creator" = "Creator";
+
+"messageid" = "Message ID";
+
+"actualtime" = "Actual time";
+
+"sender" = "Sender";
+
+"recipient" = "Recipient";
+
+"groupid" = "Group ID";
+
+"message" = "Message";
+
+"senderip" = "Sender IP";
+
+"delivered" = "Delivered";
+
+"type" = "Type";
+
+"actualprice" = "Actual price";
+
+"instrumenttype" = "Instrument type";
+
+"quoteticker" = "Quote ticker";
+
+"minchange" = "Min. change";
+
+"lotsize" = "Lot size";
+
+"crosstype" = "Cross type";
+
+"spread" = "Spread";
+
+"discount" = "Discount";
+
+"swapplan" = "Swap plan";
+
+"swapsell" = "Swap sell";
+
+"swapbuy" = "Swap buy";
+
+"closedbyorderid" = "Close by order ID";
+
+"executedat" = "Execute";
+
+"usage" = "Usage";
+
+"username" = "User";
+
+"role" = "Role";
+
+"phone" = "Phone";
+
+"email" = "Email";
+
+"phonepassword" = "Phone password";
+
+"irdnumber" = "IR number";
+
+"address" = "Address";
+
+"brokerlogin" = "Broker login";
+
+"locked" = "Locked";
+
+"expiresat" = "Expire";
+
+"openorderid" = "Open order ID";
+
+"openprice" = "Open price";
+
+"opentime" = "Open time";
+
+"closeprice" = "Close price";
+
+"stoploss" = "SL";
+
+"takeprofit" = "TP";
+
+"swaps" = "Swaps";
+
+"comission" = "Commission";
+
+"routename" = "Route";
+
+"closedat" = "Close";
+
+"route" = "Route";
+
+"rate" = "Rate";
+
+"description" = "Description";
+
+"submitted" = "Submitted";
+
+"tradeid" = "Trade ID";
+
+"externalid" = "External ID";
+
+"time" = "Time";
+
+"crossprice" = "Cross price";
+
+"extprice" = "Ext. price";
+
+"User" = "User";
+
+"Account" = "Account";
+
+"Position" = "Position";
+
+"number" = "number";
+
+"Instrument" = "Symbol";
+
+"Amount" = "Quantity";
+
+"Operation" = "Operation";
+
+"Price" = "Price";
+
+"Open" = "Open";
+
+"order" = "Order";
+
+"type" = "Type";
+
+"Commissions" = "Commissions";
+
+"Time" = "Time";
+
+"Order" = "Order";
+
+"number" = "Number";
+
+"price" = "Price";
+
+"Type" = "Type";
+
+"Open date" = "Open date";
+
+"Open price" = "Open price";
+
+"Close order type" = "Close order type";
+
+"Realised profit/loss" = "Realised P/L";
+
+"Oreder Number" = "Order number";
+
+"Order Price" = "Order price";
+
+"Position number" = "Position number";
+
+"Open order type" = "Open order type";
+
+"Order number" = "Order number";
+
+"Order price" = "Order price";
+
+"accname" = "Account name";
+
+"action" = "Side";
+
+"event" = "Event";
+
+"price" = "Price";
+
+"remoteid" = "Remote ID";
+
+"trader" = "Trader";
+
+"stopprice" = "Stop price";
+
+"margin" = "Margin";
+
+"currentprice" = "Current price";
+
+"groupname" = "Group";
+
+"account" = "Account";
+
+"accountname" = "Account";
+
+"userid" = "User ID";
+
+"profit" = "Profit";
+
+"tradevolume" = "Trade volume";
+
+"purchaseprice" = "Purchase price";
+
+"exchange" = "Exchange";
+
+"valuedate" = "Date";
+
+"expiredate" = "Expire date";
+
+"autotrade" = "Autotrade";
+
+"instrumentgroup" = "Symb. group";
+
+"dividends" = "Dividends";
+
+"other_account" = "Other.acc";
+
+"terminaltype" = "Terminal type";
+
+"commission" = "Commission";
+
+/*Local Notifications*/
+"Delayed Limit Order Removed" = "Pending Limit order removed";
+
+"Delayed Stop Order Removed" = "Pending Stop order removed";
+
+"Delayed Limit Order Created" = "Pending Limit order created";
+
+"Delayed Stop Order Created" = "Pending Stop order created";
+
+"Delayed OCO Order Created" = "Pending OCO order created";
+
+"Delayed Limit Order Modified" = "Pending Limit order modified";
+
+"Delayed Stop Order Modified" = "Pending Stop order modified";
+
+"Stop Limit Order Created" = "Stop Limit order created";
+
+"Stop Limit Order Modified" = "Stop Limit order modified";
+
+"Stop Limit Order Removed" = "Stop Limit order removed";
+
+"Trailing Stop Order Created" = "Trailing Stop order created";
+
+"Trailing Stop Order Modified" = "Trailing Stop order modified";
+
+"Trailing Stop Order Removed" = "Trailing Stop order removed";
+
+"Delayed Stop Limit Order Created" = "Stop Limit order created";
+
+"Delayed Stop Limit Order Modified" = "Stop Limit order modified";
+
+"Delayed Stop Limit Order Removed" = "Stop Limit order removed";
+
+"Delayed Trailing Stop Order Created" = "Trailing Stop order created";
+
+"Delayed Trailing Stop Order Modified" = "Trailing Stop order modified";
+
+"Delayed Trailing Stop Order Removed" = "Trailing Stop order removed";
+
+"Limit Order Removed" = "Limit order removed";
+
+"Stop Order Removed" = "Stop order removed";
+
+"Limit Order Created" = "Limit order created";
+
+"Stop Order Created" = "Stop order created";
+
+"OCO Order Created" = "OCO order created";
+
+"Tr.SL Order Removed" = "Trailing stop order removed";
+
+"Stop Order Removed" = "Stop order removed";
+
+"Limit Order Created" = "Limit order created";
+
+"Stop Order Created" = "Stop order created";
+
+"OCO Order Created" = "OCO order created";
+
+"Limit Order Modified" = "Limit order modified";
+
+"Stop Order Modified" = "Stop order modified";
+
+"Position Opened" = "Position opened";
+
+"TP Order Modified" = "TP order modified";
+
+"SL Order Modified" = "SL order modified";
+
+"Position Closed" = "Position closed";
+
+"Order placing request" = "Order placing request";
+
+"Position Closed (TP)" = "Position closed (TP)";
+
+"Position Closed (SL)" = "Position closed (SL)";
+
+"Trade executed (Mutual)" = "Trade executed (mutual)";
+
+"Fill Market Order" = "Fill Market order";
+
+"Fill Limit Order" = "Fill Limit order";
+
+"Market Order Modified" = "Market order modified";
+
+"Margin Call Reached" = "Margin call reached";
+
+"Margin Call Warning." = "Margin call warning.";
+
+"Account operation confirmation." = "Account operation confirmation.";
+
+"Market Order Removed" = "Market order removed";
+
+"Not enough Margin to open position" = "Not enough margin to open position";
+
+"Trade executed" = "Trade executed";
+
+"SL Order Removed" = "SL order removed";
+
+"TP Order Removed" = "TP order removed";
+
+"SL Order Created" = "SL order created";
+
+"TP Order Created" = "TP order created";
+
+"Trailing Stop Order Created" = "Trailing stop order created";
+
+"POSITION MODIFIED" = "Position modified";
+
+"Market Close Order Removed" = "Market close order removed";
+
+"Position Opened (Limit Order)" = "Position opened (Limit order)";
+
+"Informational message" = "Informational message";
+
+"Trade executed (SL)" = "Trade executed (SL)";
+
+"BROKER_MESSAGE" = "Broker message";
+
+/* Transfer and Withdrawal*/
+
+"TRANSFER_TITLE" = "Transfer";
+
+"TRANSFER_RATE" = "Transfer rate";
+
+"SUBMIT_BUTTON" = "Submit";
+
+"INVALID_TRANSFER_SUM" = "Current transfer value is invalid";
+
+"AVAILABLE" = "Available";
+
+"REMAINS" = "Remains";
+
+"SOURCE_ACCOUNT" = "Source account";
+
+"TRANSFER" = "Transfer";
+
+"TRANSFER_VALUE" = "Transfer value";
+
+"DEPOSIT" = "Deposit";
+
+"TARGET_ACCOUNT" = "Target account";
+
+"WITHDRAWAL_TITLE" = "Withdrawal";
+
+"INVALID_WITHDRAWAL_SUM" = "Current withdrawal value is invalid";
+
+"WITHDRAWAL" = "Withdrawal";
+
+"WITHDRAWAL_VALUE" = "Withdrawal value";
+
+/*Event log*/
+
+"EVENT_LOG" = "Event log";
+
+"EVENT_BROWSER" = "Event browser";
+
+/*Symbol Info*/
+
+"INSTRUMENT_FOREX" = "Forex";
+
+"INSTRUMENT_STOCKS" = "Stocks";
+
+"INSTRUMENT_FUTURES" = "Futures";
+
+"INSTRUMENT_OPTIONS" = "Options";
+
+"INSTRUMENT_CFDINDEX" = "CFD Index";
+
+"INSTRUMENT_FORWARD" = "Forward";
+
+"INSTRUMENT_CFDFUTURES" = "CFD Futures";
+
+"INSTRUMENT_INDICES" = "Indicies";
+
+"INSTRUMENT_GENERAL" = "General";
+
+"INSTRUMENT_ACTIVE" = "Open";
+
+"INSTRUMENT_CLOSED" = "Closed";
+
+"INSTRUMENT_HALT" = "Trading halt";
+
+"INSTRUMENT_WAIT_FOR_PRICE" = "Wait for price";
+
+"INSTRUMENT_DELIVERED" = "Delivered";
+
+"INSTRUMENT_READY" = "Ready";
+
+"TRADING_SESSION_AUCTION" = "Auction";
+
+"TRADING_SESSION_MAINTRADE" = "Main trade";
+
+"TRADING_SESSION_EXTTRADE" = "Ext. trade";
+
+"TRADING_SESSION_CLEARING" = "Clearing";
+
+"SYMBOL_INFO_SYMBOL" = "Symbol";
+
+"SYMBOL_INFO_DESCRIPTION" = "Description";
+
+"SYMBOL_INFO_FUTURES_CLASS" = "Futures class";
+
+"SYMBOL_INFO_EXANGE" = "Exchange";
+
+"SYMBOL_INFO_ASSET_CLASS" = "Asset class";
+
+"SYMBOL_INFO_DELIVERY_METHOD" = "Delivery method";
+
+"SYMBOL_INFO_CONTRACT_MONTH" = "Contract month";
+
+"SYMBOL_INFO_FIRST_TRADE_DATE" = "First trade date";
+
+"SYMBOL_INFO_LAST_TRADE_DATE" = "Last trade date";
+
+"SYMBOL_INFO_NOTICE_DATE" = "Notice date";
+
+"SYMBOL_INFO_SETTLEMENT_DATE" = "Settlement date";
+
+"SYMBOL_INFO_CLOSE_OUT_DATE" = "Close-out deadline";
+
+"SYMBOL_INFO_TRADING_BALANCE" = "Settlement system";
+
+"SYMBOL_INFO_TRADING_ALLOWED" = "Trading status";
+
+"SYMBOL_INFO_DELIVERY_STATUS" = "Delivery status";
+
+"SYMBOL_INFO_CURRENT_SESSION" = "Current session";
+
+"SYMBOL_INFO_CURRENT_SESSION_NOT_TRDING_DAY" = "Non trading day";
+
+"SYMBOL_INFO_CURRENT_SESSION_SHORTENED" = "Shortened";
+
+"SYMBOL_INFO_NEXT_HOLIDAY" = "Next holiday";
+
+"SYMBOL_INFO_NOT_DEFINED" = "Not defined";
+
+"SYMBOL_INFO_EXP" = "Quoting currency";
+
+"SYMBOL_INFO_LOT_SIZE" = "Lot size";
+
+"SYMBOL_INFO_CONTRACT_SIZE" = "Contract size";
+
+"SYMBOL_INFO_TICK_COAST" = "Tick cost";
+
+"SYMBOL_INFO_TICK_SIZE" = "Tick size";
+
+"SYMBOL_INFO_MINIMAL_LOT" = "Minimal lot";
+
+"SYMBOL_INFO_LOT_STEP" = "Lot step";
+
+"SYMBOL_INFO_HIGH_LIMIT" = "High limit";
+
+"SYMBOL_INFO_LOW_LIMIT" = "Low limit";
+
+"SYMBOL_INFO" = "Info";
+
+"SYMBOL_INFO_GROUP_TRADING" = "Trading";
+
+"SYMBOL_INFO_GROUP_FEES" = "Fees";
+
+"SYMBOL_INFO_GROUP_SESSION" = "Sessions";
+
+"SYMBOL_INFO_GROUP_GENERAL" = "General";
+
+"SYMBOL_INFO_FEES_SWAPBUY" = "Long Swap";
+
+"SYMBOL_INFO_FEES_SWAPSELL" = "Short Swap";
+
+"SYMBOL_INFO_FEES_OPEN" = "Open";
+
+"SYMBOL_INFO_FEES_CLOSE" = "Close";
+
+"SYMBOL_INFO_FEES_ORDER_MIN" = "Min. per order";
+
+"SYMBOL_INFO_FEES_ORDER_MAX" = "Max. per order";
+
+"SYMBOL_INFO_FEES_FREE" = "Free quantity";
+
+"SYMBOL_INFO_FEES_PHONE" = "Phone order";
+
+"SYMBOL_INFO_FEES_PER_LOT" = "Per lot";
+
+"SYMBOL_INFO_FEES_PER_FILL" = "Per fill";
+
+"SYMBOL_INFO_FEES_PER_TRANSACTION" = "Per transaction";
+
+"SYMBOL_INFO_FEES_PER_PHONE_TRANSACTION" = "Per phone trans.";
+
+"SYMBOL_INFO_FEES_VOLUME" = "Per volume";
+
+"SYMBOL_INFO_FEES_VAT" = "VAT";
+
+"SYMBOL_INFO_FEES_BUY_SELL" = " (Buy/Sell)";
+
+"SYMBOL_INFO_FEES_SHORT" = " (Short)";
+
+"SYMBOL_INFO_FEES_LOTS" = "lots:";
+
+"SYMBOL_INFO_CASH" = "Cash";
+
+"SYMBOL_INFO_PHYSICALLY" = "Physically";
+
+"SYMBOL_INFO_GROUP_MARGIN" = "Margin requirements";
+
+"SYMBOL_INFO_INIT_MAINT" = "(init / maint)";
+
+"SYMBOL_INFO_DAY" = "Day";
+
+"SYMBOL_INFO_BUY" = "Buy";
+
+"SYMBOL_INFO_SELL" = "Sell";
+
+"SYMBOL_INFO_OVERNIGHT" = "Overnight";
+
+"SYMBOL_INFO_MARGIN_REQ" = "Margin req.";
+
+"SYMBOL_INFO_DAY_BUY" = "Day buy";
+
+"SYMBOL_INFO_DAY_SELL" = "Day sell";
+
+"SYMBOL_INFO_OVERNIGHT_BUY" = "Overnight buy";
+
+"SYMBOL_INFO_OVERNIGHT_SELL" = "Overnight sell";
+
+/*Secure Logs*/
+
+"SECURE_LOG" = "Secure Log";
+
+"LOG_DATE" = "Log Date";
+
+/*Dashboard*/
+
+"DASHBOARD_BID" = "Bid";
+
+"DASHBOARD_CHANGE_PERCENT" = "%Change";
+
+"DASHBOARD_HIGH" = "High";
+
+"DASHBOARD_SPREAD" = "Sprd";
+
+"DASHBOARD_LAST" = "Last";
+
+"DASHBOARD_LOW" = "Low";
+
+"DASHBOARD_ASK" = "Ask";
+
+"DASHBOARD_CLOSE" = "Close";
+
+"DASHBOARD_OPEN" = "Open";
+
+"gi.balance" = "Balance";
+
+"gi.fund_used" = "Fund used";
+
+"gi.avaliable_funds" = "Avail. funds";
+
+"gi.margin_used" = "Margin used";
+
+"gi.maintain_margin" = "Maint.margin";
+
+"gi.risk_lvl" = "Risk level";
+
+"gi.margin_orders" = "Margin ord.";
+
+"gi.margin_positions" = "Margin pos.";
+
+"gi.fund_capital" = "Fund capital";
+
+"gi.pos_maintenance_req" = "Pos.main req";
+
+"terminal_type" = "Termin.type";
+
+"dealercommission" = "Dealer com-n";
+
+"other_account_operations" = "Other oper-s";
+
+"opengrosspnl" = "OpengrossP/L";

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PFUsePrivateLogs</key>
+	<false/>
+	<key>PFUseChangePassword</key>
+	<true/>
+	<key>PFUseChat</key>
+	<true/>
+	<key>PFUseNews</key>
+	<true/>
+	<key>PFUseTransfer</key>
+	<true/>
+	<key>PFUseSecure</key>
+	<false/>
+	<key>PFUseDemoSecure</key>
+	<false/>
+	<key>PFShowFundValues</key>
+	<true/>
+	<key>PFShowEquityValue</key>
+	<true/>
+	<key>PFDefaultServer</key>
+	<string>trade.grgfinance.com:8090</string>
+	<key>PFDefaultDemoServer</key>
+	<string>demo.grgfinance.com:8090</string>
+	<key>PFAppID</key>
+	<string></string>
+	<key>PFScriptsServer</key>
+	<string></string>
+	<key>PFDefaultSymbols</key>
+	<array>
+		<string>EUR/USD</string>
+		<string>EUR/USD:GFT</string>
+		<string>AUD/CAD</string>
+		<string>AUD/CAD:GFT</string>
+		<string>EUR/JPY</string>
+		<string>EUR/JPY:GFT</string>
+		<string>EUR/CAD</string>
+		<string>EUR/CAD:GFT</string>
+		<string>EUR/AUD</string>
+		<string>EUR/AUD:GFT</string>
+	</array>
+	<key>PFBrandingKey</key>
+	<string>grgildemo</string>
+	<key>PFBrandingServer</key>
+	<string>demo.grgfinance.com:8090</string>
+	<key>PFUseBrandingSecure</key>
+	<false/>
+	<key>PFUseValidityIOC</key>
+	<true/>
+</dict>
+</plist>

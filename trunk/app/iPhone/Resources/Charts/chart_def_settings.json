@@ -1,0 +1,312 @@
+{
+    "version": 14
+,
+    "view":     {
+                    "chartInterval":1,
+                    "chartType":0,
+                    "zoom":80,
+					"panel_heights":[]
+                },
+    "style":
+	{
+					"sec_order":	["annotations", "chart_general", "draw", "candles", "bars", "main_line", "area"],
+                    "annotations":  {
+                                        "name":"chart_annotations",
+                                        "order":["show_orders", "show_bid", "chart_bid_color", "show_ask", "chart_ask_color"],
+                                        "show_orders":{"type":5, "label":"chart_settings_show_orders", "value":"0"},
+                                        "show_bid":{"type":5, "label":"chart_settings_show_bid", "value":"1"},
+                                        "chart_bid_color":{"type":0, "label":"chart_settings_bid_color", "value":"0x0000FFFF"},
+                                        "show_ask":{"type":5, "label":"chart_settings_show_ask", "value":"0"},
+                                        "chart_ask_color":{"type":0, "label":"chart_settings_ask_color", "value":"0xFF0000FF"}
+                                    },
+					"chart_general":{
+										"name":"chart_general",
+										"order":["chart_bg_color", "chart_frame_color", "chart_grid_color", 
+												"chart_margin_color", "chart_font_color", 
+												"chart_cursor_color", "chart_cursor_textcolor", "show_loupe"],
+										"chart_bg_color":{"type":0, "label":"chart_settings_color_plot", "value":"0xFFFFFFFF"},
+										"chart_frame_color":{"type":0, "label":"chart_settings_color_axis", "value":"0x000000FF"},
+										"chart_grid_color":{"type":0, "label":"chart_settings_color_grid", "value":"0xCCCCCCFF"},
+										"chart_margin_color":{"type":0, "label":"chart_settings_color_margin", "value":"0xFFFFFFFF"},
+										"chart_font_color":{"type":0, "label":"chart_settings_color_text", "value":"0x000000FF"},
+										"chart_cursor_color":{"type":0, "label":"chart_settings_color_cursor_color", "value":"0x000000FF"},
+										"chart_cursor_textcolor":{"type":0, "label":"chart_settings_color_cursor_text_color", "value":"0xFFFFFFFF"},
+										"show_loupe":{"type":5, "label":"chart_settings_show_loupe", "value":"1"}
+									},
+					"draw":			{
+										"name":"chart_draw",
+										"order":["color", "width", "dash"],
+										"color":{"type":0, "label":"chart_settings_color", "value":"0x000000FF"},
+										"width":{"type":2, "label":"chart_settings_width", "value":"2"} ,
+										"dash":{"type":3, "label":"chart_settings_dash", "value":"0"} 
+									},
+					"candles":		{
+										"name":"candles",
+										"order":["candle_up", "candle_up_border", "candle_down", "candle_down_border"],
+										"candle_up":{"type":0, "label":"chart_settings_color_candle_up", "value":"0x96C984FF"},
+										"candle_up_border":{"type":0, "label":"chart_settings_color_candle_up_border", "value":"0x288728FF"},
+										"candle_down":{"type":0, "label":"chart_settings_color_candle_down", "value":"0xD86363FF"},
+										"candle_down_border":{"type":0, "label":"chart_settings_color_candle_down_border", "value":"0x881000FF"}
+									},
+					"bars":			{
+										"name":"bars",
+										"order":["chart_bars_color", "chart_bars_width"],
+										"chart_bars_color":{"type":0, "label":"chart_settings_color", "value":"0x000000FF"},
+										"chart_bars_width":{"type":2, "label":"chart_settings_width", "value":"1"}
+									},
+					"main_line":	{
+										"name":"main_line",
+										"order":["apply", "color", "width", "dash"],
+										"apply":{"type":4, "label":"chart_settings_apply_to", "value":"0"},
+										"color":{"type":0, "label":"chart_settings_color", "value":"0x316396FF"},
+										"width":{"type":2, "label":"chart_settings_width", "value":"2"} ,
+										"dash":{"type":3, "label":"chart_settings_dash", "value":"0"} 
+									},
+					"area":			{
+										"name":"area",
+										"order":["area_apply", "area_fill_color", "area_stroke_color", "area_stroke_width", "area_stroke_dash"],
+										"area_apply":{"type":4, "label":"chart_settings_apply_to", "value":"0"},
+										"area_fill_color":{"type":0, "label":"chart_settings_fillcolor", "value":"0x3333FFFF"},
+										"area_stroke_color":{"type":0, "label":"chart_settings_color", "value":"0x3333FFFF"},
+										"area_stroke_width":{"type":2, "label":"chart_settings_width", "value":"1"} ,
+										"area_stroke_dash":{"type":3, "label":"chart_settings_dash", "value":"0"} 
+									}
+	},
+    "indicators":
+                {
+                    "order":		["bb", "dmi", "env", "ema", "macd", "mtm", "psar", "rsi", "sma", "stoh", "vol", "will"],
+					"user_main":	["sma"],
+					"user_add":		["macd"],
+					"sma":			{
+										"code":     "sma",
+										"title":    "chart_sma_title",
+										"mainchart":"1",
+										"sec_order": ["sma"],
+										"sma":	{
+													"name":         "chart_sma_title",
+													"order":        ["interval", "apply", "color", "width", "dash"],
+													"interval":		{"type":1, "label":"chart_settings_interval", "value":10, "min":1, "max":150},
+													"apply":		{"type":4, "label":"chart_settings_apply_to", "value":"0"},
+													"color":		{"type":0, "label":"chart_settings_color", "value":"0xFF0000FF"},
+													"width":		{"type":2, "label":"chart_settings_width", "value":1},
+													"dash":			{"type":3, "label":"chart_settings_dash", "value":0}
+												}
+									},
+					"ema":			{
+										"code":     "ema",
+										"title":    "chart_ema_title",
+										"mainchart":"1",
+										"sec_order": ["ema"],
+										"ema":	{
+													"name":         "chart_ema_title",
+													"order":        ["interval", "apply", "color", "width", "dash"],
+													"interval":		{"type":1, "label":"chart_settings_interval", "value":14, "min":1, "max":150},
+													"apply":		{"type":4, "label":"chart_settings_apply_to", "value":"0"},
+													"color":		{"type":0, "label":"chart_settings_color", "value":"0x00FF00FF"},
+													"width":		{"type":2, "label":"chart_settings_width", "value":1},
+													"dash":			{"type":3, "label":"chart_settings_dash", "value":0}
+												}
+									},	
+					"psar":			{
+										"code":     "psar",
+										"title":    "chart_psar_title",
+										"mainchart":"1",
+										"sec_order": ["psar"],
+										"psar":	{
+													"name":         "chart_psar_title",
+													"order":        ["step", "max", "color1", "color2"],
+													"step":         {"type":6, "label":"chart_settings_step", "value":0.02, "min":"0.01", "max":"1.00", "step":"0.01", "digits":2},
+													"max":          {"type":6, "label":"chart_settings_max", "value":0.02, "min":"0.1", "max":"1.0", "step":"0.1", "digits":1},
+                                                    "color1":		{"type":0, "label":"chart_settings_color", "value":"0x800000FF"},
+                                                    "color2":		{"type":0, "label":"chart_settings_color", "value":"0x003300FF"}
+												}
+									},					
+					"env":			{
+										"code":     "env",
+										"title":    "chart_env_title",
+										"mainchart":"1",
+										"sec_order": ["env"],
+										"env":	{
+													"name":         "chart_env_title",
+													"order":        ["interval", "deviation", "apply", "color1", "color2"],
+													"interval":		{"type":1, "label":"chart_settings_interval", "value":14, "min":1, "max":100},
+													"deviation":	{"type":1, "label":"chart_settings_deviation", "value":1, "min":1, "max":100},
+													"apply":		{"type":4, "label":"chart_settings_apply_to", "value":"0"},
+													"width":		{"type":2, "label":"chart_settings_width", "value":1},
+													"color1":		{"type":0, "label":"chart_settings_color", "value":"0xFF0000FF"},
+													"color2":		{"type":0, "label":"chart_settings_color", "value":"0x0000FFFF"}
+												}
+									},				
+					"bb":			{
+										"code":     "bb",
+										"title":    "chart_bb_title",
+										"mainchart":"1",
+										"sec_order": ["bb", "line"],
+										"bb":	{
+													"name":         "chart_bb_title",
+													"order":        ["interval", "deviation", "apply", "color"],
+													"interval":		{"type":1, "label":"chart_settings_interval", "value":20, "min":1, "max":100},
+													"deviation":	{"type":1, "label":"chart_settings_deviation", "value":2, "min":1, "max":100},
+													"apply":		{"type":4, "label":"chart_settings_apply_to", "value":"0"},
+													"color":		{"type":0, "label":"chart_settings_fillcolor", "value":"0x3333FFFF"}
+												},
+										"line":	{
+													"name":         "Lines",
+													"order":        ["color", "width", "dash"],
+													"color":		{"type":0, "label":"chart_settings_color", "value":"0000FFFF"},
+													"width":		{"type":2, "label":"chart_settings_width", "value":1},
+													"dash":			{"type":3, "label":"chart_settings_dash", "value":0}
+												}
+									},
+					"vol":			{
+										"code":     "vol",
+										"title":    "chart_vol_title",
+										"mainchart":"0",
+										"sec_order": ["vol"],
+										"vol":	{
+													"name":         "chart_vol_title",
+													"order":        ["color"],
+													"color":		{"type":0, "label":"chart_settings_color", "value":"0x00FF00FF"}
+												}
+									},
+					"mtm":			{
+										"code":     "mtm",
+										"title":    "chart_mtm_title",
+										"mainchart":"0",
+										"sec_order": ["mtm"],
+										"mtm":	{
+													"name":         "chart_mtm_title",
+													"order":        ["apply", "interval", "color", "width", "dash"],
+                                                    "apply":		{"type":4, "label":"chart_settings_apply_to", "value":"0"},
+													"interval":		{"type":1, "label":"chart_settings_interval", "value":14, "min":1, "max":150},
+													"color":		{"type":0, "label":"chart_settings_color", "value":"0xFF0066FF"},
+													"width":		{"type":2, "label":"chart_settings_width", "value":1},
+													"dash":			{"type":3, "label":"chart_settings_dash", "value":0}
+												}
+									},
+                    "macd":			{
+                                        "code":     "macd",
+                                        "title":    "chart_macd_title",
+                                        "mainchart":"0",
+                                        "sec_order": ["macd", "ema1", "ema2", "sma", "div"],
+                                        "macd": { 
+                                                "name":         "chart_macd_title",
+                                                "order":        ["apply", "color1", "color2"],
+                                                "apply":		{"type":4, "label":"chart_settings_apply_to", "value":"0"},
+                                                "color1":		{"type":0, "label":"chart_settings_color", "value":"0x008000FF"},
+                                                "color2":		{"type":0, "label":"chart_settings_color", "value":"0x800000FF"}
+                                                },
+                                        "ema1":	{
+                                                "name":         "EMA 1",
+                                                "order":        ["interval"],
+                                                "interval":		{"type":1, "label":"chart_settings_interval", "value":12, "min":1, "max":100}
+                                                },
+                                        "ema2":	{
+                                                "name":         "EMA 2",
+                                                "order":        ["interval"],
+                                                "interval":		{"type":1, "label":"chart_settings_interval", "value":26, "min":1, "max":100}
+                                                },
+                                        "sma":	{
+                                                "name":         "SMA",
+                                                "order":        ["interval", "color", "width", "dash"],
+                                                "interval":		{"type":1, "label":"chart_settings_interval", "value":9, "min":1, "max":100},
+                                                "color":		{"type":0, "label":"chart_settings_color", "value":"0xFF0000FF"},
+                                                "width":		{"type":2, "label":"chart_settings_width", "value":1},
+                                                "dash":			{"type":3, "label":"chart_settings_dash", "value":0}										
+                                                },
+                                        "div":	{
+                                                "name":         "DIV",
+                                                "order":        ["color", "width", "dash"],
+                                                "color":		{"type":0, "label":"chart_settings_color", "value":"0x0000FFFF"},
+                                                "width":		{"type":2, "label":"chart_settings_width", "value":1},
+                                                "dash":			{"type":3, "label":"chart_settings_dash", "value":0}										
+                                                }
+									},
+					"rsi":			{
+										"code":     "rsi",
+										"title":    "chart_rsi_title",
+										"mainchart":"0",
+										"sec_order": ["rsi"],
+										"rsi":	{
+													"name":         "chart_rsi_title",
+													"order":        ["interval", "apply", "color", "level", "fillcolor1", "fillcolor2", "width", "dash"],
+													"interval":		{"type":1, "label":"chart_settings_interval", "value":14, "min":1, "max":150},
+													"apply":		{"type":4, "label":"chart_settings_apply_to", "value":"0"},
+                                                    "color":		{"type":0, "label":"chart_settings_color", "value":"0x008000FF"},
+													"level":		{"type":1, "label":"chart_settings_level", "value":30, "min":1, "max":50},
+                                                    "fillcolor1":	{"type":0, "label":"chart_settings_fillcolor", "value":"0x0000FFFF"},
+                                                    "fillcolor2":	{"type":0, "label":"chart_settings_fillcolor", "value":"0xFF0000FF"},
+													"width":		{"type":2, "label":"chart_settings_width", "value":1},
+													"dash":			{"type":3, "label":"chart_settings_dash", "value":0}
+												}
+									},
+					"will":			{
+										"code":     "will",
+										"title":    "chart_will_title",
+										"mainchart":"0",
+										"sec_order": ["will"],
+										"will":	{
+													"name":         "chart_will_title",
+													"order":        ["interval", "color", "width", "dash"],
+													"interval":		{"type":1, "label":"chart_settings_interval", "value":14, "min":1, "max":50},
+                                                    "color":		{"type":0, "label":"chart_settings_color", "value":"0x00FFFFFF"},
+													"width":		{"type":2, "label":"chart_settings_width", "value":1},
+													"dash":			{"type":3, "label":"chart_settings_dash", "value":0}
+												}
+									},
+					"stoh":			{
+										"code":     "stoh",
+										"title":    "chart_stoh_title",
+										"mainchart":"0",
+										"sec_order": ["perc_k", "perc_d"],
+										"perc_k":{
+													"name":         "%K",
+													"order":        ["interval", "slowing", "color", "width", "dash"],
+													"interval":		{"type":1, "label":"chart_settings_interval", "value":14, "min":1, "max":100},
+													"slowing":		{"type":1, "label":"chart_settings_slowing", "value":1, "min":1, "max":50},
+                                                    "color":		{"type":0, "label":"chart_settings_color", "value":"0x008080FF"},
+													"width":		{"type":2, "label":"chart_settings_width", "value":1},
+													"dash":			{"type":3, "label":"chart_settings_dash", "value":0}
+												},
+										"perc_d":{
+													"name":         "%D",
+													"order":        ["interval", "color", "width", "dash"],
+													"interval":		{"type":1, "label":"chart_settings_interval", "value":3, "min":1, "max":50},
+                                                    "color":		{"type":0, "label":"chart_settings_color", "value":"0xFF0000FF"},
+													"width":		{"type":2, "label":"chart_settings_width", "value":1},
+													"dash":			{"type":3, "label":"chart_settings_dash", "value":2}
+												}
+									},
+					"dmi":			{
+										"code":     "dmi",
+										"title":    "chart_dmi_title",
+										"mainchart":"0",
+										"sec_order": ["adx", "di_plus", "di_min"],
+										"adx":	{
+													"name":         "ADX",
+													"order":        ["interval", "color", "width", "dash"],
+													"interval":		{"type":1, "label":"chart_settings_interval", "value":14, "min":1, "max":50},
+                                                    "color":		{"type":0, "label":"chart_settings_color", "value":"0x008080FF"},
+													"width":		{"type":2, "label":"chart_settings_width", "value":1},
+													"dash":			{"type":3, "label":"chart_settings_dash", "value":0}
+												},
+										"di_plus":{
+													"name":         "DI+",
+													"order":        ["color", "width", "dash"],
+                                                    "color":		{"type":0, "label":"chart_settings_color", "value":"0x00FF00FF"},
+													"width":		{"type":2, "label":"chart_settings_width", "value":1},
+													"dash":			{"type":3, "label":"chart_settings_dash", "value":1}
+												},
+										"di_min":{
+													"name":         "DI-",
+													"order":        ["color", "width", "dash"],
+                                                    "color":		{"type":0, "label":"chart_settings_color", "value":"0xFF0000FF"},
+													"width":		{"type":2, "label":"chart_settings_width", "value":1},
+													"dash":			{"type":3, "label":"chart_settings_dash", "value":1}
+												}
+									}	
+                },
+    "drawings":
+                {
+                }
+}

@@ -1,0 +1,1511 @@
+/*Reconnection 06.03.2014*/
+"RECONNECTING" = "Bağlanıyor";
+
+"RECONNECTING_ALERT_TEXT" = "Sunucuya bağlanılamıyor";
+
+"NO_INTERNET_CONNECTION" = "Internet'e bağlanılamıyor";
+
+/*Güncelleme*/
+"UPDATE_APP" = "Güncelle";
+
+"LOGOUT" = "Çıkış";
+
+/*Giriş Ekranı*/
+"LOGIN" = "Giriş";
+
+"PASSWORD" = "Şifre";
+
+"REMEMBER_PASSWORD" = "Şifremi Hatırla";
+
+"LOGIN_BUTTON" = "Giriş";
+
+"REGISTER_BUTTON" = "Kayıt Ol";
+
+"LIVE_SERVER" = "Gerçek";
+
+"DEMO_SERVER" = "Deneme";
+
+"EMPTY_LOGIN" = "Lütfen Kullanıcı Kodunu Giriniz";
+
+"EMPTY_PASSWORD" = "Lütfen Şifrenizi Giriniz";
+
+"WRONG_SERVER_TEXT" = "Kullandığınız uygulamanın versiyonu server versiyonu ile uyumlu değildir. Uygulamada bazı fonksiyonlar düzgün çalışmayabilir.  Lütfen uygun versiyonu yükleyiniz!";
+
+"terminal type error" = "Kullanıcı yetkilerinden dolayı erişim engellenmiştir. Lütfen Çağrı Merkezini Arayınız.";
+
+/*Giriş Süreci*/
+
+"VERIFICATION_TITLE" = "SMS Doğrulama";
+
+"SMS_PASSWORD" = "SMS Şifre";
+
+"SERVER_CONNECTING" = "Bağlanıyor...";
+
+"AUTHENTICATION" = "Doğrulama...";
+
+"READING_DATA" = "Veri Okunuyor...";
+
+"CONNECTION_FAILED" = "Bağlantı Başarısız";
+
+"CHECK_NETWORK" = "Lütfen Ağ Ayarlarınızı Kontrol Edin!";
+
+"SSL_CERTIFICATE_WARNING" = "SSL Sertifikası geçerli değil. Devam etmek ister misiniz?";
+
+"CHANGE_PASSWORD_TITLE" = "Şifre Değiştir";
+
+"OLD_PASSWORD" = "Eski Şifre";
+
+"NEW_PASSWORD" = "Yeni Şifre";
+
+"CHANGE_PASSWORD_OK" = "Şifre Değiştirlidi";
+
+"CHANGE_PASSWORD_VERIFICATION_WRONG" = "SMS Doğrulama Şifresi Hatalı";
+
+"CHANGE_PASSWORD_ERROR" = "Şifre Değişim Hatası";
+
+"SMS_VERIFICATION_CANCELLED" = "SMS Doğrulaması İptal Edildi";
+
+"CHANGE_PASSWORD_CANCELLED" = "Şifre Değiştirme iptal edildi";
+
+"Password required with level - 1" = "Şifreniz harf ve rakam içermelidir.";
+
+"Password required with level - 2" = "Şifreniz en az 8 karakterden oluşmalı, harf ve rakam içermelidir.";
+
+"Password required with level - 3" = "Şifreniz en az 8 karakterden oluşmalı; harf, rakam ve özel karakter içermelidir.";
+
+/*Hesaplar*/
+
+"ACCOUNTS" = "Hesaplar";
+
+"ACTIVE_ACCOUNT" = "Aktif Hesabınız";
+
+"ACCOUNT_DETAILS" = "Hesap Detayları";
+
+/*Hesap Bilgileri*/
+
+"MAKE_ACTIVE" = "Aktif Hale Getir";
+
+"TODAY" = "Günlük";
+
+"ACTIVITY" = "Özet";
+
+"GENERAL" = "Genel";
+
+"GROSS_PL" = "Brüt K/Z";
+
+"NET_PL" = "Net K/Z";
+
+"FEES" = "İşlem Maliyeti";
+
+"VOLUME" = "Hacim";
+
+"TRADES" = "İşlemler";
+
+"OPEN_GROSS_PL" = "Açık Brüt K/Z";
+
+"OPEN_NET_PL" = "Açık Net K/Z ";
+
+"N_ORDERS" = "Emir Sayısı";
+
+"N_POSITIONS" = "Pozisyon Sayısı";
+
+"ORDERS_MARGIN" = "Emir Teminatı";
+
+"POSITIONS_MARGIN" = "Poz. Teminatı";
+
+"BLOCKED_FOR_FUNDS" = "Bloke Tutar";
+
+"STOCK_VALUE" = "Hisse Değeri";
+
+"ACCOUNT_NAME" = "Hesap Adı";
+
+"ACCOUNT_BALANCE" = "Bakiye";
+
+"ACCOUNT_EQUITY" = "Anlık Bakiye";
+
+"ACCOUNT_VALUE" = "Hesap Değeri";
+
+"BLOCKED_BALANCE" = "Blok. Bakiye";
+
+"CASH_BALANCE" = "Nakit Bakiye";
+
+"MARGIN_AVAILABLE" = "Kull. Teminat";
+
+"CURRENT_MARGIN" = "Anlık Teminat";
+
+"MARGIN_WARNING" = "Tmnt. Uyarısı";
+
+"STOP_TRADING" = "Son İşlem Svy.";
+
+"STOP_OUT" = "Stop Out";
+
+"WITHDRAWAL_AVAILABLE" = "Çekilebilir Tutar";
+
+"INVESTED_FUND_CAPITAL" = "Yatırılan Sermaye";
+
+"CURRENT_FUND_CAPITAL" = "Sermaye";
+
+"FUND_CAPITAL_GAIN" = "Sermaye Kazanımı";
+
+/*Sembol Ekranı*/
+"SYMBOLS" = "Semboller";
+
+"SYMBOL" = "Sembol";
+
+"BID" = "Sat";
+
+"ASK" = "Al";
+
+"BSIZE" = "Satış Mkt.";
+
+"CHANGE_PERCENT" = "Değişim %";
+
+"ASIZE" = "Alış Miktari";
+
+"SPREAD" = "Spread";
+
+"LAST" = "Son";
+
+"VOLUME" = "Hacim";
+
+"CHANGE" = "Değişim";
+
+"LAST_UPDATE" = "Son Günc.";
+
+"OPEN" = "Açılış";
+
+"LOW" = "Düşük";
+
+"CLOSE" = "Kapanış";
+
+"HIGH" = "Yüksek";
+
+"REMOVE_ALL_SYMBOLS_PROMPT" = "Tüm Enstrümanları Kaldır";
+
+"REMOVE_ALL" = "Tümünü Kaldır";
+
+"NO_OPTION_FOR_SYMBOL" = "Mevcut Enstrüman için herhangi bir opsiyon bulunamadı.";
+
+"DAYS" = "Gün";
+
+"HOURS" = "Saat";
+
+"MINUTES" = "Dk.";
+
+"SECONDS" = "Sn.";
+
+"MIN_SECONDS" = "1'den küçük";
+
+/*Pozisyon ve Emir Ekranları*/
+"POSITIONS" = "Pozisyonlar";
+
+"ORDERS" = "Emirler";
+
+"OPEN_TIME" = "Açılış Zamanı";
+
+"QUANTITY" = "Miktar";
+
+"SIDE" = "Yön";
+
+"OPEN_PRICE" = "Açılış Fiyatı";
+
+"EXPIRATION_DATE" = "Vade Sonu";
+
+"PL_TICKS" = "K/Z Tik";
+
+"COMMISSION" = "Komisyon";
+
+"SWAPS" = "Swap";
+
+"SL" = "Zarar Drd.";
+
+"TP" = "Kar Al";
+
+"MARGIN_USED" = "Kullanılan Teminat";
+
+"EXPIRY_DATE" = "Vade Sonu";
+
+"INSTRUMENT_TYPE" = "Enst. Tür";
+
+"POSITION_ID" = "Poz. No:";
+
+"TYPE" = "Emir Türü";
+
+"PRICE" = "Fiyat";
+
+"LAST_PRICE" = "Son";
+
+"TIF" = "Süre";
+
+"EXCHANGE" = "Piyasa";
+
+"STATUS" = "Durum";
+
+"ORDER_ID" = "Emir No:";
+
+"BUY" = "Al";
+
+"SELL" = "Sat";
+
+"CANCEL_ALL_ORDERS_PROMPT" = "Tüm Emirleri İptal Et";
+
+"CANCEL_ALL" = "Tümünü İptal Et";
+
+"CLOSE_ALL_POSITIONS_PROMPT" = "Tüm Pozisyonları Kapat";
+
+"CLOSE_ALL" = "Tümünü Kapat";
+
+"EVENT" = "Olay";
+
+"ORDER_STAUS_NONE" = "Hiçbiri";
+
+"ORDER_STAUS_PENDING_NEW" = "İşleniyor";
+
+"ORDER_STAUS_PENDING_EXECUTION" = "İşleniyor";
+
+"ORDER_STAUS_PENDING_CANCEL" = "İşleniyor";
+
+"ORDER_STAUS_PENDING_REPLACE" = "İşleniyor";
+
+"ORDER_STAUS_PENDING_STP" = "İşleniyor";
+
+"ORDER_STAUS_NEW" = "Kaydedildi";
+
+"ORDER_STAUS_CANCELLED" = "İptal Edildi";
+
+"ORDER_STAUS_PART_FILLED" = "Kısmen Gerçekleşti";
+
+"ORDER_STAUS_FILLED" = "Gerçekleşti";
+
+"ORDER_STAUS_REPLACED" = "Değiştirildi";
+
+"NOT_AVAILABLE_VALUE" = "Uygun değer bulunamadı.";
+
+/*İşlem Ekranları*/
+"TRADE_ID" = "İşlem No:";
+
+"PURCHASE_PRICE" ="İşlem Fiyatı";
+
+"ACCOUNT" = "Hesap";
+
+/*Emir Türleri*/
+"ORDER_MANUAL" = "Manuel";
+
+"ORDER_MARKET" = "Piyasa";
+
+"ORDER_STOP" = "Stop";
+
+"ORDER_LIMIT" = "Limit";
+
+"ORDER_STOP_LIMIT" = "Limit Stop";
+
+"ORDER_TRAILING_STOP" = "Takip Eden Limit";
+
+"ORDER_OCO" = "OCO";
+
+"WATCHLIST" = "İzleme Listesi";
+
+/**/
+"WATCHLIST_EDITOR" = "İzleme Liste Düzenleyicisi";
+
+"ACTIVE_MODE" = "Seçili";
+
+"ACTIVE" = "I";
+
+"HIDDEN" = "O";
+
+"ACTIVE_ORDERS" = "Aktif Emirler";
+
+"ALL" = "Tümü";
+
+"FILLED" = "Gerçekleşen";
+
+/*Emir Girişi*/
+"OE" = "EG";
+
+"ORDER_CREATED" = "Emir Oluşturuldu";
+
+"CLOSE_OE" = "EG panelini kapat";
+
+"ORDER_ENTRY" = "Emir Girişi";
+
+"CLOSING_ORDERS" = "Bağlantılı Emir";
+
+"QUANTITY_FORMAT" = "%@ Lot";
+
+"ORDER_TYPE" = "Emir Türü";
+
+"ENABLE" = "I";
+
+"DISABLE" = "O";
+
+"STOP_LOSS" = "Zarar Durdur";
+
+"TRAILING_STOP_LOSS" = "Tkp. Stop";
+
+"TRAILING" = "Takip Eden";
+
+"S_L_PRICE" = "SL Fiyat";
+
+"SL_OFFSET" = "SL Ofset";
+
+"TP_OFFSET" = "T/P Ofset";
+
+"TAKE_PROFIT" = "Kar Al";
+
+"T_P_PRICE" = "TP Fiyat";
+
+"STOP_PRICE" = "Stop Fiyat";
+
+"LIMIT_PRICE" = "Limit Fiyat";
+
+"PRICE_OFFSET" = "Ofset Fiyat";
+
+"DAY" = "Gün";
+
+"GTC" = "GTC";
+
+"IOC" = "IOC";
+
+"GTD" = "GTD";
+
+"GTD_TO" = "GTD";
+
+"FOK" = "FOK";
+
+"MOO" = "MOO";
+
+"MOC" = "MOC";
+
+"MINUS_1" = "-1";
+
+"MINUS_5" = "-5";
+
+"PLUS_1" = "+1";
+
+"PLUS_5" = "+5";
+
+"PLACE_CONFIRMATION" = "Emir Gönderilsin mi?";
+
+"MODIFY_CONFIRMATION" = "Emir Düzeltilsin mi?";
+
+"CANCEL_CONFIRMATION" = "Emir İptal Edilsin mi?";
+
+"EXECUTE_CONFIRMATION" = "Emri Gerçekleştir?";
+
+"PLACE_ORDER" = "Emri Gönder";
+
+"PLACE_ORDER_BUTTON" = "Emir Gönder";
+
+"CLOSE_BUTTON" = "Kapat";
+
+"INVALID_SL_PRICE" = "Geçersiz SL Fiyatı";
+
+"INVALID_TP_PRICE" = "Geçersiz TP Fiyatı";
+
+"INVALID_TR_OFFSET" = "Tr. Stop fiyatı çok yüksek";
+
+/*Emri Değiştir*/
+"MODIFY_ORDER" = "Emri Değiştir";
+
+"MODIFY_ORDER_BUTTON" = "Emri Değiştir";
+
+"CANCEL_ORDER_BUTTON" = "Emir İptali";
+
+"EXECUTE_ORDER_BUTTON" = "Piyasa Fiyatından Kapat";
+
+/*Pozisyon Değiştir*/
+"MODIFY_POSITION" = "Değiştir";
+
+"LONG" = "UZUN";
+
+"SHORT" = "KISA";
+
+"MODIFY_POSITION_CONFIRMATION" = "Pozisyon Değiştirilsin mi?";
+
+"CLOSE_CONFIRMATION" = "Pozisyon Kapatılsın mı?";
+
+"CLOSE_POSITION" = "Pozisyonu Kapat";
+
+"MODIFY_POSITION_BUTTON" = "Pozisyonu Değiştir";
+
+"CLOSE_POSITION_BUTTON" = "Piyasa Fiyatından Kapat";
+
+/*Grafikler*/
+"CHART" = "Grafik";
+
+"SELECT_RANGE" = "Aralık Seçin";
+
+"INVALID_AMOUNT" = "Yetersiz Miktar";
+
+"QTY" = "MKT.";
+
+"M1" = "1 Dk.";
+
+"M5" = "5 Dk.";
+
+"M15" = "15 Dk.";
+
+"M30" = "30 Dk.";
+
+"H1" = "1 S.";
+
+"H4" = "4 S.";
+
+"D1" = "G";
+
+"W1" = "H";
+
+"MN1" = "A";
+
+"TICK" = "Tik";
+
+"CANCEL" = "İptal";
+
+"SEGMENT" = "Segment";
+
+"LINE" = "Çizgi";
+
+"RAY" = "Parlaklık";
+
+"CHANNEL" = "Kanal";
+
+"FIB_RETR" = "Fibonacci Düzeltme Seviyeleri";
+
+"FIB_CIRC" = "Fibonacci Yayları";
+
+"FIB_FAN" = "Fibonacci Fanları";
+
+"HLINE" = "Yatay Çizgi";
+
+"VLINE" = "Dikey Çizgi";
+
+"CHART_MODE_FREE" = "Serbest";
+
+"CHART_MODE_CROSSHAIR" = "Artı İmleç";
+
+"CHART_MODE_SPLITTER" = "Ayraç";
+
+"CHART_MODE_RESIZE" = "Çizimleri Yeniden Boyutlandır";
+
+"CHART_MODE_DELETE" = "Çizimleri Sil";
+
+"CHART_MODE_DRAW" = "Çiz";
+
+"DRAWINGS" = "Çizimler";
+
+"SELECT_DRAWING" = "Çizim Seç";
+
+"SELECT_MODE" = "Mod Seç";
+
+"INDICATORS" = "İndikatör";
+
+"ALL_INDICATORS" = "Tüm İndikatörler";
+
+"INDICATORS_LIMIT" = "Maksimum İndikatör Sayısına Erişildi";
+
+"SHOW_VOLUME" = "Hacim";
+
+"SHOW_ORDERS" = "Emirler";
+
+"SHOW_POSITIONS" ="Pozisyonlar";
+
+"TRADING_LAYERS" = "İşlem Grafik Ayarları ";
+
+"INCLUDE_IN_SCALING" = "İşlemleri Göster";
+
+"CHART_COLOR_SCHEME" = "Renk şeması";
+
+"CHART_SCHEME_DARK" = "Koyu";
+
+"CHART_SCHEME_LITE" = "Açık";
+
+"CHART_SCHEME_GREEN" = "Yeşil";
+
+"CHART_STYLE_TYPE" = "Stil";
+
+"CHART_STYLE_CANDLE" = "Mum";
+
+"CHART_STYLE_BAR" = "Bar";
+
+"CHART_STYLE_LINE" = "Çizgi";
+
+"CHART_STYLE_AREA" = "Alan";
+
+"CHART_SETTINGS" = "Ayarlar";
+
+/*Haberler*/
+"NEWS" = "Haberler";
+
+"NEWS_BROWSER" = "Haber İçeriği";
+
+/*Sohbet*/
+"CHAT" = "Canlı Yardım";
+
+"SEND_BUTTON" = "Gönder";
+
+/*Güncelleme Mesajı*/
+"NEW_CHAT_MESSAGE" = "Yeni Mesaj Alındı";
+
+"OPEN_POSITION_MESSAGE" = "Pozisyon Açıldı";
+
+"MODIFY_POSITION_MESSAGE" = "Pozisyon Değiştirildi";
+
+"CLOSE_POSITION_MESSAGE" = "Pozisyon Kapatıldı";
+
+"CREATE_ORDER_MESSAGE" = "Emir Oluşturuldu";
+
+"MODIFY_ORDER_MESSAGE" = "Emir Değiştirildi";
+
+"REMOVE_ORDER_MESSAGE" = "Emir Kaldırıldı";
+
+/*Ayarlar*/
+
+"SETTINGS" = "Ayarlar";
+
+"DEFAULTS" = "Varsayılan";
+
+"ADDITIONAL" = "Ek Ayarlar";
+
+"CONFIRMATIONS" = "Onaylar";
+
+"ORDER_SENDING" = "Emir Gönderme";
+
+"ORDER_MODIFY" = "Emir Düzeltme";
+
+"ORDER_CANCELLING" = "Emir İptali";
+
+"EXECUTING_AS_MARKET" = "Emir Gerçekleştirme";
+
+"POSITION_MODIFY" = "Pozisyon Düzeltme";
+
+"POSITION_CLOSING" = "Pozisyon Kapatma";
+
+"USE_NUMERIC_PAD" = "Ondalıklı Klavye Kullan";
+
+"CHART_CASHE_SIZE" = "Bellek Boyutu";
+
+"CHART_DEFAULT_PERIOD" = "Periyot";
+
+"TRADING_PANELS" = "İşlem Paneli";
+
+"SHOW_MODAL" = "Modeli Göster";
+
+"USE_SLTP_OFFSET" = "SL/TP ofset";
+
+/*Kayıt*/
+
+"LOGIN" = "Kullanıcı Adı";
+
+"PASSWORD" = "Şifre";
+
+"CONFIRM_PASSWORD" = "Şifre Onayı";
+
+"INCORRECT_CONFIRM_PASSWORD" = "Hatalı Şifre Onayı";
+
+"REGISTRATION" = "Kayıt";
+
+"FIRST_NAME" = "İsim";
+
+"LAST_NAME" = "Soyisim";
+
+"COUNTRY" = "Ülke";
+
+"PHONE" = "Telefon";
+
+"EMAIL" = "E-posta";
+
+"ACCOUNT_CURRENCY" = "Teminat Türü";
+
+"DEMO_ACCOUNT_BALANCE" = "Hesap Bakiyesi";
+
+"ONE_POSITION_PER_INSTRUMENT" = "Enstrüman Başına Pozisyon";
+
+"SELECT_COUNTRY" = "Ülke Seçin";
+
+/*Piyasa Derinliği*/
+"MARKET_DEPTH" = "Piyasa Derinliği";
+
+/*Opsiyon Zinciri*/
+"OPTION_CHAIN" = "Opsiyon Zinciri";
+
+"STRIKE" = "Strike";
+
+"STRIKES_COUNT_PROMPT" = "Strike Sayacı Seç";
+
+"ALL_STRIKES" = "Tüm Strikelar";
+
+"4_STRIKES" = "4 Strike";
+
+"8_STRIKES" = "8 Strike";
+
+"12_STRIKES" = "12 Strike";
+
+"16_STRIKES" = "16 Strike";
+
+"ALL_COUNT" = "Tümü";
+
+"CALL" = "Call";
+
+"PUT" = "Put";
+
+"NO_EXPIRATION_DATES" = "Vade Sonu Yok";
+
+"DELTA" = "Delta";
+
+"GAMMA" = "Gamma";
+
+"VEGA" = "Vega";
+
+"THETA" = "Theta";
+
+/*Skriptler*/
+"SCRIPTS" = "Skript Listesi";
+
+/*Raporlar*/
+
+"GET_REPORT_BUTTON" = "Rapor Oluştur";
+
+"REPORTS" = "Raporlar";
+
+"REPORT_TYPE" = "Rapor Türü";
+
+"REPORT_STATEMENT" = "Hesap Ekstresi";
+
+"REPORT_BALANCE" = "Bakiye";
+
+"REPORT_BALANCE_SUMMARY" = "Bakiye Özeti";
+
+"REPORT_COMMISSIONS" = "Komisyon";
+
+"REPORT_TRADES" = "İşlemler";
+
+"REPORT_ORDER_HISTORY" = "Emir Geçmişi";
+
+"REPORT_SUMMARY" = "Özet";
+
+"FROM" = "Başlangıç";
+
+"TO" = "Bitiş";
+
+"EMPTY_REPORT" = "Seçilen Rapor İçin Veri Yok";
+
+"account name" = "Hesap";
+
+"login" = "Kull. Adı";
+
+"group name" = "Grup";
+
+"balance" = "Bakiye";
+
+"blockedbalance" = "Bloklanan";
+
+"unrealized p/l" = "Geçici K/Z";
+
+"gi.cur_balance" = "Anlık Bakiye";
+
+"gi.min_margin" = "Min. Teminat";
+
+"gi.cur_margin" = "Teminat%";
+
+"gi.available_margin" = "Kull. Teminat";
+
+"gi.margin_warning" = "Tem. Uyarı Svy.";
+
+"gi.margin_stoptrade" = "İşlem Drd. Svy.";
+
+"gi.margin_stopout" = "Stop Out";
+
+"gi.withdrawal_available" = "Serbest Tutar";
+
+"gi.today_released_pnl" = "Gerçekleşen K/Z";
+
+"gi.balance_blocked_by_orders" = "Bloklanan Tem.";
+
+"gi.stock_value" = "Hisse";
+
+"accountcurrency" = "Tem. Döviz";
+
+"orderid" = "Emir No";
+
+"createdat" = "Oluştur";
+
+"boundtoorderid" = "Bağlı Emir No";
+
+"instrumentname" = "Sembol";
+
+"openclosebuysell" = "Yön";
+
+"ordertype" = "Emir Türü";
+
+"price" = "Fiyat";
+
+"amount" = "Miktar";
+
+"tif" = "Süre";
+
+"updatedtime" = "Güncelleme Zamanı";
+
+"instrument" = "Sembol";
+
+"balance.buy" = "Al";
+
+"balance.everbuy" = "Ortalama Alış";
+
+"balance.sell" = "Sat";
+
+"balance.eversell" = "Ortalama Satış";
+
+"balance.net" = "Net";
+
+"balance.profit" = "Kar";
+
+"balance.exposure" = "Risk";
+
+"balance.exposurenet" = "Net Risk";
+
+"accountoperationid" = "Opr. No";
+
+"operation" = "İşlem Detay";
+
+"debit" = "Çekilen";
+
+"credit" = "Yatırılan";
+
+"currency" = "Para Birimi";
+
+"balance_before" = "Önceki Bakiye";
+
+"trading_in" = "İşlem Zararı";
+
+"trading_out" = "İşlem Karı";
+
+"deposit" = "Para Yatırma";
+
+"widthdraw" = "Para Çekme";
+
+"commission_out" = "Ödenen Komisyon";
+
+"swaps_in" = "Swap Geliri";
+
+"swaps_out" = "Swap Gideri";
+
+"interest" = "Faiz";
+
+"total" = "Toplam";
+
+"balance_after" = "Sonraki Bakiye";
+
+"operationtype" = "İşlem Türü";
+
+"basis" = "Baz";
+
+"sum" = "Toplam";
+
+"creator" = "İşlemi Yapan";
+
+"messageid" = "Mesaj No";
+
+"actualtime" = "Gerçek Zaman";
+
+"sender" = "Gönderen";
+
+"recipient" = "Alıcı";
+
+"groupid" = "Grup No:";
+
+"message" = "Mesaj";
+
+"senderip" = "Gönderen IP";
+
+"delivered" = "İletildi";
+
+"type" = "Tür";
+
+"actualprice" = "Gerçek Fiyat";
+
+"instrumenttype" = "Enstr. Türü";
+
+"quoteticker" = "Fiyat Sembolü";
+
+"minchange" = "Min. Değişim";
+
+"lotsize" = "Lot Büyüklüğü";
+
+"crosstype" = "Çapraz Tür";
+
+"spread" = "Spread";
+
+"discount" = "İndirim";
+
+"swapplan" = "Swap Planı";
+
+"swapsell" = "Satış Swap";
+
+"swapbuy" = "Alış Swap";
+
+"closedbyorderid" = "Kapatan Emir No.";
+
+"executedat" = "Gerçekleşme";
+
+"usage" = "Kullanım";
+
+"username" = "Kullanıcı";
+
+"role" = "Rol";
+
+"phone" = "Telefon";
+
+"email" = "E-posta";
+
+"phonepassword" = "Telefon Şifresi";
+
+"irdnumber" = "IRD Numarası";
+
+"address" = "Adres";
+
+"brokerlogin" = "Broker Girişi";
+
+"locked" = "Kilitli";
+
+"expiresat" = "Vade Sonu";
+
+"openorderid" = "Açık Emir Numarası";
+
+"openprice" = "Açılış Fiyatı";
+
+"opentime" = "Açılış Zamanı";
+
+"closeprice" = "Kapanış Fiyatı";
+
+"stoploss" = "Zarar Kes";
+
+"takeprofit" = "Kar Al";
+
+"swaps" = "Swap";
+
+"comission" = "Komisyon";
+
+"routename" = "Kaynak";
+
+"closedat" = "Kapanış";
+
+"route" = "Kaynak";
+
+"rate" = "Oran";
+
+"description" = "Tanım";
+
+"submitted" = "Gönderildi";
+
+"tradeid" = "İşlem No:";
+
+"externalid" = "Gönd. No:";
+
+"time" = "Zaman";
+
+"crossprice" = "Çapraz Fiyat";
+
+"extprice" = "Gerçekleşme Fiyatı";
+
+"User" = "Kullanıcı";
+
+"Account" = "Hesap";
+
+"Position" = "Pozisyon";
+
+"number" = "Numara";
+
+"Instrument" = "Enstrüman";
+
+"Amount" = "Miktar";
+
+"Operation" = "Operasyon";
+
+"Price" = "Fiyat";
+
+"Open" = "Açılış";
+
+"order" = "Emir";
+
+"type" = "Tür";
+
+"Commissions" = "Komisyon";
+
+"Time" = "Zaman";
+
+"Order" = "Emir";
+
+"number" = "Numara";
+
+"price" = "Fiyat";
+
+"Type" = "Tür";
+
+"Open date" = "Açılış Tarihi";
+
+"Open price" = "Açılış Fiyatı";
+
+"Close order type" = "Kapatma Emir Türü";
+
+"Realised profit/loss" = "Gerçekleşmiş K/Z";
+
+"Oreder Number" = "Emir No";
+
+"Order Price" = "Emir Fiyatı";
+
+"Position number" = "Pozisyon No";
+
+"Open order type" = "Açılış Emir Türü";
+
+"Order number" = "Emir No";
+
+"Order price" = "Emir Fiyatı";
+
+"accname" = "Hesap Adı";
+
+"action" = "Yön";
+
+"event" = "Olay";
+
+"price" = "Fiyat";
+
+"remoteid" = "Remote ID";
+
+"trader" = "İşlemci";
+
+"stopprice" = "Stop Fiyat";
+
+"margin" = "Teminat";
+
+"currentprice" = "Anlık Fiyat";
+
+"groupname" = "Grup";
+
+"account" = "Hesap";
+
+"accountname" = "Hesap Adı";
+
+"userid" = "Kullanıcı No";
+
+"profit" = "Kar";
+
+"tradevolume" = "İşlem Hacmi";
+
+"purchaseprice" = "İşlem Fiyatı";
+
+"exchange" = "Piyasa";
+
+"valuedate" = "Tarih";
+
+"expiredate" = "Vade Sonu";
+
+"autotrade" = "Otomatik İşlem";
+
+"instrumentgroup" = "Enstrüman Grubu";
+
+"dividends" = "Kar Payı";
+
+"other_account" = "diğer Hesaplar";
+
+"terminaltype" = "Terminal Türü";
+
+"commission" = "Komisyon";
+
+/*Local Notifications*/
+
+"Delayed Limit Order Removed" = "Bekleyen Limit Emir Kaldırıldı";
+
+"Delayed Stop Order Removed" = "Bekleyen Stop Emir Kaldırıldı";
+
+"Delayed Stop Order Removed" = "Bekleyen Stop Emir Kaldırıldı";
+
+"Delayed Limit Order Created" = "Bekleyen Limit Emir Oluşturuldu";
+
+"Delayed Stop Order Created" = "Bekleyen Stop Emir Oluşturuldu";
+
+"Delayed OCO Order Created" = "Bekleyen OCO Emir Oluşturuldu";
+
+"Delayed Stop Order Removed" = "Bekleyen Stop Emir Kaldırıldı";
+
+"Delayed Stop Order Removed" = "Bekleyen Stop Emir Kaldırıldı";
+
+"Delayed Limit Order Created" = "Bekleyen Limit Emir Oluşturuldu";
+
+"Delayed Stop Order Created" = "Bekleyen Stop Emir Oluşturuldu";
+
+"Delayed OCO Order Created" = "Bekleyen OCO Emir Oluşturuldu";
+
+"Delayed Limit Order Modified" = "Bekleyen Limit Emir Değiştirildi";
+
+"Delayed Stop Order Modified" = "Bekleyen Stop Emir Değiştirildi";
+
+"Stop Limit Order Created" = "Stop Limit Emir Oluşturuldu";
+
+"Stop Limit Order Modified" = "Stop Limit Emir Değiştirildi";
+
+"Stop Limit Order Removed" = "Stop Limit Emir Kaldırıldı";
+
+"Trailing Stop Order Created" = "Takip Eden Stop Emir Oluşturuldu";
+
+"Trailing Stop Order Modified" = "Takip Eden Stop Emir Değiştirildi";
+
+"Trailing Stop Order Removed" = "Takip Eden Stop Emir Kaldırıldı";
+
+"Delayed Stop Limit Order Created" = "Stop Limit Emir Oluşturuldu";
+
+"Delayed Stop Limit Order Modified" = "Stop Limit Emir Değiştirildi";
+
+"Delayed Stop Limit Order Removed" = "Stop Limit Emir Kaldırıldı";
+
+"Delayed Trailing Stop Order Created" = "Takip Eden Stop Emir Oluşturuldu";
+
+"Delayed Trailing Stop Order Modified" = "Takip Eden Stop Emir Değiştirildi";
+
+"Delayed Trailing Stop Order Removed" = "Takip Eden Stop Emir Kaldırıldı";
+
+"Limit Order Removed" = "Limit Emir Kaldırıldı";
+
+"Stop Order Removed" = "Stop Emir Kaldırıldı";
+
+"Stop Order Removed" = "Stop Emir Kaldırıldı";
+
+"Limit Order Created" = "Limit Emir Oluşturuldu";
+
+"Stop Order Created" = "Stop Emir Oluşturuldu";
+
+"OCO Order Created" = "OCO Emir Oluşturuldu";
+
+"Stop Order Removed" = "Stop Emir Kaldırıldı";
+
+"Tr.SL Order Removed" = "Takip Eden Stop Emir Kaldırıldı";
+
+"Stop Order Removed" = "Stop Emir Kaldırıldı";
+
+"Limit Order Created" = "Limit Emir Oluşturuldu";
+
+"Stop Order Created" = "Stop Emir Oluşturuldu";
+
+"OCO Order Created" = "OCO Emir Oluşturuldu";
+
+"Limit Order Modified" = "Limit Emir Değiştirildi";
+
+"Stop Order Modified" = "Stop Emir Değiştirildi";
+
+"Position Opened" = "Pozisyon Açıldı";
+
+"TP Order Modified" = "TP Emri Değiştirildi";
+
+"SL Order Modified" = "SL Emri Değiştirildi";
+
+"Position Closed" = "Pozisyon Kapatıldı";
+
+"Order placing request" = "Emir Yerleştirme Talebi";
+
+"Position Closed (TP)" = "Pozisyon Kapatıldı (TP)";
+
+"Position Closed (SL)" = "Pozisyon Kapatıldı (SL)";
+
+"Trade executed (Mutual)" = "İşlem Gerçekleştirildi (Karşılıklı)";
+
+"Fill Market Order" = "Piyasa Emri Gerçekleşti";
+
+"Market Order Modified" = "Piyasa Emri Değiştirildi";
+
+"Margin Call Reached" = "Teminat Tamamlama Seviyesine Ulaşıldı";
+
+"Margin Call Warning." = "Teminat Tamamlama Çağrısı";
+
+"Account operation confirmation." = "Hesap Operasyonu Onaylandı";
+
+"Market Order Removed" = "Piyasa Emri Kaldırıldı";
+
+"Not enough Margin to open position" = "Pozisyon açmak için yeterli teminat yok";
+
+"Trade executed" = "İşlem gerçekleştirildi";
+
+"SL Order Removed" = "SL Emri Kaldırıldı";
+
+"TP Order Removed" = "TP Emri Kaldırıldı";
+
+"SL Order Created" = "SL Emri Oluşturuldu";
+
+"TP Order Created" = "TP Emri Oluşturuldu";
+
+"Trailing Stop Order Created" = "Takip Eden Stop Emir Oluşturuldu";
+
+"POSITION MODIFIED" = "Pozisyon Değiştirildi";
+
+"Market Close Order Removed" = "Piyasadan Kapama Emri Kaldırıldı";
+
+"Position Opened (Limit Order)" = "Pozisyon Açıldı (Limit Emir)";
+
+"Informational message" = "Bilgilendirme mesajı";
+
+"Trade executed (SL)" = "İşlem Gerçekleştirildi (SL)";
+
+"BROKER_MESSAGE" = "Broker Mesajı";
+
+/* Transfer and Withdrawal*/
+
+"TRANSFER_TITLE" = "Transfer";
+
+"SUBMIT_BUTTON" = "Onay";
+
+"INVALID_TRANSFER_SUM" = "Geçersiz transfer değeri";
+
+"AVAILABLE" = "Çekilebilir";
+
+"REMAINS" = "Kalan";
+
+"SOURCE_ACCOUNT" = "Çekilecek Hesap";
+
+"TRANSFER" = "Transfer";
+
+"TRANSFER_VALUE" = "Transfer değeri";
+
+"DEPOSIT" = "Para Yatırma";
+
+"TARGET_ACCOUNT" = "Aktarılacak Hesap";
+
+"WITHDRAWAL_TITLE" = "Para Çekme";
+
+"INVALID_WITHDRAWAL_SUM" = "Çekilecek tutar hatalıdır";
+
+"WITHDRAWAL" = "Para Çekme";
+
+"WITHDRAWAL_VALUE" = "Çekilebilir Tutar";
+
+/*Event log*/
+
+"EVENT_LOG" = "Olay Günlüğü";
+
+"EVENT_BROWSER" = "Olay Penceresi";
+
+/*Symbol Info*/
+
+"INSTRUMENT_FOREX" = "Foreks";
+
+"INSTRUMENT_STOCKS" = "Hisse Senetleri";
+
+"INSTRUMENT_FUTURES" = "Futures";
+
+"INSTRUMENT_OPTIONS" = "Options";
+
+"INSTRUMENT_CFDINDEX" = "CFD Index";
+
+"INSTRUMENT_FORWARD" = "Forward";
+
+"INSTRUMENT_CFDFUTURES" = "CFD Futures";
+
+"INSTRUMENT_INDICES" = "Endeksler";
+
+"INSTRUMENT_GENERAL" = "Genel";
+
+"INSTRUMENT_ACTIVE" = "Aktif";
+
+"INSTRUMENT_CLOSED" = "Kapalı";
+
+"INSTRUMENT_WAIT_FOR_PRICE" = "Fiyat İçin Bekleniyor";
+
+"INSTRUMENT_DELIVERED" = "Gönderildi";
+
+"INSTRUMENT_READY" = "Hazır";
+
+"TRADING_SESSION_AUCTION" = "Müzayede";
+
+"TRADING_SESSION_MAINTRADE" = "Ana İşlem Seansı";
+
+"TRADING_SESSION_EXTTRADE" = "Seans Dışı Emir";
+
+"TRADING_SESSION_CLEARING" = "Takas";
+
+"SYMBOL_INFO_SYMBOL" = "Sembol";
+
+"SYMBOL_INFO_DESCRIPTION" = "Tanımlama";
+
+"SYMBOL_INFO_FUTURES_CLASS" = "Futures Sınıfı";
+
+"SYMBOL_INFO_EXANGE" = "Borsa";
+
+"SYMBOL_INFO_ASSET_CLASS" = "Varlık Sınıfı";
+
+"SYMBOL_INFO_DELIVERY_METHOD" = "Teslimat Yöntemi";
+
+"SYMBOL_INFO_CONTRACT_MONTH" = "Kontrat Tarihi";
+
+"SYMBOL_INFO_FIRST_TRADE_DATE" = "İlk İşlem Tarihi";
+
+"SYMBOL_INFO_LAST_TRADE_DATE" = "Son İşlem Tarihi";
+
+"SYMBOL_INFO_NOTICE_DATE" = "Uyarı Tarihi";
+
+"SYMBOL_INFO_SETTLEMENT_DATE" = "Vade Tarihi";
+
+"SYMBOL_INFO_CLOSE_OUT_DATE" = "Kapanış Tarihi";
+
+"SYMBOL_INFO_TRADING_BALANCE" = "İşlem Bakiyesi";
+
+"SYMBOL_INFO_TRADING_ALLOWED" = "İşlem Modu";
+
+"SYMBOL_INFO_DELIVERY_STATUS" = "Teslimat Durumu";
+
+"SYMBOL_INFO_CURRENT_SESSION" = "Mevcut Seans";
+
+"SYMBOL_INFO_CURRENT_SESSION_NOT_TRDING_DAY" = "Tatil Günü";
+
+"SYMBOL_INFO_CURRENT_SESSION_SHORTENED" = "Yarım İş Günü";
+
+"SYMBOL_INFO_NEXT_HOLIDAY" = "Bir Sonraki Tatil Günü";
+
+"SYMBOL_INFO_NOT_DEFINED" = "Tanımlı Değil";
+
+"SYMBOL_INFO_EXP" = "Fiyatlanan Döviz";
+
+"SYMBOL_INFO_LOT_SIZE" = "Lot Büyüklüğü";
+
+"SYMBOL_INFO_TICK_COAST" = "Tick Maliyeti";
+
+"SYMBOL_INFO_TICK_SIZE" = "Tick Büyüklüğü";
+
+"SYMBOL_INFO_MINIMAL_LOT" = "Minimal lot";
+
+"SYMBOL_INFO_LOT_STEP" = "Lot Adımı";
+
+"SYMBOL_INFO_FEES_SWAPBUY" = "Yatırılan Swap";
+
+"SYMBOL_INFO_FEES_SWAPSELL" = "Ödenen Swap";
+
+"SYMBOL_INFO_FEES_OPEN" = "Açık";
+
+"SYMBOL_INFO_FEES_CLOSE" = "Kapalı";
+
+"SYMBOL_INFO_FEES_ORDER_MIN" = "MIN per order";
+
+"SYMBOL_INFO_FEES_ORDER_MAX" = "MAX per order";
+
+"SYMBOL_INFO_FEES_FREE" = "Komisyonsuz Tutar";
+
+"SYMBOL_INFO_FEES_PHONE" = "Dealer Komisyonu";
+
+"SYMBOL_INFO" = "Bilgi";
+
+"SYMBOL_INFO_GROUP_TRADING" = "İşlem";
+
+"SYMBOL_INFO_GROUP_MARGIN" = "Teminat";
+
+"SYMBOL_INFO_GROUP_FEES" = "İşlem Maliyeti";
+
+"SYMBOL_INFO_GROUP_SESSION" = "Seans Bilgisi";
+
+"SYMBOL_INFO_GROUP_GENERAL" = "Genel";
+
+/*Secure Logs*/
+
+"SECURE_LOG" = "Güvenli Giriş";
+
+"LOG_DATE" = "Giriş Tarihi";
+
+/*Event Log for header*/
+"Delayed Stop Order Removed" = "Delayed Stop order removed ";
+"Delayed Limit Order Created" = "Delayed Limit order created ";
+"Delayed Stop Order Created" = "Delayed Stop order created ";
+"Delayed OCO Order Created" = "Delayed OCO order created ";
+"Delayed Limit Order Modified" = "Delayed Limit order modified ";
+"Delayed Stop Order Modified" = "Delayed Stop order modified ";
+"Stop Limit Order Created" = "Stop limit order created ";
+"Stop Limit Order Modified" = "Stop limit order modified ";
+"Stop Limit Order Removed" = "Stop limit order removed ";
+"Trailing Stop Order Created" = "Trailing stop order created ";
+"Trailing Stop Order Modified" = "Trailing stop order modified ";
+"Trailing Stop Order Removed" = "Trailing stop order removed ";
+"Delayed Stop Limit Order Created" = "Delayed Stop limit order created ";
+"Delayed Stop Limit Order Modified" = "Delayed Stop limit order modified ";
+"Delayed Stop Limit Order Removed" = "Delayed Stop limit order removed ";
+"Delayed Trailing Stop Order Created" = "Delayed Trailing stop order created ";
+"Delayed Trailing Stop Order Modified" = "Delayed Trailing stop order modified ";
+"Delayed Trailing Stop Order Removed" = "Delayed Trailing stop order removed ";
+"Limit Order Removed" = "Limit order removed ";
+"Stop Order Removed" = "Stop order removed ";
+"Stop Order Removed" = "Stop order removed ";
+"Limit Order Created" = "Limit order created ";
+"Stop Order Created" = "Stop order created ";
+"OCO Order Created" = "OCO order created ";
+"Stop Order Removed" = "Stop order removed ";
+"Tr.SL Order Removed" = "Tr.SL order removed ";
+"Stop Order Removed" = "Stop order removed ";
+"Limit Order Created" = "Limit order created ";
+"Stop Order Created" = "Stop order created ";
+"OCO Order Created" = "OCO order created ";
+"Limit Order Modified" = "Limit order modified ";
+"Stop Order Modified" = "Stop order modified ";
+"Position Opened" = "Position opened ";
+"TP Order Modified" = "TP order modified ";
+"SL Order Modified" = "SL order modified ";
+"Position Closed" = "Position closed ";
+"Order placing request" = "Order placing request ";
+"Position Closed (TP)" = "Position closed (TP) ";
+"Position Closed (SL)" = "Position closed (SL) ";
+"Trade executed (Mutual)" = "Trade executed (Mutual) ";
+"Fill Market Order" = "Market order filled ";
+"Market Order Modified" = "Market order modified ";
+"Margin Call Reached" = "Margin Call reached ";
+"Margin Call Warning." = "Margin Call warning. ";
+"Account operation confirmation." = "Account operation confirmation. ";
+"Market Order Removed" = "Market order removed ";
+"Not enough Margin to open position" = "Not enough margin to open position ";
+"Trade executed" = "Trade executed ";
+"SL Order Removed" = "SL order removed ";
+"TP Order Removed" = "TP order removed ";
+"SL Order Created" = "SL order created ";
+"TP Order Created" = "TP order created ";
+"Trailing Stop Order Created" = "Trailing stop order created ";
+"POSITION MODIFIED" = "Position modified ";
+"Market Close Order Removed" = "Market close order removed ";
+"Position Opened (Limit Order)" = "Position opened (Limit order) ";
+"Informational message" = "Informational message ";
+"Trade executed (SL)" = "Trade executed (SL) ";
+"Order Modified" = "Order modified ";
+"Fill Close Market Order" = "Close market order filled ";
+"Fill Market Order" = "Market order filled ";
+"Fill Close Market Order (Mutual)" = "Close market order (Mutual) filled ";
+"Fill Market Order (Mutual)" = "Market order (Mutual) filled ";
+"Fill Close Limit Order" = "Close limit order filled ";
+"Fill Limit Order" = "Limit order filled ";
+"Fill Close Stop Order" = "Close stop order filled ";
+"Fill Close Traling Stop Order" = "Close Trailing stop order filled ";
+"Fill Stop Order" = "Stop order filled ";
+"Fill Traling Stop Order" = "Trailing stop order filled ";
+"Fill Stop Limit Order" = "Stop limit order filled ";
+"Partially Reject Close Market Order" = "Close market order partially rejected ";
+"Partially Reject Market Order" = "Market order partially rejected ";
+"Partially Reject Close Limit Order" = "Close limit order partially rejected ";
+"Partially Reject Limit Order" = "Limit order partially rejected ";
+"Partially Reject Close Stop Order" = "Close stop order partially rejected ";
+"Partially Reject Close Traling Stop Order" = "Close Trailing stop order partially rejected ";
+"Partially Reject Stop Order" = "Stop order partially rejected ";
+"Partially Reject Traling Stop Order" = "Trailing stop order partially rejected ";
+"Partially Reject Stop Limit Order" = "Stop limit order partially rejected ";
+"Fill Stop Limit Order" = "Stop limit order filled ";
+"SL Order Modified" = "SL order modified ";
+"TP Order Modified" = "TP order modified ";
+"Market Close Order Modified" = "Close market order modified ";
+"Close Market Order Created" = "Close market order created ";
+"Market Order Created" = "Market order created ";
+"Fund processing failed." = "Fund processing failed. ";
+"Limit order Filled" = "Limit order filled ";
+"Stop order Filled" = "Stop order filled ";
+"StopLimit order Filled" = "Stop limit order filled ";
+"Market_order_Filled" = "Market order filled ";
+"Limit_order_Filled_Mutual" = "Limit order filled (Mutual) ";
+"Stop_order_Filled_Mutual" = "Stop order filled (Mutual) ";
+"StopLimit_order_Filled_Mutual" = "Stop limit order filled (Mutual) ";
+"Market order Filled Mutual" = "Market order filled (Mutual) ";
+"Limit order Filled (Stop Order)" = "Limit order filled (Stop order) ";
+"Stop order Filled (Stop Order)" = "Stop order filled (Stop order) ";
+"StopLimit order Filled (Stop Order)" = "Stop limit order filled (Stop order) ";
+"Market order Filled (Stop Order)" = "Market order filled (Stop order) ";
+"Limit order Filled (Trailing Stop Order)" = "Limit order filled (Trailing stop order) ";
+"Stop order Filled (Trailing Stop Order)" = "Stop order filled (Trailing stop order) ";
+"StopLimit order Filled (Trailing Stop Order)" = "Stop limit order filled (Trailing stop order) ";
+"Market order Filled (Trailing Stop Order)" = "Market order filled (Trailing stop order) ";
+"Limit order Filled (Limit Order)" = "Limit order filled (Limit order) ";
+"Stop order Filled (Limit Order)" = "Stop order filled (Limit order) ";
+"StopLimit order Filled (Limit Order)" = "Stop limit order filled (Limit order) ";
+"Market order Filled (Limit Order)" = "Market order filled (Limit order) ";
+"Position Closed" = "Position closed ";
+"Trade executed" = "Trade executed ";
+"Position Closed (Mutual)" = "Position closed (Mutual) ";
+"Trade executed (Mutual)" = "Trade executed (Mutual) ";
+"Position Closed (Margin Call)" = "Position closed (Margin Call) ";
+"Trade executed (Margin Call)" = "Trade executed (Margin Call) ";
+"Position Closed (Option Expired)" = "Position closed (Option expired) ";
+"Trade executed (Option Expired)" = "Trade executed (Option expired) ";
+"Position Closed (SL)" = "Position closed (SL) ";
+"Trade executed (SL)" = "Trade executed (SL) ";
+"Position Closed (TrSL)" = "Position closed (Tr.SL) ";
+"Trade executed (TrSL)" = "Trade executed (Tr.SL) ";
+"Position Closed (TP)" = "Position closed (TP) ";
+"Trade executed (TP)" = "Trade executed (TP) ";
+"Position is already closing" = "Position is already closing ";
+
+/*Event Log for value*/
+"User" = "User ";
+"Account" = "Account ";
+"Order number" = "Order number ";
+"Instrument" = "Symbol ";
+"Amount" = "Amount ";
+"Operation" = "Operation ";
+"Average filled price" = "Average filled price ";
+"Last fill price" = "Last filled price ";
+"Time" = "Time ";
+"Sell" = "Sell ";
+"Buy" = "Buy ";
+"Position number" = "Position number ";
+"Price" = "Price ";
+"Margin Call" = "Margin call ";
+"Stop Out Type" = "Stop out type ";
+"Deposit" = "Deposit ";
+"Message" = "Message ";
+"Please deposit on your account." = "Please deposit on your account. ";
+"Fund User" = "Fund user ";
+"Fund Account" = "Fund account ";
+"Investor User" = "Investor user ";
+"Investor Account" = "Investor account ";
+"Share Price" = "Share price ";
+"Pending Shares" = "Pending shares ";
+"Pending Capital" = "Pending capital ";
+"Pending Gross P/L" = "Pending gross P/L ";
+"Event" = "Event ";
+"Can't finish investment period" = "Can't finish investment period ";
+"Can't perform rollover" = "Can't perform rollover ";
+"Notification" = "Notification ";
+"Share Price" = "Share price ";
+"Reason" = "Reason ";
+"Account Name" = "Account name ";
+"Counter Account Name" = "Counter account name ";
+"Operation Id" = "Operation ID ";
+"Counter Operation Id" = "Counter operation ID ";
+"Operation Type" = "Operation type ";
+"Sum" = "Sum ";
+"Basis" = "Basis ";
+"Open lots" = "Open lots ";
+"Lots to open" = "Lots to open ";
+"Commission" = "Commission ";
+"Available funds" = "Available funds ";
+"Init margin req." = "Init margin req. ";
+"Minimum Open Margin" = "Minimum open margin ";
+"Current Balance" = "Current balance ";
+"Required Balance" = "Required balance ";
+"Open lots" = "Open lots ";
+"Comission" = "Commission ";
+"Operation" = "Operation ";
+"Avg.Price" = "Avg.price ";
+"SL trailing offset" = "SL trailing offset ";
+"SL price" = "SL price ";
+"TP price" = "TP price ";
+"Open order type" = "Open order type ";
+"Commissions" = "Commissions ";
+"Modifyied by" = "Modified by ";
+"Position number" = "Position number ";
+"Open date" = "Open date ";
+"Open price" = "Open price ";
+"Close order type" = "Close order type ";
+"Realised profit/loss" = "Realised profit/loss ";
+"Market" = "Market ";
+"Limit" = "Limit ";
+"Stop" = "Stop ";
+"Traling Stop" = "Trailing stop ";
+"Stop Limit" = "Stop limit ";
+"Unknown" = "Unknown ";
+"Route Name" = "Route name ";
+"Refused Amount" = "Refused amount ";
+"Bound To" = "Bound to ";
+"Route" = "Route ";
+"Limit price" = "Limit price ";
+"Stop price" = "Stop price ";
+"Order price" = "Order price ";
+"Type" = "Type ";
+"Stop-loss" = "Stop loss ";
+"Take-profit" = "Take profit ";
+"SettleDate" = "SettleDate ";

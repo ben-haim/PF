@@ -1,0 +1,13 @@
+"SERVER_TIMEOUT" = "Sorry but server is not reachable at this moment";
+
+"PARSE_CHART_ERROR" = "Invalid chart format";
+
+"CHART_SIGNATURE_ERROR" = "Chart signature check is failed";
+
+"CHART_UNZIP_ERROR" = "Chart data unzip is failed";
+
+"PARSE_REPORT_ERROR" = "Invalid report format";
+
+"PARSE_RESPONSE_ERROR" = "Invalid response format";
+
+"CONNECTION_ERROR" = "Problem with server connection";

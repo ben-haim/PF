@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+   <head>
+      <link rel='stylesheet' type='text/css' href='file://<TMPL_var RESOURCE_PATH>/PFStory_iPad.css'>
+   </head>
+   <body>
+      <div class="story-header"><TMPL_var HEADER></div>
+      <div class="story-date"><TMPL_var DATE></div>
+      <TMPL_loop LINES>
+         <div class="story-line"><TMPL_var LINE></div>
+      </TMPL_loop>
+   </body>
+</html>

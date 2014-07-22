@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[PFAssetAccount currency]:PFAssetAccount.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PFTableViewCard tableView:didSelectRowAtIndexPath:]:PFTableViewCard.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "item_.cell">
+            </PersistentString>
+            <PersistentString
+               value = "oldItemClass">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PFApi connectToServerWithInfo:]:PFApi.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "server_info_.host">
+            </PersistentString>
+            <PersistentString
+               value = "server_info_.secure">
+            </PersistentString>
+            <PersistentString
+               value = "server_info_.useHTTP">
+            </PersistentString>
+            <PersistentString
+               value = "server_info_.port">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PFCrossRates priceForCurrency:toCurrency:]:PFCrossRates.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PFSymbol spread]:PFSymbol.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

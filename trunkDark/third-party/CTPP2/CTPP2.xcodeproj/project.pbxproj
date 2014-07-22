@@ -1,0 +1,1446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B811C1814878BE2001B46D8 /* CTPP2_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* CTPP2_Prefix.pch */; };
+		5B811C1914878BE2001B46D8 /* CDT.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD8F12E42DA500777281 /* CDT.hpp */; };
+		5B811C1A14878BE2001B46D8 /* CDTSortRoutines.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9012E42DA500777281 /* CDTSortRoutines.hpp */; };
+		5B811C1B14878BE2001B46D8 /* CTPP2BitIndex.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9112E42DA500777281 /* CTPP2BitIndex.hpp */; };
+		5B811C1C14878BE2001B46D8 /* CTPP2CharIterator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9212E42DA500777281 /* CTPP2CharIterator.hpp */; };
+		5B811C1D14878BE2001B46D8 /* CTPP2Compiler.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9312E42DA500777281 /* CTPP2Compiler.hpp */; };
+		5B811C1E14878BE2001B46D8 /* CTPP2DTOA.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9412E42DA500777281 /* CTPP2DTOA.hpp */; };
+		5B811C1F14878BE2001B46D8 /* CTPP2Error.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9512E42DA500777281 /* CTPP2Error.hpp */; };
+		5B811C2014878BE2001B46D8 /* CTPP2ErrorCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9612E42DA500777281 /* CTPP2ErrorCodes.h */; };
+		5B811C2114878BE2001B46D8 /* CTPP2Exception.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9712E42DA500777281 /* CTPP2Exception.hpp */; };
+		5B811C2214878BE2001B46D8 /* CTPP2FileLogger.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9812E42DA500777281 /* CTPP2FileLogger.hpp */; };
+		5B811C2314878BE2001B46D8 /* CTPP2FileOutputCollector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9912E42DA500777281 /* CTPP2FileOutputCollector.hpp */; };
+		5B811C2414878BE2001B46D8 /* CTPP2FileSourceLoader.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9A12E42DA500777281 /* CTPP2FileSourceLoader.hpp */; };
+		5B811C2514878BE2001B46D8 /* CTPP2GlobalDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9B12E42DA500777281 /* CTPP2GlobalDefines.h */; };
+		5B811C2614878BE2001B46D8 /* CTPP2HashTable.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9C12E42DA500777281 /* CTPP2HashTable.hpp */; };
+		5B811C2714878BE2001B46D8 /* CTPP2JSONFileParser.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9D12E42DA500777281 /* CTPP2JSONFileParser.hpp */; };
+		5B811C2814878BE2001B46D8 /* CTPP2JSONParser.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9E12E42DA500777281 /* CTPP2JSONParser.hpp */; };
+		5B811C2914878BE2001B46D8 /* CTPP2Logger.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9F12E42DA500777281 /* CTPP2Logger.hpp */; };
+		5B811C2A14878BE2001B46D8 /* CTPP2OutputCollector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDA012E42DA500777281 /* CTPP2OutputCollector.hpp */; };
+		5B811C2B14878BE2001B46D8 /* CTPP2Parser.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDA112E42DA500777281 /* CTPP2Parser.hpp */; };
+		5B811C2C14878BE2001B46D8 /* CTPP2ParserException.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDA212E42DA500777281 /* CTPP2ParserException.hpp */; };
+		5B811C2D14878BE2001B46D8 /* CTPP2SourceLoader.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDA312E42DA500777281 /* CTPP2SourceLoader.hpp */; };
+		5B811C2E14878BE2001B46D8 /* CTPP2Sprintf.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDA412E42DA500777281 /* CTPP2Sprintf.hpp */; };
+		5B811C2F14878BE2001B46D8 /* CTPP2StaticData.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDA512E42DA500777281 /* CTPP2StaticData.hpp */; };
+		5B811C3014878BE2001B46D8 /* CTPP2StaticText.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDA612E42DA500777281 /* CTPP2StaticText.hpp */; };
+		5B811C3114878BE2001B46D8 /* CTPP2StreamOutputCollector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDA712E42DA500777281 /* CTPP2StreamOutputCollector.hpp */; };
+		5B811C3214878BE2001B46D8 /* CTPP2StringBuffer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDA812E42DA500777281 /* CTPP2StringBuffer.hpp */; };
+		5B811C3314878BE2001B46D8 /* CTPP2StringIconvOutputCollector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDA912E42DA500777281 /* CTPP2StringIconvOutputCollector.hpp */; };
+		5B811C3414878BE2001B46D8 /* CTPP2StringOutputCollector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDAA12E42DA500777281 /* CTPP2StringOutputCollector.hpp */; };
+		5B811C3514878BE2001B46D8 /* CTPP2SymbolTable.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDAB12E42DA500777281 /* CTPP2SymbolTable.hpp */; };
+		5B811C3614878BE2001B46D8 /* CTPP2Syntax.h in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDAC12E42DA500777281 /* CTPP2Syntax.h */; };
+		5B811C3714878BE2001B46D8 /* CTPP2SyscallFactory.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDAD12E42DA500777281 /* CTPP2SyscallFactory.hpp */; };
+		5B811C3814878BE2001B46D8 /* CTPP2SysHeaders.h in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDAE12E42DA500777281 /* CTPP2SysHeaders.h */; };
+		5B811C3914878BE2001B46D8 /* CTPP2SysTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDAF12E42DA500777281 /* CTPP2SysTypes.h */; };
+		5B811C3A14878BE2001B46D8 /* CTPP2Time.h in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDB012E42DA500777281 /* CTPP2Time.h */; };
+		5B811C3B14878BE2001B46D8 /* CTPP2Types.h in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDB112E42DA500777281 /* CTPP2Types.h */; };
+		5B811C3C14878BE2001B46D8 /* CTPP2Util.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDB212E42DA500777281 /* CTPP2Util.hpp */; };
+		5B811C3D14878BE2001B46D8 /* CTPP2VM.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDB312E42DA500777281 /* CTPP2VM.hpp */; };
+		5B811C3E14878BE2001B46D8 /* CTPP2VMArgStack.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDB412E42DA500777281 /* CTPP2VMArgStack.hpp */; };
+		5B811C3F14878BE2001B46D8 /* CTPP2VMCodeStack.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDB512E42DA500777281 /* CTPP2VMCodeStack.hpp */; };
+		5B811C4014878BE2001B46D8 /* CTPP2VMDebugInfo.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDB612E42DA500777281 /* CTPP2VMDebugInfo.hpp */; };
+		5B811C4114878BE2001B46D8 /* CTPP2VMDumper.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDB712E42DA500777281 /* CTPP2VMDumper.hpp */; };
+		5B811C4214878BE2001B46D8 /* CTPP2VMException.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDB812E42DA500777281 /* CTPP2VMException.hpp */; };
+		5B811C4314878BE2001B46D8 /* CTPP2VMExecutable.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDB912E42DA500777281 /* CTPP2VMExecutable.hpp */; };
+		5B811C4414878BE2001B46D8 /* CTPP2VMFileLoader.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDBA12E42DA500777281 /* CTPP2VMFileLoader.hpp */; };
+		5B811C4514878BE2001B46D8 /* CTPP2VMInstruction.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDBB12E42DA500777281 /* CTPP2VMInstruction.hpp */; };
+		5B811C4614878BE2001B46D8 /* CTPP2VMLoader.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDBC12E42DA500777281 /* CTPP2VMLoader.hpp */; };
+		5B811C4714878BE2001B46D8 /* CTPP2VMMemoryCore.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDBD12E42DA500777281 /* CTPP2VMMemoryCore.hpp */; };
+		5B811C4814878BE2001B46D8 /* CTPP2VMOpcodeCollector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDBE12E42DA500777281 /* CTPP2VMOpcodeCollector.hpp */; };
+		5B811C4914878BE2001B46D8 /* CTPP2VMOpcodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDBF12E42DA500777281 /* CTPP2VMOpcodes.h */; };
+		5B811C4A14878BE2001B46D8 /* CTPP2VMStackException.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDC012E42DA500777281 /* CTPP2VMStackException.hpp */; };
+		5B811C4B14878BE2001B46D8 /* CTPP2VMSTDLib.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDC112E42DA500777281 /* CTPP2VMSTDLib.hpp */; };
+		5B811C4C14878BE2001B46D8 /* CTPP2VMSyscall.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDC212E42DA500777281 /* CTPP2VMSyscall.hpp */; };
+		5B811C4D14878BE2001B46D8 /* CTPP2VMSTDLibFunctions.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDC412E42DA500777281 /* CTPP2VMSTDLibFunctions.hpp */; };
+		5B811C4E14878BE2001B46D8 /* FnArrayElement.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDC512E42DA500777281 /* FnArrayElement.hpp */; };
+		5B811C4F14878BE2001B46D8 /* FnAvg.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDC612E42DA500777281 /* FnAvg.hpp */; };
+		5B811C5014878BE2001B46D8 /* FnBase64Decode.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDC712E42DA500777281 /* FnBase64Decode.hpp */; };
+		5B811C5114878BE2001B46D8 /* FnBase64Encode.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDC812E42DA500777281 /* FnBase64Encode.hpp */; };
+		5B811C5214878BE2001B46D8 /* FnCast.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDC912E42DA500777281 /* FnCast.hpp */; };
+		5B811C5314878BE2001B46D8 /* FnConcat.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDCA12E42DA500777281 /* FnConcat.hpp */; };
+		5B811C5414878BE2001B46D8 /* FnDateFormat.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDCB12E42DA600777281 /* FnDateFormat.hpp */; };
+		5B811C5514878BE2001B46D8 /* FnDefault.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDCC12E42DA600777281 /* FnDefault.hpp */; };
+		5B811C5614878BE2001B46D8 /* FnDefined.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDCD12E42DA600777281 /* FnDefined.hpp */; };
+		5B811C5714878BE2001B46D8 /* FnEmitter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDCE12E42DA600777281 /* FnEmitter.hpp */; };
+		5B811C5814878BE2001B46D8 /* FnError.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDCF12E42DA600777281 /* FnError.hpp */; };
+		5B811C5914878BE2001B46D8 /* FnFormParam.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDD012E42DA600777281 /* FnFormParam.hpp */; };
+		5B811C5A14878BE2001B46D8 /* FnGetText.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDD112E42DA600777281 /* FnGetText.hpp */; };
+		5B811C5B14878BE2001B46D8 /* FnGetText_.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDD212E42DA600777281 /* FnGetText_.hpp */; };
+		5B811C5C14878BE2001B46D8 /* FnHashElement.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDD312E42DA600777281 /* FnHashElement.hpp */; };
+		5B811C5D14878BE2001B46D8 /* FnHMACMD5.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDD412E42DA600777281 /* FnHMACMD5.hpp */; };
+		5B811C5E14878BE2001B46D8 /* FnHrefParam.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDD512E42DA600777281 /* FnHrefParam.hpp */; };
+		5B811C5F14878BE2001B46D8 /* FnHTMLEscape.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDD612E42DA600777281 /* FnHTMLEscape.hpp */; };
+		5B811C6014878BE2001B46D8 /* FnIconv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDD712E42DA600777281 /* FnIconv.hpp */; };
+		5B811C6114878BE2001B46D8 /* FnInSet.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDD812E42DA600777281 /* FnInSet.hpp */; };
+		5B811C6214878BE2001B46D8 /* FnJSEscape.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDD912E42DA600777281 /* FnJSEscape.hpp */; };
+		5B811C6314878BE2001B46D8 /* FnJSON.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDDA12E42DA600777281 /* FnJSON.hpp */; };
+		5B811C6414878BE2001B46D8 /* FnListElement.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDDB12E42DA600777281 /* FnListElement.hpp */; };
+		5B811C6514878BE2001B46D8 /* FnLog.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDDC12E42DA600777281 /* FnLog.hpp */; };
+		5B811C6614878BE2001B46D8 /* FnMax.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDDD12E42DA600777281 /* FnMax.hpp */; };
+		5B811C6714878BE2001B46D8 /* FnMBSize.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDDE12E42DA600777281 /* FnMBSize.hpp */; };
+		5B811C6814878BE2001B46D8 /* FnMBSubstring.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDDF12E42DA600777281 /* FnMBSubstring.hpp */; };
+		5B811C6914878BE2001B46D8 /* FnMBTruncate.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDE012E42DA600777281 /* FnMBTruncate.hpp */; };
+		5B811C6A14878BE2001B46D8 /* FnMD5.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDE112E42DA600777281 /* FnMD5.hpp */; };
+		5B811C6B14878BE2001B46D8 /* FnMin.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDE212E42DA600777281 /* FnMin.hpp */; };
+		5B811C6C14878BE2001B46D8 /* FnNumeral.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDE312E42DA600777281 /* FnNumeral.hpp */; };
+		5B811C6D14878BE2001B46D8 /* FnNumFormat.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDE412E42DA600777281 /* FnNumFormat.hpp */; };
+		5B811C6E14878BE2001B46D8 /* FnObjDump.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDE512E42DA600777281 /* FnObjDump.hpp */; };
+		5B811C6F14878BE2001B46D8 /* FnRandom.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDE612E42DA600777281 /* FnRandom.hpp */; };
+		5B811C7014878BE2001B46D8 /* FnSize.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDE712E42DA600777281 /* FnSize.hpp */; };
+		5B811C7114878BE2001B46D8 /* FnSprintf.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDE812E42DA600777281 /* FnSprintf.hpp */; };
+		5B811C7214878BE2001B46D8 /* FnSubstring.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDE912E42DA600777281 /* FnSubstring.hpp */; };
+		5B811C7314878BE2001B46D8 /* FnTruncate.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDEA12E42DA600777281 /* FnTruncate.hpp */; };
+		5B811C7414878BE2001B46D8 /* FnURIEscape.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDEB12E42DA600777281 /* FnURIEscape.hpp */; };
+		5B811C7514878BE2001B46D8 /* FnURLEscape.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDEC12E42DA600777281 /* FnURLEscape.hpp */; };
+		5B811C7614878BE2001B46D8 /* FnVersion.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDED12E42DA600777281 /* FnVersion.hpp */; };
+		5B811C7714878BE2001B46D8 /* FnWMLEscape.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDEE12E42DA600777281 /* FnWMLEscape.hpp */; };
+		5B811C7814878BE2001B46D8 /* FnXMLEscape.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDEF12E42DA600777281 /* FnXMLEscape.hpp */; };
+		5B811C7914878BE2001B46D8 /* STLException.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDF012E42DA600777281 /* STLException.hpp */; };
+		5B811C7A14878BE2001B46D8 /* STLFunctional.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDF112E42DA600777281 /* STLFunctional.hpp */; };
+		5B811C7B14878BE2001B46D8 /* STLIosfwd.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDF212E42DA600777281 /* STLIosfwd.hpp */; };
+		5B811C7C14878BE2001B46D8 /* STLMap.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDF312E42DA600777281 /* STLMap.hpp */; };
+		5B811C7D14878BE2001B46D8 /* STLOstream.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDF412E42DA600777281 /* STLOstream.hpp */; };
+		5B811C7E14878BE2001B46D8 /* STLPair.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDF512E42DA600777281 /* STLPair.hpp */; };
+		5B811C7F14878BE2001B46D8 /* STLString.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDF612E42DA600777281 /* STLString.hpp */; };
+		5B811C8014878BE2001B46D8 /* STLVector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDF712E42DA600777281 /* STLVector.hpp */; };
+		5B811C8214878BE2001B46D8 /* CDT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FDF912E42DA600777281 /* CDT.cpp */; };
+		5B811C8314878BE2001B46D8 /* CDTSortRoutines.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FDFA12E42DA600777281 /* CDTSortRoutines.cpp */; };
+		5B811C8414878BE2001B46D8 /* CTPP2BitIndex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FDFB12E42DA600777281 /* CTPP2BitIndex.cpp */; };
+		5B811C8514878BE2001B46D8 /* CTPP2Compiler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FDFC12E42DA600777281 /* CTPP2Compiler.cpp */; };
+		5B811C8614878BE2001B46D8 /* CTPP2DTOA.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FDFD12E42DA600777281 /* CTPP2DTOA.cpp */; };
+		5B811C8714878BE2001B46D8 /* CTPP2Error.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FDFE12E42DA600777281 /* CTPP2Error.cpp */; };
+		5B811C8814878BE2001B46D8 /* CTPP2Exception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FDFF12E42DA600777281 /* CTPP2Exception.cpp */; };
+		5B811C8914878BE2001B46D8 /* CTPP2FileLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0012E42DA600777281 /* CTPP2FileLogger.cpp */; };
+		5B811C8A14878BE2001B46D8 /* CTPP2FileOutputCollector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0112E42DA600777281 /* CTPP2FileOutputCollector.cpp */; };
+		5B811C8B14878BE2001B46D8 /* CTPP2FileSourceLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0212E42DA600777281 /* CTPP2FileSourceLoader.cpp */; };
+		5B811C8C14878BE2001B46D8 /* CTPP2HashTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0312E42DA600777281 /* CTPP2HashTable.cpp */; };
+		5B811C8D14878BE2001B46D8 /* CTPP2JSONFileParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0412E42DA600777281 /* CTPP2JSONFileParser.cpp */; };
+		5B811C8E14878BE2001B46D8 /* CTPP2JSONParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0512E42DA600777281 /* CTPP2JSONParser.cpp */; };
+		5B811C8F14878BE2001B46D8 /* CTPP2Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0612E42DA600777281 /* CTPP2Logger.cpp */; };
+		5B811C9014878BE2001B46D8 /* CTPP2Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0712E42DA600777281 /* CTPP2Parser.cpp */; };
+		5B811C9114878BE2001B46D8 /* CTPP2ParserException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0812E42DA600777281 /* CTPP2ParserException.cpp */; };
+		5B811C9214878BE2001B46D8 /* CTPP2Sprintf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0912E42DA600777281 /* CTPP2Sprintf.cpp */; };
+		5B811C9314878BE2001B46D8 /* CTPP2StaticData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0A12E42DA600777281 /* CTPP2StaticData.cpp */; };
+		5B811C9414878BE2001B46D8 /* CTPP2StaticText.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0B12E42DA600777281 /* CTPP2StaticText.cpp */; };
+		5B811C9514878BE2001B46D8 /* CTPP2StreamOutputCollector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0C12E42DA600777281 /* CTPP2StreamOutputCollector.cpp */; };
+		5B811C9614878BE2001B46D8 /* CTPP2StringBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0D12E42DA600777281 /* CTPP2StringBuffer.cpp */; };
+		5B811C9714878BE2001B46D8 /* CTPP2StringIconvOutputCollector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0E12E42DA600777281 /* CTPP2StringIconvOutputCollector.cpp */; };
+		5B811C9814878BE2001B46D8 /* CTPP2StringOutputCollector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0F12E42DA600777281 /* CTPP2StringOutputCollector.cpp */; };
+		5B811C9914878BE2001B46D8 /* CTPP2SyscallFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1012E42DA600777281 /* CTPP2SyscallFactory.cpp */; };
+		5B811C9A14878BE2001B46D8 /* CTPP2Util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1112E42DA600777281 /* CTPP2Util.cpp */; };
+		5B811C9B14878BE2001B46D8 /* CTPP2VM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1212E42DA600777281 /* CTPP2VM.cpp */; };
+		5B811C9C14878BE2001B46D8 /* CTPP2VMArgStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1312E42DA600777281 /* CTPP2VMArgStack.cpp */; };
+		5B811C9D14878BE2001B46D8 /* CTPP2VMCodeStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1412E42DA600777281 /* CTPP2VMCodeStack.cpp */; };
+		5B811C9E14878BE2001B46D8 /* CTPP2VMDebugInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1512E42DA600777281 /* CTPP2VMDebugInfo.cpp */; };
+		5B811C9F14878BE2001B46D8 /* CTPP2VMDumper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1612E42DA600777281 /* CTPP2VMDumper.cpp */; };
+		5B811CA014878BE2001B46D8 /* CTPP2VMException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1712E42DA600777281 /* CTPP2VMException.cpp */; };
+		5B811CA114878BE2001B46D8 /* CTPP2VMExecutable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1812E42DA600777281 /* CTPP2VMExecutable.cpp */; };
+		5B811CA214878BE2001B46D8 /* CTPP2VMFileLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1912E42DA600777281 /* CTPP2VMFileLoader.cpp */; };
+		5B811CA314878BE2001B46D8 /* CTPP2VMMemoryCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1A12E42DA600777281 /* CTPP2VMMemoryCore.cpp */; };
+		5B811CA414878BE2001B46D8 /* CTPP2VMOpcodeCollector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1B12E42DA600777281 /* CTPP2VMOpcodeCollector.cpp */; };
+		5B811CA514878BE2001B46D8 /* CTPP2VMSTDLib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1C12E42DA600777281 /* CTPP2VMSTDLib.cpp */; };
+		5B811CA614878BE2001B46D8 /* CTPP2VMSyscall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1D12E42DA600777281 /* CTPP2VMSyscall.cpp */; };
+		5B811CA714878BE2001B46D8 /* FnArrayElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1F12E42DA600777281 /* FnArrayElement.cpp */; };
+		5B811CA814878BE2001B46D8 /* FnAvg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2012E42DA600777281 /* FnAvg.cpp */; };
+		5B811CA914878BE2001B46D8 /* FnBase64Decode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2112E42DA600777281 /* FnBase64Decode.cpp */; };
+		5B811CAA14878BE2001B46D8 /* FnBase64Encode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2212E42DA600777281 /* FnBase64Encode.cpp */; };
+		5B811CAB14878BE2001B46D8 /* FnCast.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2312E42DA600777281 /* FnCast.cpp */; };
+		5B811CAC14878BE2001B46D8 /* FnConcat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2412E42DA600777281 /* FnConcat.cpp */; };
+		5B811CAD14878BE2001B46D8 /* FnDateFormat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2512E42DA600777281 /* FnDateFormat.cpp */; };
+		5B811CAE14878BE2001B46D8 /* FnDefault.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2612E42DA600777281 /* FnDefault.cpp */; };
+		5B811CAF14878BE2001B46D8 /* FnDefined.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2712E42DA600777281 /* FnDefined.cpp */; };
+		5B811CB014878BE2001B46D8 /* FnEmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2812E42DA600777281 /* FnEmitter.cpp */; };
+		5B811CB114878BE2001B46D8 /* FnError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2912E42DA600777281 /* FnError.cpp */; };
+		5B811CB214878BE2001B46D8 /* FnFormParam.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2A12E42DA600777281 /* FnFormParam.cpp */; };
+		5B811CB314878BE2001B46D8 /* FnGetText.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2B12E42DA600777281 /* FnGetText.cpp */; };
+		5B811CB414878BE2001B46D8 /* FnGetText_.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2C12E42DA600777281 /* FnGetText_.cpp */; };
+		5B811CB514878BE2001B46D8 /* FnHashElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2D12E42DA600777281 /* FnHashElement.cpp */; };
+		5B811CB614878BE2001B46D8 /* FnHMACMD5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2E12E42DA600777281 /* FnHMACMD5.cpp */; };
+		5B811CB714878BE2001B46D8 /* FnHrefParam.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2F12E42DA600777281 /* FnHrefParam.cpp */; };
+		5B811CB814878BE2001B46D8 /* FnHTMLEscape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3012E42DA600777281 /* FnHTMLEscape.cpp */; };
+		5B811CB914878BE2001B46D8 /* FnIconv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3112E42DA600777281 /* FnIconv.cpp */; };
+		5B811CBA14878BE2001B46D8 /* FnInSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3212E42DA600777281 /* FnInSet.cpp */; };
+		5B811CBB14878BE2001B46D8 /* FnJSEscape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3312E42DA600777281 /* FnJSEscape.cpp */; };
+		5B811CBC14878BE2001B46D8 /* FnJSON.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3412E42DA600777281 /* FnJSON.cpp */; };
+		5B811CBD14878BE2001B46D8 /* FnListElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3512E42DA600777281 /* FnListElement.cpp */; };
+		5B811CBE14878BE2001B46D8 /* FnLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3612E42DA600777281 /* FnLog.cpp */; };
+		5B811CBF14878BE2001B46D8 /* FnMax.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3712E42DA600777281 /* FnMax.cpp */; };
+		5B811CC014878BE2001B46D8 /* FnMBSize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3812E42DA600777281 /* FnMBSize.cpp */; };
+		5B811CC114878BE2001B46D8 /* FnMBSubstring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3912E42DA600777281 /* FnMBSubstring.cpp */; };
+		5B811CC214878BE2001B46D8 /* FnMBTruncate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3A12E42DA600777281 /* FnMBTruncate.cpp */; };
+		5B811CC314878BE2001B46D8 /* FnMD5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3B12E42DA600777281 /* FnMD5.cpp */; };
+		5B811CC414878BE2001B46D8 /* FnMin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3C12E42DA600777281 /* FnMin.cpp */; };
+		5B811CC514878BE2001B46D8 /* FnNumeral.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3D12E42DA600777281 /* FnNumeral.cpp */; };
+		5B811CC614878BE2001B46D8 /* FnNumFormat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3E12E42DA600777281 /* FnNumFormat.cpp */; };
+		5B811CC714878BE2001B46D8 /* FnObjDump.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3F12E42DA600777281 /* FnObjDump.cpp */; };
+		5B811CC814878BE2001B46D8 /* FnRandom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE4012E42DA600777281 /* FnRandom.cpp */; };
+		5B811CC914878BE2001B46D8 /* FnSize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE4112E42DA600777281 /* FnSize.cpp */; };
+		5B811CCA14878BE2001B46D8 /* FnSprintf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE4212E42DA600777281 /* FnSprintf.cpp */; };
+		5B811CCB14878BE2001B46D8 /* FnSubstring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE4312E42DA600777281 /* FnSubstring.cpp */; };
+		5B811CCC14878BE2001B46D8 /* FnTruncate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE4412E42DA600777281 /* FnTruncate.cpp */; };
+		5B811CCD14878BE2001B46D8 /* FnURIEscape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE4512E42DA600777281 /* FnURIEscape.cpp */; };
+		5B811CCE14878BE2001B46D8 /* FnURLEscape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE4612E42DA600777281 /* FnURLEscape.cpp */; };
+		5B811CCF14878BE2001B46D8 /* FnVersion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE4712E42DA600777281 /* FnVersion.cpp */; };
+		5B811CD014878BE2001B46D8 /* FnWMLEscape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE4812E42DA600777281 /* FnWMLEscape.cpp */; };
+		5B811CD114878BE2001B46D8 /* FnXMLEscape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE4912E42DA600777281 /* FnXMLEscape.cpp */; };
+		7807FE4A12E42DA600777281 /* CDT.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD8F12E42DA500777281 /* CDT.hpp */; };
+		7807FE4B12E42DA600777281 /* CDTSortRoutines.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9012E42DA500777281 /* CDTSortRoutines.hpp */; };
+		7807FE4C12E42DA600777281 /* CTPP2BitIndex.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9112E42DA500777281 /* CTPP2BitIndex.hpp */; };
+		7807FE4D12E42DA600777281 /* CTPP2CharIterator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9212E42DA500777281 /* CTPP2CharIterator.hpp */; };
+		7807FE4E12E42DA600777281 /* CTPP2Compiler.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9312E42DA500777281 /* CTPP2Compiler.hpp */; };
+		7807FE4F12E42DA600777281 /* CTPP2DTOA.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9412E42DA500777281 /* CTPP2DTOA.hpp */; };
+		7807FE5012E42DA600777281 /* CTPP2Error.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9512E42DA500777281 /* CTPP2Error.hpp */; };
+		7807FE5112E42DA600777281 /* CTPP2ErrorCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9612E42DA500777281 /* CTPP2ErrorCodes.h */; };
+		7807FE5212E42DA600777281 /* CTPP2Exception.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9712E42DA500777281 /* CTPP2Exception.hpp */; };
+		7807FE5312E42DA600777281 /* CTPP2FileLogger.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9812E42DA500777281 /* CTPP2FileLogger.hpp */; };
+		7807FE5412E42DA600777281 /* CTPP2FileOutputCollector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9912E42DA500777281 /* CTPP2FileOutputCollector.hpp */; };
+		7807FE5512E42DA600777281 /* CTPP2FileSourceLoader.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9A12E42DA500777281 /* CTPP2FileSourceLoader.hpp */; };
+		7807FE5612E42DA600777281 /* CTPP2GlobalDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9B12E42DA500777281 /* CTPP2GlobalDefines.h */; };
+		7807FE5712E42DA600777281 /* CTPP2HashTable.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9C12E42DA500777281 /* CTPP2HashTable.hpp */; };
+		7807FE5812E42DA600777281 /* CTPP2JSONFileParser.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9D12E42DA500777281 /* CTPP2JSONFileParser.hpp */; };
+		7807FE5912E42DA600777281 /* CTPP2JSONParser.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9E12E42DA500777281 /* CTPP2JSONParser.hpp */; };
+		7807FE5A12E42DA600777281 /* CTPP2Logger.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FD9F12E42DA500777281 /* CTPP2Logger.hpp */; };
+		7807FE5B12E42DA600777281 /* CTPP2OutputCollector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDA012E42DA500777281 /* CTPP2OutputCollector.hpp */; };
+		7807FE5C12E42DA600777281 /* CTPP2Parser.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDA112E42DA500777281 /* CTPP2Parser.hpp */; };
+		7807FE5D12E42DA600777281 /* CTPP2ParserException.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDA212E42DA500777281 /* CTPP2ParserException.hpp */; };
+		7807FE5E12E42DA600777281 /* CTPP2SourceLoader.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDA312E42DA500777281 /* CTPP2SourceLoader.hpp */; };
+		7807FE5F12E42DA600777281 /* CTPP2Sprintf.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDA412E42DA500777281 /* CTPP2Sprintf.hpp */; };
+		7807FE6012E42DA600777281 /* CTPP2StaticData.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDA512E42DA500777281 /* CTPP2StaticData.hpp */; };
+		7807FE6112E42DA600777281 /* CTPP2StaticText.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDA612E42DA500777281 /* CTPP2StaticText.hpp */; };
+		7807FE6212E42DA600777281 /* CTPP2StreamOutputCollector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDA712E42DA500777281 /* CTPP2StreamOutputCollector.hpp */; };
+		7807FE6312E42DA600777281 /* CTPP2StringBuffer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDA812E42DA500777281 /* CTPP2StringBuffer.hpp */; };
+		7807FE6412E42DA600777281 /* CTPP2StringIconvOutputCollector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDA912E42DA500777281 /* CTPP2StringIconvOutputCollector.hpp */; };
+		7807FE6512E42DA600777281 /* CTPP2StringOutputCollector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDAA12E42DA500777281 /* CTPP2StringOutputCollector.hpp */; };
+		7807FE6612E42DA600777281 /* CTPP2SymbolTable.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDAB12E42DA500777281 /* CTPP2SymbolTable.hpp */; };
+		7807FE6712E42DA600777281 /* CTPP2Syntax.h in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDAC12E42DA500777281 /* CTPP2Syntax.h */; };
+		7807FE6812E42DA600777281 /* CTPP2SyscallFactory.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDAD12E42DA500777281 /* CTPP2SyscallFactory.hpp */; };
+		7807FE6912E42DA600777281 /* CTPP2SysHeaders.h in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDAE12E42DA500777281 /* CTPP2SysHeaders.h */; };
+		7807FE6A12E42DA600777281 /* CTPP2SysTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDAF12E42DA500777281 /* CTPP2SysTypes.h */; };
+		7807FE6B12E42DA600777281 /* CTPP2Time.h in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDB012E42DA500777281 /* CTPP2Time.h */; };
+		7807FE6C12E42DA600777281 /* CTPP2Types.h in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDB112E42DA500777281 /* CTPP2Types.h */; };
+		7807FE6D12E42DA600777281 /* CTPP2Util.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDB212E42DA500777281 /* CTPP2Util.hpp */; };
+		7807FE6E12E42DA600777281 /* CTPP2VM.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDB312E42DA500777281 /* CTPP2VM.hpp */; };
+		7807FE6F12E42DA600777281 /* CTPP2VMArgStack.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDB412E42DA500777281 /* CTPP2VMArgStack.hpp */; };
+		7807FE7012E42DA600777281 /* CTPP2VMCodeStack.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDB512E42DA500777281 /* CTPP2VMCodeStack.hpp */; };
+		7807FE7112E42DA600777281 /* CTPP2VMDebugInfo.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDB612E42DA500777281 /* CTPP2VMDebugInfo.hpp */; };
+		7807FE7212E42DA600777281 /* CTPP2VMDumper.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDB712E42DA500777281 /* CTPP2VMDumper.hpp */; };
+		7807FE7312E42DA600777281 /* CTPP2VMException.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDB812E42DA500777281 /* CTPP2VMException.hpp */; };
+		7807FE7412E42DA600777281 /* CTPP2VMExecutable.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDB912E42DA500777281 /* CTPP2VMExecutable.hpp */; };
+		7807FE7512E42DA600777281 /* CTPP2VMFileLoader.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDBA12E42DA500777281 /* CTPP2VMFileLoader.hpp */; };
+		7807FE7612E42DA600777281 /* CTPP2VMInstruction.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDBB12E42DA500777281 /* CTPP2VMInstruction.hpp */; };
+		7807FE7712E42DA600777281 /* CTPP2VMLoader.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDBC12E42DA500777281 /* CTPP2VMLoader.hpp */; };
+		7807FE7812E42DA600777281 /* CTPP2VMMemoryCore.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDBD12E42DA500777281 /* CTPP2VMMemoryCore.hpp */; };
+		7807FE7912E42DA600777281 /* CTPP2VMOpcodeCollector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDBE12E42DA500777281 /* CTPP2VMOpcodeCollector.hpp */; };
+		7807FE7A12E42DA600777281 /* CTPP2VMOpcodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDBF12E42DA500777281 /* CTPP2VMOpcodes.h */; };
+		7807FE7B12E42DA600777281 /* CTPP2VMStackException.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDC012E42DA500777281 /* CTPP2VMStackException.hpp */; };
+		7807FE7C12E42DA600777281 /* CTPP2VMSTDLib.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDC112E42DA500777281 /* CTPP2VMSTDLib.hpp */; };
+		7807FE7D12E42DA600777281 /* CTPP2VMSyscall.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDC212E42DA500777281 /* CTPP2VMSyscall.hpp */; };
+		7807FE7E12E42DA600777281 /* CTPP2VMSTDLibFunctions.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDC412E42DA500777281 /* CTPP2VMSTDLibFunctions.hpp */; };
+		7807FE7F12E42DA600777281 /* FnArrayElement.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDC512E42DA500777281 /* FnArrayElement.hpp */; };
+		7807FE8012E42DA600777281 /* FnAvg.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDC612E42DA500777281 /* FnAvg.hpp */; };
+		7807FE8112E42DA600777281 /* FnBase64Decode.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDC712E42DA500777281 /* FnBase64Decode.hpp */; };
+		7807FE8212E42DA600777281 /* FnBase64Encode.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDC812E42DA500777281 /* FnBase64Encode.hpp */; };
+		7807FE8312E42DA600777281 /* FnCast.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDC912E42DA500777281 /* FnCast.hpp */; };
+		7807FE8412E42DA600777281 /* FnConcat.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDCA12E42DA500777281 /* FnConcat.hpp */; };
+		7807FE8512E42DA600777281 /* FnDateFormat.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDCB12E42DA600777281 /* FnDateFormat.hpp */; };
+		7807FE8612E42DA600777281 /* FnDefault.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDCC12E42DA600777281 /* FnDefault.hpp */; };
+		7807FE8712E42DA600777281 /* FnDefined.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDCD12E42DA600777281 /* FnDefined.hpp */; };
+		7807FE8812E42DA600777281 /* FnEmitter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDCE12E42DA600777281 /* FnEmitter.hpp */; };
+		7807FE8912E42DA600777281 /* FnError.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDCF12E42DA600777281 /* FnError.hpp */; };
+		7807FE8A12E42DA600777281 /* FnFormParam.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDD012E42DA600777281 /* FnFormParam.hpp */; };
+		7807FE8B12E42DA600777281 /* FnGetText.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDD112E42DA600777281 /* FnGetText.hpp */; };
+		7807FE8C12E42DA600777281 /* FnGetText_.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDD212E42DA600777281 /* FnGetText_.hpp */; };
+		7807FE8D12E42DA600777281 /* FnHashElement.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDD312E42DA600777281 /* FnHashElement.hpp */; };
+		7807FE8E12E42DA600777281 /* FnHMACMD5.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDD412E42DA600777281 /* FnHMACMD5.hpp */; };
+		7807FE8F12E42DA600777281 /* FnHrefParam.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDD512E42DA600777281 /* FnHrefParam.hpp */; };
+		7807FE9012E42DA600777281 /* FnHTMLEscape.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDD612E42DA600777281 /* FnHTMLEscape.hpp */; };
+		7807FE9112E42DA600777281 /* FnIconv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDD712E42DA600777281 /* FnIconv.hpp */; };
+		7807FE9212E42DA600777281 /* FnInSet.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDD812E42DA600777281 /* FnInSet.hpp */; };
+		7807FE9312E42DA600777281 /* FnJSEscape.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDD912E42DA600777281 /* FnJSEscape.hpp */; };
+		7807FE9412E42DA600777281 /* FnJSON.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDDA12E42DA600777281 /* FnJSON.hpp */; };
+		7807FE9512E42DA600777281 /* FnListElement.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDDB12E42DA600777281 /* FnListElement.hpp */; };
+		7807FE9612E42DA600777281 /* FnLog.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDDC12E42DA600777281 /* FnLog.hpp */; };
+		7807FE9712E42DA600777281 /* FnMax.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDDD12E42DA600777281 /* FnMax.hpp */; };
+		7807FE9812E42DA600777281 /* FnMBSize.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDDE12E42DA600777281 /* FnMBSize.hpp */; };
+		7807FE9912E42DA600777281 /* FnMBSubstring.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDDF12E42DA600777281 /* FnMBSubstring.hpp */; };
+		7807FE9A12E42DA600777281 /* FnMBTruncate.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDE012E42DA600777281 /* FnMBTruncate.hpp */; };
+		7807FE9B12E42DA600777281 /* FnMD5.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDE112E42DA600777281 /* FnMD5.hpp */; };
+		7807FE9C12E42DA600777281 /* FnMin.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDE212E42DA600777281 /* FnMin.hpp */; };
+		7807FE9D12E42DA600777281 /* FnNumeral.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDE312E42DA600777281 /* FnNumeral.hpp */; };
+		7807FE9E12E42DA600777281 /* FnNumFormat.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDE412E42DA600777281 /* FnNumFormat.hpp */; };
+		7807FE9F12E42DA600777281 /* FnObjDump.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDE512E42DA600777281 /* FnObjDump.hpp */; };
+		7807FEA012E42DA600777281 /* FnRandom.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDE612E42DA600777281 /* FnRandom.hpp */; };
+		7807FEA112E42DA600777281 /* FnSize.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDE712E42DA600777281 /* FnSize.hpp */; };
+		7807FEA212E42DA600777281 /* FnSprintf.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDE812E42DA600777281 /* FnSprintf.hpp */; };
+		7807FEA312E42DA600777281 /* FnSubstring.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDE912E42DA600777281 /* FnSubstring.hpp */; };
+		7807FEA412E42DA600777281 /* FnTruncate.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDEA12E42DA600777281 /* FnTruncate.hpp */; };
+		7807FEA512E42DA600777281 /* FnURIEscape.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDEB12E42DA600777281 /* FnURIEscape.hpp */; };
+		7807FEA612E42DA600777281 /* FnURLEscape.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDEC12E42DA600777281 /* FnURLEscape.hpp */; };
+		7807FEA712E42DA600777281 /* FnVersion.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDED12E42DA600777281 /* FnVersion.hpp */; };
+		7807FEA812E42DA600777281 /* FnWMLEscape.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDEE12E42DA600777281 /* FnWMLEscape.hpp */; };
+		7807FEA912E42DA600777281 /* FnXMLEscape.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDEF12E42DA600777281 /* FnXMLEscape.hpp */; };
+		7807FEAA12E42DA600777281 /* STLException.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDF012E42DA600777281 /* STLException.hpp */; };
+		7807FEAB12E42DA600777281 /* STLFunctional.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDF112E42DA600777281 /* STLFunctional.hpp */; };
+		7807FEAC12E42DA600777281 /* STLIosfwd.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDF212E42DA600777281 /* STLIosfwd.hpp */; };
+		7807FEAD12E42DA600777281 /* STLMap.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDF312E42DA600777281 /* STLMap.hpp */; };
+		7807FEAE12E42DA600777281 /* STLOstream.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDF412E42DA600777281 /* STLOstream.hpp */; };
+		7807FEAF12E42DA600777281 /* STLPair.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDF512E42DA600777281 /* STLPair.hpp */; };
+		7807FEB012E42DA600777281 /* STLString.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDF612E42DA600777281 /* STLString.hpp */; };
+		7807FEB112E42DA600777281 /* STLVector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7807FDF712E42DA600777281 /* STLVector.hpp */; };
+		7807FEB212E42DA600777281 /* CDT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FDF912E42DA600777281 /* CDT.cpp */; };
+		7807FEB312E42DA600777281 /* CDTSortRoutines.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FDFA12E42DA600777281 /* CDTSortRoutines.cpp */; };
+		7807FEB412E42DA600777281 /* CTPP2BitIndex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FDFB12E42DA600777281 /* CTPP2BitIndex.cpp */; };
+		7807FEB512E42DA600777281 /* CTPP2Compiler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FDFC12E42DA600777281 /* CTPP2Compiler.cpp */; };
+		7807FEB612E42DA600777281 /* CTPP2DTOA.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FDFD12E42DA600777281 /* CTPP2DTOA.cpp */; };
+		7807FEB712E42DA600777281 /* CTPP2Error.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FDFE12E42DA600777281 /* CTPP2Error.cpp */; };
+		7807FEB812E42DA600777281 /* CTPP2Exception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FDFF12E42DA600777281 /* CTPP2Exception.cpp */; };
+		7807FEB912E42DA600777281 /* CTPP2FileLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0012E42DA600777281 /* CTPP2FileLogger.cpp */; };
+		7807FEBA12E42DA600777281 /* CTPP2FileOutputCollector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0112E42DA600777281 /* CTPP2FileOutputCollector.cpp */; };
+		7807FEBB12E42DA600777281 /* CTPP2FileSourceLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0212E42DA600777281 /* CTPP2FileSourceLoader.cpp */; };
+		7807FEBC12E42DA600777281 /* CTPP2HashTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0312E42DA600777281 /* CTPP2HashTable.cpp */; };
+		7807FEBD12E42DA600777281 /* CTPP2JSONFileParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0412E42DA600777281 /* CTPP2JSONFileParser.cpp */; };
+		7807FEBE12E42DA600777281 /* CTPP2JSONParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0512E42DA600777281 /* CTPP2JSONParser.cpp */; };
+		7807FEBF12E42DA600777281 /* CTPP2Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0612E42DA600777281 /* CTPP2Logger.cpp */; };
+		7807FEC012E42DA600777281 /* CTPP2Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0712E42DA600777281 /* CTPP2Parser.cpp */; };
+		7807FEC112E42DA600777281 /* CTPP2ParserException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0812E42DA600777281 /* CTPP2ParserException.cpp */; };
+		7807FEC212E42DA600777281 /* CTPP2Sprintf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0912E42DA600777281 /* CTPP2Sprintf.cpp */; };
+		7807FEC312E42DA600777281 /* CTPP2StaticData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0A12E42DA600777281 /* CTPP2StaticData.cpp */; };
+		7807FEC412E42DA600777281 /* CTPP2StaticText.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0B12E42DA600777281 /* CTPP2StaticText.cpp */; };
+		7807FEC512E42DA600777281 /* CTPP2StreamOutputCollector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0C12E42DA600777281 /* CTPP2StreamOutputCollector.cpp */; };
+		7807FEC612E42DA600777281 /* CTPP2StringBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0D12E42DA600777281 /* CTPP2StringBuffer.cpp */; };
+		7807FEC712E42DA600777281 /* CTPP2StringIconvOutputCollector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0E12E42DA600777281 /* CTPP2StringIconvOutputCollector.cpp */; };
+		7807FEC812E42DA600777281 /* CTPP2StringOutputCollector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE0F12E42DA600777281 /* CTPP2StringOutputCollector.cpp */; };
+		7807FEC912E42DA600777281 /* CTPP2SyscallFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1012E42DA600777281 /* CTPP2SyscallFactory.cpp */; };
+		7807FECA12E42DA600777281 /* CTPP2Util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1112E42DA600777281 /* CTPP2Util.cpp */; };
+		7807FECB12E42DA600777281 /* CTPP2VM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1212E42DA600777281 /* CTPP2VM.cpp */; };
+		7807FECC12E42DA600777281 /* CTPP2VMArgStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1312E42DA600777281 /* CTPP2VMArgStack.cpp */; };
+		7807FECD12E42DA600777281 /* CTPP2VMCodeStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1412E42DA600777281 /* CTPP2VMCodeStack.cpp */; };
+		7807FECE12E42DA600777281 /* CTPP2VMDebugInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1512E42DA600777281 /* CTPP2VMDebugInfo.cpp */; };
+		7807FECF12E42DA600777281 /* CTPP2VMDumper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1612E42DA600777281 /* CTPP2VMDumper.cpp */; };
+		7807FED012E42DA600777281 /* CTPP2VMException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1712E42DA600777281 /* CTPP2VMException.cpp */; };
+		7807FED112E42DA600777281 /* CTPP2VMExecutable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1812E42DA600777281 /* CTPP2VMExecutable.cpp */; };
+		7807FED212E42DA600777281 /* CTPP2VMFileLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1912E42DA600777281 /* CTPP2VMFileLoader.cpp */; };
+		7807FED312E42DA600777281 /* CTPP2VMMemoryCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1A12E42DA600777281 /* CTPP2VMMemoryCore.cpp */; };
+		7807FED412E42DA600777281 /* CTPP2VMOpcodeCollector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1B12E42DA600777281 /* CTPP2VMOpcodeCollector.cpp */; };
+		7807FED512E42DA600777281 /* CTPP2VMSTDLib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1C12E42DA600777281 /* CTPP2VMSTDLib.cpp */; };
+		7807FED612E42DA600777281 /* CTPP2VMSyscall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1D12E42DA600777281 /* CTPP2VMSyscall.cpp */; };
+		7807FED712E42DA600777281 /* FnArrayElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE1F12E42DA600777281 /* FnArrayElement.cpp */; };
+		7807FED812E42DA600777281 /* FnAvg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2012E42DA600777281 /* FnAvg.cpp */; };
+		7807FED912E42DA600777281 /* FnBase64Decode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2112E42DA600777281 /* FnBase64Decode.cpp */; };
+		7807FEDA12E42DA600777281 /* FnBase64Encode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2212E42DA600777281 /* FnBase64Encode.cpp */; };
+		7807FEDB12E42DA600777281 /* FnCast.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2312E42DA600777281 /* FnCast.cpp */; };
+		7807FEDC12E42DA600777281 /* FnConcat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2412E42DA600777281 /* FnConcat.cpp */; };
+		7807FEDD12E42DA600777281 /* FnDateFormat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2512E42DA600777281 /* FnDateFormat.cpp */; };
+		7807FEDE12E42DA600777281 /* FnDefault.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2612E42DA600777281 /* FnDefault.cpp */; };
+		7807FEDF12E42DA600777281 /* FnDefined.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2712E42DA600777281 /* FnDefined.cpp */; };
+		7807FEE012E42DA600777281 /* FnEmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2812E42DA600777281 /* FnEmitter.cpp */; };
+		7807FEE112E42DA600777281 /* FnError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2912E42DA600777281 /* FnError.cpp */; };
+		7807FEE212E42DA600777281 /* FnFormParam.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2A12E42DA600777281 /* FnFormParam.cpp */; };
+		7807FEE312E42DA600777281 /* FnGetText.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2B12E42DA600777281 /* FnGetText.cpp */; };
+		7807FEE412E42DA600777281 /* FnGetText_.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2C12E42DA600777281 /* FnGetText_.cpp */; };
+		7807FEE512E42DA600777281 /* FnHashElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2D12E42DA600777281 /* FnHashElement.cpp */; };
+		7807FEE612E42DA600777281 /* FnHMACMD5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2E12E42DA600777281 /* FnHMACMD5.cpp */; };
+		7807FEE712E42DA600777281 /* FnHrefParam.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE2F12E42DA600777281 /* FnHrefParam.cpp */; };
+		7807FEE812E42DA600777281 /* FnHTMLEscape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3012E42DA600777281 /* FnHTMLEscape.cpp */; };
+		7807FEE912E42DA600777281 /* FnIconv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3112E42DA600777281 /* FnIconv.cpp */; };
+		7807FEEA12E42DA600777281 /* FnInSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3212E42DA600777281 /* FnInSet.cpp */; };
+		7807FEEB12E42DA600777281 /* FnJSEscape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3312E42DA600777281 /* FnJSEscape.cpp */; };
+		7807FEEC12E42DA600777281 /* FnJSON.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3412E42DA600777281 /* FnJSON.cpp */; };
+		7807FEED12E42DA600777281 /* FnListElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3512E42DA600777281 /* FnListElement.cpp */; };
+		7807FEEE12E42DA600777281 /* FnLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3612E42DA600777281 /* FnLog.cpp */; };
+		7807FEEF12E42DA600777281 /* FnMax.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3712E42DA600777281 /* FnMax.cpp */; };
+		7807FEF012E42DA600777281 /* FnMBSize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3812E42DA600777281 /* FnMBSize.cpp */; };
+		7807FEF112E42DA600777281 /* FnMBSubstring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3912E42DA600777281 /* FnMBSubstring.cpp */; };
+		7807FEF212E42DA600777281 /* FnMBTruncate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3A12E42DA600777281 /* FnMBTruncate.cpp */; };
+		7807FEF312E42DA600777281 /* FnMD5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3B12E42DA600777281 /* FnMD5.cpp */; };
+		7807FEF412E42DA600777281 /* FnMin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3C12E42DA600777281 /* FnMin.cpp */; };
+		7807FEF512E42DA600777281 /* FnNumeral.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3D12E42DA600777281 /* FnNumeral.cpp */; };
+		7807FEF612E42DA600777281 /* FnNumFormat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3E12E42DA600777281 /* FnNumFormat.cpp */; };
+		7807FEF712E42DA600777281 /* FnObjDump.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE3F12E42DA600777281 /* FnObjDump.cpp */; };
+		7807FEF812E42DA600777281 /* FnRandom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE4012E42DA600777281 /* FnRandom.cpp */; };
+		7807FEF912E42DA600777281 /* FnSize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE4112E42DA600777281 /* FnSize.cpp */; };
+		7807FEFA12E42DA600777281 /* FnSprintf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE4212E42DA600777281 /* FnSprintf.cpp */; };
+		7807FEFB12E42DA600777281 /* FnSubstring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE4312E42DA600777281 /* FnSubstring.cpp */; };
+		7807FEFC12E42DA600777281 /* FnTruncate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE4412E42DA600777281 /* FnTruncate.cpp */; };
+		7807FEFD12E42DA600777281 /* FnURIEscape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE4512E42DA600777281 /* FnURIEscape.cpp */; };
+		7807FEFE12E42DA600777281 /* FnURLEscape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE4612E42DA600777281 /* FnURLEscape.cpp */; };
+		7807FEFF12E42DA600777281 /* FnVersion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE4712E42DA600777281 /* FnVersion.cpp */; };
+		7807FF0012E42DA600777281 /* FnWMLEscape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE4812E42DA600777281 /* FnWMLEscape.cpp */; };
+		7807FF0112E42DA600777281 /* FnXMLEscape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7807FE4912E42DA600777281 /* FnXMLEscape.cpp */; };
+		AA747D9F0F9514B9006C5449 /* CTPP2_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* CTPP2_Prefix.pch */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5B811CD614878BE2001B46D8 /* libCTPP2-clang.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libCTPP2-clang.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7807FD8F12E42DA500777281 /* CDT.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CDT.hpp; sourceTree = "<group>"; };
+		7807FD9012E42DA500777281 /* CDTSortRoutines.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CDTSortRoutines.hpp; sourceTree = "<group>"; };
+		7807FD9112E42DA500777281 /* CTPP2BitIndex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2BitIndex.hpp; sourceTree = "<group>"; };
+		7807FD9212E42DA500777281 /* CTPP2CharIterator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2CharIterator.hpp; sourceTree = "<group>"; };
+		7807FD9312E42DA500777281 /* CTPP2Compiler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2Compiler.hpp; sourceTree = "<group>"; };
+		7807FD9412E42DA500777281 /* CTPP2DTOA.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2DTOA.hpp; sourceTree = "<group>"; };
+		7807FD9512E42DA500777281 /* CTPP2Error.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2Error.hpp; sourceTree = "<group>"; };
+		7807FD9612E42DA500777281 /* CTPP2ErrorCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPP2ErrorCodes.h; sourceTree = "<group>"; };
+		7807FD9712E42DA500777281 /* CTPP2Exception.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2Exception.hpp; sourceTree = "<group>"; };
+		7807FD9812E42DA500777281 /* CTPP2FileLogger.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2FileLogger.hpp; sourceTree = "<group>"; };
+		7807FD9912E42DA500777281 /* CTPP2FileOutputCollector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2FileOutputCollector.hpp; sourceTree = "<group>"; };
+		7807FD9A12E42DA500777281 /* CTPP2FileSourceLoader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2FileSourceLoader.hpp; sourceTree = "<group>"; };
+		7807FD9B12E42DA500777281 /* CTPP2GlobalDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPP2GlobalDefines.h; sourceTree = "<group>"; };
+		7807FD9C12E42DA500777281 /* CTPP2HashTable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2HashTable.hpp; sourceTree = "<group>"; };
+		7807FD9D12E42DA500777281 /* CTPP2JSONFileParser.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2JSONFileParser.hpp; sourceTree = "<group>"; };
+		7807FD9E12E42DA500777281 /* CTPP2JSONParser.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2JSONParser.hpp; sourceTree = "<group>"; };
+		7807FD9F12E42DA500777281 /* CTPP2Logger.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2Logger.hpp; sourceTree = "<group>"; };
+		7807FDA012E42DA500777281 /* CTPP2OutputCollector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2OutputCollector.hpp; sourceTree = "<group>"; };
+		7807FDA112E42DA500777281 /* CTPP2Parser.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2Parser.hpp; sourceTree = "<group>"; };
+		7807FDA212E42DA500777281 /* CTPP2ParserException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2ParserException.hpp; sourceTree = "<group>"; };
+		7807FDA312E42DA500777281 /* CTPP2SourceLoader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2SourceLoader.hpp; sourceTree = "<group>"; };
+		7807FDA412E42DA500777281 /* CTPP2Sprintf.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2Sprintf.hpp; sourceTree = "<group>"; };
+		7807FDA512E42DA500777281 /* CTPP2StaticData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2StaticData.hpp; sourceTree = "<group>"; };
+		7807FDA612E42DA500777281 /* CTPP2StaticText.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2StaticText.hpp; sourceTree = "<group>"; };
+		7807FDA712E42DA500777281 /* CTPP2StreamOutputCollector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2StreamOutputCollector.hpp; sourceTree = "<group>"; };
+		7807FDA812E42DA500777281 /* CTPP2StringBuffer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2StringBuffer.hpp; sourceTree = "<group>"; };
+		7807FDA912E42DA500777281 /* CTPP2StringIconvOutputCollector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2StringIconvOutputCollector.hpp; sourceTree = "<group>"; };
+		7807FDAA12E42DA500777281 /* CTPP2StringOutputCollector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2StringOutputCollector.hpp; sourceTree = "<group>"; };
+		7807FDAB12E42DA500777281 /* CTPP2SymbolTable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2SymbolTable.hpp; sourceTree = "<group>"; };
+		7807FDAC12E42DA500777281 /* CTPP2Syntax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPP2Syntax.h; sourceTree = "<group>"; };
+		7807FDAD12E42DA500777281 /* CTPP2SyscallFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2SyscallFactory.hpp; sourceTree = "<group>"; };
+		7807FDAE12E42DA500777281 /* CTPP2SysHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPP2SysHeaders.h; sourceTree = "<group>"; };
+		7807FDAF12E42DA500777281 /* CTPP2SysTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPP2SysTypes.h; sourceTree = "<group>"; };
+		7807FDB012E42DA500777281 /* CTPP2Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPP2Time.h; sourceTree = "<group>"; };
+		7807FDB112E42DA500777281 /* CTPP2Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPP2Types.h; sourceTree = "<group>"; };
+		7807FDB212E42DA500777281 /* CTPP2Util.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2Util.hpp; sourceTree = "<group>"; };
+		7807FDB312E42DA500777281 /* CTPP2VM.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2VM.hpp; sourceTree = "<group>"; };
+		7807FDB412E42DA500777281 /* CTPP2VMArgStack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2VMArgStack.hpp; sourceTree = "<group>"; };
+		7807FDB512E42DA500777281 /* CTPP2VMCodeStack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2VMCodeStack.hpp; sourceTree = "<group>"; };
+		7807FDB612E42DA500777281 /* CTPP2VMDebugInfo.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2VMDebugInfo.hpp; sourceTree = "<group>"; };
+		7807FDB712E42DA500777281 /* CTPP2VMDumper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2VMDumper.hpp; sourceTree = "<group>"; };
+		7807FDB812E42DA500777281 /* CTPP2VMException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2VMException.hpp; sourceTree = "<group>"; };
+		7807FDB912E42DA500777281 /* CTPP2VMExecutable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2VMExecutable.hpp; sourceTree = "<group>"; };
+		7807FDBA12E42DA500777281 /* CTPP2VMFileLoader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2VMFileLoader.hpp; sourceTree = "<group>"; };
+		7807FDBB12E42DA500777281 /* CTPP2VMInstruction.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2VMInstruction.hpp; sourceTree = "<group>"; };
+		7807FDBC12E42DA500777281 /* CTPP2VMLoader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2VMLoader.hpp; sourceTree = "<group>"; };
+		7807FDBD12E42DA500777281 /* CTPP2VMMemoryCore.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2VMMemoryCore.hpp; sourceTree = "<group>"; };
+		7807FDBE12E42DA500777281 /* CTPP2VMOpcodeCollector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2VMOpcodeCollector.hpp; sourceTree = "<group>"; };
+		7807FDBF12E42DA500777281 /* CTPP2VMOpcodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPP2VMOpcodes.h; sourceTree = "<group>"; };
+		7807FDC012E42DA500777281 /* CTPP2VMStackException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2VMStackException.hpp; sourceTree = "<group>"; };
+		7807FDC112E42DA500777281 /* CTPP2VMSTDLib.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2VMSTDLib.hpp; sourceTree = "<group>"; };
+		7807FDC212E42DA500777281 /* CTPP2VMSyscall.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2VMSyscall.hpp; sourceTree = "<group>"; };
+		7807FDC412E42DA500777281 /* CTPP2VMSTDLibFunctions.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTPP2VMSTDLibFunctions.hpp; sourceTree = "<group>"; };
+		7807FDC512E42DA500777281 /* FnArrayElement.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnArrayElement.hpp; sourceTree = "<group>"; };
+		7807FDC612E42DA500777281 /* FnAvg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnAvg.hpp; sourceTree = "<group>"; };
+		7807FDC712E42DA500777281 /* FnBase64Decode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnBase64Decode.hpp; sourceTree = "<group>"; };
+		7807FDC812E42DA500777281 /* FnBase64Encode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnBase64Encode.hpp; sourceTree = "<group>"; };
+		7807FDC912E42DA500777281 /* FnCast.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnCast.hpp; sourceTree = "<group>"; };
+		7807FDCA12E42DA500777281 /* FnConcat.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnConcat.hpp; sourceTree = "<group>"; };
+		7807FDCB12E42DA600777281 /* FnDateFormat.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnDateFormat.hpp; sourceTree = "<group>"; };
+		7807FDCC12E42DA600777281 /* FnDefault.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnDefault.hpp; sourceTree = "<group>"; };
+		7807FDCD12E42DA600777281 /* FnDefined.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnDefined.hpp; sourceTree = "<group>"; };
+		7807FDCE12E42DA600777281 /* FnEmitter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnEmitter.hpp; sourceTree = "<group>"; };
+		7807FDCF12E42DA600777281 /* FnError.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnError.hpp; sourceTree = "<group>"; };
+		7807FDD012E42DA600777281 /* FnFormParam.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnFormParam.hpp; sourceTree = "<group>"; };
+		7807FDD112E42DA600777281 /* FnGetText.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnGetText.hpp; sourceTree = "<group>"; };
+		7807FDD212E42DA600777281 /* FnGetText_.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnGetText_.hpp; sourceTree = "<group>"; };
+		7807FDD312E42DA600777281 /* FnHashElement.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnHashElement.hpp; sourceTree = "<group>"; };
+		7807FDD412E42DA600777281 /* FnHMACMD5.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnHMACMD5.hpp; sourceTree = "<group>"; };
+		7807FDD512E42DA600777281 /* FnHrefParam.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnHrefParam.hpp; sourceTree = "<group>"; };
+		7807FDD612E42DA600777281 /* FnHTMLEscape.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnHTMLEscape.hpp; sourceTree = "<group>"; };
+		7807FDD712E42DA600777281 /* FnIconv.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnIconv.hpp; sourceTree = "<group>"; };
+		7807FDD812E42DA600777281 /* FnInSet.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnInSet.hpp; sourceTree = "<group>"; };
+		7807FDD912E42DA600777281 /* FnJSEscape.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnJSEscape.hpp; sourceTree = "<group>"; };
+		7807FDDA12E42DA600777281 /* FnJSON.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnJSON.hpp; sourceTree = "<group>"; };
+		7807FDDB12E42DA600777281 /* FnListElement.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnListElement.hpp; sourceTree = "<group>"; };
+		7807FDDC12E42DA600777281 /* FnLog.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnLog.hpp; sourceTree = "<group>"; };
+		7807FDDD12E42DA600777281 /* FnMax.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnMax.hpp; sourceTree = "<group>"; };
+		7807FDDE12E42DA600777281 /* FnMBSize.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnMBSize.hpp; sourceTree = "<group>"; };
+		7807FDDF12E42DA600777281 /* FnMBSubstring.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnMBSubstring.hpp; sourceTree = "<group>"; };
+		7807FDE012E42DA600777281 /* FnMBTruncate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnMBTruncate.hpp; sourceTree = "<group>"; };
+		7807FDE112E42DA600777281 /* FnMD5.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnMD5.hpp; sourceTree = "<group>"; };
+		7807FDE212E42DA600777281 /* FnMin.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnMin.hpp; sourceTree = "<group>"; };
+		7807FDE312E42DA600777281 /* FnNumeral.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnNumeral.hpp; sourceTree = "<group>"; };
+		7807FDE412E42DA600777281 /* FnNumFormat.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnNumFormat.hpp; sourceTree = "<group>"; };
+		7807FDE512E42DA600777281 /* FnObjDump.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnObjDump.hpp; sourceTree = "<group>"; };
+		7807FDE612E42DA600777281 /* FnRandom.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnRandom.hpp; sourceTree = "<group>"; };
+		7807FDE712E42DA600777281 /* FnSize.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnSize.hpp; sourceTree = "<group>"; };
+		7807FDE812E42DA600777281 /* FnSprintf.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnSprintf.hpp; sourceTree = "<group>"; };
+		7807FDE912E42DA600777281 /* FnSubstring.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnSubstring.hpp; sourceTree = "<group>"; };
+		7807FDEA12E42DA600777281 /* FnTruncate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnTruncate.hpp; sourceTree = "<group>"; };
+		7807FDEB12E42DA600777281 /* FnURIEscape.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnURIEscape.hpp; sourceTree = "<group>"; };
+		7807FDEC12E42DA600777281 /* FnURLEscape.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnURLEscape.hpp; sourceTree = "<group>"; };
+		7807FDED12E42DA600777281 /* FnVersion.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnVersion.hpp; sourceTree = "<group>"; };
+		7807FDEE12E42DA600777281 /* FnWMLEscape.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnWMLEscape.hpp; sourceTree = "<group>"; };
+		7807FDEF12E42DA600777281 /* FnXMLEscape.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FnXMLEscape.hpp; sourceTree = "<group>"; };
+		7807FDF012E42DA600777281 /* STLException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = STLException.hpp; sourceTree = "<group>"; };
+		7807FDF112E42DA600777281 /* STLFunctional.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = STLFunctional.hpp; sourceTree = "<group>"; };
+		7807FDF212E42DA600777281 /* STLIosfwd.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = STLIosfwd.hpp; sourceTree = "<group>"; };
+		7807FDF312E42DA600777281 /* STLMap.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = STLMap.hpp; sourceTree = "<group>"; };
+		7807FDF412E42DA600777281 /* STLOstream.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = STLOstream.hpp; sourceTree = "<group>"; };
+		7807FDF512E42DA600777281 /* STLPair.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = STLPair.hpp; sourceTree = "<group>"; };
+		7807FDF612E42DA600777281 /* STLString.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = STLString.hpp; sourceTree = "<group>"; };
+		7807FDF712E42DA600777281 /* STLVector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = STLVector.hpp; sourceTree = "<group>"; };
+		7807FDF912E42DA600777281 /* CDT.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CDT.cpp; sourceTree = "<group>"; };
+		7807FDFA12E42DA600777281 /* CDTSortRoutines.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CDTSortRoutines.cpp; sourceTree = "<group>"; };
+		7807FDFB12E42DA600777281 /* CTPP2BitIndex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2BitIndex.cpp; sourceTree = "<group>"; };
+		7807FDFC12E42DA600777281 /* CTPP2Compiler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2Compiler.cpp; sourceTree = "<group>"; };
+		7807FDFD12E42DA600777281 /* CTPP2DTOA.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2DTOA.cpp; sourceTree = "<group>"; };
+		7807FDFE12E42DA600777281 /* CTPP2Error.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2Error.cpp; sourceTree = "<group>"; };
+		7807FDFF12E42DA600777281 /* CTPP2Exception.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2Exception.cpp; sourceTree = "<group>"; };
+		7807FE0012E42DA600777281 /* CTPP2FileLogger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2FileLogger.cpp; sourceTree = "<group>"; };
+		7807FE0112E42DA600777281 /* CTPP2FileOutputCollector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2FileOutputCollector.cpp; sourceTree = "<group>"; };
+		7807FE0212E42DA600777281 /* CTPP2FileSourceLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2FileSourceLoader.cpp; sourceTree = "<group>"; };
+		7807FE0312E42DA600777281 /* CTPP2HashTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2HashTable.cpp; sourceTree = "<group>"; };
+		7807FE0412E42DA600777281 /* CTPP2JSONFileParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2JSONFileParser.cpp; sourceTree = "<group>"; };
+		7807FE0512E42DA600777281 /* CTPP2JSONParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2JSONParser.cpp; sourceTree = "<group>"; };
+		7807FE0612E42DA600777281 /* CTPP2Logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2Logger.cpp; sourceTree = "<group>"; };
+		7807FE0712E42DA600777281 /* CTPP2Parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2Parser.cpp; sourceTree = "<group>"; };
+		7807FE0812E42DA600777281 /* CTPP2ParserException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2ParserException.cpp; sourceTree = "<group>"; };
+		7807FE0912E42DA600777281 /* CTPP2Sprintf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2Sprintf.cpp; sourceTree = "<group>"; };
+		7807FE0A12E42DA600777281 /* CTPP2StaticData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2StaticData.cpp; sourceTree = "<group>"; };
+		7807FE0B12E42DA600777281 /* CTPP2StaticText.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2StaticText.cpp; sourceTree = "<group>"; };
+		7807FE0C12E42DA600777281 /* CTPP2StreamOutputCollector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2StreamOutputCollector.cpp; sourceTree = "<group>"; };
+		7807FE0D12E42DA600777281 /* CTPP2StringBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2StringBuffer.cpp; sourceTree = "<group>"; };
+		7807FE0E12E42DA600777281 /* CTPP2StringIconvOutputCollector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2StringIconvOutputCollector.cpp; sourceTree = "<group>"; };
+		7807FE0F12E42DA600777281 /* CTPP2StringOutputCollector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2StringOutputCollector.cpp; sourceTree = "<group>"; };
+		7807FE1012E42DA600777281 /* CTPP2SyscallFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2SyscallFactory.cpp; sourceTree = "<group>"; };
+		7807FE1112E42DA600777281 /* CTPP2Util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2Util.cpp; sourceTree = "<group>"; };
+		7807FE1212E42DA600777281 /* CTPP2VM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2VM.cpp; sourceTree = "<group>"; };
+		7807FE1312E42DA600777281 /* CTPP2VMArgStack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2VMArgStack.cpp; sourceTree = "<group>"; };
+		7807FE1412E42DA600777281 /* CTPP2VMCodeStack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2VMCodeStack.cpp; sourceTree = "<group>"; };
+		7807FE1512E42DA600777281 /* CTPP2VMDebugInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2VMDebugInfo.cpp; sourceTree = "<group>"; };
+		7807FE1612E42DA600777281 /* CTPP2VMDumper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2VMDumper.cpp; sourceTree = "<group>"; };
+		7807FE1712E42DA600777281 /* CTPP2VMException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2VMException.cpp; sourceTree = "<group>"; };
+		7807FE1812E42DA600777281 /* CTPP2VMExecutable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2VMExecutable.cpp; sourceTree = "<group>"; };
+		7807FE1912E42DA600777281 /* CTPP2VMFileLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2VMFileLoader.cpp; sourceTree = "<group>"; };
+		7807FE1A12E42DA600777281 /* CTPP2VMMemoryCore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2VMMemoryCore.cpp; sourceTree = "<group>"; };
+		7807FE1B12E42DA600777281 /* CTPP2VMOpcodeCollector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2VMOpcodeCollector.cpp; sourceTree = "<group>"; };
+		7807FE1C12E42DA600777281 /* CTPP2VMSTDLib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2VMSTDLib.cpp; sourceTree = "<group>"; };
+		7807FE1D12E42DA600777281 /* CTPP2VMSyscall.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTPP2VMSyscall.cpp; sourceTree = "<group>"; };
+		7807FE1F12E42DA600777281 /* FnArrayElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnArrayElement.cpp; sourceTree = "<group>"; };
+		7807FE2012E42DA600777281 /* FnAvg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnAvg.cpp; sourceTree = "<group>"; };
+		7807FE2112E42DA600777281 /* FnBase64Decode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnBase64Decode.cpp; sourceTree = "<group>"; };
+		7807FE2212E42DA600777281 /* FnBase64Encode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnBase64Encode.cpp; sourceTree = "<group>"; };
+		7807FE2312E42DA600777281 /* FnCast.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnCast.cpp; sourceTree = "<group>"; };
+		7807FE2412E42DA600777281 /* FnConcat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnConcat.cpp; sourceTree = "<group>"; };
+		7807FE2512E42DA600777281 /* FnDateFormat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnDateFormat.cpp; sourceTree = "<group>"; };
+		7807FE2612E42DA600777281 /* FnDefault.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnDefault.cpp; sourceTree = "<group>"; };
+		7807FE2712E42DA600777281 /* FnDefined.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnDefined.cpp; sourceTree = "<group>"; };
+		7807FE2812E42DA600777281 /* FnEmitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnEmitter.cpp; sourceTree = "<group>"; };
+		7807FE2912E42DA600777281 /* FnError.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnError.cpp; sourceTree = "<group>"; };
+		7807FE2A12E42DA600777281 /* FnFormParam.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnFormParam.cpp; sourceTree = "<group>"; };
+		7807FE2B12E42DA600777281 /* FnGetText.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnGetText.cpp; sourceTree = "<group>"; };
+		7807FE2C12E42DA600777281 /* FnGetText_.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnGetText_.cpp; sourceTree = "<group>"; };
+		7807FE2D12E42DA600777281 /* FnHashElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnHashElement.cpp; sourceTree = "<group>"; };
+		7807FE2E12E42DA600777281 /* FnHMACMD5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnHMACMD5.cpp; sourceTree = "<group>"; };
+		7807FE2F12E42DA600777281 /* FnHrefParam.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnHrefParam.cpp; sourceTree = "<group>"; };
+		7807FE3012E42DA600777281 /* FnHTMLEscape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnHTMLEscape.cpp; sourceTree = "<group>"; };
+		7807FE3112E42DA600777281 /* FnIconv.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnIconv.cpp; sourceTree = "<group>"; };
+		7807FE3212E42DA600777281 /* FnInSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnInSet.cpp; sourceTree = "<group>"; };
+		7807FE3312E42DA600777281 /* FnJSEscape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnJSEscape.cpp; sourceTree = "<group>"; };
+		7807FE3412E42DA600777281 /* FnJSON.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnJSON.cpp; sourceTree = "<group>"; };
+		7807FE3512E42DA600777281 /* FnListElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnListElement.cpp; sourceTree = "<group>"; };
+		7807FE3612E42DA600777281 /* FnLog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnLog.cpp; sourceTree = "<group>"; };
+		7807FE3712E42DA600777281 /* FnMax.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnMax.cpp; sourceTree = "<group>"; };
+		7807FE3812E42DA600777281 /* FnMBSize.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnMBSize.cpp; sourceTree = "<group>"; };
+		7807FE3912E42DA600777281 /* FnMBSubstring.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnMBSubstring.cpp; sourceTree = "<group>"; };
+		7807FE3A12E42DA600777281 /* FnMBTruncate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnMBTruncate.cpp; sourceTree = "<group>"; };
+		7807FE3B12E42DA600777281 /* FnMD5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnMD5.cpp; sourceTree = "<group>"; };
+		7807FE3C12E42DA600777281 /* FnMin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnMin.cpp; sourceTree = "<group>"; };
+		7807FE3D12E42DA600777281 /* FnNumeral.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnNumeral.cpp; sourceTree = "<group>"; };
+		7807FE3E12E42DA600777281 /* FnNumFormat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnNumFormat.cpp; sourceTree = "<group>"; };
+		7807FE3F12E42DA600777281 /* FnObjDump.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnObjDump.cpp; sourceTree = "<group>"; };
+		7807FE4012E42DA600777281 /* FnRandom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnRandom.cpp; sourceTree = "<group>"; };
+		7807FE4112E42DA600777281 /* FnSize.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnSize.cpp; sourceTree = "<group>"; };
+		7807FE4212E42DA600777281 /* FnSprintf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnSprintf.cpp; sourceTree = "<group>"; };
+		7807FE4312E42DA600777281 /* FnSubstring.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnSubstring.cpp; sourceTree = "<group>"; };
+		7807FE4412E42DA600777281 /* FnTruncate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnTruncate.cpp; sourceTree = "<group>"; };
+		7807FE4512E42DA600777281 /* FnURIEscape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnURIEscape.cpp; sourceTree = "<group>"; };
+		7807FE4612E42DA600777281 /* FnURLEscape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnURLEscape.cpp; sourceTree = "<group>"; };
+		7807FE4712E42DA600777281 /* FnVersion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnVersion.cpp; sourceTree = "<group>"; };
+		7807FE4812E42DA600777281 /* FnWMLEscape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnWMLEscape.cpp; sourceTree = "<group>"; };
+		7807FE4912E42DA600777281 /* FnXMLEscape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FnXMLEscape.cpp; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* CTPP2_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPP2_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		D2AAC07E0554694100DB518D /* libCTPP2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCTPP2.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B811CD214878BE2001B46D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libCTPP2.a */,
+				5B811CD614878BE2001B46D8 /* libCTPP2-clang.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* CTPP2 */ = {
+			isa = PBXGroup;
+			children = (
+				7807FD8E12E42DA500777281 /* include */,
+				7807FDF812E42DA600777281 /* src */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = CTPP2;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* CTPP2_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		7807FD8E12E42DA500777281 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				7807FD8F12E42DA500777281 /* CDT.hpp */,
+				7807FD9012E42DA500777281 /* CDTSortRoutines.hpp */,
+				7807FD9112E42DA500777281 /* CTPP2BitIndex.hpp */,
+				7807FD9212E42DA500777281 /* CTPP2CharIterator.hpp */,
+				7807FD9312E42DA500777281 /* CTPP2Compiler.hpp */,
+				7807FD9412E42DA500777281 /* CTPP2DTOA.hpp */,
+				7807FD9512E42DA500777281 /* CTPP2Error.hpp */,
+				7807FD9612E42DA500777281 /* CTPP2ErrorCodes.h */,
+				7807FD9712E42DA500777281 /* CTPP2Exception.hpp */,
+				7807FD9812E42DA500777281 /* CTPP2FileLogger.hpp */,
+				7807FD9912E42DA500777281 /* CTPP2FileOutputCollector.hpp */,
+				7807FD9A12E42DA500777281 /* CTPP2FileSourceLoader.hpp */,
+				7807FD9B12E42DA500777281 /* CTPP2GlobalDefines.h */,
+				7807FD9C12E42DA500777281 /* CTPP2HashTable.hpp */,
+				7807FD9D12E42DA500777281 /* CTPP2JSONFileParser.hpp */,
+				7807FD9E12E42DA500777281 /* CTPP2JSONParser.hpp */,
+				7807FD9F12E42DA500777281 /* CTPP2Logger.hpp */,
+				7807FDA012E42DA500777281 /* CTPP2OutputCollector.hpp */,
+				7807FDA112E42DA500777281 /* CTPP2Parser.hpp */,
+				7807FDA212E42DA500777281 /* CTPP2ParserException.hpp */,
+				7807FDA312E42DA500777281 /* CTPP2SourceLoader.hpp */,
+				7807FDA412E42DA500777281 /* CTPP2Sprintf.hpp */,
+				7807FDA512E42DA500777281 /* CTPP2StaticData.hpp */,
+				7807FDA612E42DA500777281 /* CTPP2StaticText.hpp */,
+				7807FDA712E42DA500777281 /* CTPP2StreamOutputCollector.hpp */,
+				7807FDA812E42DA500777281 /* CTPP2StringBuffer.hpp */,
+				7807FDA912E42DA500777281 /* CTPP2StringIconvOutputCollector.hpp */,
+				7807FDAA12E42DA500777281 /* CTPP2StringOutputCollector.hpp */,
+				7807FDAB12E42DA500777281 /* CTPP2SymbolTable.hpp */,
+				7807FDAC12E42DA500777281 /* CTPP2Syntax.h */,
+				7807FDAD12E42DA500777281 /* CTPP2SyscallFactory.hpp */,
+				7807FDAE12E42DA500777281 /* CTPP2SysHeaders.h */,
+				7807FDAF12E42DA500777281 /* CTPP2SysTypes.h */,
+				7807FDB012E42DA500777281 /* CTPP2Time.h */,
+				7807FDB112E42DA500777281 /* CTPP2Types.h */,
+				7807FDB212E42DA500777281 /* CTPP2Util.hpp */,
+				7807FDB312E42DA500777281 /* CTPP2VM.hpp */,
+				7807FDB412E42DA500777281 /* CTPP2VMArgStack.hpp */,
+				7807FDB512E42DA500777281 /* CTPP2VMCodeStack.hpp */,
+				7807FDB612E42DA500777281 /* CTPP2VMDebugInfo.hpp */,
+				7807FDB712E42DA500777281 /* CTPP2VMDumper.hpp */,
+				7807FDB812E42DA500777281 /* CTPP2VMException.hpp */,
+				7807FDB912E42DA500777281 /* CTPP2VMExecutable.hpp */,
+				7807FDBA12E42DA500777281 /* CTPP2VMFileLoader.hpp */,
+				7807FDBB12E42DA500777281 /* CTPP2VMInstruction.hpp */,
+				7807FDBC12E42DA500777281 /* CTPP2VMLoader.hpp */,
+				7807FDBD12E42DA500777281 /* CTPP2VMMemoryCore.hpp */,
+				7807FDBE12E42DA500777281 /* CTPP2VMOpcodeCollector.hpp */,
+				7807FDBF12E42DA500777281 /* CTPP2VMOpcodes.h */,
+				7807FDC012E42DA500777281 /* CTPP2VMStackException.hpp */,
+				7807FDC112E42DA500777281 /* CTPP2VMSTDLib.hpp */,
+				7807FDC212E42DA500777281 /* CTPP2VMSyscall.hpp */,
+				7807FDC312E42DA500777281 /* functions */,
+				7807FDF012E42DA600777281 /* STLException.hpp */,
+				7807FDF112E42DA600777281 /* STLFunctional.hpp */,
+				7807FDF212E42DA600777281 /* STLIosfwd.hpp */,
+				7807FDF312E42DA600777281 /* STLMap.hpp */,
+				7807FDF412E42DA600777281 /* STLOstream.hpp */,
+				7807FDF512E42DA600777281 /* STLPair.hpp */,
+				7807FDF612E42DA600777281 /* STLString.hpp */,
+				7807FDF712E42DA600777281 /* STLVector.hpp */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		7807FDC312E42DA500777281 /* functions */ = {
+			isa = PBXGroup;
+			children = (
+				7807FDC412E42DA500777281 /* CTPP2VMSTDLibFunctions.hpp */,
+				7807FDC512E42DA500777281 /* FnArrayElement.hpp */,
+				7807FDC612E42DA500777281 /* FnAvg.hpp */,
+				7807FDC712E42DA500777281 /* FnBase64Decode.hpp */,
+				7807FDC812E42DA500777281 /* FnBase64Encode.hpp */,
+				7807FDC912E42DA500777281 /* FnCast.hpp */,
+				7807FDCA12E42DA500777281 /* FnConcat.hpp */,
+				7807FDCB12E42DA600777281 /* FnDateFormat.hpp */,
+				7807FDCC12E42DA600777281 /* FnDefault.hpp */,
+				7807FDCD12E42DA600777281 /* FnDefined.hpp */,
+				7807FDCE12E42DA600777281 /* FnEmitter.hpp */,
+				7807FDCF12E42DA600777281 /* FnError.hpp */,
+				7807FDD012E42DA600777281 /* FnFormParam.hpp */,
+				7807FDD112E42DA600777281 /* FnGetText.hpp */,
+				7807FDD212E42DA600777281 /* FnGetText_.hpp */,
+				7807FDD312E42DA600777281 /* FnHashElement.hpp */,
+				7807FDD412E42DA600777281 /* FnHMACMD5.hpp */,
+				7807FDD512E42DA600777281 /* FnHrefParam.hpp */,
+				7807FDD612E42DA600777281 /* FnHTMLEscape.hpp */,
+				7807FDD712E42DA600777281 /* FnIconv.hpp */,
+				7807FDD812E42DA600777281 /* FnInSet.hpp */,
+				7807FDD912E42DA600777281 /* FnJSEscape.hpp */,
+				7807FDDA12E42DA600777281 /* FnJSON.hpp */,
+				7807FDDB12E42DA600777281 /* FnListElement.hpp */,
+				7807FDDC12E42DA600777281 /* FnLog.hpp */,
+				7807FDDD12E42DA600777281 /* FnMax.hpp */,
+				7807FDDE12E42DA600777281 /* FnMBSize.hpp */,
+				7807FDDF12E42DA600777281 /* FnMBSubstring.hpp */,
+				7807FDE012E42DA600777281 /* FnMBTruncate.hpp */,
+				7807FDE112E42DA600777281 /* FnMD5.hpp */,
+				7807FDE212E42DA600777281 /* FnMin.hpp */,
+				7807FDE312E42DA600777281 /* FnNumeral.hpp */,
+				7807FDE412E42DA600777281 /* FnNumFormat.hpp */,
+				7807FDE512E42DA600777281 /* FnObjDump.hpp */,
+				7807FDE612E42DA600777281 /* FnRandom.hpp */,
+				7807FDE712E42DA600777281 /* FnSize.hpp */,
+				7807FDE812E42DA600777281 /* FnSprintf.hpp */,
+				7807FDE912E42DA600777281 /* FnSubstring.hpp */,
+				7807FDEA12E42DA600777281 /* FnTruncate.hpp */,
+				7807FDEB12E42DA600777281 /* FnURIEscape.hpp */,
+				7807FDEC12E42DA600777281 /* FnURLEscape.hpp */,
+				7807FDED12E42DA600777281 /* FnVersion.hpp */,
+				7807FDEE12E42DA600777281 /* FnWMLEscape.hpp */,
+				7807FDEF12E42DA600777281 /* FnXMLEscape.hpp */,
+			);
+			path = functions;
+			sourceTree = "<group>";
+		};
+		7807FDF812E42DA600777281 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				7807FDF912E42DA600777281 /* CDT.cpp */,
+				7807FDFA12E42DA600777281 /* CDTSortRoutines.cpp */,
+				7807FDFB12E42DA600777281 /* CTPP2BitIndex.cpp */,
+				7807FDFC12E42DA600777281 /* CTPP2Compiler.cpp */,
+				7807FDFD12E42DA600777281 /* CTPP2DTOA.cpp */,
+				7807FDFE12E42DA600777281 /* CTPP2Error.cpp */,
+				7807FDFF12E42DA600777281 /* CTPP2Exception.cpp */,
+				7807FE0012E42DA600777281 /* CTPP2FileLogger.cpp */,
+				7807FE0112E42DA600777281 /* CTPP2FileOutputCollector.cpp */,
+				7807FE0212E42DA600777281 /* CTPP2FileSourceLoader.cpp */,
+				7807FE0312E42DA600777281 /* CTPP2HashTable.cpp */,
+				7807FE0412E42DA600777281 /* CTPP2JSONFileParser.cpp */,
+				7807FE0512E42DA600777281 /* CTPP2JSONParser.cpp */,
+				7807FE0612E42DA600777281 /* CTPP2Logger.cpp */,
+				7807FE0712E42DA600777281 /* CTPP2Parser.cpp */,
+				7807FE0812E42DA600777281 /* CTPP2ParserException.cpp */,
+				7807FE0912E42DA600777281 /* CTPP2Sprintf.cpp */,
+				7807FE0A12E42DA600777281 /* CTPP2StaticData.cpp */,
+				7807FE0B12E42DA600777281 /* CTPP2StaticText.cpp */,
+				7807FE0C12E42DA600777281 /* CTPP2StreamOutputCollector.cpp */,
+				7807FE0D12E42DA600777281 /* CTPP2StringBuffer.cpp */,
+				7807FE0E12E42DA600777281 /* CTPP2StringIconvOutputCollector.cpp */,
+				7807FE0F12E42DA600777281 /* CTPP2StringOutputCollector.cpp */,
+				7807FE1012E42DA600777281 /* CTPP2SyscallFactory.cpp */,
+				7807FE1112E42DA600777281 /* CTPP2Util.cpp */,
+				7807FE1212E42DA600777281 /* CTPP2VM.cpp */,
+				7807FE1312E42DA600777281 /* CTPP2VMArgStack.cpp */,
+				7807FE1412E42DA600777281 /* CTPP2VMCodeStack.cpp */,
+				7807FE1512E42DA600777281 /* CTPP2VMDebugInfo.cpp */,
+				7807FE1612E42DA600777281 /* CTPP2VMDumper.cpp */,
+				7807FE1712E42DA600777281 /* CTPP2VMException.cpp */,
+				7807FE1812E42DA600777281 /* CTPP2VMExecutable.cpp */,
+				7807FE1912E42DA600777281 /* CTPP2VMFileLoader.cpp */,
+				7807FE1A12E42DA600777281 /* CTPP2VMMemoryCore.cpp */,
+				7807FE1B12E42DA600777281 /* CTPP2VMOpcodeCollector.cpp */,
+				7807FE1C12E42DA600777281 /* CTPP2VMSTDLib.cpp */,
+				7807FE1D12E42DA600777281 /* CTPP2VMSyscall.cpp */,
+				7807FE1E12E42DA600777281 /* functions */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		7807FE1E12E42DA600777281 /* functions */ = {
+			isa = PBXGroup;
+			children = (
+				7807FE1F12E42DA600777281 /* FnArrayElement.cpp */,
+				7807FE2012E42DA600777281 /* FnAvg.cpp */,
+				7807FE2112E42DA600777281 /* FnBase64Decode.cpp */,
+				7807FE2212E42DA600777281 /* FnBase64Encode.cpp */,
+				7807FE2312E42DA600777281 /* FnCast.cpp */,
+				7807FE2412E42DA600777281 /* FnConcat.cpp */,
+				7807FE2512E42DA600777281 /* FnDateFormat.cpp */,
+				7807FE2612E42DA600777281 /* FnDefault.cpp */,
+				7807FE2712E42DA600777281 /* FnDefined.cpp */,
+				7807FE2812E42DA600777281 /* FnEmitter.cpp */,
+				7807FE2912E42DA600777281 /* FnError.cpp */,
+				7807FE2A12E42DA600777281 /* FnFormParam.cpp */,
+				7807FE2B12E42DA600777281 /* FnGetText.cpp */,
+				7807FE2C12E42DA600777281 /* FnGetText_.cpp */,
+				7807FE2D12E42DA600777281 /* FnHashElement.cpp */,
+				7807FE2E12E42DA600777281 /* FnHMACMD5.cpp */,
+				7807FE2F12E42DA600777281 /* FnHrefParam.cpp */,
+				7807FE3012E42DA600777281 /* FnHTMLEscape.cpp */,
+				7807FE3112E42DA600777281 /* FnIconv.cpp */,
+				7807FE3212E42DA600777281 /* FnInSet.cpp */,
+				7807FE3312E42DA600777281 /* FnJSEscape.cpp */,
+				7807FE3412E42DA600777281 /* FnJSON.cpp */,
+				7807FE3512E42DA600777281 /* FnListElement.cpp */,
+				7807FE3612E42DA600777281 /* FnLog.cpp */,
+				7807FE3712E42DA600777281 /* FnMax.cpp */,
+				7807FE3812E42DA600777281 /* FnMBSize.cpp */,
+				7807FE3912E42DA600777281 /* FnMBSubstring.cpp */,
+				7807FE3A12E42DA600777281 /* FnMBTruncate.cpp */,
+				7807FE3B12E42DA600777281 /* FnMD5.cpp */,
+				7807FE3C12E42DA600777281 /* FnMin.cpp */,
+				7807FE3D12E42DA600777281 /* FnNumeral.cpp */,
+				7807FE3E12E42DA600777281 /* FnNumFormat.cpp */,
+				7807FE3F12E42DA600777281 /* FnObjDump.cpp */,
+				7807FE4012E42DA600777281 /* FnRandom.cpp */,
+				7807FE4112E42DA600777281 /* FnSize.cpp */,
+				7807FE4212E42DA600777281 /* FnSprintf.cpp */,
+				7807FE4312E42DA600777281 /* FnSubstring.cpp */,
+				7807FE4412E42DA600777281 /* FnTruncate.cpp */,
+				7807FE4512E42DA600777281 /* FnURIEscape.cpp */,
+				7807FE4612E42DA600777281 /* FnURLEscape.cpp */,
+				7807FE4712E42DA600777281 /* FnVersion.cpp */,
+				7807FE4812E42DA600777281 /* FnWMLEscape.cpp */,
+				7807FE4912E42DA600777281 /* FnXMLEscape.cpp */,
+			);
+			path = functions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5B811C1714878BE2001B46D8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B811C1814878BE2001B46D8 /* CTPP2_Prefix.pch in Headers */,
+				5B811C1914878BE2001B46D8 /* CDT.hpp in Headers */,
+				5B811C1A14878BE2001B46D8 /* CDTSortRoutines.hpp in Headers */,
+				5B811C1B14878BE2001B46D8 /* CTPP2BitIndex.hpp in Headers */,
+				5B811C1C14878BE2001B46D8 /* CTPP2CharIterator.hpp in Headers */,
+				5B811C1D14878BE2001B46D8 /* CTPP2Compiler.hpp in Headers */,
+				5B811C1E14878BE2001B46D8 /* CTPP2DTOA.hpp in Headers */,
+				5B811C1F14878BE2001B46D8 /* CTPP2Error.hpp in Headers */,
+				5B811C2014878BE2001B46D8 /* CTPP2ErrorCodes.h in Headers */,
+				5B811C2114878BE2001B46D8 /* CTPP2Exception.hpp in Headers */,
+				5B811C2214878BE2001B46D8 /* CTPP2FileLogger.hpp in Headers */,
+				5B811C2314878BE2001B46D8 /* CTPP2FileOutputCollector.hpp in Headers */,
+				5B811C2414878BE2001B46D8 /* CTPP2FileSourceLoader.hpp in Headers */,
+				5B811C2514878BE2001B46D8 /* CTPP2GlobalDefines.h in Headers */,
+				5B811C2614878BE2001B46D8 /* CTPP2HashTable.hpp in Headers */,
+				5B811C2714878BE2001B46D8 /* CTPP2JSONFileParser.hpp in Headers */,
+				5B811C2814878BE2001B46D8 /* CTPP2JSONParser.hpp in Headers */,
+				5B811C2914878BE2001B46D8 /* CTPP2Logger.hpp in Headers */,
+				5B811C2A14878BE2001B46D8 /* CTPP2OutputCollector.hpp in Headers */,
+				5B811C2B14878BE2001B46D8 /* CTPP2Parser.hpp in Headers */,
+				5B811C2C14878BE2001B46D8 /* CTPP2ParserException.hpp in Headers */,
+				5B811C2D14878BE2001B46D8 /* CTPP2SourceLoader.hpp in Headers */,
+				5B811C2E14878BE2001B46D8 /* CTPP2Sprintf.hpp in Headers */,
+				5B811C2F14878BE2001B46D8 /* CTPP2StaticData.hpp in Headers */,
+				5B811C3014878BE2001B46D8 /* CTPP2StaticText.hpp in Headers */,
+				5B811C3114878BE2001B46D8 /* CTPP2StreamOutputCollector.hpp in Headers */,
+				5B811C3214878BE2001B46D8 /* CTPP2StringBuffer.hpp in Headers */,
+				5B811C3314878BE2001B46D8 /* CTPP2StringIconvOutputCollector.hpp in Headers */,
+				5B811C3414878BE2001B46D8 /* CTPP2StringOutputCollector.hpp in Headers */,
+				5B811C3514878BE2001B46D8 /* CTPP2SymbolTable.hpp in Headers */,
+				5B811C3614878BE2001B46D8 /* CTPP2Syntax.h in Headers */,
+				5B811C3714878BE2001B46D8 /* CTPP2SyscallFactory.hpp in Headers */,
+				5B811C3814878BE2001B46D8 /* CTPP2SysHeaders.h in Headers */,
+				5B811C3914878BE2001B46D8 /* CTPP2SysTypes.h in Headers */,
+				5B811C3A14878BE2001B46D8 /* CTPP2Time.h in Headers */,
+				5B811C3B14878BE2001B46D8 /* CTPP2Types.h in Headers */,
+				5B811C3C14878BE2001B46D8 /* CTPP2Util.hpp in Headers */,
+				5B811C3D14878BE2001B46D8 /* CTPP2VM.hpp in Headers */,
+				5B811C3E14878BE2001B46D8 /* CTPP2VMArgStack.hpp in Headers */,
+				5B811C3F14878BE2001B46D8 /* CTPP2VMCodeStack.hpp in Headers */,
+				5B811C4014878BE2001B46D8 /* CTPP2VMDebugInfo.hpp in Headers */,
+				5B811C4114878BE2001B46D8 /* CTPP2VMDumper.hpp in Headers */,
+				5B811C4214878BE2001B46D8 /* CTPP2VMException.hpp in Headers */,
+				5B811C4314878BE2001B46D8 /* CTPP2VMExecutable.hpp in Headers */,
+				5B811C4414878BE2001B46D8 /* CTPP2VMFileLoader.hpp in Headers */,
+				5B811C4514878BE2001B46D8 /* CTPP2VMInstruction.hpp in Headers */,
+				5B811C4614878BE2001B46D8 /* CTPP2VMLoader.hpp in Headers */,
+				5B811C4714878BE2001B46D8 /* CTPP2VMMemoryCore.hpp in Headers */,
+				5B811C4814878BE2001B46D8 /* CTPP2VMOpcodeCollector.hpp in Headers */,
+				5B811C4914878BE2001B46D8 /* CTPP2VMOpcodes.h in Headers */,
+				5B811C4A14878BE2001B46D8 /* CTPP2VMStackException.hpp in Headers */,
+				5B811C4B14878BE2001B46D8 /* CTPP2VMSTDLib.hpp in Headers */,
+				5B811C4C14878BE2001B46D8 /* CTPP2VMSyscall.hpp in Headers */,
+				5B811C4D14878BE2001B46D8 /* CTPP2VMSTDLibFunctions.hpp in Headers */,
+				5B811C4E14878BE2001B46D8 /* FnArrayElement.hpp in Headers */,
+				5B811C4F14878BE2001B46D8 /* FnAvg.hpp in Headers */,
+				5B811C5014878BE2001B46D8 /* FnBase64Decode.hpp in Headers */,
+				5B811C5114878BE2001B46D8 /* FnBase64Encode.hpp in Headers */,
+				5B811C5214878BE2001B46D8 /* FnCast.hpp in Headers */,
+				5B811C5314878BE2001B46D8 /* FnConcat.hpp in Headers */,
+				5B811C5414878BE2001B46D8 /* FnDateFormat.hpp in Headers */,
+				5B811C5514878BE2001B46D8 /* FnDefault.hpp in Headers */,
+				5B811C5614878BE2001B46D8 /* FnDefined.hpp in Headers */,
+				5B811C5714878BE2001B46D8 /* FnEmitter.hpp in Headers */,
+				5B811C5814878BE2001B46D8 /* FnError.hpp in Headers */,
+				5B811C5914878BE2001B46D8 /* FnFormParam.hpp in Headers */,
+				5B811C5A14878BE2001B46D8 /* FnGetText.hpp in Headers */,
+				5B811C5B14878BE2001B46D8 /* FnGetText_.hpp in Headers */,
+				5B811C5C14878BE2001B46D8 /* FnHashElement.hpp in Headers */,
+				5B811C5D14878BE2001B46D8 /* FnHMACMD5.hpp in Headers */,
+				5B811C5E14878BE2001B46D8 /* FnHrefParam.hpp in Headers */,
+				5B811C5F14878BE2001B46D8 /* FnHTMLEscape.hpp in Headers */,
+				5B811C6014878BE2001B46D8 /* FnIconv.hpp in Headers */,
+				5B811C6114878BE2001B46D8 /* FnInSet.hpp in Headers */,
+				5B811C6214878BE2001B46D8 /* FnJSEscape.hpp in Headers */,
+				5B811C6314878BE2001B46D8 /* FnJSON.hpp in Headers */,
+				5B811C6414878BE2001B46D8 /* FnListElement.hpp in Headers */,
+				5B811C6514878BE2001B46D8 /* FnLog.hpp in Headers */,
+				5B811C6614878BE2001B46D8 /* FnMax.hpp in Headers */,
+				5B811C6714878BE2001B46D8 /* FnMBSize.hpp in Headers */,
+				5B811C6814878BE2001B46D8 /* FnMBSubstring.hpp in Headers */,
+				5B811C6914878BE2001B46D8 /* FnMBTruncate.hpp in Headers */,
+				5B811C6A14878BE2001B46D8 /* FnMD5.hpp in Headers */,
+				5B811C6B14878BE2001B46D8 /* FnMin.hpp in Headers */,
+				5B811C6C14878BE2001B46D8 /* FnNumeral.hpp in Headers */,
+				5B811C6D14878BE2001B46D8 /* FnNumFormat.hpp in Headers */,
+				5B811C6E14878BE2001B46D8 /* FnObjDump.hpp in Headers */,
+				5B811C6F14878BE2001B46D8 /* FnRandom.hpp in Headers */,
+				5B811C7014878BE2001B46D8 /* FnSize.hpp in Headers */,
+				5B811C7114878BE2001B46D8 /* FnSprintf.hpp in Headers */,
+				5B811C7214878BE2001B46D8 /* FnSubstring.hpp in Headers */,
+				5B811C7314878BE2001B46D8 /* FnTruncate.hpp in Headers */,
+				5B811C7414878BE2001B46D8 /* FnURIEscape.hpp in Headers */,
+				5B811C7514878BE2001B46D8 /* FnURLEscape.hpp in Headers */,
+				5B811C7614878BE2001B46D8 /* FnVersion.hpp in Headers */,
+				5B811C7714878BE2001B46D8 /* FnWMLEscape.hpp in Headers */,
+				5B811C7814878BE2001B46D8 /* FnXMLEscape.hpp in Headers */,
+				5B811C7914878BE2001B46D8 /* STLException.hpp in Headers */,
+				5B811C7A14878BE2001B46D8 /* STLFunctional.hpp in Headers */,
+				5B811C7B14878BE2001B46D8 /* STLIosfwd.hpp in Headers */,
+				5B811C7C14878BE2001B46D8 /* STLMap.hpp in Headers */,
+				5B811C7D14878BE2001B46D8 /* STLOstream.hpp in Headers */,
+				5B811C7E14878BE2001B46D8 /* STLPair.hpp in Headers */,
+				5B811C7F14878BE2001B46D8 /* STLString.hpp in Headers */,
+				5B811C8014878BE2001B46D8 /* STLVector.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* CTPP2_Prefix.pch in Headers */,
+				7807FE4A12E42DA600777281 /* CDT.hpp in Headers */,
+				7807FE4B12E42DA600777281 /* CDTSortRoutines.hpp in Headers */,
+				7807FE4C12E42DA600777281 /* CTPP2BitIndex.hpp in Headers */,
+				7807FE4D12E42DA600777281 /* CTPP2CharIterator.hpp in Headers */,
+				7807FE4E12E42DA600777281 /* CTPP2Compiler.hpp in Headers */,
+				7807FE4F12E42DA600777281 /* CTPP2DTOA.hpp in Headers */,
+				7807FE5012E42DA600777281 /* CTPP2Error.hpp in Headers */,
+				7807FE5112E42DA600777281 /* CTPP2ErrorCodes.h in Headers */,
+				7807FE5212E42DA600777281 /* CTPP2Exception.hpp in Headers */,
+				7807FE5312E42DA600777281 /* CTPP2FileLogger.hpp in Headers */,
+				7807FE5412E42DA600777281 /* CTPP2FileOutputCollector.hpp in Headers */,
+				7807FE5512E42DA600777281 /* CTPP2FileSourceLoader.hpp in Headers */,
+				7807FE5612E42DA600777281 /* CTPP2GlobalDefines.h in Headers */,
+				7807FE5712E42DA600777281 /* CTPP2HashTable.hpp in Headers */,
+				7807FE5812E42DA600777281 /* CTPP2JSONFileParser.hpp in Headers */,
+				7807FE5912E42DA600777281 /* CTPP2JSONParser.hpp in Headers */,
+				7807FE5A12E42DA600777281 /* CTPP2Logger.hpp in Headers */,
+				7807FE5B12E42DA600777281 /* CTPP2OutputCollector.hpp in Headers */,
+				7807FE5C12E42DA600777281 /* CTPP2Parser.hpp in Headers */,
+				7807FE5D12E42DA600777281 /* CTPP2ParserException.hpp in Headers */,
+				7807FE5E12E42DA600777281 /* CTPP2SourceLoader.hpp in Headers */,
+				7807FE5F12E42DA600777281 /* CTPP2Sprintf.hpp in Headers */,
+				7807FE6012E42DA600777281 /* CTPP2StaticData.hpp in Headers */,
+				7807FE6112E42DA600777281 /* CTPP2StaticText.hpp in Headers */,
+				7807FE6212E42DA600777281 /* CTPP2StreamOutputCollector.hpp in Headers */,
+				7807FE6312E42DA600777281 /* CTPP2StringBuffer.hpp in Headers */,
+				7807FE6412E42DA600777281 /* CTPP2StringIconvOutputCollector.hpp in Headers */,
+				7807FE6512E42DA600777281 /* CTPP2StringOutputCollector.hpp in Headers */,
+				7807FE6612E42DA600777281 /* CTPP2SymbolTable.hpp in Headers */,
+				7807FE6712E42DA600777281 /* CTPP2Syntax.h in Headers */,
+				7807FE6812E42DA600777281 /* CTPP2SyscallFactory.hpp in Headers */,
+				7807FE6912E42DA600777281 /* CTPP2SysHeaders.h in Headers */,
+				7807FE6A12E42DA600777281 /* CTPP2SysTypes.h in Headers */,
+				7807FE6B12E42DA600777281 /* CTPP2Time.h in Headers */,
+				7807FE6C12E42DA600777281 /* CTPP2Types.h in Headers */,
+				7807FE6D12E42DA600777281 /* CTPP2Util.hpp in Headers */,
+				7807FE6E12E42DA600777281 /* CTPP2VM.hpp in Headers */,
+				7807FE6F12E42DA600777281 /* CTPP2VMArgStack.hpp in Headers */,
+				7807FE7012E42DA600777281 /* CTPP2VMCodeStack.hpp in Headers */,
+				7807FE7112E42DA600777281 /* CTPP2VMDebugInfo.hpp in Headers */,
+				7807FE7212E42DA600777281 /* CTPP2VMDumper.hpp in Headers */,
+				7807FE7312E42DA600777281 /* CTPP2VMException.hpp in Headers */,
+				7807FE7412E42DA600777281 /* CTPP2VMExecutable.hpp in Headers */,
+				7807FE7512E42DA600777281 /* CTPP2VMFileLoader.hpp in Headers */,
+				7807FE7612E42DA600777281 /* CTPP2VMInstruction.hpp in Headers */,
+				7807FE7712E42DA600777281 /* CTPP2VMLoader.hpp in Headers */,
+				7807FE7812E42DA600777281 /* CTPP2VMMemoryCore.hpp in Headers */,
+				7807FE7912E42DA600777281 /* CTPP2VMOpcodeCollector.hpp in Headers */,
+				7807FE7A12E42DA600777281 /* CTPP2VMOpcodes.h in Headers */,
+				7807FE7B12E42DA600777281 /* CTPP2VMStackException.hpp in Headers */,
+				7807FE7C12E42DA600777281 /* CTPP2VMSTDLib.hpp in Headers */,
+				7807FE7D12E42DA600777281 /* CTPP2VMSyscall.hpp in Headers */,
+				7807FE7E12E42DA600777281 /* CTPP2VMSTDLibFunctions.hpp in Headers */,
+				7807FE7F12E42DA600777281 /* FnArrayElement.hpp in Headers */,
+				7807FE8012E42DA600777281 /* FnAvg.hpp in Headers */,
+				7807FE8112E42DA600777281 /* FnBase64Decode.hpp in Headers */,
+				7807FE8212E42DA600777281 /* FnBase64Encode.hpp in Headers */,
+				7807FE8312E42DA600777281 /* FnCast.hpp in Headers */,
+				7807FE8412E42DA600777281 /* FnConcat.hpp in Headers */,
+				7807FE8512E42DA600777281 /* FnDateFormat.hpp in Headers */,
+				7807FE8612E42DA600777281 /* FnDefault.hpp in Headers */,
+				7807FE8712E42DA600777281 /* FnDefined.hpp in Headers */,
+				7807FE8812E42DA600777281 /* FnEmitter.hpp in Headers */,
+				7807FE8912E42DA600777281 /* FnError.hpp in Headers */,
+				7807FE8A12E42DA600777281 /* FnFormParam.hpp in Headers */,
+				7807FE8B12E42DA600777281 /* FnGetText.hpp in Headers */,
+				7807FE8C12E42DA600777281 /* FnGetText_.hpp in Headers */,
+				7807FE8D12E42DA600777281 /* FnHashElement.hpp in Headers */,
+				7807FE8E12E42DA600777281 /* FnHMACMD5.hpp in Headers */,
+				7807FE8F12E42DA600777281 /* FnHrefParam.hpp in Headers */,
+				7807FE9012E42DA600777281 /* FnHTMLEscape.hpp in Headers */,
+				7807FE9112E42DA600777281 /* FnIconv.hpp in Headers */,
+				7807FE9212E42DA600777281 /* FnInSet.hpp in Headers */,
+				7807FE9312E42DA600777281 /* FnJSEscape.hpp in Headers */,
+				7807FE9412E42DA600777281 /* FnJSON.hpp in Headers */,
+				7807FE9512E42DA600777281 /* FnListElement.hpp in Headers */,
+				7807FE9612E42DA600777281 /* FnLog.hpp in Headers */,
+				7807FE9712E42DA600777281 /* FnMax.hpp in Headers */,
+				7807FE9812E42DA600777281 /* FnMBSize.hpp in Headers */,
+				7807FE9912E42DA600777281 /* FnMBSubstring.hpp in Headers */,
+				7807FE9A12E42DA600777281 /* FnMBTruncate.hpp in Headers */,
+				7807FE9B12E42DA600777281 /* FnMD5.hpp in Headers */,
+				7807FE9C12E42DA600777281 /* FnMin.hpp in Headers */,
+				7807FE9D12E42DA600777281 /* FnNumeral.hpp in Headers */,
+				7807FE9E12E42DA600777281 /* FnNumFormat.hpp in Headers */,
+				7807FE9F12E42DA600777281 /* FnObjDump.hpp in Headers */,
+				7807FEA012E42DA600777281 /* FnRandom.hpp in Headers */,
+				7807FEA112E42DA600777281 /* FnSize.hpp in Headers */,
+				7807FEA212E42DA600777281 /* FnSprintf.hpp in Headers */,
+				7807FEA312E42DA600777281 /* FnSubstring.hpp in Headers */,
+				7807FEA412E42DA600777281 /* FnTruncate.hpp in Headers */,
+				7807FEA512E42DA600777281 /* FnURIEscape.hpp in Headers */,
+				7807FEA612E42DA600777281 /* FnURLEscape.hpp in Headers */,
+				7807FEA712E42DA600777281 /* FnVersion.hpp in Headers */,
+				7807FEA812E42DA600777281 /* FnWMLEscape.hpp in Headers */,
+				7807FEA912E42DA600777281 /* FnXMLEscape.hpp in Headers */,
+				7807FEAA12E42DA600777281 /* STLException.hpp in Headers */,
+				7807FEAB12E42DA600777281 /* STLFunctional.hpp in Headers */,
+				7807FEAC12E42DA600777281 /* STLIosfwd.hpp in Headers */,
+				7807FEAD12E42DA600777281 /* STLMap.hpp in Headers */,
+				7807FEAE12E42DA600777281 /* STLOstream.hpp in Headers */,
+				7807FEAF12E42DA600777281 /* STLPair.hpp in Headers */,
+				7807FEB012E42DA600777281 /* STLString.hpp in Headers */,
+				7807FEB112E42DA600777281 /* STLVector.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5B811C1614878BE2001B46D8 /* CTPP2-clang */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B811CD314878BE2001B46D8 /* Build configuration list for PBXNativeTarget "CTPP2-clang" */;
+			buildPhases = (
+				5B811C1714878BE2001B46D8 /* Headers */,
+				5B811C8114878BE2001B46D8 /* Sources */,
+				5B811CD214878BE2001B46D8 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CTPP2-clang";
+			productName = CTPP2;
+			productReference = 5B811CD614878BE2001B46D8 /* libCTPP2-clang.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D2AAC07D0554694100DB518D /* CTPP2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "CTPP2" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CTPP2;
+			productName = CTPP2;
+			productReference = D2AAC07E0554694100DB518D /* libCTPP2.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "CTPP2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* CTPP2 */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* CTPP2 */,
+				5B811C1614878BE2001B46D8 /* CTPP2-clang */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B811C8114878BE2001B46D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B811C8214878BE2001B46D8 /* CDT.cpp in Sources */,
+				5B811C8314878BE2001B46D8 /* CDTSortRoutines.cpp in Sources */,
+				5B811C8414878BE2001B46D8 /* CTPP2BitIndex.cpp in Sources */,
+				5B811C8514878BE2001B46D8 /* CTPP2Compiler.cpp in Sources */,
+				5B811C8614878BE2001B46D8 /* CTPP2DTOA.cpp in Sources */,
+				5B811C8714878BE2001B46D8 /* CTPP2Error.cpp in Sources */,
+				5B811C8814878BE2001B46D8 /* CTPP2Exception.cpp in Sources */,
+				5B811C8914878BE2001B46D8 /* CTPP2FileLogger.cpp in Sources */,
+				5B811C8A14878BE2001B46D8 /* CTPP2FileOutputCollector.cpp in Sources */,
+				5B811C8B14878BE2001B46D8 /* CTPP2FileSourceLoader.cpp in Sources */,
+				5B811C8C14878BE2001B46D8 /* CTPP2HashTable.cpp in Sources */,
+				5B811C8D14878BE2001B46D8 /* CTPP2JSONFileParser.cpp in Sources */,
+				5B811C8E14878BE2001B46D8 /* CTPP2JSONParser.cpp in Sources */,
+				5B811C8F14878BE2001B46D8 /* CTPP2Logger.cpp in Sources */,
+				5B811C9014878BE2001B46D8 /* CTPP2Parser.cpp in Sources */,
+				5B811C9114878BE2001B46D8 /* CTPP2ParserException.cpp in Sources */,
+				5B811C9214878BE2001B46D8 /* CTPP2Sprintf.cpp in Sources */,
+				5B811C9314878BE2001B46D8 /* CTPP2StaticData.cpp in Sources */,
+				5B811C9414878BE2001B46D8 /* CTPP2StaticText.cpp in Sources */,
+				5B811C9514878BE2001B46D8 /* CTPP2StreamOutputCollector.cpp in Sources */,
+				5B811C9614878BE2001B46D8 /* CTPP2StringBuffer.cpp in Sources */,
+				5B811C9714878BE2001B46D8 /* CTPP2StringIconvOutputCollector.cpp in Sources */,
+				5B811C9814878BE2001B46D8 /* CTPP2StringOutputCollector.cpp in Sources */,
+				5B811C9914878BE2001B46D8 /* CTPP2SyscallFactory.cpp in Sources */,
+				5B811C9A14878BE2001B46D8 /* CTPP2Util.cpp in Sources */,
+				5B811C9B14878BE2001B46D8 /* CTPP2VM.cpp in Sources */,
+				5B811C9C14878BE2001B46D8 /* CTPP2VMArgStack.cpp in Sources */,
+				5B811C9D14878BE2001B46D8 /* CTPP2VMCodeStack.cpp in Sources */,
+				5B811C9E14878BE2001B46D8 /* CTPP2VMDebugInfo.cpp in Sources */,
+				5B811C9F14878BE2001B46D8 /* CTPP2VMDumper.cpp in Sources */,
+				5B811CA014878BE2001B46D8 /* CTPP2VMException.cpp in Sources */,
+				5B811CA114878BE2001B46D8 /* CTPP2VMExecutable.cpp in Sources */,
+				5B811CA214878BE2001B46D8 /* CTPP2VMFileLoader.cpp in Sources */,
+				5B811CA314878BE2001B46D8 /* CTPP2VMMemoryCore.cpp in Sources */,
+				5B811CA414878BE2001B46D8 /* CTPP2VMOpcodeCollector.cpp in Sources */,
+				5B811CA514878BE2001B46D8 /* CTPP2VMSTDLib.cpp in Sources */,
+				5B811CA614878BE2001B46D8 /* CTPP2VMSyscall.cpp in Sources */,
+				5B811CA714878BE2001B46D8 /* FnArrayElement.cpp in Sources */,
+				5B811CA814878BE2001B46D8 /* FnAvg.cpp in Sources */,
+				5B811CA914878BE2001B46D8 /* FnBase64Decode.cpp in Sources */,
+				5B811CAA14878BE2001B46D8 /* FnBase64Encode.cpp in Sources */,
+				5B811CAB14878BE2001B46D8 /* FnCast.cpp in Sources */,
+				5B811CAC14878BE2001B46D8 /* FnConcat.cpp in Sources */,
+				5B811CAD14878BE2001B46D8 /* FnDateFormat.cpp in Sources */,
+				5B811CAE14878BE2001B46D8 /* FnDefault.cpp in Sources */,
+				5B811CAF14878BE2001B46D8 /* FnDefined.cpp in Sources */,
+				5B811CB014878BE2001B46D8 /* FnEmitter.cpp in Sources */,
+				5B811CB114878BE2001B46D8 /* FnError.cpp in Sources */,
+				5B811CB214878BE2001B46D8 /* FnFormParam.cpp in Sources */,
+				5B811CB314878BE2001B46D8 /* FnGetText.cpp in Sources */,
+				5B811CB414878BE2001B46D8 /* FnGetText_.cpp in Sources */,
+				5B811CB514878BE2001B46D8 /* FnHashElement.cpp in Sources */,
+				5B811CB614878BE2001B46D8 /* FnHMACMD5.cpp in Sources */,
+				5B811CB714878BE2001B46D8 /* FnHrefParam.cpp in Sources */,
+				5B811CB814878BE2001B46D8 /* FnHTMLEscape.cpp in Sources */,
+				5B811CB914878BE2001B46D8 /* FnIconv.cpp in Sources */,
+				5B811CBA14878BE2001B46D8 /* FnInSet.cpp in Sources */,
+				5B811CBB14878BE2001B46D8 /* FnJSEscape.cpp in Sources */,
+				5B811CBC14878BE2001B46D8 /* FnJSON.cpp in Sources */,
+				5B811CBD14878BE2001B46D8 /* FnListElement.cpp in Sources */,
+				5B811CBE14878BE2001B46D8 /* FnLog.cpp in Sources */,
+				5B811CBF14878BE2001B46D8 /* FnMax.cpp in Sources */,
+				5B811CC014878BE2001B46D8 /* FnMBSize.cpp in Sources */,
+				5B811CC114878BE2001B46D8 /* FnMBSubstring.cpp in Sources */,
+				5B811CC214878BE2001B46D8 /* FnMBTruncate.cpp in Sources */,
+				5B811CC314878BE2001B46D8 /* FnMD5.cpp in Sources */,
+				5B811CC414878BE2001B46D8 /* FnMin.cpp in Sources */,
+				5B811CC514878BE2001B46D8 /* FnNumeral.cpp in Sources */,
+				5B811CC614878BE2001B46D8 /* FnNumFormat.cpp in Sources */,
+				5B811CC714878BE2001B46D8 /* FnObjDump.cpp in Sources */,
+				5B811CC814878BE2001B46D8 /* FnRandom.cpp in Sources */,
+				5B811CC914878BE2001B46D8 /* FnSize.cpp in Sources */,
+				5B811CCA14878BE2001B46D8 /* FnSprintf.cpp in Sources */,
+				5B811CCB14878BE2001B46D8 /* FnSubstring.cpp in Sources */,
+				5B811CCC14878BE2001B46D8 /* FnTruncate.cpp in Sources */,
+				5B811CCD14878BE2001B46D8 /* FnURIEscape.cpp in Sources */,
+				5B811CCE14878BE2001B46D8 /* FnURLEscape.cpp in Sources */,
+				5B811CCF14878BE2001B46D8 /* FnVersion.cpp in Sources */,
+				5B811CD014878BE2001B46D8 /* FnWMLEscape.cpp in Sources */,
+				5B811CD114878BE2001B46D8 /* FnXMLEscape.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7807FEB212E42DA600777281 /* CDT.cpp in Sources */,
+				7807FEB312E42DA600777281 /* CDTSortRoutines.cpp in Sources */,
+				7807FEB412E42DA600777281 /* CTPP2BitIndex.cpp in Sources */,
+				7807FEB512E42DA600777281 /* CTPP2Compiler.cpp in Sources */,
+				7807FEB612E42DA600777281 /* CTPP2DTOA.cpp in Sources */,
+				7807FEB712E42DA600777281 /* CTPP2Error.cpp in Sources */,
+				7807FEB812E42DA600777281 /* CTPP2Exception.cpp in Sources */,
+				7807FEB912E42DA600777281 /* CTPP2FileLogger.cpp in Sources */,
+				7807FEBA12E42DA600777281 /* CTPP2FileOutputCollector.cpp in Sources */,
+				7807FEBB12E42DA600777281 /* CTPP2FileSourceLoader.cpp in Sources */,
+				7807FEBC12E42DA600777281 /* CTPP2HashTable.cpp in Sources */,
+				7807FEBD12E42DA600777281 /* CTPP2JSONFileParser.cpp in Sources */,
+				7807FEBE12E42DA600777281 /* CTPP2JSONParser.cpp in Sources */,
+				7807FEBF12E42DA600777281 /* CTPP2Logger.cpp in Sources */,
+				7807FEC012E42DA600777281 /* CTPP2Parser.cpp in Sources */,
+				7807FEC112E42DA600777281 /* CTPP2ParserException.cpp in Sources */,
+				7807FEC212E42DA600777281 /* CTPP2Sprintf.cpp in Sources */,
+				7807FEC312E42DA600777281 /* CTPP2StaticData.cpp in Sources */,
+				7807FEC412E42DA600777281 /* CTPP2StaticText.cpp in Sources */,
+				7807FEC512E42DA600777281 /* CTPP2StreamOutputCollector.cpp in Sources */,
+				7807FEC612E42DA600777281 /* CTPP2StringBuffer.cpp in Sources */,
+				7807FEC712E42DA600777281 /* CTPP2StringIconvOutputCollector.cpp in Sources */,
+				7807FEC812E42DA600777281 /* CTPP2StringOutputCollector.cpp in Sources */,
+				7807FEC912E42DA600777281 /* CTPP2SyscallFactory.cpp in Sources */,
+				7807FECA12E42DA600777281 /* CTPP2Util.cpp in Sources */,
+				7807FECB12E42DA600777281 /* CTPP2VM.cpp in Sources */,
+				7807FECC12E42DA600777281 /* CTPP2VMArgStack.cpp in Sources */,
+				7807FECD12E42DA600777281 /* CTPP2VMCodeStack.cpp in Sources */,
+				7807FECE12E42DA600777281 /* CTPP2VMDebugInfo.cpp in Sources */,
+				7807FECF12E42DA600777281 /* CTPP2VMDumper.cpp in Sources */,
+				7807FED012E42DA600777281 /* CTPP2VMException.cpp in Sources */,
+				7807FED112E42DA600777281 /* CTPP2VMExecutable.cpp in Sources */,
+				7807FED212E42DA600777281 /* CTPP2VMFileLoader.cpp in Sources */,
+				7807FED312E42DA600777281 /* CTPP2VMMemoryCore.cpp in Sources */,
+				7807FED412E42DA600777281 /* CTPP2VMOpcodeCollector.cpp in Sources */,
+				7807FED512E42DA600777281 /* CTPP2VMSTDLib.cpp in Sources */,
+				7807FED612E42DA600777281 /* CTPP2VMSyscall.cpp in Sources */,
+				7807FED712E42DA600777281 /* FnArrayElement.cpp in Sources */,
+				7807FED812E42DA600777281 /* FnAvg.cpp in Sources */,
+				7807FED912E42DA600777281 /* FnBase64Decode.cpp in Sources */,
+				7807FEDA12E42DA600777281 /* FnBase64Encode.cpp in Sources */,
+				7807FEDB12E42DA600777281 /* FnCast.cpp in Sources */,
+				7807FEDC12E42DA600777281 /* FnConcat.cpp in Sources */,
+				7807FEDD12E42DA600777281 /* FnDateFormat.cpp in Sources */,
+				7807FEDE12E42DA600777281 /* FnDefault.cpp in Sources */,
+				7807FEDF12E42DA600777281 /* FnDefined.cpp in Sources */,
+				7807FEE012E42DA600777281 /* FnEmitter.cpp in Sources */,
+				7807FEE112E42DA600777281 /* FnError.cpp in Sources */,
+				7807FEE212E42DA600777281 /* FnFormParam.cpp in Sources */,
+				7807FEE312E42DA600777281 /* FnGetText.cpp in Sources */,
+				7807FEE412E42DA600777281 /* FnGetText_.cpp in Sources */,
+				7807FEE512E42DA600777281 /* FnHashElement.cpp in Sources */,
+				7807FEE612E42DA600777281 /* FnHMACMD5.cpp in Sources */,
+				7807FEE712E42DA600777281 /* FnHrefParam.cpp in Sources */,
+				7807FEE812E42DA600777281 /* FnHTMLEscape.cpp in Sources */,
+				7807FEE912E42DA600777281 /* FnIconv.cpp in Sources */,
+				7807FEEA12E42DA600777281 /* FnInSet.cpp in Sources */,
+				7807FEEB12E42DA600777281 /* FnJSEscape.cpp in Sources */,
+				7807FEEC12E42DA600777281 /* FnJSON.cpp in Sources */,
+				7807FEED12E42DA600777281 /* FnListElement.cpp in Sources */,
+				7807FEEE12E42DA600777281 /* FnLog.cpp in Sources */,
+				7807FEEF12E42DA600777281 /* FnMax.cpp in Sources */,
+				7807FEF012E42DA600777281 /* FnMBSize.cpp in Sources */,
+				7807FEF112E42DA600777281 /* FnMBSubstring.cpp in Sources */,
+				7807FEF212E42DA600777281 /* FnMBTruncate.cpp in Sources */,
+				7807FEF312E42DA600777281 /* FnMD5.cpp in Sources */,
+				7807FEF412E42DA600777281 /* FnMin.cpp in Sources */,
+				7807FEF512E42DA600777281 /* FnNumeral.cpp in Sources */,
+				7807FEF612E42DA600777281 /* FnNumFormat.cpp in Sources */,
+				7807FEF712E42DA600777281 /* FnObjDump.cpp in Sources */,
+				7807FEF812E42DA600777281 /* FnRandom.cpp in Sources */,
+				7807FEF912E42DA600777281 /* FnSize.cpp in Sources */,
+				7807FEFA12E42DA600777281 /* FnSprintf.cpp in Sources */,
+				7807FEFB12E42DA600777281 /* FnSubstring.cpp in Sources */,
+				7807FEFC12E42DA600777281 /* FnTruncate.cpp in Sources */,
+				7807FEFD12E42DA600777281 /* FnURIEscape.cpp in Sources */,
+				7807FEFE12E42DA600777281 /* FnURLEscape.cpp in Sources */,
+				7807FEFF12E42DA600777281 /* FnVersion.cpp in Sources */,
+				7807FF0012E42DA600777281 /* FnWMLEscape.cpp in Sources */,
+				7807FF0112E42DA600777281 /* FnXMLEscape.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/CTPP2.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CTPP2_Prefix.pch;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_CFLAGS = "-fvisibility=hidden";
+				PRODUCT_NAME = CTPP2;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/CTPP2.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CTPP2_Prefix.pch;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_CFLAGS = "-fvisibility=hidden";
+				PRODUCT_NAME = CTPP2;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5B811CD414878BE2001B46D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/CTPP2.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CTPP2_Prefix.pch;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_CFLAGS = "-fvisibility=hidden";
+				PRODUCT_NAME = "CTPP2-clang";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+			};
+			name = Debug;
+		};
+		5B811CD514878BE2001B46D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/CTPP2.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CTPP2_Prefix.pch;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_CFLAGS = "-fvisibility=hidden";
+				PRODUCT_NAME = "CTPP2-clang";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "CTPP2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "CTPP2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B811CD314878BE2001B46D8 /* Build configuration list for PBXNativeTarget "CTPP2-clang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B811CD414878BE2001B46D8 /* Debug */,
+				5B811CD514878BE2001B46D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PFUsePrivateLogs</key>
+	<false/>
+	<key>PFUseChat</key>
+	<true/>
+	<key>PFUseNews</key>
+	<true/>
+	<key>PFUseTransfer</key>
+	<true/>
+	<key>PFUseSecure</key>
+	<false/>
+	<key>PFUseHTTP</key>
+	<false/>
+	<key>PFDefaultServer</key>
+	<string>pt3.protraderfx.net:80</string>
+	<key>PFAppID</key>
+	<string>717101081</string>
+	<key>PFScriptsServer</key>
+	<string></string>
+	<key>PFDefaultSymbols</key>
+	<array>
+		<string>EUR/USD</string>
+		<string>EUR/USD:GFT</string>
+		<string>AUD/CAD</string>
+		<string>AUD/CAD:GFT</string>
+		<string>EUR/JPY</string>
+		<string>EUR/JPY:GFT</string>
+		<string>EUR/CAD</string>
+		<string>EUR/CAD:GFT</string>
+		<string>EUR/AUD</string>
+		<string>EUR/AUD:GFT</string>
+	</array>
+	<key>PFBrandingKey</key>
+	<string>pt3_beta</string>
+	<key>PFBrandingServer</key>
+	<string>pt3.protraderfx.net</string>
+</dict>
+</plist>

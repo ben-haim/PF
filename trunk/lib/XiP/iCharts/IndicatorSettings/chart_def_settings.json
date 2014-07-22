@@ -1,0 +1,185 @@
+{
+    "view":     {
+                    "chartType":0,
+                    "zoom":80,
+					"panel_heights":[]
+                },
+    "style":
+	{
+					"sec_order":	["chart_general", "draw", "candles", "bars", "main_line", "area"],
+					"chart_general":{
+										"name":"chart_general",
+										"order":["chart_bg_color", "chart_frame_color", "chart_grid_color", 
+												"chart_margin_color", "chart_font_color", 
+												"chart_cursor_color", "chart_cursor_textcolor",
+												"show_bid", "show_ask", "chart_bid_color", "chart_ask_color"],
+										"chart_bg_color":{"type":0, "label":"chart_settings_color_plot", "value":"0xFFFFFFFF"},
+										"chart_frame_color":{"type":0, "label":"chart_settings_color_axis", "value":"0x000000FF"},
+										"chart_grid_color":{"type":0, "label":"chart_settings_color_grid", "value":"0xCCCCCCFF"},
+										"chart_margin_color":{"type":0, "label":"chart_settings_color_margin", "value":"0xEEEEEEFF"},
+										"chart_font_color":{"type":0, "label":"chart_settings_color_text", "value":"0x000000FF"},
+										"chart_cursor_color":{"type":0, "label":"chart_settings_color_cursor_color", "value":"0x000000FF"},
+										"chart_cursor_textcolor":{"type":0, "label":"chart_settings_color_cursor_text_color", "value":"0xFFFFFFFF"}
+										"show_bid":{"type":5, "label":"chart_settings_show_bid", "value":"1"},
+										"chart_bid_color":{"type":0, "label":"chart_settings_bid_color", "value":"0x0000FFFF"},
+										"show_ask":{"type":5, "label":"chart_settings_show_ask", "value":"0"},
+										"chart_ask_color":{"type":0, "label":"chart_settings_ask_color", "value":"0xFF0000FF"}
+									},
+					"draw":			{
+										"name":"chart_draw",
+										"order":["color", "width", "dash"],
+										"color":{"type":0, "label":"chart_settings_color", "value":"0x000000FF"},
+										"width":{"type":2, "label":"chart_settings_width", "value":"2"} ,
+										"dash":{"type":3, "label":"chart_settings_dash", "value":"0"} 
+									},
+					"candles":		{
+										"name":"candles",
+										"order":["candle_up", "candle_up_border", "candle_down", "candle_down_border"],
+										"candle_up":{"type":0, "label":"chart_settings_color_candle_up", "value":"0x96C984FF"},
+										"candle_up_border":{"type":0, "label":"chart_settings_color_candle_up_border", "value":"0x288728FF"},
+										"candle_down":{"type":0, "label":"chart_settings_color_candle_down", "value":"0xD86363FF"},
+										"candle_down_border":{"type":0, "label":"chart_settings_color_candle_down_border", "value":"0x881000FF"}
+									},
+					"bars":			{
+										"name":"bars",
+										"order":["chart_bars_color", "chart_bars_width"],
+										"chart_bars_color":{"type":0, "label":"chart_settings_color", "value":"0x000000FF"},
+										"chart_bars_width":{"type":2, "label":"chart_settings_width", "value":"1"}
+									},
+					"main_line":	{
+										"name":"main_line",
+										"order":["apply", "color", "width", "dash"],
+										"apply":{"type":4, "label":"chart_settings_apply_to", "value":"0"},
+										"color":{"type":0, "label":"chart_settings_color", "value":"0x316396FF"},
+										"width":{"type":2, "label":"chart_settings_width", "value":"2"} ,
+										"dash":{"type":3, "label":"chart_settings_dash", "value":"0"} 
+									},
+					"area":			{
+										"name":"area",
+										"order":["area_apply", "area_fill_color", "area_stroke_color", "area_stroke_width", "area_stroke_dash"],
+										"area_apply":{"type":4, "label":"chart_settings_apply_to", "value":"0"},
+										"area_fill_color":{"type":0, "label":"chart_settings_fillcolor", "value":"0x3333FFFF"},
+										"area_stroke_color":{"type":0, "label":"chart_settings_color", "value":"0x3333FFFF"},
+										"area_stroke_width":{"type":2, "label":"chart_settings_width", "value":"2"} ,
+										"area_stroke_dash":{"type":3, "label":"chart_settings_dash", "value":"0"} 
+									}
+	},
+    "indicators":
+                {
+                    "order":		["sma", "ema", "vol", "bb", "mtm", "macd"],
+					"user_main":	["ema"],
+					"user_add":		["mtm", "vol"],
+					"sma":			{
+										"code":     "sma",
+										"title":    "chart_sma_title",
+										"mainchart":"1",
+										"sec_order": ["sma"],
+										"sma":	{
+													"name":         "chart_sma_title",
+													"order":        ["interval", "apply", "color", "width", "dash"],
+													"interval":		{"type":1, "label":"chart_settings_interval", "value":10, "min":1, "max":50},
+													"apply":		{"type":4, "label":"chart_settings_apply_to", "value":"0"},
+													"color":		{"type":0, "label":"chart_settings_color", "value":"0xFF0000FF"},
+													"width":		{"type":2, "label":"chart_settings_width", "value":1},
+													"dash":			{"type":3, "label":"chart_settings_dash", "value":0}
+												}
+									},
+					"ema":			{
+										"code":     "ema",
+										"title":    "chart_ema_title",
+										"mainchart":"1",
+										"sec_order": ["ema"],
+										"ema":	{
+													"name":         "chart_ema_title",
+													"order":        ["interval", "apply", "color", "width", "dash"],
+													"interval":		{"type":1, "label":"chart_settings_interval", "value":14, "min":1, "max":50},
+													"apply":		{"type":4, "label":"chart_settings_apply_to", "value":"0"},
+													"color":		{"type":0, "label":"chart_settings_color", "value":"0x00FF00FF"},
+													"width":		{"type":2, "label":"chart_settings_width", "value":1},
+													"dash":			{"type":3, "label":"chart_settings_dash", "value":0}
+												}
+									},						
+					"bb":			{
+										"code":     "bb",
+										"title":    "chart_bb_title",
+										"mainchart":"1",
+										"sec_order": ["bb", "line"],
+										"bb":	{
+													"name":         "Bollinger Bands",
+													"order":        ["interval", "deviation", "apply", "color"],
+													"interval":		{"type":1, "label":"chart_settings_interval", "value":20, "min":1, "max":100}
+													"deviation":	{"type":1, "label":"chart_settings_deviation", "value":2, "min":1, "max":100},
+													"apply":		{"type":4, "label":"chart_settings_apply_to", "value":"0"},
+													"color":		{"type":0, "label":"chart_settings_fillcolor", "value":"0x3333FFFF"}
+												},
+										"line":	{
+													"name":         "Lines",
+													"order":        ["color", "width", "dash"],
+													"color":		{"type":0, "label":"chart_settings_color", "value":"0000FFFF"},
+													"width":		{"type":2, "label":"chart_settings_width", "value":1},
+													"dash":			{"type":3, "label":"chart_settings_dash", "value":0}
+												}
+									},
+					"vol":			{
+										"code":     "vol",
+										"title":    "chart_vol_title",
+										"mainchart":"0",
+										"sec_order": ["vol"],
+										"vol":	{
+													"name":         "chart_vol_title",
+													"order":        ["color", "width"],
+													"color":		{"type":0, "label":"chart_settings_color", "value":"0x00FF00FF"},
+													"width":		{"type":2, "label":"chart_settings_width", "value":2}
+												}
+									},
+					"mtm":			{
+										"code":     "mtm",
+										"title":    "chart_mtm_title",
+										"mainchart":"0",
+										"sec_order": ["mtm"],
+										"mtm":	{
+													"name":         "chart_mtm_title",
+													"order":        ["interval", "color", "width", "dash"],
+													"interval":		{"type":1, "label":"chart_settings_interval", "value":14, "min":1, "max":100},
+													"color":		{"type":0, "label":"chart_settings_color", "value":"0xFF0066FF"},
+													"width":		{"type":2, "label":"chart_settings_width", "value":1},
+													"dash":			{"type":3, "label":"chart_settings_dash", "value":0}
+												}
+									},
+					"macd":			{
+										"code":     "macd",
+										"title":    "chart_macd_title",
+										"mainchart":"0",
+										"sec_order": ["ema1", "ema2", "sma"],
+										"ema1":	{
+													"name":         "EMA 1",
+													"order":        ["interval", "color", "width", "dash"],
+													"interval":		{"type":1, "label":"chart_settings_interval", "value":12, "min":1, "max":100},
+													"color":		{"type":0, "label":"chart_settings_color", "value":"0x0033FFFF"},
+													"width":		{"type":2, "label":"chart_settings_width", "value":1},
+													"dash":			{"type":3, "label":"chart_settings_dash", "value":0}
+
+												},
+										"ema2":	{
+													"name":         "EMA 2",
+													"order":        ["interval", "color", "width", "dash"],
+													"interval":		{"type":1, "label":"chart_settings_interval", "value":26, "min":1, "max":100},
+													"color":		{"type":0, "label":"chart_settings_color", "value":"0xFF0000FF"},
+													"width":		{"type":2, "label":"chart_settings_width", "value":1},
+													"dash":			{"type":3, "label":"chart_settings_dash", "value":0}
+												},
+										"sma":	{
+													"name":         "SMA",
+													"order":        ["interval", "color", "width", "dash"],
+													"interval":		{"type":1, "label":"chart_settings_interval", "value":9, "min":1, "max":100},
+													"color":		{"type":0, "label":"chart_settings_color", "value":"0x008000FF"},
+													"width":		{"type":2, "label":"chart_settings_width", "value":1},
+													"dash":			{"type":3, "label":"chart_settings_dash", "value":0}
+													
+												}	
+									}
+                }
+    "drawings":
+                {
+                }
+}

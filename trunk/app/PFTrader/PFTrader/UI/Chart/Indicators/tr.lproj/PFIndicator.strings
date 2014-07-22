@@ -1,0 +1,69 @@
+"chart_sma_title" = "Basit Hareketli Ortalama";
+
+"chart_ema_title" = "Üssel Hareketli Ortalama";
+
+"chart_psar_title" = "Parabolic SAR";
+
+"chart_vol_title" = "Hacim";
+
+"chart_env_title" = "Envelopes";
+
+"chart_bb_title" = "Bollinger Bands";
+
+"chart_bands_title" = "Bands";
+
+"chart_mtm_title" = "Momentum";
+
+"chart_macd_title" = "MACD";
+
+"chart_will_title" = "Williams' Percent Range";
+
+"chart_rsi_title" = "Relative Strength Index";
+
+"chart_stoh_title" = "Stochastic Oscillator";
+
+"chart_dmi_title" = "Directional Movement Index";
+
+"chart_main_chart" = "Ana Grafik";
+
+"chart_main_panels" = "Panel";
+
+"APPLY_TYPE_CLOSE" = "Kapanış";
+
+"APPLY_TYPE_OPEN" = "Açılış";
+
+"APPLY_TYPE_HIGH" = "Yüksek";
+
+"APPLY_TYPE_LOW" = "Düşük";
+
+"APPLY_TYPE_HL2" = "HL/2";
+
+"APPLY_TYPE_HLC2" = "HLC/2";
+
+"APPLY_TYPE_HLC3" = "HLC/3";
+
+"APPLY_TYPE_HLCC4" = "HLCC/3";
+
+"chart_settings_interval" = "Zaman aralığı";
+
+"chart_settings_slowing" = "Yavaşlayan";
+
+"chart_settings_deviation" = "Sapma";
+
+"chart_settings_apply_to" = "Uygula";
+
+"chart_settings_color" = "Renk";
+
+"chart_settings_dash" = "Çizgi";
+
+"chart_settings_width" = "Genişlik";
+
+"chart_settings_fillcolor" = "Doldurma Rengi";
+
+"chart_settings_step" = "Adım";
+
+"chart_settings_max" = "Maks.";
+
+"MAIN_INDICATORS" = "Temel İndikatörler";
+
+"ADDITIONAL_INDICATORS" = "Ek İndikatörler";

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PFUsePrivateLogs</key>
+	<false/>
+	<key>PFUseChangePassword</key>
+	<true/>
+	<key>PFUseChat</key>
+	<true/>
+	<key>PFUseNews</key>
+	<true/>
+	<key>PFUseTransfer</key>
+	<true/>
+	<key>PFUseSecure</key>
+	<true/>
+	<key>PFUseDemoSecure</key>
+	<true/>
+	<key>PFShowFundValues</key>
+	<false/>
+	<key>PFShowEquityValue</key>
+	<false/>
+	<key>PFDefaultServer</key>
+	<string>prod1.ingprotrader.pl:443,prod1.ingprotrader.pl:4905</string>
+	<key>PFDefaultDemoServer</key>
+	<string>demo1.ingprotrader.pl:4910,demo1.ingprotrader.pl:4911</string>
+	<key>PFAppID</key>
+	<string>757872276</string>
+	<key>PFScriptsServer</key>
+	<string></string>
+	<key>PFDefaultSymbols</key>
+	<array>
+		<string>EUR/USD</string>
+		<string>USD/PLN</string>
+		<string>USD/JPY</string>
+		<string>EUR/JPY</string>
+		<string>EUR/CHF</string>
+	</array>
+	<key>PFBrandingKey</key>
+	<string>ingbrand</string>
+	<key>PFBrandingServer</key>
+	<string>demo1.ingprotrader.pl:4910</string>
+	<key>PFUseBrandingSecure</key>
+	<true/>
+	<key>PFUseValidityIOC</key>
+	<false/>
+</dict>
+</plist>

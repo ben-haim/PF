@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'ESButtonGroup' target in the 'ESButtonGroup' project
+//
+
+#ifdef __OBJC__
+   #import <Foundation/Foundation.h>
+#endif

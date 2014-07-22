@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+   <head>
+      <link rel='stylesheet' type='text/css' href='file://<TMPL_var RESOURCE_PATH>/PFEvent.css'>
+   </head>
+   <body>
+      <div class="event-header"><TMPL_var HEADER></div>
+      <div class="event-date"><TMPL_var DATE></div>
+      <table>
+      <TMPL_loop LINES>
+         <tr>
+            <td><div class="event-line-left"><TMPL_var LINE0></div></td>
+            <td><div class="event-line-right"><TMPL_var LINE1></div></td>
+         </tr>
+      </TMPL_loop>
+      </table>
+   </body>
+</html>

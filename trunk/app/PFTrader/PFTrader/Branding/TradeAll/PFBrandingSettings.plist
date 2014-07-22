@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PFUsePrivateLogs</key>
+	<true/>
+	<key>PFUseChangePassword</key>
+	<true/>
+	<key>PFUseChat</key>
+	<true/>
+	<key>PFUseNews</key>
+	<true/>
+	<key>PFUseTransfer</key>
+	<true/>
+	<key>PFUseSecure</key>
+	<true/>
+	<key>PFUseDemoSecure</key>
+	<true/>
+	<key>PFShowFundValues</key>
+	<true/>
+	<key>PFShowEquityValue</key>
+	<true/>
+	<key>PFDefaultServer</key>
+	<string>trade.tradeall.com,trade1.tradeall.com</string>
+	<key>PFDefaultDemoServer</key>
+	<string>demo.tradeall.com:80,demo1.tradeall.com</string>
+	<key>PFAppID</key>
+	<string>648892326</string>
+	<key>PFScriptsServer</key>
+	<string></string>
+	<key>PFDefaultSymbols</key>
+	<array>
+		<string>EUR-USD</string>
+		<string>EUR-GBP</string>
+		<string>AUD-CAD</string>
+		<string>AUD-CHF</string>
+		<string>EUR-CHF</string>
+		<string>USD-GBP</string>
+		<string>XAU/USD</string>
+		<string>XAG/USD</string>
+	</array>
+	<key>PFBrandingKey</key>
+	<string>TradeALL</string>
+	<key>PFBrandingServer</key>
+	<string>demo.tradeall.com</string>
+	<key>PFUseBrandingSecure</key>
+	<false/>
+	<key>PFUseValidityIOC</key>
+	<true/>
+</dict>
+</plist>

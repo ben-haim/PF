@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Formax.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>36</integer>
+		</dict>
+		<key>PFTrader.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>33</integer>
+		</dict>
+		<key>UpBit Trader.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>34</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>92E39B521871609500302B6D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AE1ED80018E426F500187B17</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AE1EDB2918E42C6200187B17</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AE1EDDC818E4303F00187B17</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AEF9365918E97DC400561E0F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D6BFAF2A163A747E00B65ED0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

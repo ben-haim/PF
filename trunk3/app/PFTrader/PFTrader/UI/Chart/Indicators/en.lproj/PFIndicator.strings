@@ -1,0 +1,79 @@
+"chart_sma_title" = "Simple Moving Average";
+
+"chart_ema_title" = "Exponential Moving Average";
+
+"chart_psar_title" = "Parabolic SAR";
+
+"chart_vol_title" = "Volumes";
+
+"chart_env_title" = "Envelopes";
+
+"chart_bb_title" = "Bollinger Bands";
+
+"chart_bands_title" = "Bands";
+
+"chart_mtm_title" = "Momentum";
+
+"chart_macd_title" = "MACD";
+
+"chart_will_title" = "Williams' Percent Range";
+
+"chart_rsi_title" = "Relative Strength Index";
+
+"chart_stoh_title" = "Stochastic Oscillator";
+
+"chart_dmi_title" = "Directional Movement Index";
+
+"chart_main_chart" = "Main chart";
+
+"chart_main_panels" = "Panels";
+
+"APPLY_TYPE_CLOSE" = "Close";
+
+"APPLY_TYPE_OPEN" = "Open";
+
+"APPLY_TYPE_HIGH" = "High";
+
+"APPLY_TYPE_LOW" = "Low";
+
+"APPLY_TYPE_HL2" = "HL/2";
+
+"APPLY_TYPE_HLC2" = "HLC/2";
+
+"APPLY_TYPE_HLC3" = "HLC/3";
+
+"APPLY_TYPE_HLCC4" = "HLCC/3";
+
+"chart_settings_interval" = "Interval";
+
+"chart_settings_slowing" = "Slowing";
+
+"chart_settings_deviation" = "Deviation";
+
+"chart_settings_apply_to" = "Apply to";
+
+"chart_settings_color" = "Color";
+
+"chart_settings_level" = "Level";
+
+"chart_settings_dash" = "Line";
+
+"chart_settings_width" = "Width";
+
+"chart_settings_fillcolor" = "Fill color";
+
+"chart_settings_step" = "Step";
+
+"chart_settings_max" = "Max";
+
+"MAIN_INDICATORS" = "Main indicators";
+
+"ADDITIONAL_INDICATORS" = "Additional indicators";
+
+"Line 1" = "Line 1";
+
+"Line 2" = "Line 2";
+
+"Line 3" = "Line 3";
+
+"Lines" = "Lines";

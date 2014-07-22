@@ -1,0 +1,69 @@
+"chart_sma_title" = "Простое скользящее средние";
+
+"chart_ema_title" = "Экспоненциальная скользящая средняя";
+
+"chart_psar_title" = "Параболическая система цены/времени";
+
+"chart_vol_title" = "Объемы";
+
+"chart_env_title" = "Конверты";
+
+"chart_bb_title" = "Полосы Боллинджера";
+
+"chart_bands_title" = "Полосы";
+
+"chart_mtm_title" = "Моментум";
+
+"chart_macd_title" = "MACD";
+
+"chart_will_title" = "Процентный Диапазон Вильямса";
+
+"chart_rsi_title" = "Индекс относительной силы";
+
+"chart_stoh_title" = "Стохастический осциллятор";
+
+"chart_dmi_title" = "Индекс направленного движения";
+
+"chart_main_chart" = "Основной График";
+
+"chart_main_panels" = "Панели";
+
+"APPLY_TYPE_CLOSE" = "Закрытию";
+
+"APPLY_TYPE_OPEN" = "Открытию";
+
+"APPLY_TYPE_HIGH" = "Верху";
+
+"APPLY_TYPE_LOW" = "Низу";
+
+"APPLY_TYPE_HL2" = "ВН/2";
+
+"APPLY_TYPE_HLC2" = "ВНЗ/2";
+
+"APPLY_TYPE_HLC3" = "ВНЗ/3";
+
+"APPLY_TYPE_HLCC4" = "ВНЗЗ/3";
+
+"chart_settings_interval" = "Интервал";
+
+"chart_settings_slowing" = "Замедление";
+
+"chart_settings_deviation" = "Отклонение";
+
+"chart_settings_apply_to" = "Применительно к";
+
+"chart_settings_color" = "Цвет";
+
+"chart_settings_dash" = "Линия";
+
+"chart_settings_width" = "Ширина";
+
+"chart_settings_fillcolor" = "Заполнить цвет";
+
+"chart_settings_step" = "Шаг";
+
+"chart_settings_max" = "Макс";
+
+"MAIN_INDICATORS" = "Основные индикаторы";
+
+"ADDITIONAL_INDICATORS" = "Дополнительные индикаторы";

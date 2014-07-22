@@ -1,0 +1,32 @@
+body
+{
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   background-color: #2d2d2d;
+   font-family: "Helvetica";
+   text-shadow: #111 0px -1px 1px;
+}
+
+.event-header
+{
+   font-family: "Helvetica-Bold";
+   font-size: 20px;
+   color: #c8c8c8;
+   text-shadow: #111 0px -1px 1px;
+   matgin-bottom: 4px;
+}
+
+.event-date
+{
+   margin-top: 5px;
+   margin-botton: 11px;
+   font-size: 12px;
+   color: #999;
+}
+
+.event-line
+{
+   margin-top: 23px;
+   color: #c8c8c8;
+   font-size: 15px;
+}

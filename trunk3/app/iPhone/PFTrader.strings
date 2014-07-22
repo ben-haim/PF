@@ -1,0 +1,36 @@
+/*Account Information*/
+"GROSS_PL" = "Gross P/L";
+
+"NET_PL" = "Net P/L";
+
+"FEES" = "Fees";
+
+"VOLUME" = "Volume";
+
+"TRADES" = "Trades";
+
+"OPEN_GROSS_PL" = "Open gross P/L";
+
+"OPEN_NET_PL" = "Open net P/L";
+
+"N_ORDERS" = "#Orders";
+
+"N_POSITIONS" = "#Positions";
+
+"ORDERS_MARGIN" = "Margin used for orders";
+
+"POSITIONS_MARGIN" = "Margin used for positions";
+
+"BLOCKED_FOR_FUNDS" = "Blocked for funds";
+
+"STOCK_VALUE" = "Stock value";
+
+"ACCOUNT_BALANCE" = "Account Balance";
+
+"ACCOUNT_EQUITY" = "Account Equity";
+
+"ACCOUNT_VALUE" = "Account Value";
+
+"BLOCKED_BALANCE" = "Blocked Balance";
+
+"CASH_BALANCE" = "Cash Balance";
